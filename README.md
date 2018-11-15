@@ -1,8 +1,5 @@
 # Rabotify
 
-[![build status](https://git.rabota.space/rdw/rabotify/badges/master/build.svg)](https://git.rabota.space/rdw/rabotify/commits/master)
-[![coverage report](https://git.rabota.space/rdw/rabotify/badges/master/coverage.svg)](https://git.rabota.space/rdw/rabotify/commits/master)
-
 ## Vue 2+ компоненты для Rabota.Ru
 
 ## Installing
