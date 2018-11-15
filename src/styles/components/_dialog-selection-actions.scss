@@ -1,0 +1,51 @@
+@import "../settings/index";
+@import "../tools/index";
+
+@include block('dialog-selection-actions', 'component') {
+  margin: 0 !important;
+  border-radius: 0 !important;
+  transition: $primary-transition !important;
+  will-change: transform;
+  background-color: white;
+
+  @include shadow(10, true);
+
+  @include element('inner') {
+    @include container;
+    @extend %layer-flex-row;
+
+    padding: {
+      top: $indent-medium;
+      bottom: $indent-medium;
+    }
+  }
+
+  @include element('actions') {
+    flex: 1;
+  }
+
+  @include element('checkbox') {
+    @extend %layer-flex-column;
+    justify-content: center;
+    margin-right: $indent-small;
+
+    // workaround for indeterminate
+    .checkbox_indeterminate {
+      .checkbox__content {
+        background-color: $primary-color !important;
+        border-color: $primary-color !important;
+      }
+    }
+  }
+
+  @include modifier('mobile-menu-opened') {
+    // apply these styles only on mobile devices
+    @include media-query(md-and-down) {
+      transform: translate3d($app-menu-shift, 0, 0);
+    }
+
+    @media screen and (max-width: 360px) {
+      transform: translate3d($app-menu-small-shift, 0, 0);
+    }
+  }
+}

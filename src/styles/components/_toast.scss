@@ -1,0 +1,156 @@
+@import "../settings/index";
+@import "../tools/index";
+
+$bem-use-namespaces: true;
+
+@include block('toast', 'component') {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  color: $toast-color;
+  pointer-events: none;
+  z-index: 1000;
+  font-size: 14px;
+  left: 0;
+  right: 0;
+
+  @include modifier('absolute') {
+    position: absolute;
+  }
+
+  @include modifier('top') {
+    top: 0;
+  }
+
+  @include modifier('left') {
+    margin: 0 $indent-large;
+
+    @include modifies-modifier('top') {
+      transform: translateY($indent-large);
+    }
+
+    @include modifies-modifier('bottom') {
+      transform: translateY(0 - $indent-large);
+    }
+  }
+
+  @include modifier('right') {
+    margin: 0 $indent-large;
+
+    @include modifies-modifier('top') {
+      transform: translateY($indent-large);
+    }
+
+    @include modifies-modifier('bottom') {
+      transform: translateY(0 - $indent-large);
+    }
+  }
+
+  @include modifier('bottom') {
+    bottom: 0;
+  }
+
+  @include element('wrapper') {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    color: $primary-text;
+    pointer-events: auto;
+    width: 100%;
+
+    @include shadow(6);
+    @include theme-property(background, false, false);
+    // @include theme-property-text(color, false, false, 1, "&.$theme$, &.$theme$ .r-toast__content", true);
+
+    @include media-query(sm-and-up) {
+      width: auto;
+      max-width: 568px;
+      min-width: 288px;
+      margin: 0 auto;
+      border-radius: 2px;
+
+      .r-toast_left & {
+        margin-left: 0;
+      }
+
+      .r-toast_right & {
+        margin-right: 0;
+      }
+    }
+  }
+
+  @include element('content') {
+    width: 100%;
+    height: 48px;
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+
+    @include media-query(sm-and-up) {
+      .r-btn:first-of-type {
+        margin-left: 48px;
+        margin-right: -6px;
+      }
+    }
+
+    .r-btn {
+      // color: $toast-color;
+      flex: 0 0 auto;
+      margin: 0 0 0 24px;
+      height: auto;
+      min-width: initial;
+      width: auto;
+
+      &__content {
+        padding: 8px;
+
+        &:before {
+          display: none;
+        }
+      }
+
+      &:not(&_icon) &__content {
+        margin: -2px;
+      }
+    }
+  }
+
+  @include modifier('multi-line') {
+    @include modifies-element('content') {
+      height: 80px;
+      padding: 24px;
+    }
+  }
+
+  @include modifier('vertical') {
+    @include modifies-element('content') {
+      height: 112px;
+      padding: 24px 24px 14px;
+      flex-direction: column;
+      // https://stackoverflow.com/questions/35111090/text-in-a-flex-container-doesnt-wrap-in-ie11
+      align-items: stretch;
+
+      .r-btn {
+        justify-content: flex-end;
+        margin-left: 0;
+        margin-top: 24px;
+
+        &__content {
+          padding: 0;
+          flex: 0 0 auto;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  @include modifier('auto-height') {
+    @include modifies-element('content') {
+      height: auto;
+    }
+  }
+}
+
+$bem-use-namespaces: false;

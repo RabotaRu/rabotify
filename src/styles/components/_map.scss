@@ -1,0 +1,14 @@
+@import "../settings/index";
+@import "../tools/index";
+
+$bem-use-namespaces: true;
+
+@include block('map', 'component') {
+  transition: $primary-transition;
+
+  @include modifier('not-loaded') {
+    background-color: $gray-lightest-color;
+  }
+}
+
+$bem-use-namespaces: false;

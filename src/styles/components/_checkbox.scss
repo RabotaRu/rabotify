@@ -1,0 +1,61 @@
+@import "../settings/index";
+@import "../tools/index";
+
+@include block('checkbox', 'component') {
+
+  @include theme-property-text(background border, false, false, 1,
+    get-block() + ".input-group_active.text_$theme$ .checkbox__content", true);
+
+  .icon path {
+    fill: none !important;
+  }
+
+  @include element('content') {
+    display: block;
+    position: absolute;
+    width: $checkbox-size;
+    height: $checkbox-size;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    padding: 2px;
+    left: 1px;
+    top: 8px;
+    background: transparent;
+
+    > .icon {
+      width: 100%;
+      height: 100%;
+      position: relative;
+
+      path {
+        transition: stroke-dashoffset .3s $primary-transition-function .05s;
+        stroke-width: 3.12px;
+        stroke-dashoffset: 0;
+        stroke-dasharray: 29.78334;
+      }
+    }
+  }
+
+  &:not(.input-group_static-label) {
+    .icon {
+      top: -5px;
+    }
+  }
+
+  &:not(.input-group_active) {
+    .checkbox__content {
+      border-color: $border-color;
+
+      > .icon {
+        path {
+          stroke-dashoffset: 29.78334;
+        }
+      }
+    }
+  }
+
+  .input-group_selection-controls__ripple {
+    width: 44px;
+    height: 44px;
+  }
+}

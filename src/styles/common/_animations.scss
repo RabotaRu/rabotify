@@ -1,0 +1,35 @@
+@keyframes shake {
+  59% {
+    margin-left: 0;
+  }
+  60%, 80% {
+    margin-left: 2px;
+  }
+  70%, 90% {
+    margin-left: -2px;
+  }
+}
+
+@keyframes loading-circle-scaling {
+  0% {
+    transform: scale(.05);
+    opacity: 0;
+  }
+  25% {
+    transform: scale(.05);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes flowing {
+  0%   {
+    transform: translate3d(-200%, -20%, 0);
+  }
+  100% {
+    transform: translate3d(200%, -20%, 0);
+  }
+}

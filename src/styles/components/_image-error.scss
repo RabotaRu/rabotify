@@ -1,0 +1,59 @@
+@import "../settings/index";
+@import "../tools/index";
+
+$bem-use-namespaces: true;
+
+@include block('image-error', 'component') {
+  @extend %layer-absolute-fill;
+
+  @include element('inner') {
+    display: inline-block;
+    padding: 0 $indent-xsmall;
+    vertical-align: middle;
+    font-size: $font-size-caption - 1;
+    color: #353535;
+    line-height: 1;
+    background-color: rgba(white, .6);
+    border-radius: $radius-medium;
+    margin: 5px;
+
+    @include overflow-ellipsis;
+
+    > * {
+      vertical-align: middle;
+    }
+
+    .md-icon {
+      path {
+        fill: #353535;
+      }
+    }
+
+    .r-btn {
+      height: 22px;
+      min-width: 0;
+      color: #353535;
+      font-size: $font-size-caption - 1;
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+  }
+
+  @include element('text') {
+    margin: 0 $indent-xsmall;
+  }
+
+  @include modifier('round') {
+    @extend %layer-flex-row;
+    justify-content: center;
+    align-items: center;
+
+    @include modifies-element('inner') {
+      border-radius: 100px;
+    }
+  }
+}
+
+$bem-use-namespaces: false;

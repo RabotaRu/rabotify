@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RFlex should apply different size of element 1`] = `
+
+<div class="layout row wrap">
+  <div class="flex d-flex xs-12 sm-and-down-7">
+    Text
+  </div>
+</div>
+
+`;
+
+exports[`RFlex should conditionally apply if boolean is used 1`] = `
+
+<div class="flex foo">
+</div>
+
+`;
+
+exports[`RFlex should pass the id attr 1`] = `
+
+<div class="flex"
+     id="test"
+>
+</div>
+
+`;

@@ -1,0 +1,195 @@
+@import "../settings/index";
+@import "../tools/index";
+
+@include block('switch', 'component') {
+
+  @include theme-property(background-color, false, false);
+
+  &:not(.input-group_dirty) {
+    .input-group_selection-controls__container {
+      color: $switch-track-inactive !important;
+    }
+  }
+
+  .input-group_selection-controls__ripple {
+    &:after {
+      background-color: $switch-thumb-inactive;
+    }
+
+    &:not(.input-group_selection-controls__ripple_active) {
+      color: $switch-track-inactive;
+    }
+  }
+
+  .input-group_selection-controls__toggle {
+    color: $switch-track-inactive;
+    position: relative !important;
+
+    &_active {
+      color: inherit;
+    }
+  }
+
+  &.input-group_disabled {
+    .input-group_selection-controls__ripple {
+      &:after {
+        background-color: $switch-thumb-disabled !important;
+        @include shadow(0, true);
+      }
+    }
+
+    .input-group_selection-controls__toggle {
+      color: $switch-track-disabled !important;
+    }
+  }
+}
+
+.input-group.input-group_selection-controls {
+  z-index: 0;
+
+  &.switch {
+    min-width: 36px;
+
+    .input-group_selection-controls__container {
+      color: inherit;
+      position: relative;
+
+      #{&}[class*="text_"] {
+        .input-group_selection-controls__ripple_active:after {
+          background-color: currentColor;
+        }
+      }
+    }
+
+    .input-group_selection-controls__toggle {
+      background-color: currentColor;
+      color: inherit;
+      position: absolute;
+      height: $switch-height;
+      width: $switch-width;
+      top: 50%;
+      left: 0;
+      border-radius: 50px;
+      transform: translateY(-50%);
+      transition: .3s get($transition, 'fast-in-fast-out');
+    }
+
+    .input-group_selection-controls__ripple {
+      transform: translate(-15px, -24px);
+      transition: .3s get($transition, 'fast-in-fast-out');
+      z-index: 1;
+
+      &:after {
+        content: '';
+        position: absolute;
+        display: inline-block;
+        cursor: pointer;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        @include shadow(2);
+      }
+
+      &_active {
+        transform: translate(3px, -24px);
+      }
+    }
+
+    label {
+      padding-left: 10px;
+    }
+
+    &.input-group_static-label {
+      .input-group__input {
+        padding-left: 0;
+      }
+    }
+
+    &_small {
+      &.input-group_selection-controls {
+        &:not(.input-group_static-label) {
+          label {
+            left: $switch-small-width;
+            top: -1px;
+          }
+        }
+
+        &.input-group_static-label {
+          label {
+            padding-left: 8px;
+          }
+        }
+      }
+
+      .input-group_selection-controls__ripple {
+        width: 32px;
+        height: 32px;
+        transform: translate(-9px, -16px);
+
+        &:after {
+          width: $switch-small-height - 2;
+          height: $switch-small-height - 2;
+
+          @include shadow(1);
+        }
+
+        &_active {
+          transform: translate(1px, -16px);
+        }
+      }
+
+      .input-group_selection-controls__toggle {
+        height: $switch-small-height;
+        width: $switch-small-width;
+      }
+    }
+
+    &_large {
+      &.input-group_selection-controls {
+        &:not(.input-group_static-label) {
+          label {
+            left: $switch-large-width;
+            top: 1px;
+          }
+        }
+
+        &.input-group_static-label {
+          label {
+            padding-left: 12px;
+          }
+        }
+      }
+
+      .input-group_selection-controls__ripple {
+        width: 72px;
+        height: 72px;
+        transform: translate(-18px, -36px);
+
+        &:after {
+          width: $switch-large-height - 4;
+          height: $switch-large-height - 4;
+
+          @include shadow(4);
+        }
+
+        &_active {
+          transform: translate(9px, -36px);
+        }
+      }
+
+      .input-group_selection-controls__toggle {
+        height: $switch-large-height;
+        width: $switch-large-width;
+      }
+
+      .input-group__input {
+        min-height: $switch-large-height;
+      }
+    }
+  }
+}
+

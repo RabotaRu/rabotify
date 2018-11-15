@@ -1,0 +1,54 @@
+@import "../settings/index";
+@import "../tools/index";
+
+@include block('radio', 'component') {
+
+  @include theme-property-text(background, false, false, 1,
+    get-block() + ".text_$theme$ .radio__inner-circle", true);
+  @include theme-property-text(border-color, false, false, 1,
+    get-block() + ".input-group_active.text_$theme$ .radio__content", true);
+
+  @include element('content') {
+    @extend %layer-flex-row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 3px;
+    top: 8px;
+    border: 1px solid $border-color;
+    border-radius: 50%;
+    width: $radio-size;
+    height: $radio-size;
+    background-color: transparent;
+    transition: $primary-transition;
+  }
+
+  @include element('inner-circle') {
+    display: block;
+    transform-origin: 50% 50%;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    transition-timing-function: cubic-bezier(0.38, 0.35, 0, 1.66);
+
+    .input-group_error & {
+      background-color: $error-color;
+    }
+  }
+
+  &:not(.input-group_static-label) {
+    &:not(:last-of-type) {
+      margin-bottom: $indent-xsmall;
+    }
+  }
+
+  &.input-group_static-label {
+    .input-group__input {
+      max-height: $input-height;
+    }
+
+    .radio-group_column & {
+      display: block;
+    }
+  }
+}

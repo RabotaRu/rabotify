@@ -1,0 +1,322 @@
+@import "../settings/index";
+@import "../tools/index";
+
+@include block('list', 'component') {
+  background: white;
+  list-style-type: none;
+  padding: $list-top-padding 0 $list-bottom-padding;
+  transition: height .3s get($transition, 'fast-out-slow-in');
+
+  .list__tile:not(.list__tile_active) {
+    color: $primary-text;
+  }
+
+  .list__tile__sub-title {
+    color: $primary-text;
+  }
+
+  .divider {
+    background-color: $divider-color;
+  }
+
+  .list__tile__mask {
+    color: $app-text-color-disabled;
+  }
+
+  &_group {
+    .list__tile_active {
+      .list__tile__title {
+        color: $app-text-color-link;
+      }
+    }
+  }
+
+  .input-group {
+    margin: 0;
+
+    > .list__tile ~ .list__tile {
+      margin-top: 0;
+    }
+  }
+
+  @include element('tile') {
+    font-size: $list-tile-font-size;
+    font-weight: $list-tile-font-weight;
+    display: flex;
+    height: $list-item-single-height;
+    text-decoration: none;
+    align-items: center;
+    padding: 0 16px;
+    margin: 0;
+    transition: $primary-transition;
+    position: relative;
+    user-select: none;
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 1px;
+      opacity: 0;
+      width: 100%;
+      transition: $primary-transition;
+      background-color: transparentize(black, .92);
+    }
+
+    @include modifier('link') {
+      cursor: pointer;
+
+      &:hover {
+        background: transparentize(black, .92);
+        text-decoration: none;
+      }
+    }
+
+    @include modifier('highlighted') {
+      background: transparentize(black, .92);
+    }
+
+    &__content,
+    &__action,
+    &__avatar {
+      height: 100%;
+    }
+
+    &__title, &__sub-title {
+      width: 100%;
+
+      @include overflow-ellipsis;
+    }
+
+    &__title {
+      transition: $primary-transition;
+      height: 24px;
+      line-height: 24px;
+      position: relative;
+      text-align: left;
+    }
+
+    &__sub-title {
+      font-size: $list-sub-title-font-size;
+    }
+
+    .avatar {
+      justify-content: flex-start;
+      min-width: 56px;
+    }
+
+    &__action {
+      display: flex;
+      justify-content: flex-start;
+      min-width: 48px;
+      align-items: center;
+
+      .input-group_selection-controls {
+        align-items: center;
+        padding: 0;
+      }
+
+      .input-group__details {
+        display: none;
+      }
+
+      .icon {
+        transition: $primary-transition;
+      }
+
+      .r-btn {
+        // fix button padding if used
+        padding: 0;
+        margin: 0;
+
+        &_icon {
+          margin: -8px;
+        }
+      }
+
+      &-text {
+        color: $list-action-text-font-color;
+        font-size: $list-action-text-font-size;
+      }
+
+      &_stack {
+        align-items: flex-end;
+        justify-content: space-between;
+        padding-top: $list-top-padding;
+        padding-bottom: $list-bottom-padding;
+        white-space: nowrap;
+        flex-direction: column;
+      }
+    }
+
+    &__content {
+      text-align: left;
+      flex: 1 1 auto;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      flex-direction: column;
+
+      & ~ .list__tile__action:not(.list__tile__action_stack) {
+        justify-content: flex-end;
+      }
+    }
+
+    &_active {
+      .list__tile__action:first-of-type {
+        .icon {
+          color: inherit;
+        }
+      }
+    }
+
+    &_disabled {
+      opacity: 0.4 !important;
+      pointer-events: none !important;
+    }
+  }
+
+  @include modifier('dense') {
+    padding-top: $list-item-dense-top-padding;
+    padding-bottom: $list-item-dense-top-padding;
+
+    .subheader {
+      font-size: $subheader-dense-font-size;
+      height: $list-dense-subheader-height;
+    }
+
+    .list_group {
+      .subheader {
+        height: $list-dense-subheader-group-height;
+      }
+    }
+
+    .list__tile {
+      font-size: $list-item-dense-font-size;
+
+      &_avatar {
+        height: $list-item-dense-avatar-single-height;
+      }
+
+      &:not(.list__tile_avatar) {
+        height: $list-item-dense-single-height;
+      }
+
+      .icon {
+        font-size: $list-item-dense-icon-font-size;
+      }
+    }
+
+    .list__tile__sub-title {
+      font-size: $list-item-dense-font-size;
+    }
+  }
+
+  &_two-line {
+    .list__tile {
+      height: $list-item-double-height
+    }
+
+    &.list_dense {
+      .list__tile {
+        height: $list-item-dense-double-height;
+      }
+    }
+  }
+
+  &_three-line {
+    .list__tile {
+      height: $list-item-triple-height;
+    }
+
+    // Chrome fix
+    .list__tile__sub-title {
+      white-space: initial;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      display: -webkit-box;
+    }
+
+    &.list_dense {
+      .list__tile {
+        height: $list-item-dense-triple-height;
+      }
+    }
+  }
+
+  &_group {
+    position: relative;
+    padding: 0;
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 1px;
+      opacity: 0;
+      width: 100%;
+      background-color: transparentize(black, .92);
+    }
+
+    .list__tile {
+      padding-left: $list-item-left-padding;
+    }
+
+    &__header {
+      > li:first-child {
+        cursor: pointer;
+        display: block;
+
+        &:hover {
+          background: transparentize(black, .92);
+        }
+      }
+
+      + .list_group {
+        &:after {
+          opacity: 1;
+        }
+      }
+
+      &_active {
+        .list__tile {
+          background: transparentize(black, .92);
+
+          &:after {
+            opacity: 1;
+          }
+
+          .list__tile__title {
+            color: inherit;
+          }
+
+          .list__tile__action:last-of-type {
+            .icon {
+              transform: rotate(-180deg);
+            }
+          }
+        }
+      }
+
+      &_no-action + .list_group {
+        .list__tile {
+          padding-left: $list-left-padding;
+        }
+      }
+    }
+  }
+
+  &_subheader {
+    padding-top: 0;
+  }
+
+  &.list_two-line,
+  &.list_three-line {
+    .list__tile__avatar {
+      align-items: flex-start;
+    }
+  }
+}

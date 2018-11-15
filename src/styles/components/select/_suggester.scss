@@ -1,0 +1,62 @@
+@import "../../settings/index";
+@import "../../tools/index";
+
+$bem-use-namespaces: true;
+
+@include block('suggester', 'component') {
+  display: block;
+
+  @include element('input-group') {
+    @extend %layer-flex-row;
+    align-items: center;
+  }
+
+  @include element('input') {
+  }
+
+  @include element('prepend-icon') {
+    @extend %layer-flex-column;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    margin: 0;
+  }
+
+  @include element('append-icon') {
+    @extend %layer-flex-column;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    margin: 0;
+  }
+
+  @include element('clearable-button') {
+    margin: {
+      top: 0 !important;
+      bottom: 0 !important;
+      right: $indent-xsmall;
+    };
+  }
+
+  @include element('menu-wrapper') {
+    display: none;
+  }
+
+  @include modifier('focused') {
+    @include modifies-element('input-group') {
+      border: 1px solid $secondary-color;
+    }
+  }
+
+  @include modifier('error') {
+    @include modifies-element('input-group') {
+      border: 1px solid $red-color;
+    }
+
+    @include modifies-element('input') {
+      color: $red-color;
+    }
+  }
+}
+
+$bem-use-namespaces: false;

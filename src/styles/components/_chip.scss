@@ -1,0 +1,197 @@
+@import "../settings/index";
+@import "../tools/index";
+
+$bem-use-namespaces: true;
+
+@include block('chip', 'component') {
+  background: $chip-background;
+  color: $chip-color;
+
+  align-items: center;
+  border-radius: $chip-border-radius;
+  border: 1px solid transparent;
+  display: inline-flex;
+  font-size: $chip-font-size;
+  margin: $chip-margin;
+  outline: none;
+  position: relative;
+  transition: $primary-transition;
+  vertical-align: middle;
+
+  @include theme-property(background-color);
+  @include theme-property(color fill, white, false);
+
+  // Нужно подумать над переделываением формирования тем, оно не предусматривает тот факт, что текст может быть темным, а фон светлым
+  &.info {
+    fill: black;
+    color: black;
+  }
+
+  @include theme-property-text(color border-color fill, false, false);
+
+  @include element('content') {
+    align-items: center;
+    border-radius: $chip-border-radius;
+    cursor: default;
+    display: inline-flex;
+    height: $chip-height;
+    justify-content: space-between;
+    padding: $chip-padding;
+    vertical-align: middle;
+    white-space: nowrap;
+    z-index: 1;
+  }
+
+  @include modifier('removable') {
+    @include modifies-element('content') {
+      padding: $chip-removable-padding;
+    }
+  }
+
+  &:focus,
+  &_active,
+  &_selected {
+    &:not(#{get-block()}_disabled) {
+      @include shadow(2);
+
+      &:after {
+        background: currentColor;
+        border-color: currentColor;
+        border-radius: inherit;
+        content: '';
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: inherit;
+        width: 100%;
+        pointer-events: none;
+        opacity: .13;
+      }
+    }
+  }
+
+  @include modifier('label') {
+    border-radius: $chip-label-border-radius;
+
+    @include modifies-element('content') {
+      border-radius: $chip-label-border-radius;
+    }
+  }
+
+  @include modifier('disabled') {
+    background-color: $gray-light-color !important;
+    color: $gray-color !important;
+    border-color: $gray-color !important;
+
+    * {
+      fill: $gray-color !important;
+    }
+
+    @include modifies-element('close') {
+      pointer-events: none;
+    }
+  }
+
+  @include modifier('outline') {
+    background: $chip-outline-background;
+    border-color: currentColor;
+    color: $chip-outline-color;
+
+    @include modifies-element('close') {
+      border-left: 1px solid currentColor !important;
+    }
+  }
+
+  @include modifier('round') {
+    border-radius: 50px;
+
+    @include modifies-element('close') {
+      border-radius: 50px;
+    }
+  }
+
+  @include modifier('small') {
+
+    @include modifies-element('content') {
+      height: $chip-small-height;
+    }
+
+    .avatar {
+      height: $chip-small-height;
+      min-width: $chip-small-height;
+      width: $chip-small-height;
+    }
+
+    .icon {
+      font-size: $chip-small-font-size;
+    }
+  }
+
+  @include element('close') {
+    align-items: center;
+    color: inherit;
+    cursor: pointer;
+    display: flex;
+    font-size: $chip-icon-font-size;
+    margin: $chip-close-margin !important;
+    text-decoration: none;
+    transition: none !important;
+    user-select: none;
+    background-color: transparent !important;
+    max-height: 100%;
+    border-radius: 0;
+    border-left: 1px solid transparentize(white, .3) !important;
+
+    .icon {
+      color: inherit !important;
+      width: 14px;
+      height: 14px;
+    }
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+
+  @include modifier('removable') {
+    @include modifies-element('content') {
+      padding-right: 0;
+    }
+  }
+
+  @include modifier('default') {
+    @include modifies-element('close') {
+      .icon path {
+        transition: $primary-transition;
+      }
+
+      &:hover {
+        .icon path {
+          fill: $error-color;
+        }
+      }
+    }
+  }
+
+  @include modifier('select-multi') {
+    margin: $chip-select-multi-margin;
+  }
+
+  .icon {
+    color: inherit;
+    transition: none;
+
+    &_right {
+      margin-left: $chip-icon-offset;
+      margin-right: $chip-icon-negative-offset;
+    }
+
+    &_left {
+      margin-left: $chip-icon-negative-offset;
+      margin-right: $chip-icon-offset;
+    }
+  }
+}
+
+$bem-use-namespaces: false;

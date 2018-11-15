@@ -1,0 +1,58 @@
+@import "../settings/index";
+@import "../tools/index";
+
+@include block('menu', 'component') {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+
+  @include modifier('disabled') {
+    cursor: default;
+
+    @include modifies-element('activator') {
+      &,
+      & > * {
+        cursor: default;
+        pointer-events: none;
+      }
+    }
+  }
+
+  @include element('activator') {
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+
+    input[readonly] {
+      cursor: pointer;
+    }
+  }
+
+  @include element('content') {
+    position: absolute;
+    display: inline-block;
+    border-radius: $radius-small;
+    max-width: 80%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: .3s get($transition, 'swing');
+    contain: content;
+
+    @include shadow(5);
+
+    @include modifier('active') {
+      pointer-events: none;
+    }
+
+    @include modifier('dropdown') {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      border-top: 1px solid $divider-color;
+    }
+
+    & > .card {
+      contain: content;
+      backface-visibility: hidden;
+    }
+  }
+}

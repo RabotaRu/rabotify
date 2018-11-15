@@ -1,0 +1,107 @@
+@import "../../settings/index";
+@import "../../tools/index";
+
+@include block('dialog-card', 'component') {
+  background-color: #fff;
+  overflow: hidden;
+  border-radius: $radius-xlarge;
+
+  @include element('header') {
+  }
+
+  @include element('close') {
+    position: absolute;
+    z-index: 11;
+    top: 8px;
+    right: 8px;
+
+    .r-btn {
+      margin: 0;
+
+      .md-icon {
+        fill: $secondary-text;
+      }
+    }
+
+    .dialog_sidebar & {
+      @include media-query(sm-and-up) {
+        top: $indent-large;
+        right: $indent-large;
+      }
+    }
+  }
+
+  @include element('inner') {
+    -webkit-overflow-scrolling: touch;
+    padding: $dialog-padding-desktop !important;
+
+    @include media-query(sm-and-down) {
+      padding: $dialog-padding-mobile !important;
+    }
+
+    .dialog_fullscreen & {
+      @include container;
+    }
+
+    .dialog_sidebar &,
+    .dialog_fullscreen & {
+      padding: $sidebar-padding-desktop !important;
+
+      @include media-query(sm-and-down) {
+        padding: $sidebar-padding-mobile !important;
+      }
+    }
+
+    .dialog_scrollable & {
+      padding-top: 0 !important;
+    }
+  }
+
+  @include element('actions') {
+    @extend %layer-flex-row;
+    background-color: white;
+    padding: $dialog-actions-padding-desktop;
+
+    @include media-query(sm-and-down) {
+      padding: $dialog-actions-padding-mobile;
+    }
+
+    .dialog_fullscreen & {
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      z-index: 2;
+      left: 50%;
+      @include container;
+      transform: translateX(-50%);
+    }
+
+    .r-btn {
+      margin: 0;
+    }
+
+    .dialog_sidebar &,
+    .dialog_fullscreen & {
+      padding: $sidebar-actions-padding-desktop;
+
+      @include media-query(sm-and-down) {
+        padding: $sidebar-actions-padding-mobile;
+      }
+    }
+  }
+
+  .dialog_fullscreen & {
+    padding-bottom: 66px !important;
+
+    .mobile-header__inner {
+      @include container;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .dialog_sidebar &,
+  .dialog_fullscreen & {
+    border-radius: 0 !important;
+  }
+}

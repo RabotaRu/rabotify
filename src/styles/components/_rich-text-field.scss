@@ -1,0 +1,20 @@
+@import "../settings/index";
+@import "../tools/index";
+@import '~quill/dist/quill.core.css';
+@import '~quill/dist/quill.snow.css';
+@import '~quill/dist/quill.bubble.css';
+
+@include block('quill-editor', 'component') {
+	.ql-container.ql-snow,
+	.ql-toolbar.ql-snow {
+		border-color: $border-color;
+	}
+	.ql-toolbar {
+		border-top-left-radius: $radius-small;
+		border-top-right-radius: $radius-small;
+	}
+	.ql-container {
+		border-bottom-left-radius: $radius-small;
+		border-bottom-right-radius: $radius-small;
+	}
+}

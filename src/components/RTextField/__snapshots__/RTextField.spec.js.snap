@@ -1,0 +1,134 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RTextField.vue should always show details when preserveDetails is \`true\` 1`] = `
+
+<div class="input-group input-group_dirty input-group_text-field">
+  <div class="input-group__input">
+    <input tabindex="0"
+           type="text"
+    >
+  </div>
+  <div class="input-group__details">
+  </div>
+</div>
+
+`;
+
+exports[`RTextField.vue should calculate element height when using auto-grow prop 1`] = `
+
+<div class="input-group input-group_focused input-group_dirty input-group_text-field input-group_multi-line input-group_no-resize">
+  <div class="input-group__input">
+    <textarea tabindex="0"
+              rows="5"
+              style="height: 120px;"
+    >
+    </textarea>
+  </div>
+  <div class="input-group__details"
+       style="display: none;"
+  >
+  </div>
+</div>
+
+`;
+
+exports[`RTextField.vue should match auto-grow snapshot 1`] = `
+
+<div class="input-group input-group_text-field input-group_textarea input-group_no-resize">
+  <div class="input-group__input">
+    <textarea tabindex="0"
+              rows="5"
+              style="height: 124px;"
+    >
+    </textarea>
+  </div>
+  <div class="input-group__details"
+       style="display: none;"
+  >
+  </div>
+</div>
+
+`;
+
+exports[`RTextField.vue should match multi-line snapshot 1`] = `
+
+<div class="input-group input-group_text-field input-group_multi-line">
+  <div class="input-group__input">
+    <textarea tabindex="0"
+              rows="5"
+    >
+    </textarea>
+  </div>
+  <div class="input-group__details"
+       style="display: none;"
+  >
+  </div>
+</div>
+
+`;
+
+exports[`RTextField.vue should match textarea snapshot 1`] = `
+
+<div class="input-group input-group_text-field input-group_textarea">
+  <div class="input-group__input">
+    <textarea tabindex="0"
+              rows="5"
+    >
+    </textarea>
+  </div>
+  <div class="input-group__details"
+       style="display: none;"
+  >
+  </div>
+</div>
+
+`;
+
+exports[`RTextField.vue should not display counter when set to false 1`] = `
+
+<div class="input-group input-group_text-field">
+  <div class="input-group__input">
+    <input tabindex="0"
+           type="text"
+    >
+  </div>
+  <div class="input-group__details">
+    <div class="input-group__counter">
+      0 / 25
+    </div>
+  </div>
+</div>
+
+`;
+
+exports[`RTextField.vue should not display counter when set to false 2`] = `
+
+<div class="input-group input-group_text-field">
+  <div class="input-group__input">
+    <input tabindex="0"
+           type="text"
+    >
+  </div>
+  <div class="input-group__details"
+       style="display: none;"
+  >
+  </div>
+</div>
+
+`;
+
+exports[`RTextField.vue should render component and match snapshot 1`] = `
+
+<div class="input-group input-group_text-field">
+  <div class="input-group__input">
+    <input tabindex="0"
+           type="text"
+    >
+  </div>
+  <div class="input-group__details"
+       style="display: none;"
+  >
+  </div>
+</div>
+
+`;

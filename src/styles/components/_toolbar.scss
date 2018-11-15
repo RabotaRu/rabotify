@@ -1,0 +1,161 @@
+@import "../settings/index";
+@import "../tools/index";
+
+@include block('toolbar', 'component') {
+  position: relative;
+  transition: .2s get($transition, 'fast-out-slow-in');
+  width: 100%;
+  will-change: padding-left;
+  background-color: white;
+  color: $app-text-color;
+  z-index: 2;
+
+  & + .dialog-card__inner {
+    padding-top: 0 !important;
+  }
+
+  @include shadow(4);
+  @include theme-property(background-color, false, false);
+  @include theme-property(color, white);
+
+  @include element('title') {
+    @include font-body;
+    @include overflow-ellipsis;
+    margin-left: 32px;
+
+    .dialog & {
+      margin-left: 0;
+    }
+  }
+
+  @include element('content') {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: .2s get($transition, 'fast-in-slow-out');
+
+    .dialog & {
+      height: auto !important;
+      padding-top: $dialog-padding-desktop;
+      padding-left: $dialog-padding-left-right-desktop;
+      padding-right: $dialog-padding-left-right-desktop;
+      padding-bottom: $dialog-title-indent-desktop;
+
+      @include media-query($mobile-breakpoint) {
+        padding-top: $dialog-padding-mobile;
+        padding-left: $dialog-padding-left-right-mobile;
+        padding-right: $dialog-padding-left-right-mobile;
+        padding-bottom: $dialog-title-indent-mobile;
+      }
+    }
+
+    .dialog_full-height &,
+    .dialog_fullscreen & {
+      padding-top: $sidebar-padding-desktop;
+      padding-left: $sidebar-padding-left-right-desktop;
+      padding-right: $sidebar-padding-left-right-desktop;
+
+      @include media-query($mobile-breakpoint) {
+        padding-top: $sidebar-padding-mobile;
+        padding-left: $sidebar-padding-left-right-mobile;
+        padding-right: $sidebar-padding-left-right-mobile;
+      }
+    }
+
+    @include media-query(md-and-up) {
+      padding-right: $indent-small;
+    }
+
+    > .list {
+      flex: 1 1 auto;
+      margin: 0 !important;
+      max-height: 100%;
+    }
+
+    > .r-btn:first-child,
+    > .r-btn:last-child,
+    > .menu:first-child {
+      margin-right: $indent-small;
+    }
+  }
+
+  @include element('extension') {
+    display: flex;
+    align-items: center;
+
+    #{get-element('title')} {
+      margin-left: 72px !important;
+    }
+
+    .tabs__bar {
+      align-self: flex-end;
+      margin: 0;
+    }
+
+    > .list {
+      flex: 1 1 auto;
+      margin: 0 !important;
+      max-height: 100%;
+    }
+
+    > .r-btn:first-child,
+    > .r-btn:last-child,
+    > .menu:first-child {
+      margin-right: $indent-small;
+    }
+  }
+
+  @include element('items') {
+    display: flex;
+    height: 100%;
+    max-width: 100%;
+    padding: 0;
+  }
+
+  @include modifier('card') {
+    border-radius: $card-border-radius $card-border-radius 0 0;
+    @include shadow(0);
+  }
+
+  @include modifier('flat') {
+    @include shadow(0);
+  }
+
+  @include modifier('light') {
+    @include modifies-element('title') {
+      @include font-title;
+      margin-bottom: 0;
+      color: $app-text-color;
+    }
+  }
+
+  @include modifier('fixed') {
+    @extend %layer-fixed;
+    z-index: 2;
+  }
+
+  @include modifier('absolute') {
+    @extend %layer-absolute;
+    z-index: 2;
+  }
+
+  @include modifier('floating') {
+    display: inline-flex;
+    margin: $indent-medium;
+    width: auto;
+  }
+
+  .input-group_solo {
+    .input-group__details {
+      display: none;
+    }
+  }
+
+  .input-group_single-line:not(.input-group_solo) {
+    padding: 0;
+
+    label {
+      top: auto;
+    }
+  }
+}

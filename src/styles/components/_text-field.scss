@@ -1,0 +1,311 @@
+@import "../settings/index";
+@import "../tools/index";
+
+@include block('input-group_text-field', 'component') {
+
+  @include theme-property-text(border-color caret-color color, false, false, 1,
+    get-block() + ".text_$theme$ input, " + get-block() + ".text_$theme$ textarea", true);
+  @include theme-property-text(color, false, false, 1,
+    get-block() + ".text_$theme$ input::placeholder, " + get-block() + ".text_$theme$ textarea::placeholder", true);
+  @include theme-property-text(background-color, false, false, .4,
+    get-block() + ".text_$theme$ input::selection, " + get-block() + ".text_$theme$ textarea::selection", true);
+
+  @include theme-property-text(fill, false, false, 1, get-block() + ".text_$theme$ .r-btn:not(.r-chip__close) .icon", true);
+
+  /** Label */
+  label {
+    position: absolute;
+    top: $input-group-text-field-label-top;
+    left: $input-group-text-field-label-left;
+    color: $gray-dark-color;
+
+    @include theme-property-text(color, false, false, 1, get-block() + ".text_$theme$ label", true);
+  }
+
+  /** Input */
+  input,
+  textarea {
+    font-size: $input-font-size;
+    background-color: $text-field-background;
+    color: inherit;
+    border: 1px solid $border-color;
+    padding: $indent-small;
+    border-radius: $radius-small;
+    margin: 0;
+    box-shadow: none;
+    flex: 1;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:disabled {
+      pointer-events: none;
+    }
+
+    @include input-placeholder-color($text-field-placeholder-color, (focus: $text-field-placeholder-color-focus)) {
+      transition: .2s get($transition, 'swing');
+    }
+
+    @include media-query($mobile-breakpoint) {
+      border-radius: 0;
+      border: 1px solid transparentize(black, .75);
+      background-color: $text-field-background-mobile;
+      border-top-color: transparent !important;
+      border-right-color: transparent !important;
+      border-left-color: transparent !important;
+
+      &:disabled {
+        border-bottom-color: transparent !important;
+      }
+
+      &:focus {
+        background-color: transparentize($secondary-color, .9);
+      }
+    }
+  }
+
+  &.input-group_error {
+    .input-group__input {
+      input {
+        @include media-query($mobile-breakpoint) {
+          background-color: transparentize($error-color, .94);
+        }
+      }
+    }
+  }
+
+  &.text_white {
+    .input-group__input {
+      input {
+        border-bottom-color: transparentize(white, .65) !important;
+        background-color: $text-field-background-mobile-white;
+
+        @include input-placeholder-color(transparentize(white, .35));
+
+        @include media-query(md-and-up) {
+          border-color: transparentize(white, .65) !important;
+        }
+
+        &:focus {
+          background-color: transparentize(white, .8);
+
+          @include media-query($mobile-breakpoint) {
+            border-bottom-color: $white-color !important;
+          }
+
+          @include media-query(md-and-up) {
+            border-color: $white-color !important;
+          }
+        }
+      }
+    }
+
+    .input-group__icon-clearable {
+      &:hover {
+        background-color: transparent !important;
+      }
+    }
+  }
+
+  input {
+    height: $input-height;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  /** Counter */
+  &:not(.input-group_error) {
+    .input-group__counter {
+      color: $black-color;
+    }
+  }
+
+  .input-group__counter {
+    margin-left: auto;
+
+    &_error {
+      color: $error-color !important;
+    }
+
+    &_warn {
+      color: $warning-color !important;
+    }
+  }
+
+  /** Input States */
+  &.input-group_placeholder.input-group_dirty {
+    input::placeholder,
+    textarea::placeholder {
+      opacity: 0;
+    }
+  }
+
+  /** Types */
+  // Icons
+  &.input-group_prepend-icon {
+    .input-group__prepend-icon {
+      align-items: center;
+      display: flex;
+      justify-content: flex-start;
+      min-width: 40px;
+      transition: .3s get($transition, 'fast-in-fast-out');
+    }
+
+    .input-group__details {
+      margin-left: auto;
+      max-width: calc(100% - 40px);
+    }
+
+    label {
+      left: 40px;
+    }
+  }
+
+  .input-group__input {
+    position: relative;
+  }
+
+  .input-group__icon-clearable {
+    position: absolute;
+    margin: 3px;
+    right: 0;
+    top: 0;
+
+    @include media-query($mobile-breakpoint) {
+      &:hover {
+        background-color: transparent !important;
+      }
+    }
+  }
+
+  &:not(.input-group_single-line) {
+    &.input-group_focused,
+    &.input-group_placeholder {
+      label {
+        opacity: 1;
+      }
+
+      &:not(.input-group_textarea) {
+        label {
+          transform: translate(-#{$input-group-text-field-label-left}, -25px) scale(.8);
+        }
+      }
+
+      &:not(.input-group_full-width).input-group_textarea {
+        label {
+          transform: translate(-#{$input-group-text-field-label-left}, -25px) scale(.8);
+        }
+      }
+
+      &.input-group_text-field-box {
+        label {
+          transform: translate(0, -10px) scale(.8);
+          left: 0;
+        }
+      }
+    }
+  }
+
+  &.input-group_dirty {
+    &.input-group_select,
+    &:not(.input-group_textarea) {
+      label {
+        transform: translate(-#{$input-group-text-field-label-left}, -25px) scale(.8);
+      }
+    }
+
+    &:not(.input-group_full-width).input-group_textarea {
+      label {
+        transform: translate(-#{$input-group-text-field-label-left}, -25px) scale(.8);
+      }
+    }
+  }
+
+  &:not(.input-group_dirty) {
+    &.input-group_textarea {
+      label {
+        top: $input-group-text-field-label-top + 2;
+      }
+    }
+  }
+
+  // Textarea
+  &.input-group_no-resize {
+    textarea {
+      resize: none;
+    }
+  }
+
+  // Full Width
+  &.input-group_full-width {
+    padding: 16px;
+
+    label {
+      margin-left: $indent-medium;
+    }
+
+    .input-group__details:before,
+    .input-group__details:after {
+      display: none;
+    }
+  }
+
+  /** Prefix/Suffix */
+  .input-group_prefix {
+    &:not(.input-group_focused):not(.input-group_dirty) {
+      label {
+        left: 16px;
+      }
+    }
+  }
+
+  .input-group_prefix,
+  .input-group_suffix {
+    .input-group_text-field__prefix,
+    .input-group_text-field__suffix {
+      align-items: center;
+      display: inline-flex;
+      font-size: 16px;
+      margin-top: 1px;
+    }
+
+    .input-group_text-field__prefix {
+      margin-right: 3px;
+    }
+
+    .input-group_text-field__suffix {
+      margin-left: 3px;
+    }
+  }
+}
+
+/** Prefix/Suffix */
+.input-group_prefix {
+  &:not(.input-group_focused):not(.input-group_dirty) {
+    label {
+      left: 16px;
+    }
+  }
+}
+
+.input-group_prefix,
+.input-group_suffix {
+  .input-group_text-field__prefix,
+  .input-group_text-field__suffix {
+    align-items: center;
+    display: inline-flex;
+    font-size: 16px;
+    margin-top: 1px;
+  }
+
+  .input-group_text-field__prefix {
+    margin-right: 3px;
+  }
+
+  .input-group_text-field__suffix {
+    margin-left: 3px;
+  }
+}

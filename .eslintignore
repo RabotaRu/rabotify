@@ -1,0 +1,11 @@
+﻿build/*.js
+es5/*
+dist/*
+.github/*
+dev/*
+src/styles/*.scss
+src/util/testing.js
+src/util/to-have-been-warned.js
+src/util/resource-loader.js
+src/components/RMap/*
+src/utils/*

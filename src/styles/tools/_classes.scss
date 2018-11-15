@@ -1,0 +1,91 @@
+@import "mixins";
+
+%layer-block {
+  display: block;
+  width: 100%;
+}
+
+%layer-block-fill {
+  @extend %layer-block;
+  height: 100%;
+}
+
+%layer-flex, %layer-flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+%layer-flex-column {
+  @extend %layer-flex;
+  flex-direction: column;
+}
+
+%layer-vh-center {
+  @extend %layer-flex-row;
+  justify-content: center;
+  align-items: center;
+}
+
+%layer-absolute {
+  @extend %layer-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+%layer-absolute-fill {
+  @extend %layer-absolute;
+  height: 100%;
+  right: 0;
+  bottom: 0;
+}
+
+%layer-fixed {
+  @extend %layer-block;
+  position: fixed;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  top: 0;
+  left: 0;
+}
+
+%layer-fixed-fill {
+  @extend %layer-fixed;
+  height: 100%;
+  right: 0;
+  bottom: 0;
+}
+
+%layer-absolute-xy-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+%layer-absolute-x-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+%layer-absolute-y-center {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+%link {
+  text-decoration: none;
+}
+
+%link-inline-block {
+  @extend %link;
+  display: inline-block;
+}
+
+%link-block {
+  @extend %link;
+  display: block;
+}

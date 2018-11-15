@@ -1,0 +1,20 @@
+@import '../tools/mixins';
+@import "../settings/colors";
+
+@include block('icon', 'utility') {
+  width: $icon-size;
+  height: $icon-size;
+  background-color: transparent;
+
+  @include theme-property(color fill, false, false);
+
+  @include modifier('large') {
+    width: $icon-large-size;
+    height: $icon-large-size;
+  }
+
+  @include modifier('small') {
+    width: $icon-small-size;
+    height: $icon-small-size;
+  }
+}

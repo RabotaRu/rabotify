@@ -1,0 +1,47 @@
+@import "../../settings/index";
+@import "../../tools/index";
+
+@include block('dialog-header', 'component') {
+  position: relative;
+  z-index: 10;
+  padding: $indent-xlarge;
+  padding-bottom: 0;
+
+  @include shadow( 4 );
+
+  @include media-query(sm-and-down) {
+    padding: $indent-medium;
+  }
+
+  @include element('title') {
+    font-size: $font-size-headline;
+    font-weight: $font-weight-bold !important;
+    margin-bottom: 0;
+
+    @include media-query(sm-and-down) {
+      font-size: $font-size-subheading;
+    }
+  }
+
+  @include modifier('flat') {
+    @include shadow( 0 );
+  }
+
+  .dialog_scrollable & {
+    padding-bottom: $indent-medium * 2;
+
+    @include media-query(sm-and-down) {
+      padding-bottom: $indent-medium;
+    }
+  }
+
+  .dialog_sidebar & {
+    padding: 56px;
+    padding-bottom: $indent-medium * 2;
+
+    @include media-query(sm-and-down) {
+      padding: $indent-medium;
+      padding-bottom: $indent-medium;
+    }
+  }
+}

@@ -1,0 +1,422 @@
+@import "../settings/index";
+@import "../tools/index";
+
+@include block('input-group', 'component') {
+  display: flex;
+  align-items: flex-start;
+  flex: 1 1;
+  flex-wrap: wrap;
+  min-width: 24px;
+  position: relative;
+  width: 100%;
+  outline: none;
+
+  @include shadow-transition();
+
+  label {
+    display: inline-block;
+    font-size: $input-font-size;
+    line-height: $input-height;
+    height: $input-height;
+    max-width: 90%;
+    min-width: 0;
+    overflow: hidden;
+    pointer-events: none;
+    text-align: left;
+    text-overflow: ellipsis;
+    transform-origin: top left;
+    transition: .2s $primary-transition-function;
+    white-space: nowrap;
+    width: 100%;
+    z-index: 1;
+  }
+
+  @include element('input') {
+    display: flex;
+    flex: 1 0 100%;
+    min-width: 0;
+    min-height: $input-height;
+  }
+
+  @include element('icon-cb') {
+    cursor: pointer;
+  }
+
+  &.input-group_focused,
+  &.input-group_error {
+    .input-group__append-icon,
+    .input-group__prepend-icon {
+      color: inherit;
+
+      &, & * {
+        fill: inherit;
+      }
+    }
+  }
+
+  &.input-group_label {
+    padding: $input-group-padding;
+  }
+
+  &.input-group_append-icon,
+  &.input-group_selection-controls {
+    label {
+      max-width: 75%;
+    }
+  }
+
+  &.input-group_prepend-icon {
+    label {
+      max-width: 75%;
+    }
+  }
+
+  &.input-group_append-icon.input-group_prepend-icon {
+    label {
+      max-width: 65%;
+    }
+  }
+
+  .input-group__append-icon {
+    padding: 0 6px;
+    transition: .3s $secondary-transition-function;
+  }
+
+  .input-group__append-icon,
+  .input-group__prepend-icon {
+    display: flex;
+    align-self: center;
+    user-select: none;
+  }
+
+  &.input-group_single-line,
+  &.input-group_solo {
+    &.input-group_dirty {
+      label {
+        display: none
+      }
+    }
+  }
+
+  // Solo
+  &.input-group_solo {
+    background: #fff;
+    min-height: 46px;
+    border-radius: $radius-small;
+    padding: 0;
+
+    @include shadow(2);
+
+    label {
+      top: 8px;
+      padding-left: 16px;
+      transform: none !important;
+    }
+
+    .input-group__input {
+      align-items: center;
+      padding: 8px 16px;
+    }
+
+    .input-group__details {
+      display: none;
+    }
+  }
+
+  &_disabled {
+    .input-group__details:before {
+      background-color: transparent;
+      background-position: bottom;
+      background-size: 3px 1px;
+      background-repeat: repeat-x;
+    }
+  }
+
+  // Focused
+  &.input-group_text-field {
+    &:not(.input-group_single-line):not(.input-group_error) {
+      &.input-group_focused:not(.text_white) {
+        label {
+          color: $secondary-color;
+        }
+      }
+
+      &.input-group_focused.text_white {
+        label {
+          color: $white-color !important;
+        }
+      }
+    }
+  }
+
+  // Required
+  &_required:not(&_required-slot) {
+    label:after {
+      content: '*';
+    }
+  }
+
+  // Optional
+  &_optional:not(&_optional-slot) {
+    label:after {
+      content: ' (не обязательно)';
+      font-size: $font-size-caption;
+      color: $app-text-color-disabled;
+    }
+  }
+
+  .input-group__messages {
+    white-space: nowrap;
+  }
+
+  // Error
+  &.input-group_error {
+    label {
+      animation: shake .6s $primary-transition-function;
+    }
+
+    .input-group__messages {
+      color: inherit;
+    }
+
+    .input-group__details {
+      &:before {
+        background-color: currentColor;
+      }
+    }
+  }
+
+  .slide-y-transition-leave,
+  .slide-y-transition-leave-to {
+    position: absolute;
+  }
+
+  &__details {
+    color: inherit;
+    display: flex;
+    padding-top: 4px;
+    flex: 1 0 100%;
+    font-size: 12px;
+    min-height: 28px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    transition: height $primary-transition,
+      min-height $primary-transition;
+    will-change: height, min-height;
+  }
+
+  &_hide-details {
+    .input-group__details {
+      min-height: 2px;
+      padding: 0;
+    }
+  }
+
+  /** Async loading indicator */
+  .progress-linear {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+  }
+
+  &__hint {
+    // flex: 1 0
+    transition: .3s $primary-transition-function;
+    color: $gray-dark-color !important;
+  }
+
+  &.text_white &__hint {
+    color: transparentize(white, .35) !important;
+  }
+
+  .input-group__error {
+    color: inherit;
+    flex: 1 0;
+    transition: .3s $primary-transition-function;
+  }
+
+  &_overflow,
+  &_segmented,
+  &_editable {
+    &.input-group_active {
+      background-color: #fff;
+    }
+  }
+
+  input,
+  textarea {
+    color: $app-text-color;
+
+    &:disabled {
+      color: $app-text-color-disabled;
+    }
+  }
+
+  textarea {
+    line-height: $line-height-body;
+  }
+
+  &:not(.input-group_error) #{get-element('messages')} {
+    color: $app-text-color;
+  }
+
+  // This is specific for selects
+  &.input-group_dirty {
+    .input-group__selections__comma {
+      &:not(.input-group__selections__comma_active) {
+        color: $app-text-color;
+      }
+    }
+  }
+
+  &.input-group_dirty:not(.input-group_error) {
+    &:not(.text_white) {
+      label {
+        color: $black-color;
+      }
+    }
+
+    &.text_white {
+      label {
+        color: $white-color !important;
+      }
+    }
+  }
+
+  // focused
+  &.input-group_focused:not(.input-group_error) {
+    &:not(.text_white) {
+      .input-group__input {
+        input {
+          border-color: $secondary-color;
+        }
+      }
+
+      .input-group__icon-clearable {
+        .md-icon {
+          fill: $secondary-color;
+        }
+      }
+    }
+  }
+
+  &:not(.input-group_error) {
+
+    &.input-group_text-field {
+      label {
+        color: $gray-dark-color;
+      }
+    }
+
+    &.input-group_disabled {
+      label,
+      .input-group__selections__comma {
+        color: $app-text-color-disabled;
+      }
+    }
+
+    &.text_white {
+      .input-group__icon-clearable {
+        color: $white-color !important;
+
+        .md-icon {
+          path {
+            fill: $white-color !important;
+          }
+        }
+      }
+
+      label {
+        color: transparentize($white-color, .35) !important;
+      }
+    }
+
+    .input-group__details:before {
+      background-color: transparent;
+    }
+
+    &:not(.input-group_focused):not(.input-group_disabled) {
+      .input-group__input {
+        .input-group__append-icon,
+        .input-group__prepend-icon {
+          &:not(:hover) {
+            color: $app-text-color-disabled;
+
+            &, & * {
+              fill: $app-text-color-disabled;
+            }
+          }
+        }
+      }
+
+      &:not(.input-group_disabled):not(.input-group_overflow):not(.input-group_segmented):not(.input-group_editable):hover {
+        .input-group__details:before {
+          background-color: $app-text-color;
+        }
+
+        &.input-group_textarea:not(.input-group_full-width) {
+          .input-group__input {
+            border-color: $app-text-color;
+          }
+        }
+      }
+    }
+  }
+
+  &.input-group {
+    &_overflow,
+    &_segmented,
+    &_editable {
+      .input-group__input,
+      .input-group__details {
+        &:before {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+
+  &.input-group_disabled {
+    .input-group__input {
+
+      input {
+        background-color: $disabled-color;
+      }
+
+      .input-group__append-icon,
+      .input-group__prepend-icon {
+        color: $app-text-color-disabled;
+
+        &, & * {
+          fill: $app-text-color-disabled;
+        }
+      }
+    }
+
+    .input-group__details:before {
+      background-color: transparent;
+      background-image: linear-gradient(
+          to right,
+          $app-text-color 0,
+          $app-text-color-disabled 33%,
+          transparent 0
+      );
+    }
+  }
+
+  .input-group_text-field {
+    &__prefix,
+    &__suffix {
+      color: $app-text-color;
+    }
+
+    &.input-group_disabled {
+      &__prefix,
+      &__suffix {
+        color: $app-text-color-disabled;
+      }
+    }
+  }
+}

@@ -1,0 +1,284 @@
+@import "../../settings/index";
+@import "../../tools/index";
+@import "colors";
+
+$bem-use-namespaces: true;
+
+@include block('btn', 'component') {
+  @extend %layer-flex-row;
+
+  height: $button-height;
+  min-width: $button-min-width;
+  display: inline-block;
+  padding: $button-padding;
+  position: relative;
+
+  border-radius: $button-border-radius;
+  outline: none;
+  box-sizing: border-box;
+
+  font-size: $button-font-size;
+  font-weight: $button-font-weight;
+  font-family: $font-family-default;
+  line-height: $line-height-body;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  cursor: pointer;
+  user-select: none;
+  touch-action: manipulation;
+  transition: all $primary-transition;
+
+  background-color: $button-background-color;
+  border: 1px solid $button-border-color;
+  color: $button-text-color;
+
+  &:hover {
+    background-color: $gray-color;
+    text-decoration: none;
+  }
+
+  &:not(:last-of-type) {
+    margin-right: $indent-medium - 2;
+  }
+
+  @include theme-property(background-color border);
+  @include theme-property(color fill, auto);
+
+  @include theme-property-text(border color fill);
+
+  .md-icon {
+    width: 18px;
+    height: 18px;
+    margin-right: $indent-small - 2;
+  }
+
+  @include element('content') {
+    @extend %layer-block-fill;
+    @extend %layer-flex-row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  @include element('loading') {
+    @extend %layer-absolute-fill;
+    @extend %layer-flex-row;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+
+  @include modifier('disabled') {
+    background-color: $button-disabled-color !important;
+    color: $button-disabled-text-color !important;
+    border: 1px solid transparent !important;
+
+    &:hover {
+      background-color: $button-disabled-color !important;
+    }
+  }
+
+  @include modifier('small') {
+    font-size: $button-small-font-size;
+    height: $button-small-height;
+    min-width: $button-small-min-width;
+    padding: $button-small-padding;
+
+    &:not(:last-of-type) {
+      margin-right: $indent-medium - 4;
+    }
+
+    .md-icon {
+      width: 16px;
+      height: 16px;
+      margin-right: $indent-xsmall;
+    }
+  }
+
+  @include modifier('large') {
+    font-size: $button-large-font-size;
+    height: $button-large-height;
+    min-width: $button-large-min-width;
+    padding: $button-large-padding;
+    margin-right: $indent-medium;
+
+    &:not(:last-of-type) {
+      margin-right: $indent-medium;
+    }
+
+    .md-icon {
+      width: 24px;
+      height: 24px;
+      margin-right: $indent-small;
+    }
+  }
+
+  @include modifier('round') {
+    border-radius: $radius-large * 3;
+  }
+
+  @include modifier('loading') {
+    @include modifies-element('content') {
+      opacity: 0;
+    }
+  }
+
+  @include modifier('absolute') {
+    @extend %layer-absolute;
+  }
+
+  @include modifier('fixed') {
+    @extend %layer-fixed;
+  }
+
+  @include modifier('block') {
+    display: block !important;
+    width: 100%;
+    height: 48px;
+
+    @include media-query($mobile-breakpoint) {
+      border-radius: 0;
+
+      #{get-element('content')} {
+        justify-content: space-between;
+      }
+    }
+
+    @include modifies-modifier('link') {
+      background-color: $blue-light-color !important;
+
+      &:hover {
+        background-color: darken($blue-light-color, 10) !important;
+      }
+    }
+  }
+
+  @include modifier('full-width') {
+    display: block;
+    width: 100%;
+  }
+
+  @include modifier('bottom') {
+    bottom: 0;
+  }
+
+  @include modifier('top') {
+    top: 0;
+  }
+
+  @include modifier('left') {
+    left: 0;
+  }
+
+  @include modifier('right') {
+    right: 0;
+  }
+
+  @include modifier('outline') {
+    background-color: transparent;
+
+    &:hover {
+      @include theme-property-text(background-color, false, false, .1);
+    }
+
+    &:active {
+      @include theme-property-text(background-color, false, false, .3);
+    }
+  }
+
+  @include modifier('flat') {
+    border: 0 !important;
+    background-color: transparent;
+
+    &:hover {
+      background-color: transparent !important;
+    }
+
+    &:active {
+      @include theme-property-text(background-color, false, false, .3);
+    }
+  }
+
+  @include modifier('link') {
+    border: 1px solid transparent !important;
+    color: $link-text !important;
+    background-color: transparent !important;
+    min-width: 0 !important;
+
+    &.white {
+      &,
+      &:hover {
+        color: white !important;
+
+        .md-icon {
+          fill: white;
+        }
+      }
+    }
+
+    &:not(#{get-block()}_block) {
+      padding: 0;
+    }
+
+    .md-icon {
+      fill: $link-text;
+    }
+
+    &:hover {
+      background-color: transparent;
+      color: $link-text-hovered !important;
+
+      .md-icon {
+        fill: $link-text-hovered;
+      }
+    }
+  }
+
+  @include modifier('shadowed') {
+    transition: all $primary-transition,
+      box-shadow .5s $primary-transition-function,
+      transform .5s $primary-transition-function;
+    transform-origin: center center;
+
+    @each $theme-key, $theme-color in $themes {
+      &.#{$theme-key}, &.text_#{$theme-key} {
+        box-shadow: 0 4px 35px -8px $theme-color;
+
+        &:hover {
+          box-shadow: 0 8px 36px -4px $theme-color;
+        }
+
+        &:active {
+          transform: scale(.95);
+        }
+      }
+    }
+  }
+
+  @include modifier('icon') {
+    width: $button-height;
+    height: $button-height;
+    min-width: initial;
+    padding: 0;
+
+    @include modifies-modifier('large') {
+      width: $button-large-height;
+      height: $button-large-height;
+    }
+
+    @include modifies-modifier('small') {
+      width: $button-small-height;
+      height: $button-small-height;
+    }
+
+    .md-icon {
+      margin: 0 !important;
+    }
+  }
+}
+
+$bem-use-namespaces: false;

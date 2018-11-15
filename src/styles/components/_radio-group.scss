@@ -1,0 +1,41 @@
+@import "../settings/index";
+@import "../tools/index";
+
+@include block('radio-group', 'component') {
+
+  @include theme-property-text(fill, false, false);
+
+  @include modifier('column') {
+    .input-group__input {
+      display: block;
+    }
+  }
+
+  @include modifier('row') {
+    .input-group__input {
+      flex-direction: row;
+    }
+  }
+
+  .input-group__details:before,
+  .input-group__details:after {
+    display: none;
+  }
+
+  .input-group {
+    padding: 0;
+  }
+
+  &.input-group_error {
+    .radio {
+      label,
+      .icon_selection-control {
+        color: inherit;
+
+        &, * {
+          fill: inherit;
+        }
+      }
+    }
+  }
+}

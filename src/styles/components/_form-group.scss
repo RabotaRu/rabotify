@@ -1,0 +1,67 @@
+@import "../settings/index";
+@import "../tools/index";
+
+@include block('form-group', 'component') {
+  @include row;
+  margin-bottom: $indent-large + $indent-small;
+
+  @include media-query(sm-and-down) {
+    margin-bottom: $indent-medium;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include element('required') {
+    color: $primary-color;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1;
+    vertical-align: bottom;
+    //top: -0.2em;
+  }
+
+  @include element('label') {
+    @include col(3);
+    line-height: $line-height-caption;
+    align-self: center;
+
+    > *:last-child {
+      margin-bottom: 0 !important;
+    }
+
+    @include modifier('top') {
+      align-self: flex-start;
+      margin-top: ($input-height / 2) - ($line-height-body / 2);
+    }
+  }
+
+  @include element('control') {
+    padding: 0 $indent-medium;
+    flex-basis: 0;
+    flex-grow: 1;
+
+    > *:last-child {
+      margin-right: 0 !important;
+    }
+
+    @include modifier('offset-label') {
+      margin-left: 100% * 3 / 12;
+    }
+
+    @include modifier('narrow') {
+      max-width: 50%;
+    }
+  }
+
+  @include modifier('vertical') {
+    display: block;
+
+    @include modifies-element('label') {
+      margin-bottom: $indent-small;
+      display: block;
+      max-width: 100%;
+    }
+  }
+}

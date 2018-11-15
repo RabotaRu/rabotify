@@ -1,0 +1,50 @@
+@import "../settings/index";
+@import "../tools/index";
+
+@include block('page-headline', 'component') {
+  margin-bottom: $indent-medium * 2;
+
+  > *:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  @include media-query(md-and-down) {
+    margin-bottom: $indent-medium;
+  }
+
+  @include modifier('bordered') {
+    position: relative;
+    padding-bottom: $indent-medium * 2;
+
+    @include media-query(md-and-down) {
+      padding-bottom: $indent-medium;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: $indent-medium;
+      right: $indent-medium;
+      bottom: 0;
+      height: 1px;
+      background-color: $border-color;
+    }
+  }
+
+  @include element('inner') {
+    @extend %layer-flex-row;
+    align-items: center;
+  }
+
+  @include element('title') {
+    > *:last-child {
+      margin-bottom: 0 !important;
+    }
+  }
+
+  @include element('elements') {
+    margin-left: $indent-medium;
+    flex-grow: 1;
+  }
+}

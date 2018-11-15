@@ -1,0 +1,120 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RBtn.vue should render a <button> tag when using to prop 1`] = `
+
+<button class="r-btn r-btn_router r-btn_medium"
+        data-ripple="false"
+>
+</button>
+
+`;
+
+exports[`RBtn.vue should render an <a> tag when using href prop 1`] = `
+
+<a href="http://www.google.com"
+   class="r-btn r-btn_medium"
+   data-ripple="false"
+>
+  <div class="r-btn__content">
+  </div>
+</a>
+
+`;
+
+exports[`RBtn.vue should render component and match snapshot 1`] = `
+
+<button type="button"
+        class="r-btn r-btn_medium"
+        data-ripple="false"
+>
+  <div class="r-btn__content">
+  </div>
+</button>
+
+`;
+
+exports[`RBtn.vue should render component with color prop and match snapshot 1`] = `
+
+<button type="button"
+        class="r-btn r-btn_medium accent"
+        data-ripple="false"
+>
+  <div class="r-btn__content">
+  </div>
+</button>
+
+`;
+
+exports[`RBtn.vue should render component with color prop and match snapshot 2`] = `
+
+<button type="button"
+        class="r-btn r-btn_flat r-btn_medium text_accent"
+        data-ripple="false"
+>
+  <div class="r-btn__content">
+  </div>
+</button>
+
+`;
+
+exports[`RBtn.vue should render component with loader and match snapshot 1`] = `
+
+<button type="button"
+        class="r-btn r-btn_loading r-btn_medium"
+        data-ripple="false"
+>
+  <span class="r-btn__loading">
+    <div class="loading loading_colorful">
+      <div class="loading__circle">
+      </div>
+      <div class="loading__circle">
+      </div>
+      <div class="loading__circle">
+      </div>
+    </div>
+  </span>
+  <div class="r-btn__content">
+  </div>
+</button>
+
+`;
+
+exports[`RBtn.vue should render component with loader slot and match snapshot 1`] = `
+
+<button type="button"
+        class="r-btn r-btn_loading r-btn_medium"
+        data-ripple="false"
+>
+  <span class="r-btn__loading">
+    <span>
+      loader
+    </span>
+  </span>
+  <div class="r-btn__content">
+  </div>
+</button>
+
+`;
+
+exports[`RBtn.vue should render specified tag when using tag prop 1`] = `
+
+<a class="r-btn r-btn_medium"
+   data-ripple="false"
+>
+  <div class="r-btn__content">
+  </div>
+</a>
+
+`;
+
+exports[`RBtn.vue should use custom active-class 1`] = `
+
+<button type="button"
+        class="r-btn r-btn_medium foo"
+        data-ripple="false"
+>
+  <div class="r-btn__content">
+  </div>
+</button>
+
+`;

@@ -1,0 +1,63 @@
+@import "../settings/index";
+@import "../tools/index";
+
+@include block('page', 'component') {
+  > *:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  > * {
+    // why u changed it? :)
+    // @see http://localhost:3000/vacancies/
+    // @see http://localhost:3000/responses/40576975/incoming/
+    margin-bottom: $indent-medium * 2;
+
+    @include media-query(sm-and-down) {
+      margin-bottom: $indent-medium;
+    }
+  }
+
+  @include modifier('indent-top') {
+    padding-top: $indent-xlarge;
+
+    @include media-query(md-and-down) {
+      padding-top: $indent-large;
+    }
+  }
+
+  @include modifier('indent-bottom') {
+    padding-bottom: $indent-xlarge;
+
+    @include media-query(md-and-down) {
+      padding-bottom: $indent-large;
+    }
+  }
+
+  @include element('headline') {
+    @include container;
+  }
+
+  @include element('body') {
+    @include container;
+  }
+
+  @include element('aside') {
+    @include modifier('bordered') {
+      border-left: 1px solid $border-color;
+    }
+  }
+
+  @include element('row') {
+    @include row;
+  }
+
+  @include element('preheader') {
+    @include container;
+    margin-bottom: 0;
+
+    @include media-query(md-and-up) {
+      margin-top: -$indent-large;
+      margin-bottom: $indent-medium;
+    }
+  }
+}

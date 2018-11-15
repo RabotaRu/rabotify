@@ -1,0 +1,103 @@
+@import "../settings/index";
+@import "../tools/index";
+
+@include block('card', 'component') {
+  display: block;
+  border-radius: $card-border-radius;
+  min-width: 0;
+  position: relative;
+  text-decoration: none;
+  background-color: $cards-background-color;
+  color: $app-text-color;
+
+  @include shadow(4);
+  @include shadow-transition();
+  @include theme-property(background-color, false, false);
+
+  > *:first-child {
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+  }
+
+  > *:last-child {
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+  }
+
+  @include element('title') {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 16px;
+
+    @include modifier('primary') {
+      padding-top: $indent-large;
+    }
+  }
+
+  @include element('text') {
+    padding: $indent-medium;
+    width: 100%;
+  }
+
+  @include element('media') {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  @include element('media-background') {
+    @extend %layer-absolute-fill;
+    border-radius: inherit;
+  }
+
+  @include element('media-content') {
+    display: flex;
+    flex: 1 1 auto;
+    position: relative;
+  }
+
+  @include element('actions') {
+    align-items: center;
+    display: flex;
+    padding: $indent-medium;
+
+    .r-btn {
+      margin: 0 $indent-xsmall;
+
+      &:first-of-type {
+        margin-left: 0;
+      }
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+
+  @include modifier('raised') {
+    @include shadow(3);
+  }
+
+  @include modifier('tile') {
+    border-radius: 0;
+  }
+
+  @include modifier('flat') {
+    @include shadow(0);
+  }
+
+  @include modifier('hover') {
+    cursor: pointer;
+    transition: all .4s cubic-bezier(.25, .8, .25, 1);
+    transition-property: box-shadow;
+
+    &:hover {
+      @include shadow(8);
+    }
+  }
+}

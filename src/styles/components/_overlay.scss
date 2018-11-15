@@ -1,0 +1,62 @@
+@import "../settings/index";
+@import "../tools/index";
+
+@include block('overlay', 'component') {
+  @extend %layer-fixed-fill;
+  pointer-events: none;
+  // The overlay has a dynamically set
+  // z-index, we want the transition
+  // timing to affect its changing
+  transition: .3s $primary-transition-function;
+  // This is the standard index
+  z-index: $overlay-z-index;
+
+  @include theme-property(background-color, false, false, 0);
+
+  &:before {
+    background-color: $black-color;
+    bottom: 0;
+    content: '';
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: inherit;
+    // Delay the transition to avoid a
+    // rendering bug that is visible
+    // within Edge and Firefox
+    transition-delay: 150ms;
+    width: 100%;
+
+    @include theme-property(background-color, false, false, 1, "#{get-block()}.$theme$:before", true);
+  }
+
+  @include modifier('absolute') {
+    position: absolute;
+  }
+
+  @include modifier('transparent') {
+    &:before {
+      background-color: transparent !important;
+    }
+  }
+
+  @include modifier('active') {
+    pointer-events: auto;
+    touch-action: none;
+
+    &:before {
+      opacity: .4;
+    }
+
+    @include modifies-modifier('safari-blur') {
+      -webkit-backdrop-filter: blur(15px) !important;
+    }
+  }
+
+  @include modifier('safari-blur') {
+    -webkit-backdrop-filter: blur(0);
+  }
+}

@@ -1,0 +1,85 @@
+@import "../settings/index";
+@import "../tools/index";
+
+@include block('loading', 'component') {
+  @extend %layer-flex-row;
+  white-space: nowrap;
+
+  @include element('circle') {
+    animation: loading-circle-scaling $loading-circle-animation-duration infinite alternate-reverse get($transition, 'fast-out-slow-in');
+    width: $loading-circle-size;
+    height: $loading-circle-size;
+    border-radius: 50%;
+    display: inline-block;
+
+    &:not(:first-of-type) {
+      margin-left: $indent-small;
+    }
+
+    @for $i from 1 through $loading-circles-number-max {
+      &:nth-of-type(#{$i}) {
+        animation-delay: ($i - 1) * $loading-circle-animation-delay;
+        background-color: white;
+      }
+    }
+  }
+
+  @include modifier('large') {
+    @include modifies-element('circle') {
+      width: $loading-circle-large-size;
+      height: $loading-circle-large-size;
+    }
+  }
+
+  @include modifier('small') {
+    @include modifies-element('circle') {
+      width: $loading-circle-small-size;
+      height: $loading-circle-small-size;
+    }
+  }
+
+  @include modifier('disabled') {
+    @include modifies-element('circle') {
+      background-color: $gray-color;
+      transform: scale(.7);
+      animation: none;
+    }
+  }
+
+  @include modifier('colorful') {
+    @include modifies-element('circle') {
+      @for $i from 1 through $loading-circles-number-max {
+        &:nth-of-type(#{$i}) {
+          background-color: nth($loading-circle-colors, $i);
+        }
+      }
+    }
+  }
+
+  @include element('line') {
+    height: 100%;
+    width: 0;
+    transition: $primary-transition;
+    will-change: width;
+
+    @include theme-property(background-color color, false, false);
+  }
+
+  @include modifier('line') {
+    height: 3px;
+  }
+
+  @include modifier('round-line') {
+    border-radius: $radius-large;
+
+    @include modifies-element('line') {
+      border-radius: $radius-large;
+    }
+  }
+
+  @include modifier('shadow-line') {
+    @include modifies-element('line') {
+      box-shadow: 0 0 7px 0 currentColor;
+    }
+  }
+}

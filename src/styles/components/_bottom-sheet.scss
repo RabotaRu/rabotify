@@ -1,0 +1,33 @@
+@import "../settings/index";
+@import "../tools/index";
+
+$bem-use-namespaces: true;
+
+@include block('bottom-sheet', 'component') {
+  align-self: flex-end;
+  border-radius: 0;
+  flex: 1 0 100%;
+  margin: 0;
+  overflow: visible;
+  transition: .4s get($transition, 'swing');
+
+  @include modifier('inset') {
+    @include container;
+    overflow: hidden;
+    padding: 0;
+    border-top: {
+      left-radius: 10px;
+      right-radius: 10px;
+    }
+  }
+
+  &:not(&_inset) {
+    min-width: 100%;
+
+    @include media-query($mobile-breakpoint) {
+      max-width: none;
+    }
+  }
+}
+
+$bem-use-namespaces: false;

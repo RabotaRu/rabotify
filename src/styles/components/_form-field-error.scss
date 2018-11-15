@@ -1,0 +1,8 @@
+@import "../settings/index";
+@import "../tools/index";
+
+@include block('form-field-error', 'component') {
+  .input-group__input {
+    display: none;
+  }
+}

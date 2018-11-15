@@ -1,0 +1,112 @@
+@import "../../settings/index";
+@import "../../tools/index";
+
+@include block('dialog', 'component') {
+  border-radius: $dialog-border-radius;
+  margin: 24px;
+  overflow-y: auto;
+  pointer-events: auto;
+  transition: .3s ease-in-out;
+  width: 100%;
+
+  @include shadow(24);
+
+  &:not(#{get-block-modifier('fullscreen')}) {
+    max-height: 90%;
+  }
+
+  @include element('content') {
+    @extend %layer-fixed-fill;
+    display: flex !important;
+
+    align-items: center;
+    justify-content: center;
+
+    transition: $primary-transition;
+    z-index: $dialog-content-z-index;
+    pointer-events: none;
+    outline: none;
+
+    @include modifier('right') {
+      justify-content: flex-end;
+    }
+
+    @include modifier('left') {
+      justify-content: flex-start;
+    }
+
+    @include modifier('top') {
+      align-items: flex-start;
+    }
+
+    @include modifier('bottom') {
+      align-items: flex-end;
+    }
+  }
+
+  @include element('container') {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  @include modifier('fullscreen') {
+    height: 100%;
+    position: fixed;
+    overflow-y: auto;
+    margin: 0;
+    border-radius: 0;
+    top: 0;
+    left: 0;
+
+    > .card {
+      min-height: 100%;
+      min-width: 100%;
+      margin: 0 !important;
+      padding: 0;
+    }
+  }
+
+  @include modifier('full-height') {
+    height: 100%;
+    max-height: 100% !important;
+    overflow-y: auto;
+    margin: 0;
+    border-radius: 0;
+    top: 0;
+    bottom: 0;
+
+    > .card {
+      min-height: 100%;
+      min-width: 100%;
+      margin: 0 !important;
+      padding: 0;
+
+      .card__actions {
+        // flex: 0 !important;
+      }
+    }
+  }
+
+  @include modifier('scrollable') {
+    display: flex;
+
+    > .card {
+      display: flex;
+      flex: 1 1 auto;
+      flex-grow: 1;
+      flex-direction: column;
+
+      .card__actions {
+        flex: 1 0 auto;
+        flex-grow: 0;
+      }
+
+      .card__text {
+        overflow-y: auto;
+        backface-visibility: hidden;
+        height: 100%;
+        flex-grow: 1;
+      }
+    }
+  }
+}

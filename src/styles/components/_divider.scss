@@ -1,0 +1,45 @@
+@import "../settings/index";
+@import "../tools/index";
+
+@include block('divider', 'component') {
+  border: none;
+  display: block;
+  height: 1px;
+  min-height: 1px;
+  flex: 1;
+  width: 100%;
+  background-color: $divider-color;
+  margin-top: $indent-medium;
+  margin-bottom: $indent-medium;
+
+  @include modifier('inset') {
+    margin-left: $divider-margin-left;
+    width: calc(100% - #{$divider-margin-left});
+  }
+
+  @include modifier('shifted') {
+    width: auto;
+    margin-left: -$indent-medium;
+    margin-right: -$indent-medium;
+  }
+
+  @include modifier('large') {
+    margin-top: $indent-large;
+    margin-bottom: $indent-large;
+
+    @include media-query(sm-and-down) {
+      margin-top: $indent-medium;
+      margin-bottom: $indent-medium;
+    }
+  }
+
+  @include modifier('small') {
+    margin-top: $indent-small;
+    margin-bottom: $indent-small;
+  }
+
+  @include modifier('reset') {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}

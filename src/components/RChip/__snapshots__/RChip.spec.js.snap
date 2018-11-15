@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RChip.vue should be removable 1`] = `
+
+<span tabindex="0"
+      class="r-chip r-chip_removable r-chip_default"
+>
+  <span class="r-chip__content">
+    <button type="button"
+            class="r-chip__close r-btn r-btn_flat r-btn_icon r-btn_medium"
+            data-ripple="true"
+    >
+      <div class="r-btn__content">
+        <svg width="24"
+             height="24"
+             viewbox="0 0 24 24"
+             xmlns="http://www.w3.org/2000/svg"
+             class="icon md-icon md-close"
+        >
+          <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z">
+          </path>
+        </svg>
+      </div>
+    </button>
+  </span>
+</span>
+
+`;
+
+exports[`RChip.vue should be removable 2`] = `
+
+<span tabindex="0"
+      class="r-chip r-chip_removable r-chip_default"
+      style="display: none;"
+>
+  <span class="r-chip__content">
+    <button type="button"
+            class="r-chip__close r-btn r-btn_flat r-btn_icon r-btn_medium"
+            data-ripple="true"
+    >
+      <div class="r-btn__content">
+        <svg width="24"
+             height="24"
+             viewbox="0 0 24 24"
+             xmlns="http://www.w3.org/2000/svg"
+             class="icon md-icon md-close"
+        >
+          <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z">
+          </path>
+        </svg>
+      </div>
+    </button>
+  </span>
+</span>
+
+`;
+
+exports[`RChip.vue should have a r-chip class 1`] = `
+
+<span tabindex="0"
+      class="r-chip r-chip_default"
+>
+  <span class="r-chip__content">
+  </span>
+</span>
+
+`;

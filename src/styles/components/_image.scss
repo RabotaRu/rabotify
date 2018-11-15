@@ -1,0 +1,42 @@
+@import "../settings/index";
+@import "../tools/index";
+
+$bem-use-namespaces: true;
+
+@include block('image', 'component') {
+  display: block;
+  position: relative;
+  width: 100%;
+  border: 0;
+  overflow: hidden;
+
+  @include element('inner') {
+    width: 100%;
+    height: 100%;
+  }
+
+  @include element('image-wrapper') {
+    width: 100%;
+    height: 100%;
+  }
+
+  @include element('image') {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+  }
+
+  @include element('background') {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: background .6s $primary-transition-function;
+  }
+
+  @include modifier('round') {
+    border-radius: 500px;
+  }
+}
+
+$bem-use-namespaces: false;

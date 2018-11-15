@@ -1,0 +1,60 @@
+@import "../settings/index";
+@import "../tools/index";
+
+@include block('mobile-header', 'component') {
+  height: $mobile-header-height;
+  z-index: 1;
+
+  @include media-query($mobile-breakpoint) {
+    height: $mobile-header-height-mobile;
+  }
+
+  @include element('inner') {
+    @extend %layer-flex-row;
+    align-items: stretch;
+    height: 100%;
+  }
+
+  @include element('content') {
+    @extend %layer-flex-column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    height: 100%;
+
+    * {
+      margin-bottom: 0 !important;
+    }
+  }
+
+  @include element('left-action') {
+    @extend %layer-flex-column;
+    justify-content: center;
+    height: 100%;
+
+    .r-btn {
+      margin: $indent-small;
+    }
+  }
+
+  @include element('right-action') {
+    @extend %layer-flex-column;
+    justify-content: center;
+    height: 100%;
+
+    .r-btn {
+      margin: $indent-small;
+    }
+  }
+
+  @include modifier('centered-content') {
+    @include modifies-element('content') {
+      @extend %layer-flex-row;
+      justify-content: center;
+    }
+  }
+
+  @include modifier('shadow') {
+    box-shadow: 0 5px 15px 0 rgba(32, 35, 56, 0.1);
+  }
+}
