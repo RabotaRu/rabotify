@@ -1,13 +1,13 @@
 {
-  "name": "rabotify",
-  "version": "0.9.4",
-  "license": "UNLICENSED",
+  "name": "@rabota/rabotify",
+  "version": "1.0.0",
+  "license": "MIT",
   "main": "dist/rabotify.core.min.js",
   "unpkg": "dist/rabotify.core.min.js",
   "types": "index.d.ts",
   "author": {
-    "name": "rdw.ru",
-    "email": "info@rdw.ru"
+    "name": "rdw",
+    "email": "itservice@rdw.ru"
   },
   "scripts": {
     "watch": "cross-env TARGET=development webpack --config build/config.js --progress --hide-modules --watch",
@@ -30,7 +30,7 @@
     "commitmsg": "node dev/lint-commit-message.js",
     "precommit": "node dev/warn-npm-install.js && yarn lint && yarn test"
   },
-  "description": "Vue.js 2 Semantic Component Framework for Rabota.ru",
+  "description": "Vue.js 2 Components for Rabota.ru",
   "devDependencies": {
     "autoprefixer": "7.2.5",
     "avoriaz": "6.3.0",
