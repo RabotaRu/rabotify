@@ -308,9 +308,7 @@ export function getWindowHeight () {
  * @returns {boolean}
  */
 export function isVueComponent (obj) {
-  return obj &&
-    obj.constructor &&
-    obj.constructor.name === 'VueComponent';
+  return !!( obj && obj.$el );
 }
 
 /**
