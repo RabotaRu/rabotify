@@ -29,6 +29,10 @@
         right: $indent-large;
       }
     }
+
+    @include media-query(sm-and-down) {
+      display: none;
+    }
   }
 
   @include element('inner') {
@@ -53,7 +57,9 @@
     }
 
     .dialog_scrollable & {
-      padding-top: 0 !important;
+      @include media-query(sm-and-up) {
+        padding-top: 0 !important;
+      }
     }
   }
 
