@@ -75,15 +75,6 @@
   }
 }
 
-@mixin font-display-2 {
-  @include font-display-1;
-  @include font-style($font-size-display-2, $line-height-display-2, $font-weight-black);
-
-  @include media-query(sm-and-down) {
-    @include font-style($font-size-title, $line-height-title, $font-weight-black);
-  }
-}
-
 
 
 /**
