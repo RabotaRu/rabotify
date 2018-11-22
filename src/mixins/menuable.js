@@ -253,7 +253,9 @@ export default {
       }
 
       if (this.hasWindow) {
-        this.pageYOffset = this.getOffsetTop();
+        this.$nextTick(_ => {
+          this.pageYOffset = this.getOffsetTop();
+        });
       }
     },
     deactivate () {},
