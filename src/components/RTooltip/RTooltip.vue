@@ -126,7 +126,7 @@
         return {
           left: this.calculatedLeft,
           maxWidth: isNaN(this.maxWidth) ? this.maxWidth : `${this.maxWidth}px`,
-          opacity: this.isActive ? 0.9 : 0,
+          opacity: this.isActive ? 1 : 0,
           top: this.calculatedTop,
           zIndex: this.zIndex || this.activeZIndex
         };
