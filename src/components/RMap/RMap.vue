@@ -175,6 +175,7 @@
 
       addPointEventListener () {
         const map = this.getMap();
+
         map.addPointEventListener(point => {
           if (this.pointResolving) {
             map.resolveAddressByPoint( point ).then(pointInfo => {
@@ -196,8 +197,11 @@
       searchQuery () {
         const query = this.query;
         const map = this.getMap();
+
         map.searchQuery( query, { limit: this.queryResponseLimit } ).then(response => {
           this.$emit('queryResponse', response);
+        }).catch(_ => {
+          this.$emit('queryResponse', []);
         });
       },
 
