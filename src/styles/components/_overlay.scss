@@ -14,7 +14,7 @@
   @include theme-property(background-color, false, false, 0);
 
   &:before {
-    background-color: $black-color;
+    background-color: $blue-dark-color;
     bottom: 0;
     content: '';
     height: 100%;
@@ -48,7 +48,7 @@
     touch-action: none;
 
     &:before {
-      opacity: .4;
+      opacity: .8;
     }
 
     @include modifies-modifier('safari-blur') {
