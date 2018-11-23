@@ -31,7 +31,7 @@
       },
       center: {
         type: Array,
-        default: () => [ 55.76, 37.64 ]
+        default: () => [ 55.76, 37.64 ] // Moscow
       },
       zoom: {
         type: Number,
@@ -120,6 +120,8 @@
         if (this.query) {
           this.searchQuery();
         }
+
+        this.$emit( 'loaded', this.map );
       },
 
       getMap () {
