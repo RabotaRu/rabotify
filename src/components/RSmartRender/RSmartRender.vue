@@ -261,7 +261,9 @@
       this.$nextTick(() => {
         // in case there is no IntersectionObserver API in user's browser
         // we need to omit visibility observer logic
-        if (this.visibilityObserver && typeof window.IntersectionObserver !== 'undefined') {
+        if (this.visibilityObserver !== null
+          && this.visibilityObserver !== false
+          && typeof window.IntersectionObserver !== 'undefined') {
           this.initIntersectionObserver();
         } else {
           this.lazyVisibilityCondition = true;
