@@ -5,9 +5,10 @@ $bem-use-namespaces: true;
 
 @include block('bottom-sheet', 'component') {
   align-self: flex-end;
-  border-radius: 0;
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
   flex: 1 0 100%;
-  margin: 0;
+  margin: 0 !important;
   overflow: visible;
   transition: .4s get($transition, 'swing');
 
@@ -16,8 +17,8 @@ $bem-use-namespaces: true;
     overflow: hidden;
     padding: 0;
     border-top: {
-      left-radius: 10px;
-      right-radius: 10px;
+      left-radius: $radius-xlarge;
+      right-radius: $radius-xlarge;
     }
   }
 
