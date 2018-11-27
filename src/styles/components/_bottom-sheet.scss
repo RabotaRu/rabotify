@@ -9,7 +9,7 @@ $bem-use-namespaces: true;
   border-bottom-right-radius: 0 !important;
   flex: 1 0 100%;
   margin: 0 !important;
-  overflow: visible;
+  overflow: hidden;
   transition: .4s get($transition, 'swing');
 
   @include modifier('inset') {
