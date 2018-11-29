@@ -3,6 +3,13 @@ import { getZIndex } from '../util/helpers';
 export default {
   name: 'stackable',
 
+  props: {
+    zIndex: {
+      type: Number,
+      default: null
+    }
+  },
+
   data () {
     return {
       stackBase: null,
@@ -12,6 +19,7 @@ export default {
       stackMinZIndex: 0
     };
   },
+
   computed: {
     /**
      * Currently active z-index
@@ -22,7 +30,7 @@ export default {
       const content = this.stackElement || this.$refs.content;
       // Return current zindex if not active
 
-      const index = !this.isActive
+      const index = this.zIndex || !this.isActive
         ? getZIndex(content)
         : this.getMaxZIndex(this.stackExclude || [ content ]) + 2;
 
