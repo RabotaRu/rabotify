@@ -60,7 +60,7 @@ html, body {
 }
 
 a, button, input {
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparentize(black, 1);
 }
 
 a {
@@ -69,5 +69,11 @@ a {
 
   &:hover {
     text-decoration: underline;
+  }
+
+  &:active {
+    text-decoration: none;
+    background-color: transparentize($link-text, .9);
+    border-radius: $radius-medium;
   }
 }
