@@ -29,7 +29,7 @@ $layout-breakpoint-sm: map_get($layout-breakpoints, sm) !default;
 $layout-breakpoint-md: map_get($layout-breakpoints, md) !default;
 $layout-breakpoint-lg: map_get($layout-breakpoints, lg) !default;
 
-$mobile-breakpoint: md-and-down;
+$mobile-breakpoint: sm-and-down;
 
 $layout-breakpoint-displays: (
   xs: "screen and (max-width: #{$layout-breakpoint-xs - 1})",
