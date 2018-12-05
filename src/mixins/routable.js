@@ -43,7 +43,7 @@ export default {
 
 
       const defaultSlot = this.$slots.default;
-      data.attrs[ 'aria-label' ] = extractVNodeText( defaultSlot, true );
+      data.attrs[ 'aria-label' ] = extractVNodeText( defaultSlot, true ).trim();
 
       if (typeof this.exact === 'undefined') {
         exact = this.to === '/' ||
