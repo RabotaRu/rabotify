@@ -381,14 +381,17 @@ export function extractVNodeText (vnodes, deep = false) {
   }
 
   return vnodes.reduce((result, vnode) => {
+    // if we have native element
+    // then return inner text content
     const elm = vnode.$el;
+    const elmText = elm && (elm.innerText || elm.textContent);
 
-    if (elm && (elm.innerText || elm.textContent)) {
-      return result + ' ' + ( elm.innerText || elm.textContent );
+    if (elmText) {
+      return result + ' ' + ensureString( elmText ).trim();
     }
 
     if (vnode.text) {
-      result += ' ' + vnode.text;
+      result += ' ' + ensureString( vnode.text ).trim();
     }
 
     if (deep && vnode.children && vnode.children.length) {
