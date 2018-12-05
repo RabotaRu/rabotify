@@ -1,4 +1,6 @@
 <script>
+  import RImageError from './RImageError';
+
   import MdErrorOutline from 'md-svg-vue/dist/alert/MdErrorOutline.vue';
   import MdRefresh from 'md-svg-vue/dist/navigation/MdRefresh.vue';
 
@@ -6,13 +8,13 @@
 
   import { ImageLoader } from '../../util/loaders';
   import { getElementWidth } from '../../util/helpers';
-  import RImageError from './RImageError';
 
   export default {
     name: 'r-image',
 
     components: {
       RImageError,
+
       MdErrorOutline,
       MdRefresh,
 
@@ -40,7 +42,8 @@
       tag: {
         type: String,
         default: 'div'
-      }
+      },
+      showError: Boolean
     },
 
     data: () => ({
@@ -138,13 +141,14 @@
 
       backgroundStyles () {
         const styles = {};
+        const image = this.imageObject;
 
         if (!this.originalLoaded && this.hasThumbnail) {
-          Object.assign( styles, { 'background-image': `url(${this.imageObject.thumbnailSrc})` } );
+          Object.assign( styles, { 'background-image': `url(${image.thumbnailSrc})` } );
         }
 
         if (this.originalLoaded || !this.hasThumbnail) {
-          Object.assign( styles, { 'background-image': `url(${this.imageObject.src})` } );
+          Object.assign( styles, { 'background-image': `url(${image.src})` } );
         }
 
         if (this.imageClip !== this.defaultImageClip) {
@@ -166,7 +170,9 @@
       },
 
       hasThumbnail () {
-        return this.thumbnailSrc && this.src !== this.thumbnailSrc;
+        const image = this.imageObject;
+
+        return image.thumbnailSrc && image.src !== image.thumbnailSrc;
       },
 
       isImgMode () {
@@ -199,7 +205,7 @@
     <div class="r-image__inner" v-if="isImgMode">
 
       <transition name="fade-transition">
-        <r-image-error v-if="errored"
+        <r-image-error v-if="showError && errored"
                        :errored="errored"
                        :round="round"
                        :containerWidth="containerWidth"
