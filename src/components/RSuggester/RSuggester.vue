@@ -23,7 +23,7 @@
     getElementHeight,
     getElementRelativeOffset, getObjectValueByPath,
     isObject,
-    resolveElement, valueBetween
+    resolveElement, clampNumber
   } from '../../util/helpers';
 
   export default {
@@ -155,7 +155,7 @@
               selected = true;
             }
           } else if (this.menuIndex >= 0) {
-            const menuIndex = valueBetween( this.menuIndex, 0, this.lazyItems.length - 1 );
+            const menuIndex = clampNumber( this.menuIndex, 0, this.lazyItems.length - 1 );
 
             this.selectItem( this.lazyItems[ menuIndex ] );
             selected = true;

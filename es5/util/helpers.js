@@ -22,7 +22,7 @@ exports.isServer = isServer;
 exports.isBrowser = isBrowser;
 exports.copyTextToClipboard = copyTextToClipboard;
 exports.getElementOffset = getElementOffset;
-exports.valueBetween = valueBetween;
+exports.clampNumber = clampNumber;
 exports.ensureNumber = ensureNumber;
 exports.normalizeClassName = normalizeClassName;
 
@@ -293,7 +293,7 @@ function getElementOffset(element) {
   };
 }
 
-function valueBetween(value) {
+function clampNumber(value) {
   var min = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : -Infinity;
   var max = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : Infinity;
 

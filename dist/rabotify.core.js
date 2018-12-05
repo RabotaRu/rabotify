@@ -203,7 +203,7 @@ module.exports = function normalizeComponent (
 /* unused harmony export isBrowser */
 /* unused harmony export copyTextToClipboard */
 /* harmony export (immutable) */ __webpack_exports__["i"] = getElementOffset;
-/* unused harmony export valueBetween */
+/* unused harmony export clampNumber */
 /* harmony export (immutable) */ __webpack_exports__["f"] = ensureNumber;
 /* harmony export (immutable) */ __webpack_exports__["l"] = normalizeClassName;
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -475,7 +475,7 @@ function getElementOffset(element) {
   };
 }
 
-function valueBetween(value) {
+function clampNumber(value) {
   var min = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : -Infinity;
   var max = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : Infinity;
 

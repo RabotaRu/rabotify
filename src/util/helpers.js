@@ -373,7 +373,7 @@ export function resolveElement (target) {
  * @param {number} max
  * @return {number}
  */
-export function valueBetween (value, min = -Infinity, max = Infinity) {
+export function clampNumber (value, min = -Infinity, max = Infinity) {
   if (min > max) {
     [ min, max ] = [ max, min ];
   }
