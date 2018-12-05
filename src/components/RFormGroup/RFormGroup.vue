@@ -5,12 +5,12 @@
     props: {
       label: String,
       labelTop: Boolean,
+      required: Boolean,
       vertical: Boolean,
       labelClass: String,
       controlClass: String,
-      offsetLabel: Boolean,
-      controlNarrow: Boolean,
-      required: Boolean
+      labelOffset: Boolean,
+      narrowControl: Boolean,
     },
 
     computed: {
@@ -28,8 +28,8 @@
       controlClasses () {
         return {
           [this.controlClass]: !!this.controlClass,
-          'form-group__control_offset-label': this.offsetLabel,
-          'form-group__control_narrow': this.controlNarrow
+          'form-group__control_offset-label': this.labelOffset,
+          'form-group__control_narrow': this.narrowControl
         };
       }
     }
@@ -43,7 +43,9 @@
            :class="labelClasses"
            v-if="label || $slots.label">
       <span v-if="label" v-html="label"></span>
-      <slot v-else name="label"></slot>
+      <span v-else>
+        <slot name="label"></slot>
+      </span>
       <sup class="form-group__required" v-if="required">*</sup>
     </label>
     <div class="form-group__control"
