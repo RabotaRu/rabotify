@@ -388,10 +388,10 @@ export function extractVNodeText (vnodes, deep = false) {
     }
 
     if (vnode.text) {
-      result += vnode.text;
+      result += ' ' + vnode.text;
     }
 
-    if (deep) {
+    if (deep && vnode.children && vnode.children.length) {
       result += ' ' + extractVNodeText( vnode.children );
     }
 
