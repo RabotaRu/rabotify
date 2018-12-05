@@ -368,6 +368,38 @@ export function resolveElement (target) {
 }
 
 /**
+ * @param {Array<VNode>|VNode} vnodes
+ * @param {boolean} deep
+ */
+export function extractVNodeText (vnodes, deep = false) {
+  if (!vnodes) {
+    return '';
+  }
+
+  if (!Array.isArray(vnodes)) {
+    vnodes = [ vnodes ];
+  }
+
+  return vnodes.reduce((result, vnode) => {
+    const elm = vnode.$el;
+
+    if (elm && (elm.innerText || elm.textContent)) {
+      return result + ' ' + ( elm.innerText || elm.textContent );
+    }
+
+    if (vnode.text) {
+      result += vnode.text;
+    }
+
+    if (deep) {
+      result += ' ' + extractVNodeText( vnode.children );
+    }
+
+    return result;
+  }, '');
+}
+
+/**
  * @param {number} value
  * @param {number} min
  * @param {number} max

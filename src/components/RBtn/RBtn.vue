@@ -32,7 +32,6 @@
       },
       block: Boolean,
       fullWidth: Boolean,
-      depressed: Boolean,
       fab: Boolean,
       flat: Boolean,
       link: Boolean,

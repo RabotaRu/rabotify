@@ -40,6 +40,10 @@ export default {
         }
       };
 
+
+      const defaultSlot = this.$slots.default;
+      data.attrs[ 'aria-label' ] = extractVNodeText( defaultSlot, true );
+
       if (typeof this.exact === 'undefined') {
         exact = this.to === '/' ||
           (this.to === Object(this.to) && this.to.path === '/');
