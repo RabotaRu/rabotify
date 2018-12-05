@@ -396,7 +396,7 @@ export function extractVNodeText (vnodes, deep = false) {
     }
 
     return result;
-  }, '');
+  }, '').trim();
 }
 
 /**
