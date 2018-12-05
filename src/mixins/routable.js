@@ -1,4 +1,5 @@
 import Ripple from '../directives/ripple';
+import { extractVNodeText } from '../util/helpers';
 
 export default {
   directives: {
