@@ -9,7 +9,13 @@ export class ImageLoader extends DownloadOperation {
    */
   async download (imageUrl) {
     return new Promise((resolve, reject) => {
-      const image = new Image();
+      if (typeof window === 'undefined') {
+        return resolve();
+      }
+
+      const image = window.Image
+        ? new Image()
+        : document.createElement( 'image' );
 
       image.onload = event => resolve( image );
       image.onerror = error => reject( error );
