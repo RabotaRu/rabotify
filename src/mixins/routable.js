@@ -43,7 +43,8 @@ export default {
 
 
       const defaultSlot = this.$slots.default;
-      data.attrs[ 'aria-label' ] = extractVNodeText( defaultSlot, true ).trim();
+      data.attrs[ 'aria-label' ] = extractVNodeText( defaultSlot, true ).trim()
+        || `uniqlabel${Math.floor(Math.random() * 1e9)}`;
 
       if (typeof this.exact === 'undefined') {
         exact = this.to === '/' ||
