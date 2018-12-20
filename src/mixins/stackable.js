@@ -28,11 +28,13 @@ export default {
      */
     activeZIndex () {
       const content = this.stackElement || this.$refs.content;
-      // Return current zindex if not active
+      // Return current z-index if not active
 
-      const index = this.zIndex || !this.isActive
+      const index = this.zIndex || (
+        !this.isActive
         ? getZIndex(content)
-        : this.getMaxZIndex(this.stackExclude || [ content ]) + 2;
+        : this.getMaxZIndex(this.stackExclude || [ content ]) + 2
+      );
 
       if (index == null) {
         return index;
@@ -40,7 +42,7 @@ export default {
 
       // Return max current z-index (excluding self) + 2
       // (2 to leave room for an overlay below, if needed)
-      return parseInt(index);
+      return parseInt( index );
     }
   },
   methods: {

@@ -6,7 +6,7 @@ exports[`RChip.vue should be removable 1`] = `
       class="r-chip r-chip_removable r-chip_default"
 >
   <span class="r-chip__content">
-    <button aria-label
+    <button aria-label="uniqlabel"
             type="button"
             class="r-chip__close r-btn r-btn_flat r-btn_icon r-btn_medium"
             data-ripple="true"
@@ -35,7 +35,7 @@ exports[`RChip.vue should be removable 2`] = `
       style="display: none;"
 >
   <span class="r-chip__content">
-    <button aria-label
+    <button aria-label="uniqlabel"
             type="button"
             class="r-chip__close r-btn r-btn_flat r-btn_icon r-btn_medium"
             data-ripple="true"

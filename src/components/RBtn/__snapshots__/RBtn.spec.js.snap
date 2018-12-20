@@ -2,7 +2,7 @@
 
 exports[`RBtn.vue should render a <button> tag when using to prop 1`] = `
 
-<button aria-label
+<button aria-label="uniqlabel"
         class="r-btn r-btn_router r-btn_medium"
         data-ripple="false"
 >
@@ -12,7 +12,7 @@ exports[`RBtn.vue should render a <button> tag when using to prop 1`] = `
 
 exports[`RBtn.vue should render an <a> tag when using href prop 1`] = `
 
-<a aria-label
+<a aria-label="uniqlabel"
    href="http://www.google.com"
    class="r-btn r-btn_medium"
    data-ripple="false"
@@ -25,7 +25,7 @@ exports[`RBtn.vue should render an <a> tag when using href prop 1`] = `
 
 exports[`RBtn.vue should render component and match snapshot 1`] = `
 
-<button aria-label
+<button aria-label="uniqlabel"
         type="button"
         class="r-btn r-btn_medium"
         data-ripple="false"
@@ -38,7 +38,7 @@ exports[`RBtn.vue should render component and match snapshot 1`] = `
 
 exports[`RBtn.vue should render component with color prop and match snapshot 1`] = `
 
-<button aria-label
+<button aria-label="uniqlabel"
         type="button"
         class="r-btn r-btn_medium accent"
         data-ripple="false"
@@ -51,7 +51,7 @@ exports[`RBtn.vue should render component with color prop and match snapshot 1`]
 
 exports[`RBtn.vue should render component with color prop and match snapshot 2`] = `
 
-<button aria-label
+<button aria-label="uniqlabel"
         type="button"
         class="r-btn r-btn_flat r-btn_medium text_accent"
         data-ripple="false"
@@ -64,7 +64,7 @@ exports[`RBtn.vue should render component with color prop and match snapshot 2`]
 
 exports[`RBtn.vue should render component with loader and match snapshot 1`] = `
 
-<button aria-label
+<button aria-label="uniqlabel"
         type="button"
         class="r-btn r-btn_loading r-btn_medium"
         data-ripple="false"
@@ -87,7 +87,7 @@ exports[`RBtn.vue should render component with loader and match snapshot 1`] = `
 
 exports[`RBtn.vue should render component with loader slot and match snapshot 1`] = `
 
-<button aria-label
+<button aria-label="uniqlabel"
         type="button"
         class="r-btn r-btn_loading r-btn_medium"
         data-ripple="false"
@@ -105,7 +105,7 @@ exports[`RBtn.vue should render component with loader slot and match snapshot 1`
 
 exports[`RBtn.vue should render specified tag when using tag prop 1`] = `
 
-<a aria-label
+<a aria-label="uniqlabel"
    class="r-btn r-btn_medium"
    data-ripple="false"
 >
@@ -117,7 +117,7 @@ exports[`RBtn.vue should render specified tag when using tag prop 1`] = `
 
 exports[`RBtn.vue should use custom active-class 1`] = `
 
-<button aria-label
+<button aria-label="uniqlabel"
         type="button"
         class="r-btn r-btn_medium foo"
         data-ripple="false"
