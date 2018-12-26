@@ -1,4 +1,4 @@
-@import url(/node_modules/normalize.css/normalize.css);@import url(/node_modules/vue-virtual-repeater/dist/vue-virtual-repeater.css);
+
 .playground > .card {
   margin: 12px;
 }
@@ -26031,7 +26031,6 @@ h3 {
         -ms-flex-align: start;
             align-items: flex-start;
 }
-
 
 @charset "UTF-8";
 /** App */
