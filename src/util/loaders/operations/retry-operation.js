@@ -17,7 +17,7 @@ export class RetryOperation {
    * @private
    */
   async action (operation) {
-    throw new Error( 'Not implemented' );
+    return Promise.try( operation );
   }
 
   /**
