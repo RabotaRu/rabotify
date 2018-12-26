@@ -71,7 +71,7 @@
 
       loadImage (imageUrl) {
         const imageLoader = new ImageLoader();
-        return imageLoader.load( imageUrl, 4 );
+        return imageLoader.retry( imageUrl, 4 );
       },
 
       retry () {

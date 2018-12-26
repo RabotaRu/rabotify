@@ -300,7 +300,7 @@ export class MapManager {
       return;
     }
 
-    return this._resourceLoader.load(url, 20);
+    return this._resourceLoader.retry(url, 20);
   }
 
   /**

@@ -1,13 +1,13 @@
-import { DownloadOperation } from './download-operation';
+import { RetryOperation } from './operations';
 
-export class ImageLoader extends DownloadOperation {
+export class ImageLoader extends RetryOperation {
 
   /**
    * @param {string} imageUrl
    * @returns {Promise<*>}
    * @private
    */
-  async download (imageUrl) {
+  async action (imageUrl) {
     return new Promise((resolve, reject) => {
       if (typeof window === 'undefined') {
         return resolve();

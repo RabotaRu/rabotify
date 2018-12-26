@@ -1,13 +1,13 @@
-import { DownloadOperation } from './download-operation';
+import { RetryOperation } from './operations';
 
-export class ResourceLoader extends DownloadOperation {
+export class ResourceLoader extends RetryOperation {
 
   /**
    * @param {string} resourceUrl
    * @returns {Promise<*>}
    * @private
    */
-  async download (resourceUrl) {
+  async action (resourceUrl) {
     return new Promise((resolve, reject) => {
       const resourceLoader = document.createElement('script');
       resourceLoader.type = 'text/javascript';
@@ -18,7 +18,6 @@ export class ResourceLoader extends DownloadOperation {
             resourceLoader.onreadystatechange = null;
             resolve( resourceLoader );
           }
-          console.log( resourceLoader.readyState, resourceLoader.readyState );
         };
       } else {  // other browsers
         resourceLoader.onload = () => resolve( resourceLoader );
