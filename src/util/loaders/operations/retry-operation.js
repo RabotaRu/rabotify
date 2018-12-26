@@ -1,3 +1,5 @@
+import { clampNumber } from '../../helpers';
+
 const delay = delayMs => new Promise(resolve => setTimeout(resolve, delayMs));
 
 let OPERATION_ID = 1;
@@ -43,6 +45,8 @@ export class RetryOperation {
    * @private
    */
   async _retryUntil (asyncAction, maxAttemptsNumber) {
+    maxAttemptsNumber = clampNumber( maxAttemptsNumber, 1 );
+
     let attempts = 0;
 
     while (attempts < maxAttemptsNumber) {
