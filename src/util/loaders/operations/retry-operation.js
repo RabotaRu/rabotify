@@ -18,8 +18,10 @@ export class RetryOperation {
    * @return {Promise<*>}
    * @private
    */
-  async action (operation) {
-    return Promise.try( operation );
+  async action (operation, attempt) {
+    return Promise.resolve().then(_ => {
+      return operation && operation( attempt );
+    });
   }
 
   /**
@@ -28,7 +30,7 @@ export class RetryOperation {
    * @returns {Promise<*>}
    */
   async retry (operation, attemptsNumber = 15) {
-    return this._retryUntil(_ => this.action( operation ), attemptsNumber);
+    return this._retryUntil(attempt => this.action( operation, attempt ), attemptsNumber);
   }
 
   /**
@@ -54,6 +56,7 @@ export class RetryOperation {
         const result = await asyncAction( attempts ); // split by variable to prevent unhandled errors
         return result;
       } catch (e) {
+        console.error( '[RetryOperation]', e );
         attempts++;
         await delay(25 * Math.min(10, attempts) ** 2 + 500);
       }
