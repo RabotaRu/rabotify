@@ -351,8 +351,7 @@
 
       clearText (text) {
         return ensureString( text )
-          .toString()
-          .trim();
+          .toString();
       },
 
       makeTextSearchable (text) {
@@ -409,7 +408,7 @@
           return ( this.isActive = false );
         }
 
-        this.isActive = !!this.lazyItems.length;
+        this.isActive = !!this.lazyItems.length && this.focused;
 
         return this.search( value ).then(_ => {
           this.$nextTick(_ => {
