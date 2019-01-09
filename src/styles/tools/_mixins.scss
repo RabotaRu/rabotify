@@ -415,8 +415,9 @@
     width: 50%;
     position: absolute;
     top: 0;
+    opacity: .6;
     animation: flowing;
-    animation-duration: .75s;
+    animation-duration: 1s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 
