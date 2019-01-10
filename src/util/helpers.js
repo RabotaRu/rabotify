@@ -361,7 +361,7 @@ export function resolveElement (target) {
   } else if (isVueComponent(target)) {
     return target.$el;
   } else if (typeof target === 'string') {
-    return document.querySelector(target);
+    return document && document.querySelector(target);
   } else {
     return target;
   }

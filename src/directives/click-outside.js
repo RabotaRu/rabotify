@@ -1,3 +1,5 @@
+import { resolveElement } from '../util/helpers';
+
 function closeConditional () {
   return false;
 }
@@ -62,7 +64,10 @@ function clickedInEls (e, elements) {
 }
 
 function clickedInEl (el, x, y) {
-  if (!el) return;
+  if (!el) {
+    return;
+  }
+  el = resolveElement( el );
   // Get bounding rect for element
   // (we're in capturing event and we want to check for multiple elements,
   //  so can't use target.)
