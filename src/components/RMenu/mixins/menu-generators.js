@@ -51,7 +51,7 @@ export default {
         value: () => (this.isActive = false),
         args: {
           closeConditional: () => this.closeOnClick,
-          include: () => [ this.$el, this.activator, ...this.getOpenDependentElements() ]
+          include: () => [ this.$el, ...this.getOpenDependentElements() ]
         }
       }] : [];
 
