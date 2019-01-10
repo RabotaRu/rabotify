@@ -1,5 +1,6 @@
 import Positionable from './positionable';
 import Stackable from './stackable';
+import { resolveElement } from '../util/helpers';
 
 /* eslint-disable object-property-newline */
 const dimensions = {
@@ -263,7 +264,7 @@ export default {
       if (this.activator) {
         return typeof this.activator === 'string'
           ? document.querySelector(this.activator)
-          : this.activator;
+          : resolveElement( this.activator );
       }
 
       return this.$refs.activator.children.length > 0
