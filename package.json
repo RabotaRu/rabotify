@@ -1,6 +1,6 @@
 {
   "name": "@rabota/rabotify",
-  "version": "1.2.11",
+  "version": "1.2.12",
   "license": "MIT",
   "main": "dist/rabotify.core.min.js",
   "unpkg": "dist/rabotify.core.min.js",
@@ -118,7 +118,7 @@
   "dependencies": {
     "cleave.js": "^1.2.1",
     "md-svg-vue": "^1.0.20",
-    "normalize.css": "^8.0.0",
+    "normalize.css": "^8.0.1",
     "quill-image-resize-module": "^3.0.0",
     "vue-quill-editor": "^3.0.5",
     "vue-virtual-repeater": "^1.1.15"
