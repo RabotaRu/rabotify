@@ -117,16 +117,16 @@
 
     computed: {
       shouldRender () {
-        if (this.isServer || !this.isBooted) {
+        if (this.isServer && !this.isBooted) {
           return !this.onlyBrowser; // should always render on server if onlyBrowser is false
         }
         // client
-        const shouldUseBreakpoints = this.breakpoints && this.breakpoints.length;
-        if (this.renderedBefore && !shouldUseBreakpoints) {
+        const hasBreakpoints = this.breakpoints && this.breakpoints.length;
+        if (this.renderedBefore && !hasBreakpoints) {
           return true;
         }
 
-        const evaluatedBreakpointsExpression = shouldUseBreakpoints
+        const evaluatedBreakpointsExpression = hasBreakpoints
           ? this.evaluatedBreakpointsExpression
           : true;
 
@@ -207,7 +207,7 @@
       },
 
       evaluatedBreakpointsExpression () {
-        return this.evaluateBreakpointsExpression(this.breakpoints);
+        return this.evaluateBreakpointsExpression( this.breakpoints );
       },
 
       hasRenderListener () {
