@@ -95,6 +95,10 @@
       onFocus (ev) {
         this.focused = true;
         this.$emit( 'focus', ev );
+
+        if (this.removeQueryOnFocus) {
+          this.lazySearch = '';
+        }
       },
 
       onBlur (ev) {
