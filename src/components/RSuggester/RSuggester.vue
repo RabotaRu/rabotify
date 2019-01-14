@@ -218,6 +218,8 @@
       selectItem (item) {
         this.lazyValue = item;
         this.updateSearchValue();
+
+        this.$emit( 'select', item );
       },
 
       getItemValue (value) {
