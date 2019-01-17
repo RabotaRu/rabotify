@@ -130,7 +130,7 @@
             props: {
               large: this.large,
               small: this.small,
-              colorful: this.disabled || this.outline || !this.color
+              colorful: this.disabled || this.outline || !this.color || this.color === 'white'
             }
           }));
         } else {
