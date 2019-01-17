@@ -115,10 +115,11 @@
 
     computed: {
       shouldRender () {
-        if (isServer() && !this.isBooted) {
+        if (isServer() || !this.isBooted) {
           return !this.onlyBrowser; // should always render on server if onlyBrowser is false
         }
-        // client
+
+        // only browser code
         const hasBreakpoints = this.breakpoints && this.breakpoints.length;
         if (this.renderedBefore && !hasBreakpoints) {
           return true;
