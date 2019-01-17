@@ -1,7 +1,7 @@
 <script>
   /* eslint-disable no-unused-vars */
 
-  import { ensureNumber } from '../../util/helpers';
+  import { ensureNumber, isServer } from '../../util/helpers';
 
   import SsrBootable from '../../mixins/ssr-bootable';
 
@@ -46,8 +46,6 @@
     },
 
     data: () => ({
-      isServer: typeof window === 'undefined',
-      isBrowser: typeof window !== 'undefined',
       renderedBefore: false,
       $io: null,
       lazyVisibilityCondition: false
@@ -117,7 +115,7 @@
 
     computed: {
       shouldRender () {
-        if (this.isServer && !this.isBooted) {
+        if (isServer() && !this.isBooted) {
           return !this.onlyBrowser; // should always render on server if onlyBrowser is false
         }
         // client
