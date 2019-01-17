@@ -1,3 +1,5 @@
+import { isServer } from '../util/helpers';
+
 /**
  * SSRBootable
  *
@@ -12,12 +14,18 @@ export default {
   }),
 
   mounted () {
-    // Use setAttribute instead of dataset
-    // because dataset does not work well
-    // with unit tests
-    setTimeout(() => {
+    const shouldRunImmediately = !isServer();
+    const noopFn = this.$nextTick.bind( this );
+    const lazyFn = shouldRunImmediately
+      ? noopFn
+      : requestAnimationFrame;
+
+    lazyFn(() => {
+      // Use setAttribute instead of dataset
+      // because dataset does not work well
+      // with unit tests
       this.$el.setAttribute('data-booted', true);
       this.isBooted = true;
-    }, 200);
+    });
   }
 };
