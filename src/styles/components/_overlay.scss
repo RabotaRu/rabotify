@@ -53,6 +53,10 @@
 
     @include modifies-modifier('safari-blur') {
       -webkit-backdrop-filter: blur(15px) !important;
+
+      &:before {
+        background-color: white !important;
+      }
     }
   }
 
