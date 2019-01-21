@@ -461,3 +461,14 @@ export function normalizeClassName (className) {
 export function isObject (value) {
   return typeof value === 'object' && value !== null;
 }
+
+/**
+ * @returns {boolean}
+ */
+export function isBrowserSafari () {
+  if (isServer()) {
+    return false;
+  }
+
+  return /^((?!chrome|android|crios|fxios).)*safari/i.test( navigator.userAgent );
+}

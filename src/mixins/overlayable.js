@@ -1,3 +1,4 @@
+import { isBrowserSafari } from '../util/helpers';
 import Colorable from './colorable';
 
 export default {
@@ -68,7 +69,7 @@ export default {
         this.overlay.classList.add('overlay_transparent');
       }
 
-      if (this.safariBlurOverlay) {
+      if (this.safariBlurOverlay && isBrowserSafari()) {
         this.overlay.classList.add('overlay_safari-blur');
       }
 
