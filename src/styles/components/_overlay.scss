@@ -7,14 +7,14 @@
   // The overlay has a dynamically set
   // z-index, we want the transition
   // timing to affect its changing
-  transition: .3s $primary-transition-function;
+  transition: .3s $primary-transition-function, 0s z-index linear;
   // This is the standard index
   z-index: $overlay-z-index;
 
   @include theme-property(background-color, false, false, 0);
 
   &:before {
-    background-color: $blue-darkest-color;
+    background-color: transparent;
     bottom: 0;
     content: '';
     height: 100%;
@@ -49,13 +49,17 @@
 
     &:before {
       opacity: .9;
+      background-color: $blue-darkest-color;
     }
 
     @include modifies-modifier('safari-blur') {
       -webkit-backdrop-filter: blur(10px) !important;
+      transition: .3s all $primary-transition-function,
+        0s z-index linear;
 
       &:before {
-        background-color: transparent !important;
+        opacity: .1;
+        // background-color: $blue-darkest-color !important;
       }
     }
   }
