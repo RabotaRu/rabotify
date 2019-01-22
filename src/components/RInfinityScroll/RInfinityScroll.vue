@@ -68,16 +68,16 @@
 </script>
 
 <template>
-  <div ref="container" v-scroll="onScroll">
-    <slot></slot>
+  <div ref="container" v-scroll="onScroll" class="infinity-scroll">
+    <slot class="infinity-scroll__content"></slot>
 
-    <div v-if="canAutoLoad">
+    <div v-if="canAutoLoad" class="infinity-scroll__loading">
       <r-loading v-if="loading" colorful></r-loading>
     </div>
-    <div v-else-if="canLoadNext">
+    <div v-else-if="canLoadNext" class="infinity-scroll__actions">
       <slot name="actions"></slot>
     </div>
-    <div v-else-if="loading">
+    <div v-else-if="loading" class="infinity-scroll__loading">
       <r-loading colorful></r-loading>
     </div>
   </div>
