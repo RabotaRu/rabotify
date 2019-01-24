@@ -200,6 +200,7 @@
   <component :is="tag"
              :class="classes"
              :style="styles"
+             itemscope itemtype="http://schema.org/ImageObject"
              ref="container">
 
     <div class="r-image__inner" v-if="isImgMode">
@@ -214,10 +215,10 @@
 
       <transition name="image-transition" mode="in-out">
         <div class="r-image__image-wrapper" v-if="!originalLoaded && hasThumbnail" key="thumbnail">
-          <img :src="imageObject.thumbnailSrc" class="r-image__image" :alt="alt" :style="imageStyles">
+          <img :src="imageObject.thumbnailSrc" class="r-image__image" :alt="alt" :style="imageStyles" itemprop="contentUrl">
         </div>
         <div class="r-image__image-wrapper" v-else key="original">
-          <img :src="imageObject.src" class="r-image__image" :alt="alt" :style="imageStyles">
+          <img :src="imageObject.src" class="r-image__image" :alt="alt" :style="imageStyles" itemprop="contentUrl">
         </div>
       </transition>
     </div>
