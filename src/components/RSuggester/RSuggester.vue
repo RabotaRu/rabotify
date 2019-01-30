@@ -173,6 +173,8 @@
               this.isActive = false;
             });
           }
+        } else if (!this.strictValue) {
+          this.save();
         }
 
         this.$emit( 'enter', ev, this.menuIndex );
