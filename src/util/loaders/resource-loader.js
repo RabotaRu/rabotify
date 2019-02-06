@@ -9,7 +9,7 @@ export class ResourceLoader extends RetryOperation {
    */
   async action (resourceUrl) {
     return new Promise((resolve, reject) => {
-      const resourceLoader = document.createElement('script');
+      const resourceLoader = document.createElement( 'script' );
       resourceLoader.type = 'text/javascript';
 
       if (resourceLoader.readyState) {  // IE

@@ -15,7 +15,7 @@ export class ImageLoader extends RetryOperation {
 
       const image = window.Image
         ? new Image()
-        : document.createElement( 'image' );
+        : document.createElement( 'img' );
 
       image.onload = event => resolve( image );
       image.onerror = error => reject( error );
