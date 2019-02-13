@@ -213,7 +213,7 @@ $shadow-key-ambient: (
 );
 
 /** Ripple Animation */
-$ripple-animation-transition: .35s get($transition, 'linear-out-slow-in');
+$ripple-animation-transition: .35s map_get($transition, 'linear-out-slow-in');
 $ripple-animation-visible-opacity: .2;
 
 
