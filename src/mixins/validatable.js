@@ -71,7 +71,7 @@ export default {
       for (let i = 0; i < errors.length; ++i) {
         const error = errors[ i ];
         if (isOwnError(error)) {
-          this.errorMessages.push(error.message);
+          this.errorMessages.push(error.user_message || error.system_message || error.message);
         }
       }
     },
