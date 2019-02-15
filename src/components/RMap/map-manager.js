@@ -1,4 +1,4 @@
-import { ResourceLoader } from '../../util/loaders/resource-loader';
+import { ScriptLoader } from '@rabota/loader';
 
 export class MapManager {
 
@@ -27,7 +27,7 @@ export class MapManager {
   _queue = [];
 
   /**
-   * @type {ResourceLoader}
+   * @type {ScriptLoader}
    * @private
    */
   _resourceLoader = null;
@@ -39,7 +39,7 @@ export class MapManager {
   _defaultCenterPoint = [ 55.76, 37.64 ];
 
   constructor () {
-    this._resourceLoader = new ResourceLoader();
+    this._resourceLoader = new ScriptLoader();
   }
 
   /**

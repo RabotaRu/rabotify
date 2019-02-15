@@ -6,7 +6,7 @@
 
   import RBtn from '../RBtn/RBtn.vue';
 
-  import { ImageLoader } from '../../util/loaders';
+  import { ImageLoader } from '@rabota/loader';
   import { getElementWidth } from '../../util/helpers';
 
   export default {
