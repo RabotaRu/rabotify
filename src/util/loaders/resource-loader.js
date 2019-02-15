@@ -11,6 +11,7 @@ export class ResourceLoader extends RetryOperation {
     return new Promise((resolve, reject) => {
       const resourceLoader = document.createElement( 'script' );
       resourceLoader.type = 'text/javascript';
+      resourceLoader.async = true;
 
       if (resourceLoader.readyState) {  // IE
         resourceLoader.onreadystatechange = () => {
