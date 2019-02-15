@@ -1,6 +1,6 @@
 {
   "name": "@rabota/rabotify",
-  "version": "1.3.7",
+  "version": "1.3.8",
   "license": "MIT",
   "main": "dist/rabotify.core.min.js",
   "unpkg": "dist/rabotify.core.min.js",
@@ -117,7 +117,7 @@
     "write-file-webpack-plugin": "4.2.0"
   },
   "dependencies": {
-    "@rabota/loader": "^1.0.1",
+    "@rabota/loader": "^1.0.2",
     "cleave.js": "^1.2.1",
     "md-svg-vue": "^1.0.20",
     "normalize.css": "^8.0.1",
