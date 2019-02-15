@@ -376,11 +376,7 @@ export function extractVNodeText (vnodes, deep = false) {
     return '';
   }
 
-  if (!Array.isArray(vnodes)) {
-    vnodes = [ vnodes ];
-  }
-
-  return vnodes.reduce((result, vnode) => {
+  return [].concat( vnodes ).reduce((result, vnode) => {
     // if we have native element
     // then return inner text content
     const elm = vnode.$el;
@@ -403,31 +399,31 @@ export function extractVNodeText (vnodes, deep = false) {
 }
 
 /**
- * @param {number} value
+ * @param {number} number
  * @param {number} min
  * @param {number} max
- * @return {number}
+ * @returns {number}
  */
-export function clampNumber (value, min = -Infinity, max = Infinity) {
+export function clampNumber (number, min = -Infinity, max = Infinity) {
   if (min > max) {
     [ min, max ] = [ max, min ];
   }
+
   return Math.min(
-    Math.max(ensureNumber(value), min),
+    Math.max(ensureNumber(number), min),
     max
   );
 }
 
+
 /**
  * @param {*} value
- * @return {number}
+ * @returns {number}
  */
 export function ensureNumber (value) {
-  value = Number(value);
-  if (Number.isNaN(value)) {
-    return 0;
-  }
-  return value;
+  value = Number( value );
+
+  return !Number.isNaN(value) ? value : 0;
 }
 
 /**
