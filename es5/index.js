@@ -23,7 +23,7 @@ function Rabotify(Vue, args) {
   }, args));
 }
 
-Rabotify.version = '0.9.4';
+Rabotify.version = '1.3.9';
 
 if (typeof window !== 'undefined' && window.Vue) {
   window.Vue.use(Rabotify);

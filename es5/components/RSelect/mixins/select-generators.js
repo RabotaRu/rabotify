@@ -211,7 +211,7 @@ exports.default = {
       };
 
       return this.$createElement('r-chip', {
-        staticClass: 'chip_select-multi',
+        staticClass: 'r-chip_select-multi',
         attrs: { tabindex: '-1' },
         props: {
           color: this.chipsColor || this.color,
@@ -237,7 +237,7 @@ exports.default = {
       }, [
       // to wrap text and apply some styles to text content later
       this.$createElement('span', {
-        staticClass: 'chip__content-text'
+        staticClass: 'r-chip__content-text'
       }, this.getText(item))]);
     },
     genCommaSelection: function genCommaSelection(item, index, last) {

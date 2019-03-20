@@ -15,6 +15,11 @@
     },
 
     render (h, { props, data, children }) {
+      const rootTag = children ? 'div' : 'hr';
+      const innerText = children
+        ? [ h('div', { class: 'divider__text' }, children) ]
+        : [];
+
       data.staticClass = normalizeClassName(`divider ${data.staticClass || ''}`);
 
       data.class = {
@@ -25,7 +30,7 @@
         'divider_reset': props.reset
       };
 
-      return h('hr', data);
+      return h(rootTag, data, innerText);
     }
   };
 </script>

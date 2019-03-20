@@ -97,6 +97,7 @@ exports.default = {
         'input-group_dirty': this.isDirty,
         'input-group_tab-focused': this.tabFocused,
         'input-group_disabled': this.disabled,
+        'input-group_readonly': this.readonly,
         'input-group_error': this.hasError,
         'input-group_append-icon': this.appendIcon || this.$slots.appendIcon,
         'input-group_prepend-icon': this.prependIcon || this.$slots.prependIcon,

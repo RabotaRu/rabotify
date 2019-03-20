@@ -3,6 +3,9 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _helpers = require('../util/helpers');
+
 function closeConditional() {
   return false;
 }
@@ -12,7 +15,7 @@ function directive(e, el, binding) {
   binding.args = binding.args || {};
 
   // If no closeConditional was supplied assign a default
-  var isActive = binding.args.closeConditional || closeConditional;
+  var isActive = binding.args.closeConditional || binding.value.closeConditional || closeConditional;
 
   // The include element callbacks below can be expensive
   // so we should avoid calling them when we're not active.
@@ -33,11 +36,13 @@ function directive(e, el, binding) {
 
   // Check if additional elements were passed to be included in check
   // (click must be outside all included elements, if any)
-  var elements = (binding.args.include || function () {
+  var elements = (binding.args.include || binding.value.include || function () {
     return [];
   })();
   // Add the root element for the component this directive was defined on
   elements.push(el);
+
+  var callback = binding.args.callback || binding.value.callback || binding.value;
 
   // Check if it's a click outside our elements, and then if our callback returns true.
   // Non-toggleable components should take action in their callback and return falsy.
@@ -46,10 +51,9 @@ function directive(e, el, binding) {
   // the bubbling click event on any outside elements.
   // !clickedInEls(e, elements) && isActive(e) && binding.value();
 
-  // todo: fix this
-  !clickedInEls(e, elements) && setTimeout(function () {
-    isActive(e) && binding.value();
-  }, 0);
+  !clickedInEls(e, elements) && requestAnimationFrame(function () {
+    isActive(e) && callback();
+  });
 }
 
 function clickedInEls(e, elements) {
@@ -89,6 +93,10 @@ function clickedInEls(e, elements) {
 }
 
 function clickedInEl(el, x, y) {
+  if (!el) {
+    return;
+  }
+  el = (0, _helpers.resolveElement)(el);
   // Get bounding rect for element
   // (we're in capturing event and we want to check for multiple elements,
   //  so can't use target.)

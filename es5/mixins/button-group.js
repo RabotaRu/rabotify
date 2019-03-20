@@ -79,10 +79,42 @@ exports.default = {
       }) && this.listeners.length > 0) {
         this.listeners[0]();
       }
+    },
+    setButtonWidth: function setButtonWidth() {
+      var _iteratorNormalCompletion = true;
+      var _didIteratorError = false;
+      var _iteratorError = undefined;
+
+      try {
+        for (var _iterator = this.buttons[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+          var component = _step.value;
+
+          if (component.$el) {
+            component.$el.style.width = this.buttonWidth;
+          }
+        }
+      } catch (err) {
+        _didIteratorError = true;
+        _iteratorError = err;
+      } finally {
+        try {
+          if (!_iteratorNormalCompletion && _iterator.return) {
+            _iterator.return();
+          }
+        } finally {
+          if (_didIteratorError) {
+            throw _iteratorError;
+          }
+        }
+      }
     }
   },
 
   mounted: function mounted() {
     this.update();
+
+    if (this.buttonWidth) {
+      this.setButtonWidth();
+    }
   }
 };

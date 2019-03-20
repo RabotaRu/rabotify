@@ -12,10 +12,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
   var mount = _ref.mount,
       compileToFunctions = _ref.compileToFunctions;
 
-  it('should have a chip class', function () {
+  it('should have a r-chip class', function () {
     var wrapper = mount(_RChip2.default);
 
-    expect(wrapper.hasClass('chip')).toBe(true);
+    expect(wrapper.hasClass('r-chip')).toBe(true);
     expect(wrapper.html()).toMatchSnapshot();
   });
 
@@ -24,7 +24,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
       propsData: { close: true }
     });
 
-    var close = wrapper.find('.chip__close')[0];
+    var close = wrapper.find('.r-chip__close')[0];
 
     var input = jest.fn(function (value) {
       return wrapper.setProps({ value: value });
@@ -57,7 +57,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
       }
     });
 
-    expect(wrapper.element.classList).toContain('chip_disabled');
+    expect(wrapper.element.classList).toContain('r-chip_disabled');
   });
 
   it('should render a colored outline chip', function () {
