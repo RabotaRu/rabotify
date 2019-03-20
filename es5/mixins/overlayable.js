@@ -4,6 +4,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _helpers = require('../util/helpers');
+
 var _colorable = require('./colorable');
 
 var _colorable2 = _interopRequireDefault(_colorable);
@@ -76,7 +78,7 @@ exports.default = {
         this.overlay.classList.add('overlay_transparent');
       }
 
-      if (this.safariBlurOverlay) {
+      if (this.safariBlurOverlay && (0, _helpers.isBrowserSafari)()) {
         this.overlay.classList.add('overlay_safari-blur');
       }
 

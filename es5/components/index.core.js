@@ -94,6 +94,15 @@ Object.defineProperty(exports, 'RForm', {
   }
 });
 
+var _RFormGroup = require('./RFormGroup');
+
+Object.defineProperty(exports, 'RFormGroup', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_RFormGroup).default;
+  }
+});
+
 var _RFormFieldError = require('./RFormFieldError');
 
 Object.defineProperty(exports, 'RFormFieldError', {
@@ -154,6 +163,15 @@ Object.defineProperty(exports, 'RSelect', {
   enumerable: true,
   get: function get() {
     return _interopRequireDefault(_RSelect).default;
+  }
+});
+
+var _RSuggester = require('./RSuggester');
+
+Object.defineProperty(exports, 'RSuggester', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_RSuggester).default;
   }
 });
 

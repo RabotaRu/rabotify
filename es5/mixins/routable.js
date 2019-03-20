@@ -10,6 +10,8 @@ var _ripple = require('../directives/ripple');
 
 var _ripple2 = _interopRequireDefault(_ripple);
 
+var _helpers = require('../util/helpers');
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -51,6 +53,9 @@ exports.default = {
       }, this.to ? 'nativeOn' : 'on', _extends({}, this.$listeners || {}, {
         click: this.click
       }));
+
+      var defaultSlot = this.$slots.default;
+      data.attrs['aria-label'] = (0, _helpers.extractVNodeText)(defaultSlot, true).trim() || 'uniqlabel';
 
       if (typeof this.exact === 'undefined') {
         exact = this.to === '/' || this.to === Object(this.to) && this.to.path === '/';

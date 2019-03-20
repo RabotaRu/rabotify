@@ -13,6 +13,5 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 /* istanbul ignore next */
 _RDialogCard2.default.install = function install(Vue) {
   Vue.component('r-dialog-card', _RDialogCard2.default);
-};
-
+}; // TODO: REMOVE THIS COMPONENT LATER
 exports.default = _RDialogCard2.default;

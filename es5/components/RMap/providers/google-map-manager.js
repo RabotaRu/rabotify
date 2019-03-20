@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.GoogleMapManager = exports.MAP_SDK = exports.MAP_SDK_KEY = undefined;
+exports.GoogleMapManager = exports.MAP_SDK_PROP = exports.MAP_SDK = exports.MAP_SDK_KEY = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -17,6 +17,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var MAP_SDK_KEY = exports.MAP_SDK_KEY = 'AIzaSyAyK9FgGmO_i0IoxeJwT3bTBHv0oi1fZT0';
 var MAP_SDK = exports.MAP_SDK = 'https://maps.googleapis.com/maps/api/js?key=' + MAP_SDK_KEY;
+var MAP_SDK_PROP = exports.MAP_SDK_PROP = 'google';
 
 var GoogleMapManager = exports.GoogleMapManager = function (_MapManager) {
   _inherits(GoogleMapManager, _MapManager);
@@ -102,7 +103,7 @@ var GoogleMapManager = exports.GoogleMapManager = function (_MapManager) {
       if (Array.isArray(point)) {
         coord = point;
       } else {
-        coord = point.coord;
+        coord = point.point;
       }
       var position = { lat: coord[0], lng: coord[1] };
       return new this.sdk.maps.Marker({ position: position, map: map });
@@ -110,7 +111,7 @@ var GoogleMapManager = exports.GoogleMapManager = function (_MapManager) {
   }, {
     key: 'sdkObjectName',
     get: function get() {
-      return 'google';
+      return MAP_SDK_PROP;
     }
   }], [{
     key: 'getManager',

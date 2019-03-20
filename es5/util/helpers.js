@@ -4,6 +4,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 exports.createSimpleFunctional = createSimpleFunctional;
@@ -20,14 +22,32 @@ exports.filterObjectOnKeys = filterObjectOnKeys;
 exports.filterChildren = filterChildren;
 exports.isServer = isServer;
 exports.isBrowser = isBrowser;
-exports.copyTextToClipboard = copyTextToClipboard;
 exports.getElementOffset = getElementOffset;
+exports.getElementRelativeOffset = getElementRelativeOffset;
+exports.getDocumentHeight = getDocumentHeight;
+exports.getWindowHeight = getWindowHeight;
+exports.isVueComponent = isVueComponent;
+exports.getElementHeight = getElementHeight;
+exports.getElementWidth = getElementWidth;
+exports.getElementScrollHeight = getElementScrollHeight;
+exports.getElementScrollWidth = getElementScrollWidth;
+exports.resolveElement = resolveElement;
+exports.extractVNodeText = extractVNodeText;
 exports.clampNumber = clampNumber;
 exports.ensureNumber = ensureNumber;
+exports.ensureString = ensureString;
 exports.normalizeClassName = normalizeClassName;
+exports.isObject = isObject;
+exports.isBrowserSafari = isBrowserSafari;
 
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
+/**
+ * @param {string} c
+ * @param {string|*} el
+ * @param {string} name
+ * @return {Object}
+ */
 function createSimpleFunctional(c) {
   var el = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'div';
   var name = arguments[2];
@@ -49,6 +69,13 @@ function createSimpleFunctional(c) {
   };
 }
 
+/**
+ * @param {string} name
+ * @param {string} origin
+ * @param {string} mode
+ * @param {boolean} isGroup
+ * @return {Object}
+ */
 function createSimpleTransition(name) {
   var origin = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'top center 0';
   var mode = arguments[2];
@@ -90,6 +117,12 @@ function createSimpleTransition(name) {
   };
 }
 
+/**
+ * @param {string} name
+ * @param {string} origin
+ * @param {string} mode
+ * @return {{name, functional, props, render}}
+ */
 function createSimpleTransitionGroup(name) {
   var origin = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'top center 0';
   var mode = arguments[2];
@@ -133,12 +166,22 @@ function createJavaScriptTransition(name, functions) {
   };
 }
 
+/**
+ * @param binding
+ * @param defaults
+ * @return {Object}
+ */
 function directiveConfig(binding) {
   var defaults = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 
   return Object.assign({}, defaults, binding.modifiers, { value: binding.arg }, binding.value || {});
 }
 
+/**
+ * @param {Element} el
+ * @param {string} event
+ * @param {Function} cb
+ */
 function addOnceEventListener(el, event, cb) {
   var once = function once() {
     cb();
@@ -148,6 +191,11 @@ function addOnceEventListener(el, event, cb) {
   el.addEventListener(event, once, false);
 }
 
+/**
+ * @param {Object} obj
+ * @param {string} path
+ * @return {*}
+ */
 function getObjectValueByPath(obj, path) {
   // credit: http://stackoverflow.com/questions/6491463/accessing-nested-javascript-objects-with-string-key#comment55278413_6491621
   if (!path || path.constructor !== String) {
@@ -167,31 +215,53 @@ function getObjectValueByPath(obj, path) {
   return obj;
 }
 
+/**
+ * @param {number} length
+ * @return {Array<number>}
+ */
 function createRange(length) {
   return [].concat(_toConsumableArray(Array.from({ length: length }, function (v, k) {
     return k;
   })));
 }
 
+/**
+ * @param {Element|*} el
+ * @return {number}
+ */
 function getZIndex(el) {
-  if (!el || el.nodeType !== Node.ELEMENT_NODE) return 0;
+  if (!el || el.nodeType !== Node.ELEMENT_NODE) {
+    return 0;
+  }
+
   var zi = document.defaultView.getComputedStyle(el).getPropertyValue('z-index');
-  if (isNaN(zi)) return getZIndex(el.parentNode);
+  if (isNaN(zi)) {
+    return getZIndex(el.parentNode);
+  }
 
   return zi;
 }
 
-var tagsToReplace = {
+var tagsToReplace = exports.tagsToReplace = {
   '&': '&amp;',
   '<': '&lt;',
   '>': '&gt;'
 };
+
+/**
+ * @param {string} str
+ * @return {string}
+ */
 function escapeHTML(str) {
   return str.replace(/[&<>]/g, function (tag) {
     return tagsToReplace[tag] || tag;
   });
 }
 
+/**
+ * @param {Object} obj
+ * @param {Array} keys
+ */
 function filterObjectOnKeys(obj, keys) {
   var filtered = {};
   for (var i = 0; i < keys.length; i++) {
@@ -203,6 +273,11 @@ function filterObjectOnKeys(obj, keys) {
   return filtered;
 }
 
+/**
+ * @param {Array} array
+ * @param {string|*} tag
+ * @return {Array}
+ */
 function filterChildren() {
   var array = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
   var tag = arguments[1];
@@ -212,65 +287,24 @@ function filterChildren() {
   });
 }
 
+/**
+ * @return {boolean}
+ */
 function isServer() {
   return typeof window === 'undefined';
 }
 
+/**
+ * @return {boolean}
+ */
 function isBrowser() {
   return typeof window !== 'undefined';
 }
 
-function copyTextToClipboard(text) {
-  var cb = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : function () {};
-
-  if (isServer()) {
-    return;
-  }
-
-  function copyToClipboardFF(text) {
-    window.prompt('Чтобы скопировать, нажмите: Ctrl+C, Enter', text);
-  }
-
-  (function copyToClipboard() {
-    var success = true;
-    var selection = void 0;
-    var range = document.createRange();
-
-    // For IE.
-    if (window.clipboardData) {
-      window.clipboardData.setData('Text', text);
-    } else {
-      // Create a temporary element off screen.
-      var tmpElem = document.createElement('div');
-      tmpElem.style.position = 'absolute';
-      tmpElem.style.left = '-1000px';
-      tmpElem.style.top = '-1000px';
-
-      // Add the input value to the temp element.
-      tmpElem.innerHTML = text;
-      document.body.appendChild(tmpElem);
-
-      // Select temp element.
-      range.selectNodeContents(tmpElem);
-      selection = window.getSelection();
-      selection.removeAllRanges();
-      selection.addRange(range);
-
-      // Lets copy.
-      try {
-        success = document.execCommand('copy', false, null);
-      } catch (e) {
-        copyToClipboardFF(text);
-      }
-      if (success) {
-        // remove temp element.
-        tmpElem.remove();
-        cb();
-      }
-    }
-  })();
-}
-
+/**
+ * @param {Element} element
+ * @return {{top: number, left: number}}
+ */
 function getElementOffset(element) {
   if (!element || isServer()) {
     return { top: 0, left: 0 };
@@ -293,7 +327,131 @@ function getElementOffset(element) {
   };
 }
 
-function clampNumber(value) {
+/**
+ * @param {Element} targetElement
+ * @param {Element} relativeElement
+ * @return {{ top: number, left: number }}
+ */
+function getElementRelativeOffset(targetElement, relativeElement) {
+  var targetOffset = getElementOffset(targetElement);
+  var relativeOffset = getElementOffset(relativeElement);
+
+  return {
+    top: targetOffset.top - relativeOffset.top + relativeElement.scrollTop,
+    left: targetOffset.left - relativeOffset.left + relativeElement.scrollLeft
+  };
+}
+
+/**
+ * @returns {number}
+ */
+function getDocumentHeight() {
+  return Math.max(document.body.scrollHeight, document.documentElement.scrollHeight, document.body.offsetHeight, document.documentElement.offsetHeight, document.body.clientHeight, document.documentElement.clientHeight);
+}
+
+/**
+ * @returns {number}
+ */
+function getWindowHeight() {
+  return window.innerHeight || (document.documentElement || document.body).clientHeight;
+}
+
+/**
+ * @param {*} obj
+ * @returns {boolean}
+ */
+function isVueComponent(obj) {
+  return !!(obj && obj.$el);
+}
+
+/**
+ * @param {Element} element
+ * @returns {number}
+ */
+function getElementHeight(element) {
+  return element.innerHeight || element.clientHeight;
+}
+
+/**
+ * @param {Element} element
+ * @returns {number}
+ */
+function getElementWidth(element) {
+  return element.innerWidth || element.clientWidth;
+}
+
+/**
+ * @param {Element} element
+ * @returns {number}
+ */
+function getElementScrollHeight(element) {
+  return Math.max(element.scrollHeight, element.offsetHeight, element.clientHeight);
+}
+
+/**
+ * @param {Element} element
+ * @returns {number}
+ */
+function getElementScrollWidth(element) {
+  return Math.max(element.scrollWidth, element.offsetWidth, element.clientWidth);
+}
+
+/**
+ * @param {*} target
+ * @returns {Element}
+ */
+function resolveElement(target) {
+  if (target instanceof Element) {
+    return target;
+  } else if (isVueComponent(target)) {
+    return target.$el;
+  } else if (typeof target === 'string') {
+    return document && document.querySelector(target);
+  } else {
+    return target;
+  }
+}
+
+/**
+ * @param {Array<VNode>|VNode} vnodes
+ * @param {boolean} deep
+ */
+function extractVNodeText(vnodes) {
+  var deep = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+
+  if (!vnodes) {
+    return '';
+  }
+
+  return [].concat(vnodes).reduce(function (result, vnode) {
+    // if we have native element
+    // then return inner text content
+    var elm = vnode.$el;
+    var elmText = elm && (elm.innerText || elm.textContent);
+
+    if (elmText) {
+      return result + ' ' + ensureString(elmText).trim();
+    }
+
+    if (vnode.text) {
+      result += ' ' + ensureString(vnode.text).trim();
+    }
+
+    if (deep && vnode.children && vnode.children.length) {
+      result += ' ' + extractVNodeText(vnode.children);
+    }
+
+    return result;
+  }, '');
+}
+
+/**
+ * @param {number} number
+ * @param {number} min
+ * @param {number} max
+ * @returns {number}
+ */
+function clampNumber(number) {
   var min = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : -Infinity;
   var max = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : Infinity;
 
@@ -302,18 +460,57 @@ function clampNumber(value) {
     min = _ref2[0];
     max = _ref2[1];
   }
-  return Math.min(Math.max(Number(value), min), max);
+
+  return Math.min(Math.max(ensureNumber(number), min), max);
 }
 
+/**
+ * @param {*} value
+ * @returns {number}
+ */
 function ensureNumber(value) {
   value = Number(value);
-  if (Number.isNaN(value)) {
-    return 0;
-  }
-  return value;
+
+  return !Number.isNaN(value) ? value : 0;
 }
 
+/**
+ * @param {string|*} value
+ * @returns {string}
+ */
+function ensureString(value) {
+  if (typeof value === 'string') {
+    return value;
+  }
+
+  return (value || '').toString();
+}
+
+/**
+ * @param {string} className
+ * @return {string}
+ */
 function normalizeClassName(className) {
   var whitespaceRegexp = /(\s+(?=\s))/gi;
   return (className || '').toString().replace(whitespaceRegexp, '').trim();
+}
+
+/**
+ * @param {*} value
+ * @returns {boolean}
+ */
+function isObject(value) {
+  return (typeof value === 'undefined' ? 'undefined' : _typeof(value)) === 'object' && value !== null;
+}
+
+/**
+ * @returns {boolean}
+ */
+function isBrowserSafari() {
+  if (isServer()) {
+    return false;
+  }
+
+  return (/^((?!chrome|android|crios|fxios).)*safari/i.test(navigator.userAgent)
+  );
 }

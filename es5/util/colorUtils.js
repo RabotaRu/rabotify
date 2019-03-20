@@ -50,7 +50,9 @@ function colorToInt(color) {
 function intToHex(color) {
   color = color.toString(16);
 
-  if (color.length < 6) color = '0'.repeat(6 - color.length) + color;
+  if (color.length < 6) {
+    color = '0'.repeat(6 - color.length) + color;
+  }
 
   return '#' + color;
 }

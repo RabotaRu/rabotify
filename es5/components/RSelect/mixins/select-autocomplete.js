@@ -106,7 +106,8 @@ exports.default = {
         this.selectListTile(this.getMenuIndex());
       }
     },
-    onEnterDown: function onEnterDown() {
+    onEnterDown: function onEnterDown(e) {
+      this.$emit('enter', e);
       this.updateTags(this.getCurrentTag());
     },
     onEscDown: function onEscDown(e) {
@@ -153,7 +154,7 @@ exports.default = {
 
       // Enter
       if (e.keyCode === 13) {
-        return this.onEnterDown();
+        return this.onEnterDown(e);
       }
 
       // Left arrow

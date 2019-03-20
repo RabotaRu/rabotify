@@ -14,6 +14,8 @@ var _stackable = require('./stackable');
 
 var _stackable2 = _interopRequireDefault(_stackable);
 
+var _helpers = require('../util/helpers');
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /* eslint-disable object-property-newline */
@@ -249,18 +251,22 @@ exports.default = {
       this.deactivate();
     },
     checkForWindow: function checkForWindow() {
+      var _this = this;
+
       if (!this.hasWindow) {
         this.hasWindow = typeof window !== 'undefined';
       }
 
       if (this.hasWindow) {
-        this.pageYOffset = this.getOffsetTop();
+        this.$nextTick(function (_) {
+          _this.pageYOffset = _this.getOffsetTop();
+        });
       }
     },
     deactivate: function deactivate() {},
     getActivator: function getActivator() {
       if (this.activator) {
-        return typeof this.activator === 'string' ? document.querySelector(this.activator) : this.activator;
+        return typeof this.activator === 'string' ? document.querySelector(this.activator) : (0, _helpers.resolveElement)(this.activator);
       }
 
       return this.$refs.activator.children.length > 0 ? this.$refs.activator.children[0] : this.$refs.activator;
@@ -317,12 +323,12 @@ exports.default = {
       return rect;
     },
     sneakPeek: function sneakPeek(cb) {
-      var _this = this;
+      var _this2 = this;
 
       requestAnimationFrame(function () {
-        var el = _this.$refs.content;
+        var el = _this2.$refs.content;
 
-        if (!el || _this.isShown(el)) {
+        if (!el || _this2.isShown(el)) {
           return cb();
         }
 
@@ -332,17 +338,17 @@ exports.default = {
       });
     },
     startTransition: function startTransition() {
-      var _this2 = this;
+      var _this3 = this;
 
       requestAnimationFrame(function () {
-        return _this2.isContentActive = true;
+        return _this3.isContentActive = true;
       });
     },
     isShown: function isShown(el) {
       return el.style.display !== 'none';
     },
     updateDimensions: function updateDimensions() {
-      var _this3 = this;
+      var _this4 = this;
 
       this.checkForWindow();
 
@@ -353,9 +359,9 @@ exports.default = {
 
       // Display and hide to get dimensions
       this.sneakPeek(function () {
-        dimensions.content = _this3.measure(_this3.$refs.content);
+        dimensions.content = _this4.measure(_this4.$refs.content);
 
-        _this3.dimensions = dimensions;
+        _this4.dimensions = dimensions;
       });
     }
   }

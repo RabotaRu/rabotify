@@ -11,6 +11,13 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 exports.default = {
   name: 'stackable',
 
+  props: {
+    zIndex: {
+      type: Number,
+      default: null
+    }
+  },
+
   data: function data() {
     return {
       stackBase: null,
@@ -21,6 +28,7 @@ exports.default = {
     };
   },
 
+
   computed: {
     /**
      * Currently active z-index
@@ -29,9 +37,9 @@ exports.default = {
      */
     activeZIndex: function activeZIndex() {
       var content = this.stackElement || this.$refs.content;
-      // Return current zindex if not active
+      // Return current z-index if not active
 
-      var index = !this.isActive ? (0, _helpers.getZIndex)(content) : this.getMaxZIndex(this.stackExclude || [content]) + 2;
+      var index = this.zIndex || (!this.isActive ? (0, _helpers.getZIndex)(content) : this.getMaxZIndex(this.stackExclude || [content]) + 2);
 
       if (index == null) {
         return index;
