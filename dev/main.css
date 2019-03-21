@@ -27229,6 +27229,8 @@ h3 {
     background-color: #fff;
     padding-left: 8px;
     padding-right: 8px;
+    letter-spacing: 1px;
+    line-height: 1;
 }
 .divider_inset {
     margin-left: 72px;

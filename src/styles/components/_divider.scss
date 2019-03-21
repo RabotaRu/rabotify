@@ -24,6 +24,8 @@
     background-color: #fff;
     padding-left: $indent-small;
     padding-right: $indent-small;
+    letter-spacing: 1px;
+    line-height: 1;
   }
 
   @include modifier('inset') {

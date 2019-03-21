@@ -9,7 +9,9 @@
     props: {
       inset: Boolean,
       shifted: Boolean,
+      xmedium: Boolean,
       large: Boolean,
+      xlarge: Boolean,
       small: Boolean,
       reset: Boolean
     },
@@ -25,7 +27,9 @@
       data.class = {
         'divider_inset': props.inset,
         'divider_shifted': props.shifted,
+        'divider_xmedium': props.xmedium,
         'divider_large': props.large,
+        'divider_xlarge': props.xlarge,
         'divider_small': props.small,
         'divider_reset': props.reset
       };
