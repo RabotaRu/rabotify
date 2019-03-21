@@ -10,6 +10,7 @@ $yellow-color: #ffdd17;
 $yellow-light-color: #fff2a4;
 $yellow-dark-color: #ffc107;
 $green-color: #00c853;
+$orange-color: #ff9600;
 
 // gray colors
 $gray-color: #d8d8d8;
@@ -20,7 +21,7 @@ $gray-dark-color: #9d9d9d;
 // theme colors
 $primary-color: $red-color                  !default;
 $secondary-color: $blue-color               !default;
-$accent-color: $yellow-color                !default;
+$accent-color: $orange-color                !default;
 $error-color: $red-color                    !default;
 $success-color: $green-color                !default;
 $info-color: $blue-light-color              !default;
