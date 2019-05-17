@@ -4471,7 +4471,7 @@ h6 {
   background-color: #275a95;
 }
 .accent {
-  background-color: #ffdd17;
+  background-color: #ff9600;
 }
 .error {
   background-color: #f2412f;
@@ -4515,11 +4515,11 @@ h6 {
     fill: #275a95;
 }
 .text_accent {
-  color: #ffdd17;
-  fill: #ffdd17;
+  color: #ff9600;
+  fill: #ff9600;
 }
 .text_accent * {
-    fill: #ffdd17;
+    fill: #ff9600;
 }
 .text_error {
   color: #f2412f;
@@ -4904,11 +4904,11 @@ h6 {
       fill: #275a95;
 }
 .icon.accent {
-    color: #ffdd17;
-    fill: #ffdd17;
+    color: #ff9600;
+    fill: #ff9600;
 }
 .icon.accent * {
-      fill: #ffdd17;
+      fill: #ff9600;
 }
 .icon.error {
     color: #f2412f;
@@ -10674,7 +10674,7 @@ h3 {
     background-color: #f2412f;
 }
 .loading_colorful .loading__circle:nth-of-type(2) {
-    background-color: #ffdd17;
+    background-color: #ff9600;
 }
 .loading_colorful .loading__circle:nth-of-type(3) {
     background-color: #275a95;
@@ -10702,8 +10702,8 @@ h3 {
       color: #275a95;
 }
 .loading__line.accent {
-      background-color: #ffdd17;
-      color: #ffdd17;
+      background-color: #ff9600;
+      color: #ff9600;
 }
 .loading__line.error {
       background-color: #f2412f;
@@ -11776,12 +11776,12 @@ h3 {
     border: 1px solid #224e81 ;
 }
 .r-btn.accent {
-    background-color: #ffdd17;
-    border: 1px solid #ffdd17;
+    background-color: #ff9600;
+    border: 1px solid #ff9600;
 }
 .r-btn.accent:hover {
-    background-color: #fdd700;
-    border: 1px solid #fdd700 ;
+    background-color: #e68700;
+    border: 1px solid #e68700 ;
 }
 .r-btn.error {
     background-color: #f2412f;
@@ -12040,12 +12040,12 @@ h3 {
       fill: #275a95;
 }
 .r-btn.text_accent {
-    border: 1px solid #ffdd17;
-    color: #ffdd17;
-    fill: #ffdd17;
+    border: 1px solid #ff9600;
+    color: #ff9600;
+    fill: #ff9600;
 }
 .r-btn.text_accent * {
-      fill: #ffdd17;
+      fill: #ff9600;
 }
 .r-btn.text_error {
     border: 1px solid #f2412f;
@@ -12229,7 +12229,7 @@ h3 {
       background-color: rgba(39, 90, 149, 0.1);
 }
 .r-btn_outline:hover.text_accent {
-      background-color: rgba(255, 221, 23, 0.1);
+      background-color: rgba(255, 150, 0, 0.1);
 }
 .r-btn_outline:hover.text_error {
       background-color: rgba(242, 65, 47, 0.1);
@@ -12265,7 +12265,7 @@ h3 {
       background-color: rgba(39, 90, 149, 0.3);
 }
 .r-btn_outline:active.text_accent {
-      background-color: rgba(255, 221, 23, 0.3);
+      background-color: rgba(255, 150, 0, 0.3);
 }
 .r-btn_outline:active.text_error {
       background-color: rgba(242, 65, 47, 0.3);
@@ -12308,7 +12308,7 @@ h3 {
       background-color: rgba(39, 90, 149, 0.3);
 }
 .r-btn_flat:active.text_accent {
-      background-color: rgba(255, 221, 23, 0.3);
+      background-color: rgba(255, 150, 0, 0.3);
 }
 .r-btn_flat:active.text_error {
       background-color: rgba(242, 65, 47, 0.3);
@@ -12399,12 +12399,12 @@ h3 {
                 transform: scale(0.95);
 }
 .r-btn_shadowed.accent, .r-btn_shadowed.text_accent {
-      -webkit-box-shadow: 0 4px 35px -8px #ffdd17;
-              box-shadow: 0 4px 35px -8px #ffdd17;
+      -webkit-box-shadow: 0 4px 35px -8px #ff9600;
+              box-shadow: 0 4px 35px -8px #ff9600;
 }
 .r-btn_shadowed.accent:hover, .r-btn_shadowed.text_accent:hover {
-        -webkit-box-shadow: 0 8px 36px -4px #ffdd17;
-                box-shadow: 0 8px 36px -4px #ffdd17;
+        -webkit-box-shadow: 0 8px 36px -4px #ff9600;
+                box-shadow: 0 8px 36px -4px #ff9600;
 }
 .r-btn_shadowed.accent:active, .r-btn_shadowed.text_accent:active {
         -webkit-transform: scale(0.95);
@@ -13505,8 +13505,8 @@ h3 {
   border: 1px solid #275a95;
 }
 .checkbox.input-group_active.text_accent .checkbox__content {
-  background: #ffdd17;
-  border: 1px solid #ffdd17;
+  background: #ff9600;
+  border: 1px solid #ff9600;
 }
 .checkbox.input-group_active.text_error .checkbox__content {
   background: #f2412f;
@@ -14039,7 +14039,7 @@ h3 {
   background-color: #275a95;
 }
 .switch.accent {
-  background-color: #ffdd17;
+  background-color: #ff9600;
 }
 .switch.error {
   background-color: #f2412f;
@@ -14685,9 +14685,9 @@ h3 {
     color: #275a95;
 }
 .input-group_text-field.text_accent input, .input-group_text-field.text_accent textarea {
-    border-color: #ffdd17;
-    caret-color: #ffdd17;
-    color: #ffdd17;
+    border-color: #ff9600;
+    caret-color: #ff9600;
+    color: #ff9600;
 }
 .input-group_text-field.text_error input, .input-group_text-field.text_error textarea {
     border-color: #f2412f;
@@ -14753,13 +14753,13 @@ h3 {
     color: #275a95;
 }
 .input-group_text-field.text_accent input::-webkit-input-placeholder, .input-group_text-field.text_accent textarea::-webkit-input-placeholder {
-    color: #ffdd17;
+    color: #ff9600;
 }
 .input-group_text-field.text_accent input::-ms-input-placeholder, .input-group_text-field.text_accent textarea::-ms-input-placeholder {
-    color: #ffdd17;
+    color: #ff9600;
 }
 .input-group_text-field.text_accent input::placeholder, .input-group_text-field.text_accent textarea::placeholder {
-    color: #ffdd17;
+    color: #ff9600;
 }
 .input-group_text-field.text_error input::-webkit-input-placeholder, .input-group_text-field.text_error textarea::-webkit-input-placeholder {
     color: #f2412f;
@@ -14855,10 +14855,10 @@ h3 {
     background-color: rgba(39, 90, 149, 0.4);
 }
 .input-group_text-field.text_accent input::-moz-selection, .input-group_text-field.text_accent textarea::-moz-selection {
-    background-color: rgba(255, 221, 23, 0.4);
+    background-color: rgba(255, 150, 0, 0.4);
 }
 .input-group_text-field.text_accent input::selection, .input-group_text-field.text_accent textarea::selection {
-    background-color: rgba(255, 221, 23, 0.4);
+    background-color: rgba(255, 150, 0, 0.4);
 }
 .input-group_text-field.text_error input::-moz-selection, .input-group_text-field.text_error textarea::-moz-selection {
     background-color: rgba(242, 65, 47, 0.4);
@@ -14927,10 +14927,10 @@ h3 {
       fill: #275a95;
 }
 .input-group_text-field.text_accent .r-btn:not(.r-chip__close) .icon {
-    fill: #ffdd17;
+    fill: #ff9600;
 }
 .input-group_text-field.text_accent .r-btn:not(.r-chip__close) .icon * {
-      fill: #ffdd17;
+      fill: #ff9600;
 }
 .input-group_text-field.text_error .r-btn:not(.r-chip__close) .icon {
     fill: #f2412f;
@@ -14999,7 +14999,7 @@ h3 {
       color: #275a95;
 }
 .input-group_text-field.text_accent label {
-      color: #ffdd17;
+      color: #ff9600;
 }
 .input-group_text-field.text_error label {
       color: #f2412f;
@@ -15035,8 +15035,8 @@ h3 {
     color: inherit;
     border: 1px solid #d8d8d8;
     padding: 8px;
-    -webkit-border-radius: 2px;
-            border-radius: 2px;
+    -webkit-border-radius: 4px;
+            border-radius: 4px;
     margin: 0;
     -webkit-box-shadow: none;
             box-shadow: none;
@@ -15850,10 +15850,10 @@ h3 {
     fill: #275a95;
 }
 .radio-group.text_accent {
-  fill: #ffdd17;
+  fill: #ff9600;
 }
 .radio-group.text_accent * {
-    fill: #ffdd17;
+    fill: #ff9600;
 }
 .radio-group.text_error {
   fill: #f2412f;
@@ -16399,7 +16399,7 @@ h3 {
   background: #275a95;
 }
 .radio.text_accent .radio__inner-circle {
-  background: #ffdd17;
+  background: #ff9600;
 }
 .radio.text_error .radio__inner-circle {
   background: #f2412f;
@@ -16435,7 +16435,7 @@ h3 {
   border-color: #275a95;
 }
 .radio.input-group_active.text_accent .radio__content {
-  border-color: #ffdd17;
+  border-color: #ff9600;
 }
 .radio.input-group_active.text_error .radio__content {
   border-color: #f2412f;
@@ -17973,7 +17973,7 @@ h3 {
     background-color: #275a95;
 }
 .card.accent {
-    background-color: #ffdd17;
+    background-color: #ff9600;
 }
 .card.error {
     background-color: #f2412f;
@@ -18594,7 +18594,7 @@ h3 {
     background-color: #275a95;
 }
 .toolbar.accent {
-    background-color: #ffdd17;
+    background-color: #ff9600;
 }
 .toolbar.error {
     background-color: #f2412f;
@@ -19939,7 +19939,7 @@ h3 {
     background-color: rgba(39, 90, 149, 0);
 }
 .overlay.accent {
-    background-color: rgba(255, 221, 23, 0);
+    background-color: rgba(255, 150, 0, 0);
 }
 .overlay.error {
     background-color: rgba(242, 65, 47, 0);
@@ -19993,7 +19993,7 @@ h3 {
       background-color: #275a95;
 }
 .overlay.accent:before {
-      background-color: #ffdd17;
+      background-color: #ff9600;
 }
 .overlay.error:before {
       background-color: #f2412f;
@@ -22701,9 +22701,9 @@ h3 {
     color: #275a95;
 }
 .input-group_text-field.text_accent input, .input-group_text-field.text_accent textarea {
-    border-color: #ffdd17;
-    caret-color: #ffdd17;
-    color: #ffdd17;
+    border-color: #ff9600;
+    caret-color: #ff9600;
+    color: #ff9600;
 }
 .input-group_text-field.text_error input, .input-group_text-field.text_error textarea {
     border-color: #f2412f;
@@ -22769,13 +22769,13 @@ h3 {
     color: #275a95;
 }
 .input-group_text-field.text_accent input::-webkit-input-placeholder, .input-group_text-field.text_accent textarea::-webkit-input-placeholder {
-    color: #ffdd17;
+    color: #ff9600;
 }
 .input-group_text-field.text_accent input::-ms-input-placeholder, .input-group_text-field.text_accent textarea::-ms-input-placeholder {
-    color: #ffdd17;
+    color: #ff9600;
 }
 .input-group_text-field.text_accent input::placeholder, .input-group_text-field.text_accent textarea::placeholder {
-    color: #ffdd17;
+    color: #ff9600;
 }
 .input-group_text-field.text_error input::-webkit-input-placeholder, .input-group_text-field.text_error textarea::-webkit-input-placeholder {
     color: #f2412f;
@@ -22871,10 +22871,10 @@ h3 {
     background-color: rgba(39, 90, 149, 0.4);
 }
 .input-group_text-field.text_accent input::-moz-selection, .input-group_text-field.text_accent textarea::-moz-selection {
-    background-color: rgba(255, 221, 23, 0.4);
+    background-color: rgba(255, 150, 0, 0.4);
 }
 .input-group_text-field.text_accent input::selection, .input-group_text-field.text_accent textarea::selection {
-    background-color: rgba(255, 221, 23, 0.4);
+    background-color: rgba(255, 150, 0, 0.4);
 }
 .input-group_text-field.text_error input::-moz-selection, .input-group_text-field.text_error textarea::-moz-selection {
     background-color: rgba(242, 65, 47, 0.4);
@@ -22943,10 +22943,10 @@ h3 {
       fill: #275a95;
 }
 .input-group_text-field.text_accent .r-btn:not(.r-chip__close) .icon {
-    fill: #ffdd17;
+    fill: #ff9600;
 }
 .input-group_text-field.text_accent .r-btn:not(.r-chip__close) .icon * {
-      fill: #ffdd17;
+      fill: #ff9600;
 }
 .input-group_text-field.text_error .r-btn:not(.r-chip__close) .icon {
     fill: #f2412f;
@@ -23015,7 +23015,7 @@ h3 {
       color: #275a95;
 }
 .input-group_text-field.text_accent label {
-      color: #ffdd17;
+      color: #ff9600;
 }
 .input-group_text-field.text_error label {
       color: #f2412f;
@@ -23051,8 +23051,8 @@ h3 {
     color: inherit;
     border: 1px solid #d8d8d8;
     padding: 8px;
-    -webkit-border-radius: 2px;
-            border-radius: 2px;
+    -webkit-border-radius: 4px;
+            border-radius: 4px;
     margin: 0;
     -webkit-box-shadow: none;
             box-shadow: none;
@@ -23824,8 +23824,8 @@ h3 {
   color: #275a95;
 }
 .input-group_select.text_accent .input-group__input {
-  border-color: #ffdd17;
-  color: #ffdd17;
+  border-color: #ff9600;
+  color: #ff9600;
 }
 .input-group_select.text_error .input-group__input {
   border-color: #f2412f;
@@ -23879,10 +23879,10 @@ h3 {
     fill: #275a95 !important;
 }
 .input-group_select.text_accent .input-group__append-icon .icon * {
-  fill: #ffdd17 !important;
+  fill: #ff9600 !important;
 }
 .input-group_select.text_accent .input-group__append-icon .icon * * {
-    fill: #ffdd17 !important;
+    fill: #ff9600 !important;
 }
 .input-group_select.text_error .input-group__append-icon .icon * {
   fill: #f2412f !important;
@@ -25149,10 +25149,10 @@ h3 {
     background-color: #224e81;
 }
 .r-chip.accent {
-    background-color: #ffdd17;
+    background-color: #ff9600;
 }
 .r-chip.accent:hover {
-    background-color: #fdd700;
+    background-color: #e68700;
 }
 .r-chip.error {
     background-color: #f2412f;
@@ -25313,12 +25313,12 @@ h3 {
       fill: #275a95;
 }
 .r-chip.text_accent {
-    color: #ffdd17;
-    border-color: #ffdd17;
-    fill: #ffdd17;
+    color: #ff9600;
+    border-color: #ff9600;
+    fill: #ff9600;
 }
 .r-chip.text_accent * {
-      fill: #ffdd17;
+      fill: #ff9600;
 }
 .r-chip.text_error {
     color: #f2412f;
@@ -27231,6 +27231,7 @@ h3 {
     padding-right: 8px;
     letter-spacing: 1px;
     line-height: 1;
+    white-space: nowrap;
 }
 .divider_inset {
     margin-left: 72px;
@@ -28250,7 +28251,7 @@ h3 {
       background-color: #275a95;
 }
 .tabs__bar.accent {
-      background-color: #ffdd17;
+      background-color: #ff9600;
 }
 .tabs__bar.error {
       background-color: #f2412f;
@@ -31078,7 +31079,7 @@ h3 {
       background: #275a95;
 }
 .r-toast__wrapper.accent {
-      background: #ffdd17;
+      background: #ff9600;
 }
 .r-toast__wrapper.error {
       background: #f2412f;
@@ -36202,6 +36203,35 @@ h3 {
     margin-top: 18px;
 }
 .page12 .block .r-suggester {
+    margin-top: 12px;
+}
+
+.playground > .card {
+  margin: 12px;
+}
+.playground:after {
+  height: 300px;
+  content: '';
+  width: 100%;
+  display: block;
+}
+.playground .input-group {
+  margin: 0 !important;
+}
+.page15 .block {
+  display: block;
+  padding: 16px;
+  -webkit-box-shadow: 0 2px 7px 0px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 2px 7px 0px rgba(0, 0, 0, 0.15);
+  -webkit-border-radius: 8px;
+          border-radius: 8px;
+  vertical-align: top;
+  margin-right: 12px;
+}
+.page15 .block h2 {
+    margin-top: 18px;
+}
+.page15 .block .r-suggester {
     margin-top: 12px;
 }
 

@@ -13,6 +13,7 @@ import PlaygroundBelov10 from './Playground.belov10.vue';
 import PlaygroundBelov11 from './Playground.belov11.vue';
 import PlaygroundBelov12 from './Playground.belov12.vue';
 import PlaygroundBelov13 from './Playground.belov13.vue';
+import PlaygroundBelov14 from './Playground.belov14.vue';
 
 import PlaygroundJekins0 from './Playground.jekins0.vue';
 
@@ -87,6 +88,11 @@ const router = new VueRouter({
       path: '/page14',
       name: 'Page 14',
       component: PlaygroundBelov13
+    },
+    {
+      path: '/page15',
+      name: 'Page 15',
+      component: PlaygroundBelov14
     },
     {
       path: '/jekins0',

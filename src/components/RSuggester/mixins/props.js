@@ -50,7 +50,6 @@ export const Props = {
     prefetch: Boolean,
     strictValue: Boolean,
     selectFirstOnEnter: Boolean,
-    removeQueryOnFocus: Boolean,
     color: String
   }
 };

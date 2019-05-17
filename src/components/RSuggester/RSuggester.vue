@@ -75,33 +75,15 @@
       };
     },
 
-    mounted () {
-      // If instance is being destroyed
-      // do not run mounted functions
-      if (this._isDestroyed) {
-        return;
-      }
-
-      this.lazyItems = [];
-
-      this.updateInputHeight();
-
-      if (this.isAsync && this.value && this.prefetch) {
-        this.search( this.lazySearch );
-      }
-    },
-
     methods: {
       onFocus (ev) {
+        console.log( '[focus]' );
         this.focused = true;
         this.$emit( 'focus', ev );
-
-        if (this.removeQueryOnFocus) {
-          this.lazySearch = '';
-        }
       },
 
       onBlur (ev) {
+        console.log( '[blur]' );
         this.focused = false;
         this.$emit( 'blur', ev );
 
@@ -111,6 +93,7 @@
       },
 
       blur () {
+        console.log( '[force blur]' );
         const input = getObjectValueByPath( this.$refs, 'input.$refs.input' );
 
         if (input) {
@@ -119,6 +102,7 @@
       },
 
       onClick (ev) {
+        console.log( '[click]' );
         this.updateMenuOpenState();
       },
 
@@ -137,6 +121,7 @@
       },
 
       onTabPressed (ev) {
+        console.log( '[tab]' );
         this.isActive = false;
       },
 
@@ -149,35 +134,40 @@
       },
 
       onEnterPressed (ev) {
+        console.log( '[enter] before', this.lazyValue, this.menuIndex );
+
         if (this.isActive && this.lazyItems.length) {
           let selected = false;
+          let selectedValue = null;
 
           if (this.menuIndex === -1 && this.selectFirstOnEnter) {
             const item = this.findAppropriateValue();
             if (item) {
-              this.selectItem( item );
+              selectedValue = item;
               selected = true;
             }
           } else if (this.menuIndex >= 0) {
             const menuIndex = clampNumber( this.menuIndex, 0, this.lazyItems.length - 1 );
 
-            this.selectItem( this.lazyItems[ menuIndex ] );
+            selectedValue = this.lazyItems[ menuIndex ];
             selected = true;
           }
 
           if (selected) {
-            this.needsToCloseMenu = true;
-            this.blur();
+            if (selectedValue) {
+              this.selectItem( selectedValue );
+            }
 
-            this.$nextTick(_ => {
-              this.isActive = false;
-            });
+            this.blur();
+            this.updateMenuOpenState();
           }
         } else if (!this.strictValue) {
           this.save();
         }
 
-        this.$emit( 'enter', ev, this.menuIndex );
+        console.log( '[enter] after', this.lazyValue, this.menuIndex );
+
+        this.$emit( 'enter', this.lazyValue, this.menuIndex, this.lazySearch, ev );
       },
 
       changeMenuIndex (ev) {
@@ -222,10 +212,15 @@
       },
 
       selectItem (item) {
+        const oldValue = this.lazyValue;
+
         this.lazyValue = item;
         this.updateSearchValue();
 
-        this.$emit( 'select', item );
+        if (this.lazyValue !== oldValue) {
+          console.log( '[select] (selectItem)', item );
+          this.$emit( 'select', item );
+        }
       },
 
       getItemValue (value) {
@@ -335,6 +330,9 @@
       },
 
       save () {
+        console.log( '[save]' );
+        console.log( '[save] before', this.lazyValue );
+
         if (this.isSearchEmpty) {
           this.reset();
         } else {
@@ -348,10 +346,13 @@
             this.lazyValue = this.lazySearch;
           }
         }
+
+        console.log( '[save] after', this.lazyValue );
       },
 
       onMenuInput (val) {
         if (!val) {
+          console.log( '[menu @input]', val );
           this.save();
           this.isActive = false;
         }
@@ -435,11 +436,28 @@
       },
 
       isActive (value) {
+        console.log( '[watch]', 'isActive', value );
         if (!value) {
           this.menuIndex = -1;
         } else {
           this.updateInputHeight();
         }
+      }
+    },
+
+    mounted () {
+      // If instance is being destroyed
+      // do not run mounted functions
+      if (this._isDestroyed) {
+        return;
+      }
+
+      this.lazyItems = [];
+
+      this.updateInputHeight();
+
+      if (this.isAsync && this.value && this.prefetch) {
+        this.search( this.lazySearch );
       }
     },
 
