@@ -167,7 +167,9 @@
 
         console.log( '[enter] after', this.lazyValue, this.menuIndex );
 
-        this.$emit( 'enter', this.lazyValue, this.menuIndex, this.lazySearch, ev );
+        this.$nextTick(_ => {
+          this.$emit( 'enter', this.lazyValue, this.menuIndex, this.lazySearch, ev );
+        });
       },
 
       changeMenuIndex (ev) {
