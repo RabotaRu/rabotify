@@ -51,7 +51,10 @@ export default {
         value: () => (this.isActive = false),
         args: {
           closeConditional: () => this.closeOnClick,
-          include: () => [ this.activator, this.$el, ...this.getOpenDependentElements() ]
+          include: () => {
+            console.log('include', [ this.getActivator(), this.$el, ...this.getOpenDependentElements() ]);
+            return [ this.getActivator(), this.$el, ...this.getOpenDependentElements() ]
+          }
         }
       }] : [];
 
