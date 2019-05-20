@@ -403,7 +403,7 @@
       },
 
       openOnClickAvailable () {
-        return Boolean( this.lazySearch && this.lazySearch.length > 0 );
+        return Boolean( this.lazySearch && this.lazySearch.length > 0 && this.lazyItems.length > 0 );
       }
     },
 

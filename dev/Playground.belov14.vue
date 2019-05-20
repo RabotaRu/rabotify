@@ -16,7 +16,7 @@
 
     methods: {
       search (query, requestId) {
-        return fetch('https://api.rabota.ru/v4/vacancies/search/suggest.json', {
+        return fetch('https://api.dev.rabota.space/v4/vacancies/search/suggest.json', {
           method: 'POST',
           headers: {
             'Accept': 'application/json',
