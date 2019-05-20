@@ -57,6 +57,7 @@
 
   @include modifier('vertical') {
     display: block;
+    margin-bottom: $indent-large;
 
     @include modifies-element('label') {
       margin-bottom: $indent-small;
@@ -64,5 +65,9 @@
       max-width: 100%;
       font-weight: $font-weight-medium;
     }
+  }
+
+  @include modifier('indent-small') {
+    margin-bottom: $indent-medium;
   }
 }

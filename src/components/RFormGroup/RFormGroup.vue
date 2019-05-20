@@ -11,12 +11,14 @@
       controlClass: String,
       labelOffset: Boolean,
       narrowControl: Boolean,
+      smallIndent: Boolean,
     },
 
     computed: {
       classes () {
         return {
-          'form-group_vertical': this.vertical
+          'form-group_vertical': this.vertical,
+          'form-group_indent-small': this.smallIndent
         };
       },
       labelClasses () {

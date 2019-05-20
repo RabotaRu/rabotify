@@ -36,6 +36,12 @@
     }
   }
 
+  @include modifier('bold') {
+    label {
+      font-weight: $font-weight-medium;
+    }
+  }
+
   &:not(.input-group_static-label) {
     .icon {
       top: -5px;
