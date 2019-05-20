@@ -158,6 +158,7 @@
           }
         } else if (!this.strictValue) {
           this.save();
+          this.blur();
         }
 
         // console.log( '[enter] after', this.lazyValue, this.menuIndex );
