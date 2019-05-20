@@ -492,8 +492,9 @@
         <r-menu ref="menu"
                 v-model="isActive"
                 v-bind="menuOptionsComputed"
-                :openOnClick="openOnClickAvailable"
                 @input="onMenuInput"
+                :openOnClick="openOnClickAvailable"
+                includeActivator
                 :activator="$refs.input && $refs.input.$el">
 
           <r-list>

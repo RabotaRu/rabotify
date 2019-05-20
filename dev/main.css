@@ -13573,6 +13573,9 @@ h3 {
       stroke-dashoffset: 0;
       stroke-dasharray: 29.78334;
 }
+.checkbox_bold label {
+  font-weight: 600;
+}
 .checkbox:not(.input-group_static-label) .icon {
   top: -5px;
 }
@@ -17027,12 +17030,16 @@ h3 {
 }
 .form-group_vertical {
     display: block;
+    margin-bottom: 24px;
 }
 .form-group_vertical .form-group__label {
       margin-bottom: 8px;
       display: block;
       max-width: 100%;
       font-weight: 600;
+}
+.form-group_indent-small {
+    margin-bottom: 16px;
 }
 @media screen and (max-width: 719px) {
 .form-group {
