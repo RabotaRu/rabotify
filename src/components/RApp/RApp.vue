@@ -21,13 +21,7 @@
         type: String,
         default: 'app'
       }
-    },
-
-    watch: {
-      breakpoint (args) {
-        console.log(args);
-      }
-    },
+    }
   };
 </script>
 

@@ -65,10 +65,7 @@
       maxHeight: { default: 'auto' },
       offsetX: Boolean,
       offsetY: Boolean,
-      openOnClick: {
-        type: Boolean,
-        default: true
-      },
+      openOnClick: Boolean,
       openOnHover: Boolean,
       origin: {
         type: String,

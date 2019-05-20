@@ -77,13 +77,13 @@
 
     methods: {
       onFocus (ev) {
-        console.log( '[focus]' );
+        // console.log( '[focus]' );
         this.focused = true;
         this.$emit( 'focus', ev );
       },
 
       onBlur (ev) {
-        console.log( '[blur]' );
+        // console.log( '[blur]' );
         this.focused = false;
         this.$emit( 'blur', ev );
 
@@ -93,17 +93,12 @@
       },
 
       blur () {
-        console.log( '[force blur]' );
+        // console.log( '[force blur]' );
         const input = getObjectValueByPath( this.$refs, 'input.$refs.input' );
 
         if (input) {
           input.blur();
         }
-      },
-
-      onClick (ev) {
-        console.log( '[click]' );
-        this.updateMenuOpenState();
       },
 
       onKeyDown (ev) {
@@ -121,7 +116,7 @@
       },
 
       onTabPressed (ev) {
-        console.log( '[tab]' );
+        // console.log( '[tab]' );
         this.isActive = false;
       },
 
@@ -134,7 +129,7 @@
       },
 
       onEnterPressed (ev) {
-        console.log( '[enter] before', this.lazyValue, this.menuIndex );
+        // console.log( '[enter] before', this.lazyValue, this.menuIndex );
 
         if (this.isActive && this.lazyItems.length) {
           let selected = false;
@@ -165,7 +160,7 @@
           this.save();
         }
 
-        console.log( '[enter] after', this.lazyValue, this.menuIndex );
+        // console.log( '[enter] after', this.lazyValue, this.menuIndex );
 
         this.$nextTick(_ => {
           this.$emit( 'enter', this.lazyValue, this.menuIndex, this.lazySearch, ev );
@@ -220,7 +215,7 @@
         this.updateSearchValue();
 
         if (this.lazyValue !== oldValue) {
-          console.log( '[select] (selectItem)', item );
+          // console.log( '[select] (selectItem)', item );
           this.$emit( 'select', item );
         }
       },
@@ -332,8 +327,8 @@
       },
 
       save () {
-        console.log( '[save]' );
-        console.log( '[save] before', this.lazyValue );
+        // console.log( '[save]' );
+        // console.log( '[save] before', this.lazyValue );
 
         if (this.isSearchEmpty) {
           this.reset();
@@ -349,12 +344,12 @@
           }
         }
 
-        console.log( '[save] after', this.lazyValue );
+        // console.log( '[save] after', this.lazyValue );
       },
 
       onMenuInput (val) {
+        // console.log( '[menu @input]', val );
         if (!val) {
-          console.log( '[menu @input]', val );
           this.save();
           this.isActive = false;
         }
@@ -405,6 +400,10 @@
 
       isSearchEmpty () {
         return !this.clearText( this.lazySearch );
+      },
+
+      openOnClickAvailable () {
+        return Boolean( this.lazySearch && this.lazySearch.length > 0 );
       }
     },
 
@@ -438,7 +437,7 @@
       },
 
       isActive (value) {
-        console.log( '[watch]', 'isActive', value );
+        // console.log( '[watch]', 'isActive', value );
         if (!value) {
           this.menuIndex = -1;
         } else {
@@ -477,7 +476,6 @@
                       v-model="lazySearch"
                       @focus="onFocus"
                       @blur="onBlur"
-                      @click="onClick"
                       @keydown="onKeyDown"
                       :color="color"
                       :disabled="disabled"
@@ -493,8 +491,11 @@
         <r-menu ref="menu"
                 v-model="isActive"
                 v-bind="menuOptionsComputed"
+                :openOnClick="openOnClickAvailable"
                 @input="onMenuInput"
                 :activator="$refs.input && $refs.input.$el">
+
+          {{ lazySearch }}{{ (lazySearch && lazySearch.length > 0) ? 'true' : 'false'}}
 
           <r-list>
             <r-list-tile v-for="(item, index) in lazyItems"
