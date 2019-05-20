@@ -68,6 +68,6 @@
   }
 
   @include modifier('indent-small') {
-    margin-bottom: $indent-medium;
+    margin-bottom: $indent-small;
   }
 }
