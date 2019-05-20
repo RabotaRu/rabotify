@@ -51,11 +51,18 @@ export default {
         value: () => (this.isActive = false),
         args: {
           closeConditional: () => this.closeOnClick,
-          include: () => [
-            this.getActivator(),
-            this.$el,
-            ...this.getOpenDependentElements()
-          ]
+          include: () => {
+            const elements = [
+              this.$el,
+              ...this.getOpenDependentElements()
+            ];
+
+            if (this.includeActivator) {
+              elements.push( this.getActivator() );
+            }
+
+            return elements;
+          }
         }
       }] : [];
 

@@ -7,6 +7,9 @@
  * Supports slotted and detached activators
  */
 export default {
+  props: {
+    includeActivator: Boolean
+  },
   methods: {
     activatorClickHandler (e) {
       if (this.disabled) {
