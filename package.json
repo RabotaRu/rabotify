@@ -1,6 +1,6 @@
 {
   "name": "@rabota/rabotify",
-  "version": "1.4.5",
+  "version": "1.4.7",
   "license": "MIT",
   "main": "dist/rabotify.core.min.js",
   "unpkg": "dist/rabotify.core.min.js",

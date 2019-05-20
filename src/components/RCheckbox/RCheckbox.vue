@@ -43,7 +43,7 @@
           'checkbox': true,
           'checkbox_small': this.small,
           'checkbox_large': this.large,
-          'input-group_bold': this.bold,
+          'checkbox_bold': this.bold,
           'checkbox_indeterminate': this.indeterminate,
           'input-group_selection-controls': true,
           'input-group_active': this.isActive
