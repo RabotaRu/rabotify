@@ -152,10 +152,10 @@
             if (selectedValue) {
               this.selectItem( selectedValue );
             }
-
-            this.blur();
-            this.updateMenuOpenState();
           }
+
+          this.blur();
+          this.updateMenuOpenState();
         } else if (!this.strictValue) {
           this.save();
           this.blur();
