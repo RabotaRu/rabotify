@@ -495,8 +495,6 @@
                 @input="onMenuInput"
                 :activator="$refs.input && $refs.input.$el">
 
-          {{ lazySearch }}{{ (lazySearch && lazySearch.length > 0) ? 'true' : 'false'}}
-
           <r-list>
             <r-list-tile v-for="(item, index) in lazyItems"
                          :key="item.id || index"
