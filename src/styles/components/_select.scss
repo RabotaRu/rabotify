@@ -85,7 +85,7 @@
     background-color: $text-field-background;
     color: inherit;
     border: 1px solid $border-color;
-    border-radius: $radius-small;
+    border-radius: $radius-medium;
 
     input {
       height: $input-height - 2; // 2 * border-width = 2px
