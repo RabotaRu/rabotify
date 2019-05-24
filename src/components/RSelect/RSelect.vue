@@ -131,21 +131,23 @@
 
         const indexes = this.selectedItems.length - 1;
 
-        if (keyCode === 37) { // Left arrow
-          this.selectedIndex = this.selectedIndex === -1
-            ? indexes
-            : this.selectedIndex - 1;
-        } else if (keyCode === 39) { // Right arrow
-          this.selectedIndex = this.selectedIndex >= indexes
-            ? -1
-            : this.selectedIndex + 1;
-        } else if (this.selectedIndex === -1) {
-          this.selectedIndex = indexes;
-          return;
+        if (this.arrowNavigation) {
+          if (keyCode === 37) { // Left arrow
+            this.selectedIndex = this.selectedIndex === -1
+              ? indexes
+              : this.selectedIndex - 1;
+          } else if (keyCode === 39) { // Right arrow
+            this.selectedIndex = this.selectedIndex >= indexes
+              ? -1
+              : this.selectedIndex + 1;
+          } else if (this.selectedIndex === -1) {
+            this.selectedIndex = indexes;
+            return;
+          }
         }
 
         // backspace/delete
-        if ([ 8, 46 ].includes(keyCode)) {
+        if ([ 8, 46 ].includes(keyCode) && this.backspaceDeletable) {
           const newIndex = this.selectedIndex === indexes
             ? this.selectedIndex - 1
             : this.selectedItems[this.selectedIndex + 1]

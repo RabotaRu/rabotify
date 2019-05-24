@@ -26,6 +26,14 @@ export default {
     combobox: Boolean,
     contentClass: String,
     deletableChips: Boolean,
+    backspaceDeletable: {
+      type: Boolean,
+      default: true
+    },
+    arrowNavigation: {
+      type: Boolean,
+      default: true
+    },
     dense: Boolean,
     editable: Boolean,
     fitToContent: Boolean,
