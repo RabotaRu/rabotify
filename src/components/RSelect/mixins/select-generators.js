@@ -320,6 +320,9 @@ export default {
         }
       }
 
+      const prependItem = this.$slots['prepend-item'];
+      prependItem && children.unshift(prependItem);
+
       return this.$createElement('r-card', [
         this.$createElement('r-list', {
           props: {
