@@ -175,6 +175,8 @@ export default {
       this.$refs.menu.tiles[index].click();
     },
     updateTags (content) {
+      content = this.createItem(content);
+
       // Avoid direct mutation
       // for vuex strict mode
       let selectedItems = this.selectedItems.slice();
@@ -189,6 +191,7 @@ export default {
       // that that the search text
       // is populated if needed
       let searchValue = null;
+
       if (this.combobox) {
         selectedItems = [ content ];
         searchValue = this.chips ? null : content;
@@ -205,6 +208,21 @@ export default {
         // Combobox should close its menu when tags are updated
         this.menuIsActive = !this.combobox || this.persistentMenu;
       });
+    },
+    createItem (content) {
+      if (this.creatableChips && typeof content === 'string') {
+        const id = Math.floor(Math.random() * (-1e15 - -1e20)) + -1e20;
+
+        content = {
+          name: content,
+          id,
+          created: true
+        };
+        this.items.push(content);
+        this.selectItem(content);
+      }
+
+      return content;
     }
   }
 };

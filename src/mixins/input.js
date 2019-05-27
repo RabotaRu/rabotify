@@ -226,6 +226,7 @@ export default {
             ? -1
             : this.internalTabIndex || this.tabindex
         },
+        ref: 'inputGroup',
         on: {
           focus: this.groupFocus,
           blur: this.groupBlur,

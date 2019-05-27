@@ -329,6 +329,9 @@
           role: this.isAutocomplete ? null : 'combobox'
         }
       };
+      const selectionsOutside = this.chipsOutside
+        ? this.genSelectionsAndSearch({ search: false })
+        : null;
 
       if (!this.isAutocomplete) {
         data.on = this.genListeners();
@@ -351,10 +354,16 @@
         };
       }
 
-      return this.genInputGroup([
-        this.genSelectionsAndSearch(),
-        this.genMenu()
-      ], data, this.toggleMenu);
+      return this.$createElement('div', {
+        'class': 'input-group__select-wrapper',
+        ref: 'select'
+      }, [
+        this.genInputGroup([
+          this.genSelectionsAndSearch({ selections: !this.chipsOutside }),
+          this.genMenu()
+        ], data, this.toggleMenu),
+        selectionsOutside
+      ]);
     }
   };
 </script>

@@ -83,7 +83,9 @@ export default {
         this.searchValue === this.getText(this.selectedItem);
     },
     isHidingSelected () {
-      return this.hideSelected && this.isAutocomplete && this.isMultiple;
+      return this.hideSelected
+        && (this.isAutocomplete || this.chipsOutside)
+        && this.isMultiple;
     },
     isAutocomplete () {
       return this.autocomplete || this.editable || this.tags || this.combobox;
@@ -99,7 +101,7 @@ export default {
       return this.multiple || this.tags;
     },
     isAnyValueAllowed () {
-      return this.tags || this.combobox;
+      return this.tags || this.combobox || this.creatableChips;
     },
     menuIsVisible () {
       if (!this.menu) {

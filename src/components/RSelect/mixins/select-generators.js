@@ -17,7 +17,7 @@ export default {
       const data = {
         ref: 'menu',
         props: {
-          activator: this.$el,
+          activator: this.$refs.inputGroup,
           auto: this.auto,
           attach: (this.attach || this.staticAttach) && attachTo,
           closeOnClick: false,
@@ -73,14 +73,25 @@ export default {
     isMenuItemSelected () {
       return this.menuIsActive && this.menuItems.length && this.getMenuIndex() > -1;
     },
-    genSelectionsAndSearch () {
+    genSelectionsAndSearch ({ search = true, selections = true }) {
+      const genSearch = search ? this.genSearch() : null;
+      const genSelections = selections ? this.genSelections() : {};
+      const ref = search ? 'activator' : 'selections';
+      let classes = 'input-group__selections';
+
+      if (!search) {
+        classes += this.selectedItems.length ?
+          ' input-group__selections-outside'
+          : '';
+      }
+
       return this.$createElement('div', {
-        'class': 'input-group__selections',
+        'class': classes,
         style: { 'overflow': 'hidden' },
-        ref: 'activator'
+        ref
       }, [
-        ...this.genSelections(),
-        this.genSearch()
+        ...genSelections,
+        genSearch
       ]);
     },
     genSelections () {
@@ -312,6 +323,10 @@ export default {
       });
 
       if (!children.length) {
+        if (this.hideNoData) {
+          return;
+        }
+
         const noData = this.$slots['no-data'];
         if (noData) {
           children.push(noData);
@@ -402,7 +417,7 @@ export default {
       );
     },
     genAction (item, active) {
-      if (!this.isMultiple || this.isHidingSelected) {
+      if (!this.isMultiple || this.isHidingSelected || this.chipsOutside) {
         return null;
       }
 

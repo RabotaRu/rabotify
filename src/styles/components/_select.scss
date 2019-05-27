@@ -1,6 +1,17 @@
 @import "../settings/index";
 @import "../tools/index";
 
+@keyframes slide-chip-outside {
+  0%   {
+    opacity: 0;
+    transform: translateX(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 @include block('input-group_select', 'component') {
 
   @include theme-property-text(border-color color, false, false, 1,
@@ -137,6 +148,15 @@
     .input-group__selections__comma {
       display: none;
     }
+  }
+}
+
+.input-group__selections-outside {
+  margin-top: $indent-medium;
+
+  .r-chip {
+    animation: $primary-transition slide-chip-outside backwards;
+    animation-delay: 200ms;
   }
 }
 

@@ -22,9 +22,14 @@ export default {
       type: Boolean,
       default: true
     },
+    chipsOutside: {
+      type: Boolean,
+      default: false
+    },
     clearable: Boolean,
     combobox: Boolean,
     contentClass: String,
+    creatableChips: Boolean,
     deletableChips: Boolean,
     backspaceDeletable: {
       type: Boolean,
@@ -38,6 +43,8 @@ export default {
     editable: Boolean,
     fitToContent: Boolean,
     hideSelected: Boolean,
+    hideMenuAfterSelect: Boolean,
+    hideNoData: Boolean,
     lazy: Boolean,
     listRipple: Boolean,
     items: {

@@ -132,6 +132,11 @@ export default {
           }
         });
       }
+
+      if (this.hideMenuAfterSelect) {
+        this.resetMenuIndex();
+        this.hideMenu();
+      }
     },
     value (val) {
       this.inputValue = val;
