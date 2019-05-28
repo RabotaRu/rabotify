@@ -191,7 +191,7 @@
       },
       genSelectedItems (val = this.inputValue) {
         // If we are using tags, don't filter results
-        if (this.tags) {
+        if (this.tags || this.chips) {
           return (this.selectedItems = val);
         }
 
@@ -272,7 +272,7 @@
           this.$refs.input && this.$refs.input.setSelectionRange(this.selection, this.selection);
         }, 0);
       },
-      selectItem (item) {
+      selectItem (item, focusInputAfterSelect = true) {
         if (!this.isMultiple) {
           this.inputValue = this.returnObject ? item : this.getValue(item);
           this.selectedItems = [ item ];
@@ -303,6 +303,10 @@
         // maintain highlighting
         const savedIndex = this.getMenuIndex();
         this.resetMenuIndex();
+
+        if (!focusInputAfterSelect) {
+          return;
+        }
 
         // After selecting an item
         // refocus the input and

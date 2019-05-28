@@ -35,7 +35,7 @@
                     chips
                     chips-outside
                     deletable-chips
-                    :items="items2"
+                    :items="items"
                     :arrow-navigation="false"
                     :backspace-deletable="false"
                     :hide-menu-after-select="true"

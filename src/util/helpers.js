@@ -468,3 +468,15 @@ export function isBrowserSafari () {
 
   return /^((?!chrome|android|crios|fxios).)*safari/i.test( navigator.userAgent );
 }
+
+/**
+ * @param {number} min
+ * @param {number} max
+ * @return {number}
+ */
+export function generateNumber (min = 0, max = 1e9) {
+  min = Math.ceil( min );
+  max |= 0;
+
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}

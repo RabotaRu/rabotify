@@ -100,6 +100,11 @@
 
     input {
       height: $input-height - 2; // 2 * border-width = 2px
+
+      @include media-query(sm-and-down) {
+        background-color: #fff;
+        border-radius: $radius-medium;
+      }
     }
   }
 

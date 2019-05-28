@@ -107,9 +107,12 @@ export default {
       if (!this.menu) {
         return false;
       }
-      return this.menuIsActive &&
-        this.computedItems.length > 0 &&
-        (!this.isAnyValueAllowed || this.filteredItems.length > 0);
+
+      return this.creatableChips
+        ? this.menuIsActive
+        : this.menuIsActive
+          && this.computedItems.length > 0
+          && (!this.isAnyValueAllowed || this.filteredItems.length > 0);
     },
     menuItems () {
       return this.isHidingSelected ? this.filteredItems.filter(o => {

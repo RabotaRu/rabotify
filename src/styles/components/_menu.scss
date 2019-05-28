@@ -31,7 +31,7 @@
   @include element('content') {
     position: absolute;
     display: inline-block;
-    border-radius: $radius-small;
+    border-radius: $radius-medium;
     max-width: 80%;
     overflow-y: auto;
     overflow-x: hidden;
@@ -53,6 +53,12 @@
     & > .card {
       contain: content;
       backface-visibility: hidden;
+    }
+
+    .list__tile {
+      padding-left: $indent-small;
+      padding-right: $indent-small;
+      height: 32px;
     }
   }
 }

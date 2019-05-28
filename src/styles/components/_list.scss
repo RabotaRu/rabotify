@@ -4,8 +4,12 @@
 @include block('list', 'component') {
   background: white;
   list-style-type: none;
-  padding: $list-top-padding 0 $list-bottom-padding;
+  padding: 0;
   transition: height .3s get($transition, 'fast-out-slow-in');
+
+  &_creatable + * {
+    border-top: 1px solid $border-color;
+  }
 
   .list__tile:not(.list__tile_active) {
     color: $primary-text;
@@ -20,7 +24,7 @@
   }
 
   .list__tile__mask {
-    color: $app-text-color-disabled;
+    font-weight: $font-weight-medium;
   }
 
   &_group {

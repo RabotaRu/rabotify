@@ -127,7 +127,7 @@
                       virtual
                       :items="itemsLarge"
                       pool-size="400"
-                      :itemHeight="42">
+                      :itemHeight="32">
                 <template slot="item" slot-scope="props">
                   <r-list-tile :key="props.itemKey" @click="test(props.item)">
                     <div class="demo-circle" :style="{'background-image': `url('https://vk.com/images/stickers/${3805 + props.item.stickerId}/128.png')`}"></div>

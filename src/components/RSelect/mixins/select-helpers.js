@@ -1,5 +1,5 @@
 // Helpers
-import { getObjectValueByPath } from '../../../util/helpers';
+import { ensureString, getObjectValueByPath } from '../../../util/helpers';
 
 /**
  * Select helpers
@@ -25,6 +25,14 @@ export default {
       const value = getObjectValueByPath(item, field);
 
       return typeof value === 'undefined' ? item : value;
+    },
+    isFindInList (target) {
+      return this.computedItems.some(item => {
+        const itemText = ensureString(item[this.itemText]).toLowerCase();
+        const contentText = target.toLowerCase();
+
+        return itemText === contentText;
+      });
     }
   }
 };

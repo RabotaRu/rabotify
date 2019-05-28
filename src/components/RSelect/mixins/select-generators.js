@@ -1,4 +1,4 @@
-import { getObjectValueByPath } from '../../../util/helpers';
+import { generateNumber, getObjectValueByPath } from '../../../util/helpers';
 import { consoleWarn } from '../../../util/console';
 
 /**
@@ -227,7 +227,7 @@ export default {
           focus: click,
           input: () => {
             if (this.isMultiple) {
-              this.selectItem(item);
+              this.selectItem(item, !this.creatableChips);
             } else {
               this.inputValue = null;
             }
@@ -253,7 +253,7 @@ export default {
     genVirtualList () {
       const defaultVirtualOpts = {
         items: this.menuItems,
-        itemHeight: 42,
+        itemHeight: 32,
         anyHeight: true,
         poolSize: 400,
         buffer: 100,
@@ -322,11 +322,7 @@ export default {
         }
       });
 
-      if (!children.length) {
-        if (this.hideNoData) {
-          return;
-        }
-
+      if (!children.length && !this.hideNoData) {
         const noData = this.$slots['no-data'];
         if (noData) {
           children.push(noData);
@@ -338,7 +334,12 @@ export default {
       const prependItem = this.$slots['prepend-item'];
       prependItem && children.unshift(prependItem);
 
+      const creatableTile = this.creatableChips && this.searchValue && !this.isFindInList(this.searchValue)
+       ? this.genCreatableTile()
+       : null;
+
       return this.$createElement('r-card', [
+        creatableTile,
         this.$createElement('r-list', {
           props: {
             dense: this.dense
@@ -346,6 +347,16 @@ export default {
           ref: 'list'
         }, children)
       ]);
+    },
+    genCreatableTile () {
+      return this.$createElement('r-list', {
+        'class': 'list_creatable'
+      }, [
+        this.genTile({
+          [this.itemText]: this.searchValue,
+          [this.itemValue]: generateNumber(-1e15, -1e20),
+        }, false, this.createItem, true)
+      ])
     },
     genHeader (item) {
       return this.$createElement('r-subheader', {
@@ -372,7 +383,7 @@ export default {
 
       return this.$createElement('label', data, this.$slots.label || this.label);
     },
-    genTile (item, disabled) {
+    genTile (item, disabled, functionOnClick, isNotSelectable) {
       const active = this.selectedItems.indexOf(item) !== -1;
 
       if (typeof disabled === 'undefined') {
@@ -386,6 +397,10 @@ export default {
               return;
             }
 
+            if (functionOnClick) {
+              return functionOnClick();
+            }
+
             this.selectItem(item);
           }
         },
@@ -393,7 +408,8 @@ export default {
           avatar: item === Object(item) && this.itemAvatar in item,
           ripple: this.listRipple,
           value: active
-        }
+        },
+        'class': isNotSelectable ? '' : 'list__tile_selectable'
       };
 
       if (disabled) {

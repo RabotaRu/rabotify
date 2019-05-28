@@ -1,4 +1,4 @@
-import { escapeHTML } from '../../../util/helpers';
+import { ensureString, escapeHTML, generateNumber } from '../../../util/helpers';
 
 /**
  * Select autocomplete
@@ -105,7 +105,11 @@ export default {
     },
     onEnterDown (e) {
       this.$emit( 'enter', e );
-      this.updateTags(this.getCurrentTag());
+      if (this.creatableChips) {
+        this.createItem();
+      } else {
+        this.updateTags(this.getCurrentTag());
+      }
     },
     onEscDown (e) {
       e.preventDefault();
@@ -175,8 +179,6 @@ export default {
       this.$refs.menu.tiles[index].click();
     },
     updateTags (content) {
-      content = this.createItem(content);
-
       // Avoid direct mutation
       // for vuex strict mode
       let selectedItems = this.selectedItems.slice();
@@ -209,20 +211,26 @@ export default {
         this.menuIsActive = !this.combobox || this.persistentMenu;
       });
     },
-    createItem (content) {
-      if (this.creatableChips && typeof content === 'string') {
-        const id = Math.floor(Math.random() * (-1e15 - -1e20)) + -1e20;
-
-        content = {
-          name: content,
-          id,
+    createItem (item = this.searchValue) {
+      if (this.creatableChips && !this.isFindInList(item)) {
+        item = {
+          [this.itemText]: item,
+          [this.itemValue]: generateNumber(-1e15, -1e20),
           created: true
         };
-        this.items.push(content);
-        this.selectItem(content);
+
+        this.items.push(item);
+        this.selectItem(item);
+
+        this.$nextTick(() => {
+          this.$emit('input', this.selectedItems);
+        });
       }
 
-      return content;
+      this.$nextTick(() => {
+        this.searchValue = null;
+        this.menuIsActive = !this.hideMenuAfterSelect;
+      });
     }
   }
 };

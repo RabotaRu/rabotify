@@ -6,6 +6,8 @@
  * Watchers for the
  * r-select component
  */
+import { ensureString } from "../../../util/helpers";
+
 export default {
   watch: {
     filteredItems () {
@@ -112,9 +114,21 @@ export default {
       !val && prev && this.resetMenuIndex();
 
       this.$nextTick(() => {
-        if (val && !this.isAnyValueAllowed) {
-          this.setMenuIndex(0);
+        let isNeedSelectFirst = -1;
+
+        if (this.menuItems.length && this.searchValue) {
+          const firstItem = this.menuItems[0][this.itemText];
+          const searchValuePrepare = ensureString(val).toLowerCase();
+          const firstItemValuePrepare = ensureString(firstItem).toLowerCase();
+          const isValuesIncludes = firstItemValuePrepare.includes(searchValuePrepare);
+
+          isNeedSelectFirst = isValuesIncludes && (!this.isAnyValueAllowed || this.creatableChips)
+            ? 0
+            : -1;
         }
+
+        this.setMenuIndex(isNeedSelectFirst);
+
         if (val !== null && this.selectedIndex > -1) {
           this.selectedIndex = -1;
         }
