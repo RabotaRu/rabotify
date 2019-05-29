@@ -272,7 +272,7 @@
           this.$refs.input && this.$refs.input.setSelectionRange(this.selection, this.selection);
         }, 0);
       },
-      selectItem (item, focusInputAfterSelect = true) {
+      selectItem (item, { focusInputAfterSelect = true, removeItem = true }) {
         if (!this.isMultiple) {
           this.inputValue = this.returnObject ? item : this.getValue(item);
           this.selectedItems = [ item ];
@@ -281,7 +281,12 @@
           const inputValue = this.inputValue.slice();
           const i = this.findExistingIndex(item);
 
-          i !== -1 ? inputValue.splice(i, 1) : inputValue.push(item);
+          if (i !== -1) {
+            removeItem && inputValue.splice(i, 1);
+          } else {
+            inputValue.push(item);
+          }
+
           this.inputValue = inputValue.map(i => {
             selectedItems.push(i);
             return this.returnObject ? i : this.getValue(i);

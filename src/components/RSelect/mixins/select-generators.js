@@ -227,7 +227,7 @@ export default {
           focus: click,
           input: () => {
             if (this.isMultiple) {
-              this.selectItem(item, !this.chipsOutside);
+              this.selectItem(item, { focusInputAfterSelect: !this.chipsOutside });
             } else {
               this.inputValue = null;
             }
@@ -401,7 +401,10 @@ export default {
               return functionOnClick();
             }
 
-            this.selectItem(item);
+            this.selectItem(item, {
+              focusInputAfterSelect: true,
+              removeItem: this.removeItemAfterSelect
+            });
           }
         },
         props: {

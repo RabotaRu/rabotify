@@ -47,6 +47,10 @@ export default {
     hideNoData: Boolean,
     lazy: Boolean,
     listRipple: Boolean,
+    removeItemAfterSelect: {
+      type: Boolean,
+      default: true
+    },
     items: {
       type: Array,
       default: () => []
