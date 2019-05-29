@@ -14,6 +14,7 @@
   import RCheckbox from '../RCheckbox/RCheckbox.vue';
   import RChip from '../RChip/RChip.vue';
   import RCard from '../RCard/RCard.vue';
+  import RLoading from '../RLoading/RLoading.vue';
 
   import RList from '../RList/RList.vue';
   import RListTile from '../RList/RListTile.vue';
@@ -49,6 +50,7 @@
       RCheckbox,
       RChip,
       RCard,
+      RLoading,
       RList,
       RListTile,
       RListTileSubTitle,
@@ -272,9 +274,8 @@
           this.$refs.input && this.$refs.input.setSelectionRange(this.selection, this.selection);
         }, 0);
       },
-      selectItem (item, options = {}) {
-        const focusInputAfterSelect = options.focusInputAfterSelect || true;
-        const removeItem = options.removeItem || true;
+      selectItem (item, options = { focusInputAfterSelect: true, removeItem: true }) {
+        const { focusInputAfterSelect, removeItem } = options;
 
         if (!this.isMultiple) {
           this.inputValue = this.returnObject ? item : this.getValue(item);

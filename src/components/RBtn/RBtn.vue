@@ -102,6 +102,10 @@
         return colorBackground
           ? this.addBackgroundColorClassChecks(classes)
           : this.addTextColorClassChecks(classes);
+      },
+
+      isTypeFile () {
+        return this.type && this.type === 'file';
       }
     },
 
@@ -114,12 +118,54 @@
 
         this.$emit('click', e);
       },
+      genButton () {
+        const { tag, data } = this.generateRouteLink();
+        const children = [ this.genContent() ];
+        const type = this.isTypeFile ? 'button' : this.type
+
+        tag === 'button' && (data.attrs.type = type);
+        this.loading && children.unshift(this.genLoader());
+
+        data.attrs.value = [ 'string', 'number' ].includes(typeof this.value)
+          ? this.value
+          : JSON.stringify(this.value);
+
+        if (this.isTypeFile) {
+          data.on.click = _ => this.$refs.input.click();
+        }
+
+        return this.$createElement(tag, data, children);
+      },
       genContent () {
         const children = [ this.$slots.default ];
         return this.$createElement(
           'div',
           { 'class': 'r-btn__content' },
           children
+        );
+      },
+      genInput () {
+        return this.$createElement(
+          'input',
+          {
+            ref: 'input',
+            attrs: {
+              type: 'file',
+              hidden: true
+            },
+            on: {
+              change: event => this.$emit( 'change', event )
+            }
+          }
+        );
+      },
+      genFileLoader () {
+        return this.$createElement(
+          'div',
+          [
+            this.genInput(),
+            this.genButton()
+          ]
         );
       },
       genLoader () {
@@ -155,18 +201,10 @@
       }
     },
 
-    render (h) {
-      const { tag, data } = this.generateRouteLink();
-      const children = [ this.genContent() ];
-
-      tag === 'button' && (data.attrs.type = this.type);
-      this.loading && children.unshift(this.genLoader());
-
-      data.attrs.value = [ 'string', 'number' ].includes(typeof this.value)
-        ? this.value
-        : JSON.stringify(this.value);
-
-      return h(tag, data, children);
+    render () {
+      return this.isTypeFile
+        ? this.genFileLoader()
+        : this.genButton();
     }
   };
 </script>

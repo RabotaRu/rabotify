@@ -334,7 +334,7 @@ export default {
       const prependItem = this.$slots['prepend-item'];
       prependItem && children.unshift(prependItem);
 
-      const creatableTile = this.creatableChips && this.searchValue && !this.isFindInList(this.searchValue)
+      const creatableTile = this.searchValue && this.isNeedCreateItem(this.searchValue)
        ? this.genCreatableTile()
        : null;
 

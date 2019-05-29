@@ -212,7 +212,7 @@ export default {
       });
     },
     createItem (item = this.searchValue) {
-      if (this.creatableChips && !this.isFindInList(item)) {
+      if (this.isNeedCreateItem(item)) {
         item = {
           [this.itemText]: item,
           [this.itemValue]: generateNumber(-1e15, -1e20),
@@ -221,10 +221,6 @@ export default {
 
         this.items.push(item);
         this.selectItem(item);
-
-        this.$nextTick(() => {
-          this.$emit('input', this.selectedItems);
-        });
       }
 
       this.$nextTick(() => {

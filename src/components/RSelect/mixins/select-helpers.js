@@ -26,13 +26,26 @@ export default {
 
       return typeof value === 'undefined' ? item : value;
     },
-    isFindInList (target) {
-      return this.computedItems.some(item => {
-        const itemText = ensureString(item[this.itemText]).toLowerCase();
-        const contentText = target.toLowerCase();
+    isItemsEqual (firstItem, secondItem) {
+      const itemText = ensureString(firstItem[this.itemText]).toLowerCase();
+      const contentText = secondItem.toLowerCase();
 
-        return itemText === contentText;
-      });
-    }
+      return itemText === contentText;
+    },
+    isNeedCreateItem (target) {
+      if (!this.creatableChips) {
+        return;
+      }
+
+      const findInList = this.computedItems.some( item => this.isItemsEqual(item, target) );
+      if (findInList) {
+        return;
+      }
+
+      const findInSelected = this.selectedItems.some( item => this.isItemsEqual(item, target) );
+      if (!findInSelected) {
+        return true;
+      }
+    },
   }
 };
