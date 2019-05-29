@@ -24712,11 +24712,6 @@ h3 {
       -webkit-backface-visibility: hidden;
               backface-visibility: hidden;
 }
-.menu__content .list__tile {
-      padding-left: 8px;
-      padding-right: 8px;
-      height: 32px;
-}
 
 @charset "UTF-8";
 /** App */
