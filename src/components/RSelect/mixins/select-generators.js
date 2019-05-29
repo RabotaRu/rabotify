@@ -227,7 +227,7 @@ export default {
           focus: click,
           input: () => {
             if (this.isMultiple) {
-              this.selectItem(item, !this.creatableChips);
+              this.selectItem(item, !this.chipsOutside);
             } else {
               this.inputValue = null;
             }
