@@ -75,7 +75,7 @@ export default {
     },
     genSelectionsAndSearch ({ search = true, selections = true }) {
       const genSearch = search ? this.genSearch() : null;
-      const genSelections = selections ? this.genSelections() : {};
+      const genSelections = selections ? this.genSelections() : [];
       const ref = search ? 'activator' : 'selections';
       let classes = 'input-group__selections';
 

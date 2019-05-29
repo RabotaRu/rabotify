@@ -48,18 +48,22 @@
 
       <r-card>
         <r-card-text>
-          <r-select v-model="textfield3"
+          <r-select v-model="relocationRegions"
                     item-value="id"
                     item-text="name"
                     browser-autocomplete="nope"
+                    label="Города для переезда"
+                    error-field="resume.schedules"
                     :open-on-clear="false"
-                    chips
-                    chips-outside
-                    deletable-chips
                     :items="items"
                     :arrow-navigation="false"
                     :backspace-deletable="false"
                     :hide-menu-after-select="true"
+                    :disabled="isFormLoading"
+                    autocomplete
+                    chips
+                    chips-outside
+                    deletable-chips
                     multiple
                     hide-selected
                     return-object></r-select>
@@ -73,9 +77,11 @@
 <script>
   export default {
     data: () => ({
+        isFormLoading: false,
+        relocationRegions: null,
         textfield3: null,
         textfield2: null,
-        textfield1: null,
+        textfield1: [],
         items2: [],
         items: [
           {
