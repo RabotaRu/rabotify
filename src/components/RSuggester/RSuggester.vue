@@ -77,6 +77,10 @@
 
     methods: {
       onFocus (ev) {
+        if (this.fetchDefaultItems && !this.lazySearch) {
+          this.search( '' );
+        }
+
         // console.log( '[focus]' );
         this.focused = true;
         this.$emit( 'focus', ev );
@@ -136,9 +140,8 @@
           let selectedValue = null;
 
           if (this.menuIndex === -1 && this.selectFirstOnEnter) {
-            const item = this.findAppropriateValue();
-            if (item) {
-              selectedValue = item;
+            if (this.isFirstItemIncludeValue) {
+              selectedValue = this.lazyItems[0];
               selected = true;
             }
           } else if (this.menuIndex >= 0) {
@@ -404,7 +407,19 @@
       },
 
       openOnClickAvailable () {
-        return Boolean( this.lazySearch && this.lazySearch.length > 0 && this.lazyItems.length > 0 );
+        return this.fetchDefaultItems
+          || Boolean( this.lazySearch && this.lazySearch.length > 0 && this.lazyItems.length > 0 );
+      },
+
+      isFirstItemIncludeValue () {
+        if (!this.lazyItems.length) {
+          return;
+        }
+
+        const textFirstItem = this.makeTextSearchable( this.getItemText( this.lazyItems[ 0 ] ) );
+        const textSearch = this.makeTextSearchable( this.lazySearch );
+
+        return textFirstItem.indexOf( textSearch ) === 0;
       }
     },
 

@@ -43,6 +43,7 @@ export const Props = {
       default: () => defaultMenuOptions
     },
     fetch: Function,
+    fetchDefaultItems: Boolean,
     cacheItems: {
       type: Boolean,
       default: true

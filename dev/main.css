@@ -3003,7 +3003,8 @@ h6 {
 .input-group.input-group_dirty:not(.input-group_error).text_white label {
     color: white !important;
 }
-.input-group.input-group_focused:not(.input-group_error):not(.text_white) .input-group__input input {
+.input-group.input-group_focused:not(.input-group_error):not(.text_white) .input-group__input textarea,
+  .input-group.input-group_focused:not(.input-group_error):not(.text_white) .input-group__input input {
     border-color: #275a95;
 }
 .input-group.input-group_focused:not(.input-group_error):not(.text_white) .input-group__icon-clearable .md-icon {

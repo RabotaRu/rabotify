@@ -274,8 +274,8 @@
           this.$refs.input && this.$refs.input.setSelectionRange(this.selection, this.selection);
         }, 0);
       },
-      selectItem (item, options = { focusInputAfterSelect: true, removeItem: true }) {
-        const { focusInputAfterSelect, removeItem } = options;
+      selectItem (item, options = {}) {
+        const { focusInputAfterSelect = true, removeItem = true } = options;
 
         if (!this.isMultiple) {
           this.inputValue = this.returnObject ? item : this.getValue(item);
