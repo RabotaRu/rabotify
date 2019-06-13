@@ -212,6 +212,12 @@
         menuElement.scrollTop = scrollTop;
       },
 
+      selectItemOnClick (item) {
+        this.$emit( 'selectOnClick', item );
+
+        this.selectItem( item );
+      },
+
       selectItem (item) {
         const oldValue = this.lazyValue;
 
@@ -516,7 +522,7 @@
             <r-list-tile v-for="(item, index) in lazyItems"
                          :key="item.id || index"
                          :class="{'list__tile_highlighted': index === menuIndex}"
-                         @click="selectItem(item)">
+                         @click="selectItemOnClick(item)">
               <r-list-tile-sub-title>{{ getItemText( item ) }}</r-list-tile-sub-title>
             </r-list-tile>
           </r-list>
