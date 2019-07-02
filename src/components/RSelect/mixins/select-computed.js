@@ -116,7 +116,7 @@ export default {
     },
     menuItems () {
       return this.isHidingSelected ? this.filteredItems.filter(o => {
-        return (this.selectedItems || []).indexOf(o) === -1;
+        return (this.selectedItems || []).every(selectedItem => this.getValue(selectedItem) !== this.getValue(o));
       }) : this.filteredItems;
     },
     nudgeTop () {
