@@ -1,34 +1,35 @@
 // colors
 $black-color: black;
 $white-color: white;
-$red-color: #f2412f;
-$blue-color: #275a95;
+$dark-color: #051125;
+$red-color: #ff4c4c;
+$blue-color: #2b60b0;
 $blue-light-color: #eaf7ff;
 $blue-dark-color: #03012e;
 $blue-darkest-color: #05081E;
 $yellow-color: #ffdd17;
 $yellow-light-color: #fff2a4;
 $yellow-dark-color: #ffc107;
-$green-color: #00c853;
+$green-color: #2bb76b;
 $orange-color: #ff9600;
 
 // gray colors
-$gray-color: #d8d8d8;
-$gray-light-color: #e9e9e9;
-$gray-lightest-color: #f8f8f8;
-$gray-dark-color: #9d9d9d;
+$gray-color: #cdd0d5;
+$gray-light-color: #ebedf0;
+$gray-lightest-color: #f3f5f9;
+$gray-dark-color: #9097a3;
 
 // theme colors
-$primary-color: $red-color                  !default;
-$secondary-color: $blue-color               !default;
-$accent-color: $orange-color                !default;
+$primary-color: $blue-color                 !default;
+$secondary-color: $red-color                !default;
+$accent-color: $yellow-color                !default;
 $error-color: $red-color                    !default;
 $success-color: $green-color                !default;
 $info-color: $blue-light-color              !default;
 $warning-color: $yellow-dark-color          !default;
 
 // text colors
-$primary-text: $black-color                 !default;
+$primary-text: $dark-color                 !default;
 $secondary-text: $gray-dark-color           !default;
 $link-text: $blue-color                     !default;
 $border-color: $gray-color                  !default;
