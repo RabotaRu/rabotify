@@ -14,7 +14,7 @@
   }
 
   @include element('required') {
-    color: $primary-color;
+    color: $error-color;
     font-size: 14px;
     font-weight: bold;
     line-height: 1;
