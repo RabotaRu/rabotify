@@ -134,7 +134,9 @@
         map.createMap(this.domIdentifier, {
           center: this.center,
           zoom: this.zoom,
-          controls: this.controls
+          controls: this.controls,
+          avoidFractionalZoom: false,
+          suppressMapOpenBlock: true
         });
 
         this.created = true;

@@ -45,7 +45,7 @@ export class YaMapManager extends MapManager {
       controls: this.resolveControls( options.controls )
     });
 
-    return new this.sdk.Map(domId, options);
+    return new this.sdk.Map(domId, options, options);
   }
 
   /**
