@@ -49,7 +49,7 @@
 
     &:before {
       opacity: .9;
-      background-color: $blue-darkest-color;
+      background-color: $dark-color;
     }
 
     @include modifies-modifier('safari-blur') {

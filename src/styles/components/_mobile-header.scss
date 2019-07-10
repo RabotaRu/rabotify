@@ -55,6 +55,6 @@
   }
 
   @include modifier('shadow') {
-    box-shadow: 0 5px 15px 0 rgba(32, 35, 56, 0.1);
+    box-shadow: 0 2px 7px 0 rgba(32, 35, 56, 0.1),0 1px 3px 0 rgba(32, 35, 56, 0.04);
   }
 }

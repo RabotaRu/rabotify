@@ -41,6 +41,10 @@
     > *:last-child {
       margin-bottom: 0 !important;
     }
+
+    a {
+      color: $primary-text;
+    }
   }
 
   @include element('elements') {

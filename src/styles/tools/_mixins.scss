@@ -70,6 +70,10 @@
   margin-top: 0;
   margin-bottom: $indent-medium;
 
+  @include media-query(md-and-down) {
+    @include font-style($font-size-headline, $line-height-headline, $font-weight-black);
+  }
+
   @include media-query(sm-and-down) {
     @include font-style($font-size-heading, $line-height-heading, $font-weight-black);
     margin-bottom: $indent-small;

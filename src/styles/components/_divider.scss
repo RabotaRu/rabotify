@@ -18,11 +18,9 @@
     top: 50%;
     left: 0;
     transform: translateY(-50%);
-    text-transform: uppercase;
     color: $gray-dark-color;
     background-color: #fff;
-    padding-left: $indent-small;
-    padding-right: $indent-small;
+    padding-left: $indent-medium;
     line-height: 1;
     white-space: nowrap;
   }

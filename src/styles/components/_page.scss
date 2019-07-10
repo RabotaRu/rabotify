@@ -7,21 +7,14 @@
   }
 
   > * {
-    // why u changed it? :)
-    // @see http://localhost:3000/vacancies/
-    // @see http://localhost:3000/responses/40576975/incoming/
-    margin-bottom: $indent-medium * 2;
-
-    @include media-query(sm-and-down) {
-      margin-bottom: $indent-medium;
-    }
+    margin-bottom: $indent-medium;
   }
 
   @include modifier('indent-top') {
     padding-top: $indent-xlarge;
 
     @include media-query(md-and-down) {
-      padding-top: $indent-large;
+      padding-top: $indent-medium;
     }
   }
 
@@ -29,7 +22,7 @@
     padding-bottom: $indent-xlarge;
 
     @include media-query(md-and-down) {
-      padding-bottom: $indent-large;
+      padding-bottom: $indent-medium;
     }
   }
 
@@ -41,7 +34,23 @@
     @include container;
   }
 
+  @include element('main') {
+    padding: {
+      left: $indent-xlarge / 2;
+      right: $indent-xlarge / 2;
+    };
+
+    @include media-query(md-and-up) {
+      flex-grow: 1;
+    }
+  }
+
   @include element('aside') {
+    padding: {
+      left: $indent-xlarge / 2;
+      right: $indent-xlarge / 2;
+    };
+
     @include modifier('bordered') {
       border-left: 1px solid $border-color;
     }
@@ -49,6 +58,11 @@
 
   @include element('row') {
     @include row;
+    flex-wrap: nowrap;
+    margin: {
+      left: -$indent-xlarge / 2;
+      right: -$indent-xlarge / 2;
+    };
   }
 
   @include element('preheader') {
@@ -56,8 +70,8 @@
     margin-bottom: 0;
 
     @include media-query(md-and-up) {
-      margin-top: -$indent-large;
-      margin-bottom: $indent-medium;
+      margin-top: -$indent-medium * 2;
+      margin-bottom: $indent-small;
     }
   }
 }
