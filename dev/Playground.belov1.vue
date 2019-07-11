@@ -46,6 +46,24 @@
           <r-card-title class="font-display-1">Селекты</r-card-title>
           <r-card-text>
             <div>
+              <r-subheader>White</r-subheader>
+            </div>
+            <div style="background-color: #ccc;padding: 20px;">
+              <r-select
+                color="white"
+                v-bind:items="items"
+                item-value="id"
+                item-text="name"
+                v-model="select"
+                label="Select"
+                autocomplete
+                clearable
+                single-line
+                staticAttach
+              ></r-select>
+            </div>
+
+            <div>
               <r-subheader>Standard</r-subheader>
             </div>
             <div>

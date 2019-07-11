@@ -29,6 +29,11 @@
     white-space: nowrap;
     width: 100%;
     z-index: 1;
+
+    @include media-query($mobile-breakpoint) {
+      line-height: $input-height-large;
+      height: $input-height-large;
+    }
   }
 
   @include element('input') {
@@ -87,6 +92,15 @@
     display: flex;
     align-self: center;
     user-select: none;
+    align-items: center;
+
+    @include media-query($mobile-breakpoint) {
+      height: $input-height-large !important;
+      margin: {
+        top: 0 !important;
+        bottom: 0 !important;
+      };
+    }
   }
 
   &.input-group_single-line,
@@ -135,15 +149,9 @@
   // Focused
   &.input-group_text-field {
     &:not(.input-group_single-line):not(.input-group_error) {
-      &.input-group_focused:not(.text_white) {
+      &.input-group_focused {
         label {
-          color: $secondary-color;
-        }
-      }
-
-      &.input-group_focused.text_white {
-        label {
-          color: $white-color !important;
+          color: $primary-color;
         }
       }
     }
@@ -227,10 +235,6 @@
     color: $gray-dark-color !important;
   }
 
-  &.text_white &__hint {
-    color: transparentize(white, .35) !important;
-  }
-
   .input-group__error {
     color: inherit;
     flex: 1 0;
@@ -272,33 +276,23 @@
   }
 
   &.input-group_dirty:not(.input-group_error) {
-    &:not(.text_white) {
-      label {
-        color: $black-color;
-      }
-    }
-
-    &.text_white {
-      label {
-        color: $white-color !important;
-      }
+    label {
+      color: $black-color;
     }
   }
 
   // focused
   &.input-group_focused:not(.input-group_error) {
-    &:not(.text_white) {
-      .input-group__input {
-        textarea,
-        input {
-          border-color: $secondary-color;
-        }
+    .input-group__input {
+      textarea,
+      input {
+        border-color: $primary-color;
       }
+    }
 
-      .input-group__icon-clearable {
-        .md-icon {
-          fill: $secondary-color;
-        }
+    .input-group__icon-clearable {
+      .md-icon {
+        fill: $primary-color;
       }
     }
   }
@@ -318,22 +312,6 @@
       }
     }
 
-    &.text_white {
-      .input-group__icon-clearable {
-        color: $white-color !important;
-
-        .md-icon {
-          path {
-            fill: $white-color !important;
-          }
-        }
-      }
-
-      label {
-        color: transparentize($white-color, .35) !important;
-      }
-    }
-
     .input-group__details:before {
       background-color: transparent;
     }
@@ -343,10 +321,10 @@
         .input-group__append-icon,
         .input-group__prepend-icon {
           &:not(:hover) {
-            color: $app-text-color-disabled;
+            color: $gray-color;
 
             &, & * {
-              fill: $app-text-color-disabled;
+              fill: $gray-color;
             }
           }
         }
@@ -388,10 +366,10 @@
 
       .input-group__append-icon,
       .input-group__prepend-icon {
-        color: $app-text-color-disabled;
+        color: $gray-color;
 
         &, & * {
-          fill: $app-text-color-disabled;
+          fill: $gray-color;
         }
       }
     }

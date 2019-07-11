@@ -34,6 +34,7 @@
     margin: 0;
     box-shadow: none;
     flex: 1;
+    transition: $primary-transition;
 
     &:focus {
       outline: none;
@@ -45,23 +46,6 @@
 
     @include input-placeholder-color($text-field-placeholder-color, (focus: $text-field-placeholder-color-focus)) {
       transition: .2s get($transition, 'swing');
-    }
-
-    @include media-query($mobile-breakpoint) {
-      border-radius: 0;
-      border: 1px solid transparentize(black, .75);
-      background-color: $text-field-background-mobile;
-      border-top-color: transparent !important;
-      border-right-color: transparent !important;
-      border-left-color: transparent !important;
-
-      &:disabled {
-        border-bottom-color: transparent !important;
-      }
-
-      &:focus {
-        background-color: transparentize($secondary-color, .9);
-      }
     }
   }
 
@@ -77,34 +61,25 @@
 
   &.text_white {
     .input-group__input {
-      input {
-        border-bottom-color: transparentize(white, .65) !important;
+      input,
+      textarea {
+        border-color: $white-color;
         background-color: $text-field-background-mobile-white;
+        color: $primary-text;
+        caret-color: $primary-text;
 
-        @include input-placeholder-color(transparentize(white, .35));
-
-        @include media-query(md-and-up) {
-          border-color: transparentize(white, .65) !important;
+        @include input-placeholder-color($text-field-placeholder-color, (focus: $text-field-placeholder-color-focus)) {
         }
+      }
 
-        &:focus {
-          background-color: transparentize(white, .8);
-
-          @include media-query($mobile-breakpoint) {
-            border-bottom-color: $white-color !important;
-          }
-
-          @include media-query(md-and-up) {
-            border-color: $white-color !important;
-          }
-        }
+      .input-group__append-icon .icon *,
+      .r-btn:not(.r-chip__close) .icon * {
+        fill: $gray-color !important;
       }
     }
 
-    .input-group__icon-clearable {
-      &:hover {
-        background-color: transparent !important;
-      }
+    &.input-group_focused .r-btn:not(.r-chip__close) .icon * {
+      fill: $primary-color !important;
     }
   }
 
@@ -114,6 +89,10 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+
+    @include media-query($mobile-breakpoint) {
+      height: $input-height-large;
+    }
   }
 
   /** Counter */

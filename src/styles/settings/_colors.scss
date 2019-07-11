@@ -74,8 +74,8 @@ $switch-thumb-disabled: $white-color;
 
 /** Text-field */
 $text-field-background: $white-color;
-$text-field-background-mobile: transparentize(black, .97);
-$text-field-background-mobile-white: transparentize(white, .9);
+$text-field-background-mobile: $white-color;
+$text-field-background-mobile-white: $white-color;
 $text-field-placeholder-color: $gray-dark-color;
 $text-field-placeholder-color-focus: $gray-dark-color;
 
