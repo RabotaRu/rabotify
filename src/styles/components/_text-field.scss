@@ -170,12 +170,20 @@
       &:not(.input-group_textarea) {
         label {
           transform: translate(-#{$input-group-text-field-label-left}, -25px) scale(.8);
+
+          @include media-query($mobile-breakpoint) {
+            transform: translate(-#{$input-group-text-field-label-left}, -30px) scale(.8);
+          }
         }
       }
 
       &:not(.input-group_full-width).input-group_textarea {
         label {
           transform: translate(-#{$input-group-text-field-label-left}, -25px) scale(.8);
+
+          @include media-query($mobile-breakpoint) {
+            transform: translate(-#{$input-group-text-field-label-left}, -30px) scale(.8);
+          }
         }
       }
 
