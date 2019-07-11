@@ -5,6 +5,11 @@
 
   label {
     color: $app-text-color;
+
+    @include media-query($mobile-breakpoint) {
+      line-height: $input-height;
+      height: $input-height;
+    }
   }
 
   .icon_selection-control {

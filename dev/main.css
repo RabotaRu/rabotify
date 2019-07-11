@@ -6370,6 +6370,10 @@ h5 {
         margin-top: 0 !important;
         margin-bottom: 0 !important;
 }
+.input-group_selection-controls label {
+      line-height: 34px;
+      height: 34px;
+}
 .container {
       max-width: 100%;
 }
