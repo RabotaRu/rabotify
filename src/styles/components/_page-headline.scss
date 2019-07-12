@@ -2,7 +2,7 @@
 @import "../tools/index";
 
 @include block('page-headline', 'component') {
-  margin-bottom: $indent-medium * 2;
+  margin-bottom: $indent-medium;
 
   > *:last-child {
     margin-bottom: 0 !important;
