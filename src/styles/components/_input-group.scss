@@ -41,6 +41,10 @@
     flex: 1 0 100%;
     min-width: 0;
     min-height: $input-height;
+
+    @include media-query($mobile-breakpoint) {
+      height: $input-height-large;
+    }
   }
 
   @include element('icon-cb') {

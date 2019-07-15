@@ -87,6 +87,10 @@
     width: 100%;
     position: relative;
 
+    @include media-query($mobile-breakpoint) {
+      height: $input-height;
+    }
+
     // Needed for safari
     .icon_selection-control {
       align-self: center;
