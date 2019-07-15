@@ -88,7 +88,7 @@
     position: relative;
 
     @include media-query($mobile-breakpoint) {
-      height: $input-height;
+      min-height: $input-height;
     }
 
     // Needed for safari

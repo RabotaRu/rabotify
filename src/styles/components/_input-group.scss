@@ -43,7 +43,7 @@
     min-height: $input-height;
 
     @include media-query($mobile-breakpoint) {
-      height: $input-height-large;
+      min-height: $input-height-large;
     }
   }
 
