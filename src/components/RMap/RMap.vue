@@ -62,7 +62,7 @@
       visibilityObserver: Boolean,
       options: {
         type: Object,
-        default: {}
+        default: () => {}
       }
     },
 
