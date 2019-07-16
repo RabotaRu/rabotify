@@ -59,7 +59,11 @@
       },
       allowAdd: Boolean,
       pointResolving: Boolean,
-      visibilityObserver: Boolean
+      visibilityObserver: Boolean,
+      options: {
+        type: Object,
+        default: {}
+      }
     },
 
     data: () => ({
@@ -136,7 +140,8 @@
           zoom: this.zoom,
           controls: this.controls,
           avoidFractionalZoom: false,
-          suppressMapOpenBlock: true
+          suppressMapOpenBlock: true,
+          ...( this.options || {} )
         });
 
         this.created = true;
