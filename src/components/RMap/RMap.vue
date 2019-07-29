@@ -17,6 +17,7 @@
     },
 
     props: {
+      apiKey: String,
       provider: {
         type: String,
         default: 'yandex'
@@ -76,7 +77,10 @@
 
     methods: {
       onRender () {
-        const map = new UniversalMap({ provider: this.provider });
+        const map = new UniversalMap({
+          provider: this.provider,
+          apiKey: this.apiKey
+        });
 
         this.mapDomId = map.manager.nextDomId;
 

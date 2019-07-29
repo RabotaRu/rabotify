@@ -33,6 +33,12 @@ export class MapManager {
   _resourceLoader = null;
 
   /**
+   * @type {string}
+   * @private
+   */
+  _apiKey = null;
+
+  /**
    * @type {number[]}
    * @private
    */
@@ -241,10 +247,24 @@ export class MapManager {
   }
 
   /**
+   * @param {string} apiKey
+   */
+  setApiKey (apiKey) {
+    this._apiKey = apiKey;
+  }
+
+  /**
    * @return {number}
    */
   get nextId () {
     return this._currentId++;
+  }
+
+  /**
+   * @returns {string}
+   */
+  get apiKey () {
+    return this._apiKey;
   }
 
   /**

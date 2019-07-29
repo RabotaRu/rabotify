@@ -33,10 +33,12 @@ export class UniversalMap {
    */
   constructor (options = {}) {
     const {
-      provider = this._defaultProvider
+      provider = this._defaultProvider,
+      apiKey
     } = options;
 
     this.setProvider( provider );
+    this.setApiKey( apiKey );
   }
 
   /**
@@ -45,6 +47,13 @@ export class UniversalMap {
   setProvider (provider) {
     const providerExists = providers.hasOwnProperty( provider );
     this._provider = providerExists ? provider : this._defaultProvider;
+  }
+
+  /**
+   * @param {string} apiKey
+   */
+  setApiKey (apiKey) {
+    this.manager.setApiKey( apiKey );
   }
 
   /**

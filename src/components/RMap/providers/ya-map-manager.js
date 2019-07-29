@@ -26,7 +26,9 @@ export class YaMapManager extends MapManager {
    * @return {Promise<*>}
    */
   load () {
-    return this.loadSdk( MAP_SDK );
+    return this.loadSdk(
+      this._buildSdkUrl()
+    );
   }
 
   /**
@@ -194,9 +196,8 @@ export class YaMapManager extends MapManager {
     });
   }
 
-
   /**
-   * Destroy the map
+   * Destroys the map
    *
    * @param {*} map
    */
@@ -303,5 +304,23 @@ export class YaMapManager extends MapManager {
     return sdk.util.requireCenterAndZoom(
       map.getType(), bounds, map.container.getSize()
     );
+  }
+
+  /**
+   * @returns {string}
+   * @private
+   */
+  _buildSdkUrl () {
+    const baseUrl = MAP_SDK;
+    const apiKey = this.apiKey;
+
+    if (!apiKey) {
+      return baseUrl;
+    }
+
+    const hasQs = baseUrl.includes( '?' );
+    const apiKeyQs = `${hasQs ? '&' : '?'}apikey=${apiKey}`;
+
+    return baseUrl + apiKeyQs;
   }
 }
