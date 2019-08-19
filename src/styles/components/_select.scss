@@ -274,7 +274,10 @@
 }
 
 .menu__content_autocomplete {
-  border-radius: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: $radius-medium;
+  border-bottom-right-radius: $radius-medium;
 
   > .card {
     border-radius: 0
