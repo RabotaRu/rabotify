@@ -81,6 +81,8 @@ export default {
       this.genSelectedItems();
     },
     menuIsActive (val) {
+      this.$emit('toggle-menu', val);
+
       if (!val) {
         return;
       }
