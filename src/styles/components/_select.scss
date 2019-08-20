@@ -107,7 +107,7 @@
       }
 
       @include media-query($mobile-breakpoint) {
-        height: $input-height-large - 2; // 2 * border-width = 2px
+        height: $input-height-large;
       }
     }
   }
