@@ -152,6 +152,7 @@
     margin: 3px;
     right: 0;
     top: 0;
+    height: $input-height - 2 - 6;
 
     @include media-query($mobile-breakpoint) {
       &:hover {
