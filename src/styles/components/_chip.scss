@@ -23,8 +23,8 @@ $bem-use-namespaces: true;
 
   // Нужно подумать над переделываением формирования тем, оно не предусматривает тот факт, что текст может быть темным, а фон светлым
   &.info {
-    fill: black;
-    color: black;
+    fill: $dark-color;
+    color: $dark-color;
   }
 
   @include theme-property-text(color border-color fill, false, false);

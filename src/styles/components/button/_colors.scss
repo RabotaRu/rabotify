@@ -2,7 +2,7 @@
 @import "../../tools/index";
 
 $button-background-color: white;
-$button-text-color: black;
-$button-border-color: transparentize(black, .85);
+$button-text-color: $dark-color;
+$button-border-color: transparentize($dark-color, .85);
 $button-disabled-color: $disabled-color;
 $button-disabled-text-color: $gray-dark-color;

@@ -1,3 +1,5 @@
+@import "colors";
+
 /**
  * Bem Constructor settings override
  */
@@ -385,7 +387,7 @@ $list-dense-subheader-group-height: $list-dense-subheader-height; // the subhead
 $divider-margin-left: 72px;
 
 /** Tabs */
-$tabs-color-active: rgba(#000, .87);
+$tabs-color-active: rgba($dark-color, .87);
 
 /** Tab */
 $tab-text-transform: none;

@@ -257,7 +257,7 @@
 /**
  * Миксин для генерации теней
  */
-@mixin shadow($z, $important: false, $shadow-color: black, $shadows-opacity: (
+@mixin shadow($z, $important: false, $shadow-color: $dark-color, $shadows-opacity: (
   $shadow-key-umbra-opacity, $shadow-key-penumbra-opacity, $shadow-key-ambient-opacity
 )) {
   $shadow-params: nth($shadow-key-umbra, $z + 1),
@@ -301,7 +301,7 @@
 
     @if $force-color == auto {
       @if lightness($color) > 70 {
-        $color: black;
+        $color: $dark-color;
       } @else {
         $color: white;
       }

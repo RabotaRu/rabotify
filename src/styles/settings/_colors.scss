@@ -1,5 +1,4 @@
 // colors
-$black-color: black;
 $white-color: white;
 $dark-color: #051125;
 $red-color: #ff4c4c;
@@ -51,7 +50,7 @@ $themes: (
   gray-light: $gray-light-color,
   gray-dark: $gray-dark-color,
   white: $white-color,
-  black: $black-color
+  black: $dark-color
 );
 
 /** App */
