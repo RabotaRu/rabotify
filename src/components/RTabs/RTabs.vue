@@ -1,7 +1,7 @@
 <script>
   // Components
-  import MdChevronLeft from 'md-svg-vue/dist/navigation/MdChevronLeft.vue';
-  import MdChevronRight from 'md-svg-vue/dist/navigation/MdChevronRight.vue';
+  import MdChevronLeft from '@rabota/md-svg-vue/dist/navigation/MdChevronLeft.vue';
+  import MdChevronRight from '@rabota/md-svg-vue/dist/navigation/MdChevronRight.vue';
   import RTabsItems from './RTabsItems.vue';
   import RTab from './RTab.vue';
   import RTabItem from './RTabItem.vue';

@@ -1,25 +1,30 @@
 Arguments: 
-  /usr/local/Cellar/node/12.8.0/bin/node /usr/local/Cellar/yarn/1.17.3/libexec/bin/yarn.js
+  /usr/local/bin/node /usr/share/yarn/bin/yarn.js install
 
 PATH: 
-  /Users/jekins/Downloads/jsshell-mac:/usr/local/sbin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+  /home/asb/bin:/home/asb/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 
 Yarn version: 
-  1.17.3
+  1.12.3
 
 Node version: 
-  12.8.0
+  10.15.1
 
 Platform: 
-  darwin x64
+  linux x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/performance-now/-/performance-now-2.1.0.tgz: ENOENT: no such file or directory, open '/Users/ajzh/Library/Caches/Yarn/v4/npm-performance-now-2.1.0-6309f4e0e5fa913ec1c69307ae364b4b377c9e7b/node_modules/performance-now/.yarn-tarball.tgz'
+  SyntaxError: /var/www/lab/github/rabotify/package.json: Unexpected token @ in JSON at position 5972
+      at JSON.parse (<anonymous>)
+      at /usr/share/yarn/lib/cli.js:1631:59
+      at Generator.next (<anonymous>)
+      at step (/usr/share/yarn/lib/cli.js:304:30)
+      at /usr/share/yarn/lib/cli.js:315:13
 
 npm manifest: 
   {
     "name": "@rabota/rabotify",
-    "version": "1.4.37",
+    "version": "1.4.45",
     "license": "MIT",
     "main": "dist/rabotify.core.min.js",
     "unpkg": "dist/rabotify.core.min.js",
@@ -138,7 +143,7 @@ npm manifest:
     "dependencies": {
       "@rabota/loader": "^1.0.2",
       "cleave.js": "^1.2.1",
-      "md-svg-vue": "^1.0.20",
+      "@rabota/md-svg-vue": "^1.0.22",
       "normalize.css": "^8.0.1",
       "quill-image-resize-module": "^3.0.0",
       "vue-quill-editor": "^3.0.5",
@@ -170,7 +175,7 @@ npm manifest:
         "^@directives/(.*)$": "<rootDir>/src/directives/$1",
         "^@mixins/(.*)$": "<rootDir>/src/mixins/$1",
         "^@util/(.*)$": "<rootDir>/src/util/$1",
-        "^@md-svg-vue/(.*)$": "<rootDir>/node_modules/md-svg-vue/dist/$1"
+        "^@md-svg-vue/(.*)$": "<rootDir>/node_modules/@rabota/md-svg-vue/dist/$1"
       },
       "transform": {
         ".*\\.(vue)$": "<rootDir>/node_modules/jest-vue-preprocessor",
@@ -178,7 +183,7 @@ npm manifest:
         ".*\\.(vue|js)$": "<rootDir>/node_modules/babel-jest"
       },
       "transformIgnorePatterns": [
-        "node_modules/(?!vue-router|md-svg-vue)"
+        "node_modules/(?!vue-router|\@rabota\/md-svg-vue)"
       ],
       "snapshotSerializers": [
         "jest-serializer-html"

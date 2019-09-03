@@ -1,6 +1,6 @@
 <script>
   /** Icons */
-  import MdClose from 'md-svg-vue/dist/navigation/MdClose.vue';
+  import MdClose from '@rabota/md-svg-vue/dist/navigation/MdClose.vue';
 
   /** Transitions */
   import { RFadeTransition } from '../transitions';

@@ -1,7 +1,7 @@
 <script>
   // Icons
-  import MdClose from 'md-svg-vue/dist/navigation/MdClose.vue';
-  import MdKeyboardArrowDown from 'md-svg-vue/dist/hardware/MdKeyboardArrowDown.vue';
+  import MdClose from '@rabota/md-svg-vue/dist/navigation/MdClose.vue';
+  import MdKeyboardArrowDown from '@rabota/md-svg-vue/dist/hardware/MdKeyboardArrowDown.vue';
 
   // Components
   import RTextField from '../RTextField/RTextField';

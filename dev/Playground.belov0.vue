@@ -1533,11 +1533,11 @@
 </template>
 
 <script>
-  import MdFavoriteBorder from 'md-svg-vue/dist/action/MdFavoriteBorder';
-  import MdClose from 'md-svg-vue/dist/navigation/MdClose';
-  import MdAddCircleOutline from 'md-svg-vue/dist/content/MdAddCircleOutline.vue';
-  import MdArrowBack from 'md-svg-vue/dist/navigation/MdArrowBack';
-  import MdChevronRight from 'md-svg-vue/dist/navigation/MdChevronRight';
+  import MdFavoriteBorder from '@rabota/md-svg-vue/dist/action/MdFavoriteBorder';
+  import MdClose from '@rabota/md-svg-vue/dist/navigation/MdClose';
+  import MdAddCircleOutline from '@rabota/md-svg-vue/dist/content/MdAddCircleOutline.vue';
+  import MdArrowBack from '@rabota/md-svg-vue/dist/navigation/MdArrowBack';
+  import MdChevronRight from '@rabota/md-svg-vue/dist/navigation/MdChevronRight';
 
   export default {
     components: {

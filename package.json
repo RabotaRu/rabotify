@@ -1,6 +1,6 @@
 {
   "name": "@rabota/rabotify",
-  "version": "1.4.44",
+  "version": "1.4.45",
   "license": "MIT",
   "main": "dist/rabotify.core.min.js",
   "unpkg": "dist/rabotify.core.min.js",
@@ -118,8 +118,8 @@
   },
   "dependencies": {
     "@rabota/loader": "^1.0.2",
+    "@rabota/md-svg-vue": "^1.0.22",
     "cleave.js": "^1.2.1",
-    "md-svg-vue": "^1.0.20",
     "normalize.css": "^8.0.1",
     "quill-image-resize-module": "^3.0.0",
     "vue-quill-editor": "^3.0.5",
@@ -151,7 +151,7 @@
       "^@directives/(.*)$": "<rootDir>/src/directives/$1",
       "^@mixins/(.*)$": "<rootDir>/src/mixins/$1",
       "^@util/(.*)$": "<rootDir>/src/util/$1",
-      "^@md-svg-vue/(.*)$": "<rootDir>/node_modules/md-svg-vue/dist/$1"
+      "^@md-svg-vue/(.*)$": "<rootDir>/node_modules/@rabota/md-svg-vue/dist/$1"
     },
     "transform": {
       ".*\\.(vue)$": "<rootDir>/node_modules/jest-vue-preprocessor",
@@ -159,7 +159,7 @@
       ".*\\.(vue|js)$": "<rootDir>/node_modules/babel-jest"
     },
     "transformIgnorePatterns": [
-      "node_modules/(?!vue-router|md-svg-vue)"
+      "node_modules/(?!vue-router|@rabota/md-svg-vue)"
     ],
     "snapshotSerializers": [
       "jest-serializer-html"

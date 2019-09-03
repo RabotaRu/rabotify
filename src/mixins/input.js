@@ -2,7 +2,7 @@ import Loadable from './loadable';
 import Validatable from './validatable';
 
 // Icons
-import MdClose from 'md-svg-vue/dist/navigation/MdClose.vue';
+import MdClose from '@rabota/md-svg-vue/dist/navigation/MdClose.vue';
 
 // Components
 import RBtn from '../components/RBtn/RBtn.vue';

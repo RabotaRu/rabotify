@@ -425,6 +425,15 @@ template {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -459,6 +468,15 @@ template {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -519,6 +537,15 @@ template {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -553,6 +580,208 @@ template {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
+/**
+ * Bem Constructor settings override
+ */
+/******* Common *******/
+/**
+ * Layout breakpoints
+ * xs, sm, md, lg
+ **/
+/** Radius */
+/** Indents */
+/** Grid */
+/** Typography */
+/** Transitions */
+/** Shadows */
+/** Ripple Animation */
+/******* Components *******/
+/** Buttons */
+/** Loading */
+/** Icon */
+/** Dialog */
+/** Overlay */
+/** Input Group */
+/** Card */
+/** Toolbar */
+/** Switch */
+/** Checkbox */
+/** Radio buttons */
+/** Chip */
+/** Lists */
+/** Divider */
+/** Tabs */
+/** Tab */
+/** Mobile Header */
+/** Mobile Menu */
+/**
+ * Replace `$search` with `$replace` in `$string`
+ * @param {String} $string - Initial string
+ * @param {String} $search - Substring to replace
+ * @param {String} $replace ('') - New value
+ * @return {String} - Updated string
+ */
+/**
+ * Merges stacks of font
+ * Usage: font-family: merge-fonts-stack('Roboto Regular');
+ * Usage: font-family: merge-fonts-stack('Roboto Regular', $font-family-default);
+ */
+/**
+ * Imports background url with image
+ * Usage: background: import-background-image('image.png');
+ * Usage: background: import-background-image('image.png', '/'); // from `static` directory
+ */
+/** Typography */
+/**
+ * Add custom style to different states of input's placeholder (like :hover or :active etc).
+ *
+ * @param {string} $color - color for input placeholder
+ * @param {:hover|:active|:focus|null} $target-pseudo - parent pseudo-class
+ * E.g.: @include input-placeholder-color(#faf);
+ * E.g.: @include input-placeholder-color(#faf, (hover: #ff0));
+ * E.g.: @include input-placeholder-color(#faf, (hover: #ff0, active: #0ff), false) {
+ *    transition: all .2s ease;
+ * }
+ */
+/**
+ * Миксин для media-query:
+ * ---------------------------------------- *
+ * xs: 480px
+ * sm: 720px
+ * md: 1024px
+ * lg: 1280px
+ * ---------------------------------------- *
+ *
+ * xs-and-down  |   < 480px
+ * xs-only      |   0 <= x < 480px
+ * xs-and-up    |   >= 480px
+ *
+ * sm-and-down  |   < 720px
+ * sm-only      |   480px <= x < 720px
+ * sm-and-up    |   >= 720px
+ *
+ * md-and-down  |   < 1024px
+ * md-only      |   720px <= x < 1024px
+ * md-and-up    |   >= 1024px
+ *
+ * lg-and-down  |   < 1280px
+ * lg-only      |   1024px <= x < 1280px
+ * lg-and-up    |   >= 1280px
+ *
+ * xl-only      |   >= 1280px
+ *
+ * ---------------------------------------- *
+ * E.g.:
+ *
+ * .class {
+ *    width: 800px;
+ *    @include media-query(xs-and-down) {
+ *      width: 100%;
+ *    }
+ * }
+ *
+ * .class {
+ *    width: 800px;
+ *    @include media-query(xs-and-down, landscape, print) {
+ *      padding: 0 20px;
+ *    }
+ * }
+ */
+/**
+ * Миксин для генерации теней
+ */
+/**
+ * Миксин для плавного перехода теней
+ */
+/**
+ * Миксин для установки темы (primary, secondary) на различные свойства
+ * $properties - свойства
+ * $force-color - установить свой color насильно
+ * $hover - установить hover
+ * $color-alpha - сделать цвет прозрачным от 0 до 1
+ * $important - принудительно
+ */
+/**
+ * Миксин для установки темы (primary, secondary) на различные текстовые свойства
+ * $properties - свойства
+ * $force-color - установить свой color насильно
+ * $hover - установить hover
+ * $color-alpha - сделать цвет прозрачным от 0 до 1
+ * $important - принудительно
+ */
+/** Container layout */
+/** Row */
+/** Cols */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
+/**
+ * Bem Constructor settings override
+ */
+/******* Common *******/
+/**
+ * Layout breakpoints
+ * xs, sm, md, lg
+ **/
+/** Radius */
+/** Indents */
+/** Grid */
+/** Typography */
+/** Transitions */
+/** Shadows */
+/** Ripple Animation */
+/******* Components *******/
+/** Buttons */
+/** Loading */
+/** Icon */
+/** Dialog */
+/** Overlay */
+/** Input Group */
+/** Card */
+/** Toolbar */
+/** Switch */
+/** Checkbox */
+/** Radio buttons */
+/** Chip */
+/** Lists */
+/** Divider */
+/** Tabs */
+/** Tab */
+/** Mobile Header */
+/** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -728,172 +957,15 @@ template {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/**
- * Bem Constructor settings override
- */
-/******* Common *******/
-/**
- * Layout breakpoints
- * xs, sm, md, lg
- **/
-/** Radius */
-/** Indents */
-/** Grid */
-/** Typography */
-/** Transitions */
-/** Shadows */
-/** Ripple Animation */
-/******* Components *******/
-/** Buttons */
+/** App */
 /** Loading */
-/** Icon */
-/** Dialog */
-/** Overlay */
-/** Input Group */
-/** Card */
-/** Toolbar */
+/** Cards */
 /** Switch */
-/** Checkbox */
-/** Radio buttons */
+/** Text-field */
 /** Chip */
 /** Lists */
-/** Divider */
-/** Tabs */
-/** Tab */
-/** Mobile Header */
-/** Mobile Menu */
-/**
- * Replace `$search` with `$replace` in `$string`
- * @param {String} $string - Initial string
- * @param {String} $search - Substring to replace
- * @param {String} $replace ('') - New value
- * @return {String} - Updated string
- */
-/**
- * Merges stacks of font
- * Usage: font-family: merge-fonts-stack('Roboto Regular');
- * Usage: font-family: merge-fonts-stack('Roboto Regular', $font-family-default);
- */
-/**
- * Imports background url with image
- * Usage: background: import-background-image('image.png');
- * Usage: background: import-background-image('image.png', '/'); // from `static` directory
- */
-/** Typography */
-/**
- * Add custom style to different states of input's placeholder (like :hover or :active etc).
- *
- * @param {string} $color - color for input placeholder
- * @param {:hover|:active|:focus|null} $target-pseudo - parent pseudo-class
- * E.g.: @include input-placeholder-color(#faf);
- * E.g.: @include input-placeholder-color(#faf, (hover: #ff0));
- * E.g.: @include input-placeholder-color(#faf, (hover: #ff0, active: #0ff), false) {
- *    transition: all .2s ease;
- * }
- */
-/**
- * Миксин для media-query:
- * ---------------------------------------- *
- * xs: 480px
- * sm: 720px
- * md: 1024px
- * lg: 1280px
- * ---------------------------------------- *
- *
- * xs-and-down  |   < 480px
- * xs-only      |   0 <= x < 480px
- * xs-and-up    |   >= 480px
- *
- * sm-and-down  |   < 720px
- * sm-only      |   480px <= x < 720px
- * sm-and-up    |   >= 720px
- *
- * md-and-down  |   < 1024px
- * md-only      |   720px <= x < 1024px
- * md-and-up    |   >= 1024px
- *
- * lg-and-down  |   < 1280px
- * lg-only      |   1024px <= x < 1280px
- * lg-and-up    |   >= 1280px
- *
- * xl-only      |   >= 1280px
- *
- * ---------------------------------------- *
- * E.g.:
- *
- * .class {
- *    width: 800px;
- *    @include media-query(xs-and-down) {
- *      width: 100%;
- *    }
- * }
- *
- * .class {
- *    width: 800px;
- *    @include media-query(xs-and-down, landscape, print) {
- *      padding: 0 20px;
- *    }
- * }
- */
-/**
- * Миксин для генерации теней
- */
-/**
- * Миксин для плавного перехода теней
- */
-/**
- * Миксин для установки темы (primary, secondary) на различные свойства
- * $properties - свойства
- * $force-color - установить свой color насильно
- * $hover - установить hover
- * $color-alpha - сделать цвет прозрачным от 0 до 1
- * $important - принудительно
- */
-/**
- * Миксин для установки темы (primary, secondary) на различные текстовые свойства
- * $properties - свойства
- * $force-color - установить свой color насильно
- * $hover - установить hover
- * $color-alpha - сделать цвет прозрачным от 0 до 1
- * $important - принудительно
- */
-/** Container layout */
-/** Row */
-/** Cols */
-/**
- * Bem Constructor settings override
- */
-/******* Common *******/
-/**
- * Layout breakpoints
- * xs, sm, md, lg
- **/
-/** Radius */
-/** Indents */
-/** Grid */
-/** Typography */
-/** Transitions */
-/** Shadows */
-/** Ripple Animation */
-/******* Components *******/
-/** Buttons */
-/** Loading */
-/** Icon */
-/** Dialog */
-/** Overlay */
-/** Input Group */
-/** Card */
-/** Toolbar */
-/** Switch */
-/** Checkbox */
-/** Radio buttons */
-/** Chip */
-/** Lists */
-/** Divider */
-/** Tabs */
-/** Tab */
-/** Mobile Header */
-/** Mobile Menu */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -946,6 +1018,15 @@ template {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -1087,6 +1168,15 @@ template {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -1121,6 +1211,15 @@ template {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -1303,10 +1402,10 @@ html, body {
   /* Reset `padding` and `margin` of all elements */
   padding: 0;
   margin: 0;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: rgba(5, 17, 37, 0);
 }
 a, button, input {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: rgba(5, 17, 37, 0);
 }
 a {
   color: #2b60b0;
@@ -1322,6 +1421,15 @@ a:active {
             border-radius: 4px;
 }
 
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -1365,6 +1473,15 @@ a:active {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -1425,6 +1542,15 @@ a:active {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -1459,6 +1585,15 @@ a:active {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -1600,6 +1735,15 @@ a:active {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -1634,6 +1778,15 @@ a:active {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -1871,6 +2024,15 @@ h6 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -1905,6 +2067,15 @@ h6 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -1965,6 +2136,15 @@ h6 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -1999,6 +2179,15 @@ h6 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -2140,6 +2329,15 @@ h6 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -2174,6 +2372,15 @@ h6 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -2316,6 +2523,15 @@ h6 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -2350,6 +2566,15 @@ h6 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -2410,6 +2635,15 @@ h6 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -2444,6 +2678,15 @@ h6 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -2585,6 +2828,15 @@ h6 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -2619,6 +2871,15 @@ h6 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -2873,8 +3134,8 @@ h6 {
     -webkit-border-radius: 2px;
             border-radius: 2px;
     padding: 0;
-    -webkit-box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.1), 0px 2px 2px 0px rgba(0, 0, 0, 0.08), 0px 1px 5px 0px rgba(0, 0, 0, 0.06);
-            box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.1), 0px 2px 2px 0px rgba(0, 0, 0, 0.08), 0px 1px 5px 0px rgba(0, 0, 0, 0.06);
+    -webkit-box-shadow: 0px 3px 1px -2px rgba(5, 17, 37, 0.1), 0px 2px 2px 0px rgba(5, 17, 37, 0.08), 0px 1px 5px 0px rgba(5, 17, 37, 0.06);
+            box-shadow: 0px 3px 1px -2px rgba(5, 17, 37, 0.1), 0px 2px 2px 0px rgba(5, 17, 37, 0.08), 0px 1px 5px 0px rgba(5, 17, 37, 0.06);
 }
 .input-group.input-group_solo label {
       top: 8px;
@@ -2996,7 +3257,7 @@ h6 {
     color: #051125;
 }
 .input-group.input-group_dirty:not(.input-group_error) label {
-    color: black;
+    color: #051125;
 }
 .input-group.input-group_focused:not(.input-group_error) .input-group__input textarea,
   .input-group.input-group_focused:not(.input-group_error) .input-group__input input {
@@ -3071,6 +3332,15 @@ h6 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -3105,6 +3375,15 @@ h6 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -3165,6 +3444,15 @@ h6 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -3199,6 +3487,15 @@ h6 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -3340,6 +3637,15 @@ h6 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -3374,6 +3680,15 @@ h6 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -3690,6 +4005,15 @@ h6 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -3724,6 +4048,15 @@ h6 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -3784,6 +4117,15 @@ h6 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -3818,6 +4160,15 @@ h6 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -3959,6 +4310,15 @@ h6 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -3993,6 +4353,15 @@ h6 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -4485,7 +4854,7 @@ h6 {
   background-color: white;
 }
 .black {
-  background-color: black;
+  background-color: #051125;
 }
 .text_primary {
   color: #2b60b0;
@@ -4565,113 +4934,113 @@ h6 {
     fill: white;
 }
 .text_black {
-  color: black;
-  fill: black;
+  color: #051125;
+  fill: #051125;
 }
 .text_black * {
-    fill: black;
+    fill: #051125;
 }
 
 /** Shadows */
 .shadow-0 {
-  -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1), 0px 0px 0px 0px rgba(0, 0, 0, 0.08), 0px 0px 0px 0px rgba(0, 0, 0, 0.06);
-          box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1), 0px 0px 0px 0px rgba(0, 0, 0, 0.08), 0px 0px 0px 0px rgba(0, 0, 0, 0.06);
+  -webkit-box-shadow: 0px 0px 0px 0px rgba(5, 17, 37, 0.1), 0px 0px 0px 0px rgba(5, 17, 37, 0.08), 0px 0px 0px 0px rgba(5, 17, 37, 0.06);
+          box-shadow: 0px 0px 0px 0px rgba(5, 17, 37, 0.1), 0px 0px 0px 0px rgba(5, 17, 37, 0.08), 0px 0px 0px 0px rgba(5, 17, 37, 0.06);
 }
 .shadow-1 {
-  -webkit-box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.1), 0px 1px 1px 0px rgba(0, 0, 0, 0.08), 0px 1px 3px 0px rgba(0, 0, 0, 0.06);
-          box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.1), 0px 1px 1px 0px rgba(0, 0, 0, 0.08), 0px 1px 3px 0px rgba(0, 0, 0, 0.06);
+  -webkit-box-shadow: 0px 2px 1px -1px rgba(5, 17, 37, 0.1), 0px 1px 1px 0px rgba(5, 17, 37, 0.08), 0px 1px 3px 0px rgba(5, 17, 37, 0.06);
+          box-shadow: 0px 2px 1px -1px rgba(5, 17, 37, 0.1), 0px 1px 1px 0px rgba(5, 17, 37, 0.08), 0px 1px 3px 0px rgba(5, 17, 37, 0.06);
 }
 .shadow-2 {
-  -webkit-box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.1), 0px 2px 2px 0px rgba(0, 0, 0, 0.08), 0px 1px 5px 0px rgba(0, 0, 0, 0.06);
-          box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.1), 0px 2px 2px 0px rgba(0, 0, 0, 0.08), 0px 1px 5px 0px rgba(0, 0, 0, 0.06);
+  -webkit-box-shadow: 0px 3px 1px -2px rgba(5, 17, 37, 0.1), 0px 2px 2px 0px rgba(5, 17, 37, 0.08), 0px 1px 5px 0px rgba(5, 17, 37, 0.06);
+          box-shadow: 0px 3px 1px -2px rgba(5, 17, 37, 0.1), 0px 2px 2px 0px rgba(5, 17, 37, 0.08), 0px 1px 5px 0px rgba(5, 17, 37, 0.06);
 }
 .shadow-3 {
-  -webkit-box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.1), 0px 3px 4px 0px rgba(0, 0, 0, 0.08), 0px 1px 8px 0px rgba(0, 0, 0, 0.06);
-          box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.1), 0px 3px 4px 0px rgba(0, 0, 0, 0.08), 0px 1px 8px 0px rgba(0, 0, 0, 0.06);
+  -webkit-box-shadow: 0px 3px 3px -2px rgba(5, 17, 37, 0.1), 0px 3px 4px 0px rgba(5, 17, 37, 0.08), 0px 1px 8px 0px rgba(5, 17, 37, 0.06);
+          box-shadow: 0px 3px 3px -2px rgba(5, 17, 37, 0.1), 0px 3px 4px 0px rgba(5, 17, 37, 0.08), 0px 1px 8px 0px rgba(5, 17, 37, 0.06);
 }
 .shadow-4 {
-  -webkit-box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.1), 0px 4px 5px 0px rgba(0, 0, 0, 0.08), 0px 1px 10px 0px rgba(0, 0, 0, 0.06);
-          box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.1), 0px 4px 5px 0px rgba(0, 0, 0, 0.08), 0px 1px 10px 0px rgba(0, 0, 0, 0.06);
+  -webkit-box-shadow: 0px 2px 4px -1px rgba(5, 17, 37, 0.1), 0px 4px 5px 0px rgba(5, 17, 37, 0.08), 0px 1px 10px 0px rgba(5, 17, 37, 0.06);
+          box-shadow: 0px 2px 4px -1px rgba(5, 17, 37, 0.1), 0px 4px 5px 0px rgba(5, 17, 37, 0.08), 0px 1px 10px 0px rgba(5, 17, 37, 0.06);
 }
 .shadow-5 {
-  -webkit-box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.1), 0px 5px 8px 0px rgba(0, 0, 0, 0.08), 0px 1px 14px 0px rgba(0, 0, 0, 0.06);
-          box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.1), 0px 5px 8px 0px rgba(0, 0, 0, 0.08), 0px 1px 14px 0px rgba(0, 0, 0, 0.06);
+  -webkit-box-shadow: 0px 3px 5px -1px rgba(5, 17, 37, 0.1), 0px 5px 8px 0px rgba(5, 17, 37, 0.08), 0px 1px 14px 0px rgba(5, 17, 37, 0.06);
+          box-shadow: 0px 3px 5px -1px rgba(5, 17, 37, 0.1), 0px 5px 8px 0px rgba(5, 17, 37, 0.08), 0px 1px 14px 0px rgba(5, 17, 37, 0.06);
 }
 .shadow-6 {
-  -webkit-box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.1), 0px 6px 10px 0px rgba(0, 0, 0, 0.08), 0px 1px 18px 0px rgba(0, 0, 0, 0.06);
-          box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.1), 0px 6px 10px 0px rgba(0, 0, 0, 0.08), 0px 1px 18px 0px rgba(0, 0, 0, 0.06);
+  -webkit-box-shadow: 0px 3px 5px -1px rgba(5, 17, 37, 0.1), 0px 6px 10px 0px rgba(5, 17, 37, 0.08), 0px 1px 18px 0px rgba(5, 17, 37, 0.06);
+          box-shadow: 0px 3px 5px -1px rgba(5, 17, 37, 0.1), 0px 6px 10px 0px rgba(5, 17, 37, 0.08), 0px 1px 18px 0px rgba(5, 17, 37, 0.06);
 }
 .shadow-7 {
-  -webkit-box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.1), 0px 7px 10px 1px rgba(0, 0, 0, 0.08), 0px 2px 16px 1px rgba(0, 0, 0, 0.06);
-          box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.1), 0px 7px 10px 1px rgba(0, 0, 0, 0.08), 0px 2px 16px 1px rgba(0, 0, 0, 0.06);
+  -webkit-box-shadow: 0px 4px 5px -2px rgba(5, 17, 37, 0.1), 0px 7px 10px 1px rgba(5, 17, 37, 0.08), 0px 2px 16px 1px rgba(5, 17, 37, 0.06);
+          box-shadow: 0px 4px 5px -2px rgba(5, 17, 37, 0.1), 0px 7px 10px 1px rgba(5, 17, 37, 0.08), 0px 2px 16px 1px rgba(5, 17, 37, 0.06);
 }
 .shadow-8 {
-  -webkit-box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.1), 0px 8px 10px 1px rgba(0, 0, 0, 0.08), 0px 3px 14px 2px rgba(0, 0, 0, 0.06);
-          box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.1), 0px 8px 10px 1px rgba(0, 0, 0, 0.08), 0px 3px 14px 2px rgba(0, 0, 0, 0.06);
+  -webkit-box-shadow: 0px 5px 5px -3px rgba(5, 17, 37, 0.1), 0px 8px 10px 1px rgba(5, 17, 37, 0.08), 0px 3px 14px 2px rgba(5, 17, 37, 0.06);
+          box-shadow: 0px 5px 5px -3px rgba(5, 17, 37, 0.1), 0px 8px 10px 1px rgba(5, 17, 37, 0.08), 0px 3px 14px 2px rgba(5, 17, 37, 0.06);
 }
 .shadow-9 {
-  -webkit-box-shadow: 0px 5px 6px -3px rgba(0, 0, 0, 0.1), 0px 9px 12px 1px rgba(0, 0, 0, 0.08), 0px 3px 16px 2px rgba(0, 0, 0, 0.06);
-          box-shadow: 0px 5px 6px -3px rgba(0, 0, 0, 0.1), 0px 9px 12px 1px rgba(0, 0, 0, 0.08), 0px 3px 16px 2px rgba(0, 0, 0, 0.06);
+  -webkit-box-shadow: 0px 5px 6px -3px rgba(5, 17, 37, 0.1), 0px 9px 12px 1px rgba(5, 17, 37, 0.08), 0px 3px 16px 2px rgba(5, 17, 37, 0.06);
+          box-shadow: 0px 5px 6px -3px rgba(5, 17, 37, 0.1), 0px 9px 12px 1px rgba(5, 17, 37, 0.08), 0px 3px 16px 2px rgba(5, 17, 37, 0.06);
 }
 .shadow-10 {
-  -webkit-box-shadow: 0px 6px 6px -3px rgba(0, 0, 0, 0.1), 0px 10px 14px 1px rgba(0, 0, 0, 0.08), 0px 4px 18px 3px rgba(0, 0, 0, 0.06);
-          box-shadow: 0px 6px 6px -3px rgba(0, 0, 0, 0.1), 0px 10px 14px 1px rgba(0, 0, 0, 0.08), 0px 4px 18px 3px rgba(0, 0, 0, 0.06);
+  -webkit-box-shadow: 0px 6px 6px -3px rgba(5, 17, 37, 0.1), 0px 10px 14px 1px rgba(5, 17, 37, 0.08), 0px 4px 18px 3px rgba(5, 17, 37, 0.06);
+          box-shadow: 0px 6px 6px -3px rgba(5, 17, 37, 0.1), 0px 10px 14px 1px rgba(5, 17, 37, 0.08), 0px 4px 18px 3px rgba(5, 17, 37, 0.06);
 }
 .shadow-11 {
-  -webkit-box-shadow: 0px 6px 7px -4px rgba(0, 0, 0, 0.1), 0px 11px 15px 1px rgba(0, 0, 0, 0.08), 0px 4px 20px 3px rgba(0, 0, 0, 0.06);
-          box-shadow: 0px 6px 7px -4px rgba(0, 0, 0, 0.1), 0px 11px 15px 1px rgba(0, 0, 0, 0.08), 0px 4px 20px 3px rgba(0, 0, 0, 0.06);
+  -webkit-box-shadow: 0px 6px 7px -4px rgba(5, 17, 37, 0.1), 0px 11px 15px 1px rgba(5, 17, 37, 0.08), 0px 4px 20px 3px rgba(5, 17, 37, 0.06);
+          box-shadow: 0px 6px 7px -4px rgba(5, 17, 37, 0.1), 0px 11px 15px 1px rgba(5, 17, 37, 0.08), 0px 4px 20px 3px rgba(5, 17, 37, 0.06);
 }
 .shadow-12 {
-  -webkit-box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.1), 0px 12px 17px 2px rgba(0, 0, 0, 0.08), 0px 5px 22px 4px rgba(0, 0, 0, 0.06);
-          box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.1), 0px 12px 17px 2px rgba(0, 0, 0, 0.08), 0px 5px 22px 4px rgba(0, 0, 0, 0.06);
+  -webkit-box-shadow: 0px 7px 8px -4px rgba(5, 17, 37, 0.1), 0px 12px 17px 2px rgba(5, 17, 37, 0.08), 0px 5px 22px 4px rgba(5, 17, 37, 0.06);
+          box-shadow: 0px 7px 8px -4px rgba(5, 17, 37, 0.1), 0px 12px 17px 2px rgba(5, 17, 37, 0.08), 0px 5px 22px 4px rgba(5, 17, 37, 0.06);
 }
 .shadow-13 {
-  -webkit-box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.1), 0px 13px 19px 2px rgba(0, 0, 0, 0.08), 0px 5px 24px 4px rgba(0, 0, 0, 0.06);
-          box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.1), 0px 13px 19px 2px rgba(0, 0, 0, 0.08), 0px 5px 24px 4px rgba(0, 0, 0, 0.06);
+  -webkit-box-shadow: 0px 7px 8px -4px rgba(5, 17, 37, 0.1), 0px 13px 19px 2px rgba(5, 17, 37, 0.08), 0px 5px 24px 4px rgba(5, 17, 37, 0.06);
+          box-shadow: 0px 7px 8px -4px rgba(5, 17, 37, 0.1), 0px 13px 19px 2px rgba(5, 17, 37, 0.08), 0px 5px 24px 4px rgba(5, 17, 37, 0.06);
 }
 .shadow-14 {
-  -webkit-box-shadow: 0px 7px 9px -4px rgba(0, 0, 0, 0.1), 0px 14px 21px 2px rgba(0, 0, 0, 0.08), 0px 5px 26px 4px rgba(0, 0, 0, 0.06);
-          box-shadow: 0px 7px 9px -4px rgba(0, 0, 0, 0.1), 0px 14px 21px 2px rgba(0, 0, 0, 0.08), 0px 5px 26px 4px rgba(0, 0, 0, 0.06);
+  -webkit-box-shadow: 0px 7px 9px -4px rgba(5, 17, 37, 0.1), 0px 14px 21px 2px rgba(5, 17, 37, 0.08), 0px 5px 26px 4px rgba(5, 17, 37, 0.06);
+          box-shadow: 0px 7px 9px -4px rgba(5, 17, 37, 0.1), 0px 14px 21px 2px rgba(5, 17, 37, 0.08), 0px 5px 26px 4px rgba(5, 17, 37, 0.06);
 }
 .shadow-15 {
-  -webkit-box-shadow: 0px 8px 9px -5px rgba(0, 0, 0, 0.1), 0px 15px 22px 2px rgba(0, 0, 0, 0.08), 0px 6px 28px 5px rgba(0, 0, 0, 0.06);
-          box-shadow: 0px 8px 9px -5px rgba(0, 0, 0, 0.1), 0px 15px 22px 2px rgba(0, 0, 0, 0.08), 0px 6px 28px 5px rgba(0, 0, 0, 0.06);
+  -webkit-box-shadow: 0px 8px 9px -5px rgba(5, 17, 37, 0.1), 0px 15px 22px 2px rgba(5, 17, 37, 0.08), 0px 6px 28px 5px rgba(5, 17, 37, 0.06);
+          box-shadow: 0px 8px 9px -5px rgba(5, 17, 37, 0.1), 0px 15px 22px 2px rgba(5, 17, 37, 0.08), 0px 6px 28px 5px rgba(5, 17, 37, 0.06);
 }
 .shadow-16 {
-  -webkit-box-shadow: 0px 8px 10px -5px rgba(0, 0, 0, 0.1), 0px 16px 24px 2px rgba(0, 0, 0, 0.08), 0px 6px 30px 5px rgba(0, 0, 0, 0.06);
-          box-shadow: 0px 8px 10px -5px rgba(0, 0, 0, 0.1), 0px 16px 24px 2px rgba(0, 0, 0, 0.08), 0px 6px 30px 5px rgba(0, 0, 0, 0.06);
+  -webkit-box-shadow: 0px 8px 10px -5px rgba(5, 17, 37, 0.1), 0px 16px 24px 2px rgba(5, 17, 37, 0.08), 0px 6px 30px 5px rgba(5, 17, 37, 0.06);
+          box-shadow: 0px 8px 10px -5px rgba(5, 17, 37, 0.1), 0px 16px 24px 2px rgba(5, 17, 37, 0.08), 0px 6px 30px 5px rgba(5, 17, 37, 0.06);
 }
 .shadow-17 {
-  -webkit-box-shadow: 0px 8px 11px -5px rgba(0, 0, 0, 0.1), 0px 17px 26px 2px rgba(0, 0, 0, 0.08), 0px 6px 32px 5px rgba(0, 0, 0, 0.06);
-          box-shadow: 0px 8px 11px -5px rgba(0, 0, 0, 0.1), 0px 17px 26px 2px rgba(0, 0, 0, 0.08), 0px 6px 32px 5px rgba(0, 0, 0, 0.06);
+  -webkit-box-shadow: 0px 8px 11px -5px rgba(5, 17, 37, 0.1), 0px 17px 26px 2px rgba(5, 17, 37, 0.08), 0px 6px 32px 5px rgba(5, 17, 37, 0.06);
+          box-shadow: 0px 8px 11px -5px rgba(5, 17, 37, 0.1), 0px 17px 26px 2px rgba(5, 17, 37, 0.08), 0px 6px 32px 5px rgba(5, 17, 37, 0.06);
 }
 .shadow-18 {
-  -webkit-box-shadow: 0px 9px 11px -5px rgba(0, 0, 0, 0.1), 0px 18px 28px 2px rgba(0, 0, 0, 0.08), 0px 7px 34px 6px rgba(0, 0, 0, 0.06);
-          box-shadow: 0px 9px 11px -5px rgba(0, 0, 0, 0.1), 0px 18px 28px 2px rgba(0, 0, 0, 0.08), 0px 7px 34px 6px rgba(0, 0, 0, 0.06);
+  -webkit-box-shadow: 0px 9px 11px -5px rgba(5, 17, 37, 0.1), 0px 18px 28px 2px rgba(5, 17, 37, 0.08), 0px 7px 34px 6px rgba(5, 17, 37, 0.06);
+          box-shadow: 0px 9px 11px -5px rgba(5, 17, 37, 0.1), 0px 18px 28px 2px rgba(5, 17, 37, 0.08), 0px 7px 34px 6px rgba(5, 17, 37, 0.06);
 }
 .shadow-19 {
-  -webkit-box-shadow: 0px 9px 12px -6px rgba(0, 0, 0, 0.1), 0px 19px 29px 2px rgba(0, 0, 0, 0.08), 0px 7px 36px 6px rgba(0, 0, 0, 0.06);
-          box-shadow: 0px 9px 12px -6px rgba(0, 0, 0, 0.1), 0px 19px 29px 2px rgba(0, 0, 0, 0.08), 0px 7px 36px 6px rgba(0, 0, 0, 0.06);
+  -webkit-box-shadow: 0px 9px 12px -6px rgba(5, 17, 37, 0.1), 0px 19px 29px 2px rgba(5, 17, 37, 0.08), 0px 7px 36px 6px rgba(5, 17, 37, 0.06);
+          box-shadow: 0px 9px 12px -6px rgba(5, 17, 37, 0.1), 0px 19px 29px 2px rgba(5, 17, 37, 0.08), 0px 7px 36px 6px rgba(5, 17, 37, 0.06);
 }
 .shadow-20 {
-  -webkit-box-shadow: 0px 10px 13px -6px rgba(0, 0, 0, 0.1), 0px 20px 31px 3px rgba(0, 0, 0, 0.08), 0px 8px 38px 7px rgba(0, 0, 0, 0.06);
-          box-shadow: 0px 10px 13px -6px rgba(0, 0, 0, 0.1), 0px 20px 31px 3px rgba(0, 0, 0, 0.08), 0px 8px 38px 7px rgba(0, 0, 0, 0.06);
+  -webkit-box-shadow: 0px 10px 13px -6px rgba(5, 17, 37, 0.1), 0px 20px 31px 3px rgba(5, 17, 37, 0.08), 0px 8px 38px 7px rgba(5, 17, 37, 0.06);
+          box-shadow: 0px 10px 13px -6px rgba(5, 17, 37, 0.1), 0px 20px 31px 3px rgba(5, 17, 37, 0.08), 0px 8px 38px 7px rgba(5, 17, 37, 0.06);
 }
 .shadow-21 {
-  -webkit-box-shadow: 0px 10px 13px -6px rgba(0, 0, 0, 0.1), 0px 21px 33px 3px rgba(0, 0, 0, 0.08), 0px 8px 40px 7px rgba(0, 0, 0, 0.06);
-          box-shadow: 0px 10px 13px -6px rgba(0, 0, 0, 0.1), 0px 21px 33px 3px rgba(0, 0, 0, 0.08), 0px 8px 40px 7px rgba(0, 0, 0, 0.06);
+  -webkit-box-shadow: 0px 10px 13px -6px rgba(5, 17, 37, 0.1), 0px 21px 33px 3px rgba(5, 17, 37, 0.08), 0px 8px 40px 7px rgba(5, 17, 37, 0.06);
+          box-shadow: 0px 10px 13px -6px rgba(5, 17, 37, 0.1), 0px 21px 33px 3px rgba(5, 17, 37, 0.08), 0px 8px 40px 7px rgba(5, 17, 37, 0.06);
 }
 .shadow-22 {
-  -webkit-box-shadow: 0px 10px 14px -6px rgba(0, 0, 0, 0.1), 0px 22px 35px 3px rgba(0, 0, 0, 0.08), 0px 8px 42px 7px rgba(0, 0, 0, 0.06);
-          box-shadow: 0px 10px 14px -6px rgba(0, 0, 0, 0.1), 0px 22px 35px 3px rgba(0, 0, 0, 0.08), 0px 8px 42px 7px rgba(0, 0, 0, 0.06);
+  -webkit-box-shadow: 0px 10px 14px -6px rgba(5, 17, 37, 0.1), 0px 22px 35px 3px rgba(5, 17, 37, 0.08), 0px 8px 42px 7px rgba(5, 17, 37, 0.06);
+          box-shadow: 0px 10px 14px -6px rgba(5, 17, 37, 0.1), 0px 22px 35px 3px rgba(5, 17, 37, 0.08), 0px 8px 42px 7px rgba(5, 17, 37, 0.06);
 }
 .shadow-23 {
-  -webkit-box-shadow: 0px 11px 14px -7px rgba(0, 0, 0, 0.1), 0px 23px 36px 3px rgba(0, 0, 0, 0.08), 0px 9px 44px 8px rgba(0, 0, 0, 0.06);
-          box-shadow: 0px 11px 14px -7px rgba(0, 0, 0, 0.1), 0px 23px 36px 3px rgba(0, 0, 0, 0.08), 0px 9px 44px 8px rgba(0, 0, 0, 0.06);
+  -webkit-box-shadow: 0px 11px 14px -7px rgba(5, 17, 37, 0.1), 0px 23px 36px 3px rgba(5, 17, 37, 0.08), 0px 9px 44px 8px rgba(5, 17, 37, 0.06);
+          box-shadow: 0px 11px 14px -7px rgba(5, 17, 37, 0.1), 0px 23px 36px 3px rgba(5, 17, 37, 0.08), 0px 9px 44px 8px rgba(5, 17, 37, 0.06);
 }
 .shadow-24 {
-  -webkit-box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.1), 0px 24px 38px 3px rgba(0, 0, 0, 0.08), 0px 9px 46px 8px rgba(0, 0, 0, 0.06);
-          box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.1), 0px 24px 38px 3px rgba(0, 0, 0, 0.08), 0px 9px 46px 8px rgba(0, 0, 0, 0.06);
+  -webkit-box-shadow: 0px 11px 15px -7px rgba(5, 17, 37, 0.1), 0px 24px 38px 3px rgba(5, 17, 37, 0.08), 0px 9px 46px 8px rgba(5, 17, 37, 0.06);
+          box-shadow: 0px 11px 15px -7px rgba(5, 17, 37, 0.1), 0px 24px 38px 3px rgba(5, 17, 37, 0.08), 0px 9px 46px 8px rgba(5, 17, 37, 0.06);
 }
 
 /** Display breakpoints */
@@ -4687,6 +5056,15 @@ h6 {
   overflow-y: hidden;
 }
 
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -4730,6 +5108,15 @@ h6 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -4954,11 +5341,11 @@ h6 {
       fill: white;
 }
 .icon.black {
-    color: black;
-    fill: black;
+    color: #051125;
+    fill: #051125;
 }
 .icon.black * {
-      fill: black;
+      fill: #051125;
 }
 .icon_large {
     width: 28px;
@@ -4969,6 +5356,15 @@ h6 {
     height: 20px;
 }
 
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -5012,6 +5408,15 @@ h6 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -5588,6 +5993,15 @@ h6 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -5622,6 +6036,15 @@ h6 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -5682,6 +6105,15 @@ h6 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -5716,6 +6148,15 @@ h6 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -5857,6 +6298,15 @@ h6 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -5891,6 +6341,15 @@ h6 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -6361,18 +6820,24 @@ h5 {
       font-weight: 700;
 }
 .input-group label {
-        line-height: 40px;
-        height: 40px;
+        line-height: 38px;
+        height: 38px;
+}
+.input-group__input {
+        min-height: 38px;
 }
 .input-group .input-group__append-icon,
       .input-group .input-group__prepend-icon {
-        height: 40px !important;
+        height: 38px !important;
         margin-top: 0 !important;
         margin-bottom: 0 !important;
 }
 .input-group_selection-controls label {
       line-height: 34px;
       height: 34px;
+}
+.input-group.input-group_selection-controls .input-group__input {
+        min-height: 34px;
 }
 .container {
       max-width: 100%;
@@ -10180,6 +10645,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -10214,6 +10688,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -10274,6 +10757,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -10308,6 +10800,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -10449,6 +10950,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -10483,6 +10993,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -10749,8 +11268,8 @@ h3 {
       color: white;
 }
 .loading__line.black {
-      background-color: black;
-      color: black;
+      background-color: #051125;
+      color: #051125;
 }
 .loading_line {
     height: 3px;
@@ -10769,6 +11288,15 @@ h3 {
 }
 
 @charset "UTF-8";
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -10812,6 +11340,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -10872,6 +11409,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -10906,6 +11452,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -11047,6 +11602,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -11081,6 +11645,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -11259,6 +11832,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -11293,6 +11875,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -11353,6 +11944,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -11387,6 +11987,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -11528,6 +12137,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -11562,6 +12180,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -11760,8 +12387,8 @@ h3 {
   -o-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.5, 1);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.5, 1);
   background-color: white;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  color: black;
+  border: 1px solid rgba(5, 17, 37, 0.15);
+  color: #051125;
 }
 .r-btn:hover {
     background-color: #cdd0d5;
@@ -11859,12 +12486,12 @@ h3 {
     border: 1px solid #f2f2f2 ;
 }
 .r-btn.black {
-    background-color: black;
-    border: 1px solid black;
+    background-color: #051125;
+    border: 1px solid #051125;
 }
 .r-btn.black:hover {
-    background-color: black;
-    border: 1px solid black ;
+    background-color: #02070f;
+    border: 1px solid #02070f ;
 }
 .r-btn.primary {
     color: white;
@@ -11937,18 +12564,18 @@ h3 {
       fill: #f2f2f2;
 }
 .r-btn.info {
-    color: black;
-    fill: black;
+    color: #051125;
+    fill: #051125;
 }
 .r-btn.info * {
-      fill: black;
+      fill: #051125;
 }
 .r-btn.info:hover {
-    color: black;
-    fill: black;
+    color: #02070f;
+    fill: #02070f;
 }
 .r-btn.info:hover * {
-      fill: black;
+      fill: #02070f;
 }
 .r-btn.warning {
     color: white;
@@ -11965,32 +12592,32 @@ h3 {
       fill: #f2f2f2;
 }
 .r-btn.gray {
-    color: black;
-    fill: black;
+    color: #051125;
+    fill: #051125;
 }
 .r-btn.gray * {
-      fill: black;
+      fill: #051125;
 }
 .r-btn.gray:hover {
-    color: black;
-    fill: black;
+    color: #02070f;
+    fill: #02070f;
 }
 .r-btn.gray:hover * {
-      fill: black;
+      fill: #02070f;
 }
 .r-btn.gray-light {
-    color: black;
-    fill: black;
+    color: #051125;
+    fill: #051125;
 }
 .r-btn.gray-light * {
-      fill: black;
+      fill: #051125;
 }
 .r-btn.gray-light:hover {
-    color: black;
-    fill: black;
+    color: #02070f;
+    fill: #02070f;
 }
 .r-btn.gray-light:hover * {
-      fill: black;
+      fill: #02070f;
 }
 .r-btn.gray-dark {
     color: white;
@@ -12007,18 +12634,18 @@ h3 {
       fill: #f2f2f2;
 }
 .r-btn.white {
-    color: black;
-    fill: black;
+    color: #051125;
+    fill: #051125;
 }
 .r-btn.white * {
-      fill: black;
+      fill: #051125;
 }
 .r-btn.white:hover {
-    color: black;
-    fill: black;
+    color: #02070f;
+    fill: #02070f;
 }
 .r-btn.white:hover * {
-      fill: black;
+      fill: #02070f;
 }
 .r-btn.black {
     color: white;
@@ -12123,12 +12750,12 @@ h3 {
       fill: white;
 }
 .r-btn.text_black {
-    border: 1px solid black;
-    color: black;
-    fill: black;
+    border: 1px solid #051125;
+    color: #051125;
+    fill: #051125;
 }
 .r-btn.text_black * {
-      fill: black;
+      fill: #051125;
 }
 .r-btn .md-icon {
     width: 18px;
@@ -12267,7 +12894,7 @@ h3 {
       background-color: rgba(255, 255, 255, 0.1);
 }
 .r-btn_outline:hover.text_black {
-      background-color: rgba(0, 0, 0, 0.1);
+      background-color: rgba(5, 17, 37, 0.1);
 }
 .r-btn_outline:active.text_primary {
       background-color: rgba(43, 96, 176, 0.3);
@@ -12303,7 +12930,7 @@ h3 {
       background-color: rgba(255, 255, 255, 0.3);
 }
 .r-btn_outline:active.text_black {
-      background-color: rgba(0, 0, 0, 0.3);
+      background-color: rgba(5, 17, 37, 0.3);
 }
 .r-btn_flat {
     border: 0 !important;
@@ -12346,7 +12973,7 @@ h3 {
       background-color: rgba(255, 255, 255, 0.3);
 }
 .r-btn_flat:active.text_black {
-      background-color: rgba(0, 0, 0, 0.3);
+      background-color: rgba(5, 17, 37, 0.3);
 }
 .r-btn_link {
     border: 1px solid transparent !important;
@@ -12527,12 +13154,12 @@ h3 {
                 transform: scale(0.95);
 }
 .r-btn_shadowed.black, .r-btn_shadowed.text_black {
-      -webkit-box-shadow: 0 4px 35px -8px black;
-              box-shadow: 0 4px 35px -8px black;
+      -webkit-box-shadow: 0 4px 35px -8px #051125;
+              box-shadow: 0 4px 35px -8px #051125;
 }
 .r-btn_shadowed.black:hover, .r-btn_shadowed.text_black:hover {
-        -webkit-box-shadow: 0 8px 36px -4px black;
-                box-shadow: 0 8px 36px -4px black;
+        -webkit-box-shadow: 0 8px 36px -4px #051125;
+                box-shadow: 0 8px 36px -4px #051125;
 }
 .r-btn_shadowed.black:active, .r-btn_shadowed.text_black:active {
         -webkit-transform: scale(0.95);
@@ -12579,6 +13206,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -12613,6 +13249,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -12673,6 +13318,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -12707,6 +13361,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -12848,6 +13511,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -12882,6 +13554,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -13072,6 +13753,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -13106,6 +13796,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -13166,6 +13865,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -13200,6 +13908,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -13341,6 +14058,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -13375,6 +14101,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -13552,8 +14287,8 @@ h3 {
   border: 1px solid white;
 }
 .checkbox.input-group_active.text_black .checkbox__content {
-  background: black;
-  border: 1px solid black;
+  background: #051125;
+  border: 1px solid #051125;
 }
 .checkbox .icon path {
   fill: none !important;
@@ -13611,6 +14346,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -13645,6 +14389,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -13705,6 +14458,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -13739,6 +14501,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -13880,6 +14651,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -13914,6 +14694,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -14080,7 +14869,7 @@ h3 {
   background-color: white;
 }
 .switch.black {
-  background-color: black;
+  background-color: #051125;
 }
 .switch:not(.input-group_dirty) .input-group_selection-controls__container {
   color: #9097a3 !important;
@@ -14100,8 +14889,8 @@ h3 {
 }
 .switch.input-group_disabled .input-group_selection-controls__ripple:after {
   background-color: white !important;
-  -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1), 0px 0px 0px 0px rgba(0, 0, 0, 0.08), 0px 0px 0px 0px rgba(0, 0, 0, 0.06) !important;
-          box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1), 0px 0px 0px 0px rgba(0, 0, 0, 0.08), 0px 0px 0px 0px rgba(0, 0, 0, 0.06) !important;
+  -webkit-box-shadow: 0px 0px 0px 0px rgba(5, 17, 37, 0.1), 0px 0px 0px 0px rgba(5, 17, 37, 0.08), 0px 0px 0px 0px rgba(5, 17, 37, 0.06) !important;
+          box-shadow: 0px 0px 0px 0px rgba(5, 17, 37, 0.1), 0px 0px 0px 0px rgba(5, 17, 37, 0.08), 0px 0px 0px 0px rgba(5, 17, 37, 0.06) !important;
 }
 .switch.input-group_disabled .input-group_selection-controls__toggle {
   color: #cdd0d5 !important;
@@ -14159,8 +14948,8 @@ h3 {
         -webkit-transform: translate(-50%, -50%);
             -ms-transform: translate(-50%, -50%);
                 transform: translate(-50%, -50%);
-        -webkit-box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.1), 0px 2px 2px 0px rgba(0, 0, 0, 0.08), 0px 1px 5px 0px rgba(0, 0, 0, 0.06);
-                box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.1), 0px 2px 2px 0px rgba(0, 0, 0, 0.08), 0px 1px 5px 0px rgba(0, 0, 0, 0.06);
+        -webkit-box-shadow: 0px 3px 1px -2px rgba(5, 17, 37, 0.1), 0px 2px 2px 0px rgba(5, 17, 37, 0.08), 0px 1px 5px 0px rgba(5, 17, 37, 0.06);
+                box-shadow: 0px 3px 1px -2px rgba(5, 17, 37, 0.1), 0px 2px 2px 0px rgba(5, 17, 37, 0.08), 0px 1px 5px 0px rgba(5, 17, 37, 0.06);
 }
 .input-group.input-group_selection-controls.switch .input-group_selection-controls__ripple_active {
         -webkit-transform: translate(3px, -24px);
@@ -14190,8 +14979,8 @@ h3 {
 .input-group.input-group_selection-controls.switch_small .input-group_selection-controls__ripple:after {
         width: 12px;
         height: 12px;
-        -webkit-box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.1), 0px 1px 1px 0px rgba(0, 0, 0, 0.08), 0px 1px 3px 0px rgba(0, 0, 0, 0.06);
-                box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.1), 0px 1px 1px 0px rgba(0, 0, 0, 0.08), 0px 1px 3px 0px rgba(0, 0, 0, 0.06);
+        -webkit-box-shadow: 0px 2px 1px -1px rgba(5, 17, 37, 0.1), 0px 1px 1px 0px rgba(5, 17, 37, 0.08), 0px 1px 3px 0px rgba(5, 17, 37, 0.06);
+                box-shadow: 0px 2px 1px -1px rgba(5, 17, 37, 0.1), 0px 1px 1px 0px rgba(5, 17, 37, 0.08), 0px 1px 3px 0px rgba(5, 17, 37, 0.06);
 }
 .input-group.input-group_selection-controls.switch_small .input-group_selection-controls__ripple_active {
         -webkit-transform: translate(1px, -16px);
@@ -14219,8 +15008,8 @@ h3 {
 .input-group.input-group_selection-controls.switch_large .input-group_selection-controls__ripple:after {
         width: 32px;
         height: 32px;
-        -webkit-box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.1), 0px 4px 5px 0px rgba(0, 0, 0, 0.08), 0px 1px 10px 0px rgba(0, 0, 0, 0.06);
-                box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.1), 0px 4px 5px 0px rgba(0, 0, 0, 0.08), 0px 1px 10px 0px rgba(0, 0, 0, 0.06);
+        -webkit-box-shadow: 0px 2px 4px -1px rgba(5, 17, 37, 0.1), 0px 4px 5px 0px rgba(5, 17, 37, 0.08), 0px 1px 10px 0px rgba(5, 17, 37, 0.06);
+                box-shadow: 0px 2px 4px -1px rgba(5, 17, 37, 0.1), 0px 4px 5px 0px rgba(5, 17, 37, 0.08), 0px 1px 10px 0px rgba(5, 17, 37, 0.06);
 }
 .input-group.input-group_selection-controls.switch_large .input-group_selection-controls__ripple_active {
         -webkit-transform: translate(9px, -36px);
@@ -14236,6 +15025,15 @@ h3 {
 }
 
 @charset "UTF-8";
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -14279,6 +15077,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -14339,6 +15146,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -14373,6 +15189,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -14514,6 +15339,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -14548,6 +15382,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -14744,9 +15587,9 @@ h3 {
     color: white;
 }
 .input-group_text-field.text_black input, .input-group_text-field.text_black textarea {
-    border-color: black;
-    caret-color: black;
-    color: black;
+    border-color: #051125;
+    caret-color: #051125;
+    color: #051125;
 }
 .input-group_text-field.text_primary input::-webkit-input-placeholder, .input-group_text-field.text_primary textarea::-webkit-input-placeholder {
     color: #2b60b0;
@@ -14848,13 +15691,13 @@ h3 {
     color: white;
 }
 .input-group_text-field.text_black input::-webkit-input-placeholder, .input-group_text-field.text_black textarea::-webkit-input-placeholder {
-    color: black;
+    color: #051125;
 }
 .input-group_text-field.text_black input::-ms-input-placeholder, .input-group_text-field.text_black textarea::-ms-input-placeholder {
-    color: black;
+    color: #051125;
 }
 .input-group_text-field.text_black input::placeholder, .input-group_text-field.text_black textarea::placeholder {
-    color: black;
+    color: #051125;
 }
 .input-group_text-field.text_primary input::-moz-selection, .input-group_text-field.text_primary textarea::-moz-selection {
     background-color: rgba(43, 96, 176, 0.4);
@@ -14923,10 +15766,10 @@ h3 {
     background-color: rgba(255, 255, 255, 0.4);
 }
 .input-group_text-field.text_black input::-moz-selection, .input-group_text-field.text_black textarea::-moz-selection {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(5, 17, 37, 0.4);
 }
 .input-group_text-field.text_black input::selection, .input-group_text-field.text_black textarea::selection {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(5, 17, 37, 0.4);
 }
 .input-group_text-field.text_primary .r-btn:not(.r-chip__close) .icon {
     fill: #2b60b0;
@@ -14995,10 +15838,10 @@ h3 {
       fill: white;
 }
 .input-group_text-field.text_black .r-btn:not(.r-chip__close) .icon {
-    fill: black;
+    fill: #051125;
 }
 .input-group_text-field.text_black .r-btn:not(.r-chip__close) .icon * {
-      fill: black;
+      fill: #051125;
 }
 .input-group_text-field label {
     position: absolute;
@@ -15040,7 +15883,7 @@ h3 {
       color: white;
 }
 .input-group_text-field.text_black label {
-      color: black;
+      color: #051125;
 }
 .input-group_text-field input,
   .input-group_text-field textarea {
@@ -15264,7 +16107,7 @@ h3 {
     white-space: nowrap;
 }
 .input-group_text-field:not(.input-group_error) .input-group__counter {
-    color: black;
+    color: #051125;
 }
 .input-group_text-field .input-group__counter {
     margin-left: auto;
@@ -15320,6 +16163,7 @@ h3 {
     margin: 3px;
     right: 0;
     top: 0;
+    height: 26px;
 }
 .input-group_text-field:not(.input-group_single-line).input-group_focused label, .input-group_text-field:not(.input-group_single-line).input-group_placeholder label {
     opacity: 1;
@@ -15425,7 +16269,7 @@ h3 {
       background-color: rgba(255, 76, 76, 0.06);
 }
 .input-group_text-field input {
-        height: 40px;
+        height: 38px;
 }
 .input-group_text-field .input-group__icon-clearable:hover {
         background-color: transparent !important;
@@ -15443,6 +16287,15 @@ h3 {
 }
 
 @charset "UTF-8";
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -15486,6 +16339,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -15546,6 +16408,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -15580,6 +16451,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -15721,6 +16601,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -15755,6 +16644,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -15954,10 +16852,10 @@ h3 {
     fill: white;
 }
 .radio-group.text_black {
-  fill: black;
+  fill: #051125;
 }
 .radio-group.text_black * {
-    fill: black;
+    fill: #051125;
 }
 .radio-group_column .input-group__input {
   display: block;
@@ -15987,6 +16885,15 @@ h3 {
 }
 
 @charset "UTF-8";
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -16030,6 +16937,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -16090,6 +17006,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -16124,6 +17049,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -16265,6 +17199,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -16299,6 +17242,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -16476,7 +17428,7 @@ h3 {
   background: white;
 }
 .radio.text_black .radio__inner-circle {
-  background: black;
+  background: #051125;
 }
 .radio.input-group_active.text_primary .radio__content {
   border-color: #2b60b0;
@@ -16512,7 +17464,7 @@ h3 {
   border-color: white;
 }
 .radio.input-group_active.text_black .radio__content {
-  border-color: black;
+  border-color: #051125;
 }
 .radio__content {
   -webkit-box-pack: center;
@@ -16572,6 +17524,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -16606,6 +17567,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -16666,6 +17636,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -16700,6 +17679,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -16841,6 +17829,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -16875,6 +17872,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -17104,6 +18110,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -17138,6 +18153,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -17198,6 +18222,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -17232,6 +18265,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -17373,6 +18415,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -17407,6 +18458,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -17553,6 +18613,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -17587,6 +18656,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -17647,6 +18725,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -17681,6 +18768,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -17822,6 +18918,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -17856,6 +18961,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -18011,8 +19125,8 @@ h3 {
   text-decoration: none;
   background-color: white;
   color: #051125;
-  -webkit-box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.1), 0px 4px 5px 0px rgba(0, 0, 0, 0.08), 0px 1px 10px 0px rgba(0, 0, 0, 0.06);
-          box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.1), 0px 4px 5px 0px rgba(0, 0, 0, 0.08), 0px 1px 10px 0px rgba(0, 0, 0, 0.06);
+  -webkit-box-shadow: 0px 2px 4px -1px rgba(5, 17, 37, 0.1), 0px 4px 5px 0px rgba(5, 17, 37, 0.08), 0px 1px 10px 0px rgba(5, 17, 37, 0.06);
+          box-shadow: 0px 2px 4px -1px rgba(5, 17, 37, 0.1), 0px 4px 5px 0px rgba(5, 17, 37, 0.08), 0px 1px 10px 0px rgba(5, 17, 37, 0.06);
   -webkit-transition: -webkit-box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: -webkit-box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
   -o-transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -18054,7 +19168,7 @@ h3 {
     background-color: white;
 }
 .card.black {
-    background-color: black;
+    background-color: #051125;
 }
 .card > *:first-child {
     -webkit-border-top-left-radius: inherit;
@@ -18136,16 +19250,16 @@ h3 {
         margin-right: 0;
 }
 .card_raised {
-    -webkit-box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.1), 0px 3px 4px 0px rgba(0, 0, 0, 0.08), 0px 1px 8px 0px rgba(0, 0, 0, 0.06);
-            box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.1), 0px 3px 4px 0px rgba(0, 0, 0, 0.08), 0px 1px 8px 0px rgba(0, 0, 0, 0.06);
+    -webkit-box-shadow: 0px 3px 3px -2px rgba(5, 17, 37, 0.1), 0px 3px 4px 0px rgba(5, 17, 37, 0.08), 0px 1px 8px 0px rgba(5, 17, 37, 0.06);
+            box-shadow: 0px 3px 3px -2px rgba(5, 17, 37, 0.1), 0px 3px 4px 0px rgba(5, 17, 37, 0.08), 0px 1px 8px 0px rgba(5, 17, 37, 0.06);
 }
 .card_tile {
     -webkit-border-radius: 0;
             border-radius: 0;
 }
 .card_flat {
-    -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1), 0px 0px 0px 0px rgba(0, 0, 0, 0.08), 0px 0px 0px 0px rgba(0, 0, 0, 0.06);
-            box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1), 0px 0px 0px 0px rgba(0, 0, 0, 0.08), 0px 0px 0px 0px rgba(0, 0, 0, 0.06);
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(5, 17, 37, 0.1), 0px 0px 0px 0px rgba(5, 17, 37, 0.08), 0px 0px 0px 0px rgba(5, 17, 37, 0.06);
+            box-shadow: 0px 0px 0px 0px rgba(5, 17, 37, 0.1), 0px 0px 0px 0px rgba(5, 17, 37, 0.08), 0px 0px 0px 0px rgba(5, 17, 37, 0.06);
 }
 .card_hover {
     cursor: pointer;
@@ -18159,11 +19273,20 @@ h3 {
     transition-property: box-shadow, -webkit-box-shadow;
 }
 .card_hover:hover {
-      -webkit-box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.1), 0px 8px 10px 1px rgba(0, 0, 0, 0.08), 0px 3px 14px 2px rgba(0, 0, 0, 0.06);
-              box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.1), 0px 8px 10px 1px rgba(0, 0, 0, 0.08), 0px 3px 14px 2px rgba(0, 0, 0, 0.06);
+      -webkit-box-shadow: 0px 5px 5px -3px rgba(5, 17, 37, 0.1), 0px 8px 10px 1px rgba(5, 17, 37, 0.08), 0px 3px 14px 2px rgba(5, 17, 37, 0.06);
+              box-shadow: 0px 5px 5px -3px rgba(5, 17, 37, 0.1), 0px 8px 10px 1px rgba(5, 17, 37, 0.08), 0px 3px 14px 2px rgba(5, 17, 37, 0.06);
 }
 
 @charset "UTF-8";
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -18207,6 +19330,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -18267,6 +19399,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -18301,6 +19442,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -18442,6 +19592,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -18476,6 +19635,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -18635,8 +19803,8 @@ h3 {
   background-color: white;
   color: #051125;
   z-index: 2;
-  -webkit-box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.1), 0px 4px 5px 0px rgba(0, 0, 0, 0.08), 0px 1px 10px 0px rgba(0, 0, 0, 0.06);
-          box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.1), 0px 4px 5px 0px rgba(0, 0, 0, 0.08), 0px 1px 10px 0px rgba(0, 0, 0, 0.06);
+  -webkit-box-shadow: 0px 2px 4px -1px rgba(5, 17, 37, 0.1), 0px 4px 5px 0px rgba(5, 17, 37, 0.08), 0px 1px 10px 0px rgba(5, 17, 37, 0.06);
+          box-shadow: 0px 2px 4px -1px rgba(5, 17, 37, 0.1), 0px 4px 5px 0px rgba(5, 17, 37, 0.08), 0px 1px 10px 0px rgba(5, 17, 37, 0.06);
 }
 .toolbar + .dialog-card__inner {
     padding-top: 0 !important;
@@ -18675,7 +19843,7 @@ h3 {
     background-color: white;
 }
 .toolbar.black {
-    background-color: black;
+    background-color: #051125;
 }
 .toolbar.primary {
     color: white;
@@ -18849,12 +20017,12 @@ h3 {
 .toolbar_card {
     -webkit-border-radius: 2px 2px 0 0;
             border-radius: 2px 2px 0 0;
-    -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1), 0px 0px 0px 0px rgba(0, 0, 0, 0.08), 0px 0px 0px 0px rgba(0, 0, 0, 0.06);
-            box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1), 0px 0px 0px 0px rgba(0, 0, 0, 0.08), 0px 0px 0px 0px rgba(0, 0, 0, 0.06);
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(5, 17, 37, 0.1), 0px 0px 0px 0px rgba(5, 17, 37, 0.08), 0px 0px 0px 0px rgba(5, 17, 37, 0.06);
+            box-shadow: 0px 0px 0px 0px rgba(5, 17, 37, 0.1), 0px 0px 0px 0px rgba(5, 17, 37, 0.08), 0px 0px 0px 0px rgba(5, 17, 37, 0.06);
 }
 .toolbar_flat {
-    -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1), 0px 0px 0px 0px rgba(0, 0, 0, 0.08), 0px 0px 0px 0px rgba(0, 0, 0, 0.06);
-            box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1), 0px 0px 0px 0px rgba(0, 0, 0, 0.08), 0px 0px 0px 0px rgba(0, 0, 0, 0.06);
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(5, 17, 37, 0.1), 0px 0px 0px 0px rgba(5, 17, 37, 0.08), 0px 0px 0px 0px rgba(5, 17, 37, 0.06);
+            box-shadow: 0px 0px 0px 0px rgba(5, 17, 37, 0.1), 0px 0px 0px 0px rgba(5, 17, 37, 0.08), 0px 0px 0px 0px rgba(5, 17, 37, 0.06);
 }
 .toolbar_light .toolbar__title {
     font-size: 20px;
@@ -18925,6 +20093,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -18959,6 +20136,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -19019,6 +20205,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -19053,6 +20248,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -19194,6 +20398,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -19228,6 +20441,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -19387,8 +20609,8 @@ h3 {
   -o-transition: .2s ease-in-out;
   transition: .2s ease-in-out;
   width: 100%;
-  -webkit-box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.1), 0px 24px 38px 3px rgba(0, 0, 0, 0.08), 0px 9px 46px 8px rgba(0, 0, 0, 0.06);
-          box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.1), 0px 24px 38px 3px rgba(0, 0, 0, 0.08), 0px 9px 46px 8px rgba(0, 0, 0, 0.06);
+  -webkit-box-shadow: 0px 11px 15px -7px rgba(5, 17, 37, 0.1), 0px 24px 38px 3px rgba(5, 17, 37, 0.08), 0px 9px 46px 8px rgba(5, 17, 37, 0.06);
+          box-shadow: 0px 11px 15px -7px rgba(5, 17, 37, 0.1), 0px 24px 38px 3px rgba(5, 17, 37, 0.08), 0px 9px 46px 8px rgba(5, 17, 37, 0.06);
 }
 .dialog:not(.dialog_fullscreen) {
     max-height: 90%;
@@ -19527,6 +20749,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -19561,6 +20792,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -19621,6 +20861,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -19655,6 +20904,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -19796,6 +21054,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -19830,6 +21097,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -20020,7 +21296,7 @@ h3 {
     background-color: rgba(255, 255, 255, 0);
 }
 .overlay.black {
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(5, 17, 37, 0);
 }
 .overlay:before {
     background-color: transparent;
@@ -20074,7 +21350,7 @@ h3 {
       background-color: white;
 }
 .overlay.black:before {
-      background-color: black;
+      background-color: #051125;
 }
 .overlay_absolute {
     position: absolute;
@@ -20105,6 +21381,15 @@ h3 {
 }
 
 @charset "UTF-8";
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -20148,6 +21433,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -20208,6 +21502,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -20242,6 +21545,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -20383,6 +21695,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -20417,6 +21738,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -20714,6 +22044,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -20748,6 +22087,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -20808,6 +22156,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -20842,6 +22199,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -20983,6 +22349,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -21017,6 +22392,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -21154,8 +22538,8 @@ h3 {
   z-index: 10;
   padding: 40px;
   padding-bottom: 0;
-  -webkit-box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.1), 0px 4px 5px 0px rgba(0, 0, 0, 0.08), 0px 1px 10px 0px rgba(0, 0, 0, 0.06);
-          box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.1), 0px 4px 5px 0px rgba(0, 0, 0, 0.08), 0px 1px 10px 0px rgba(0, 0, 0, 0.06);
+  -webkit-box-shadow: 0px 2px 4px -1px rgba(5, 17, 37, 0.1), 0px 4px 5px 0px rgba(5, 17, 37, 0.08), 0px 1px 10px 0px rgba(5, 17, 37, 0.06);
+          box-shadow: 0px 2px 4px -1px rgba(5, 17, 37, 0.1), 0px 4px 5px 0px rgba(5, 17, 37, 0.08), 0px 1px 10px 0px rgba(5, 17, 37, 0.06);
 }
 .dialog-header__title {
     font-size: 24px;
@@ -21163,8 +22547,8 @@ h3 {
     margin-bottom: 0;
 }
 .dialog-header_flat {
-    -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1), 0px 0px 0px 0px rgba(0, 0, 0, 0.08), 0px 0px 0px 0px rgba(0, 0, 0, 0.06);
-            box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1), 0px 0px 0px 0px rgba(0, 0, 0, 0.08), 0px 0px 0px 0px rgba(0, 0, 0, 0.06);
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(5, 17, 37, 0.1), 0px 0px 0px 0px rgba(5, 17, 37, 0.08), 0px 0px 0px 0px rgba(5, 17, 37, 0.06);
+            box-shadow: 0px 0px 0px 0px rgba(5, 17, 37, 0.1), 0px 0px 0px 0px rgba(5, 17, 37, 0.08), 0px 0px 0px 0px rgba(5, 17, 37, 0.06);
 }
 .dialog_scrollable .dialog-header {
     padding-bottom: 32px;
@@ -21190,6 +22574,15 @@ h3 {
 }
 
 @charset "UTF-8";
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -21233,6 +22626,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -21293,6 +22695,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -21327,6 +22738,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -21468,6 +22888,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -21502,6 +22931,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -21799,6 +23237,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -21833,6 +23280,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -21893,6 +23349,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -21927,6 +23392,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -22068,6 +23542,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -22102,6 +23585,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -22301,6 +23793,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -22335,6 +23836,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -22395,6 +23905,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -22429,6 +23948,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -22570,6 +24098,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -22604,6 +24141,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -22800,9 +24346,9 @@ h3 {
     color: white;
 }
 .input-group_text-field.text_black input, .input-group_text-field.text_black textarea {
-    border-color: black;
-    caret-color: black;
-    color: black;
+    border-color: #051125;
+    caret-color: #051125;
+    color: #051125;
 }
 .input-group_text-field.text_primary input::-webkit-input-placeholder, .input-group_text-field.text_primary textarea::-webkit-input-placeholder {
     color: #2b60b0;
@@ -22904,13 +24450,13 @@ h3 {
     color: white;
 }
 .input-group_text-field.text_black input::-webkit-input-placeholder, .input-group_text-field.text_black textarea::-webkit-input-placeholder {
-    color: black;
+    color: #051125;
 }
 .input-group_text-field.text_black input::-ms-input-placeholder, .input-group_text-field.text_black textarea::-ms-input-placeholder {
-    color: black;
+    color: #051125;
 }
 .input-group_text-field.text_black input::placeholder, .input-group_text-field.text_black textarea::placeholder {
-    color: black;
+    color: #051125;
 }
 .input-group_text-field.text_primary input::-moz-selection, .input-group_text-field.text_primary textarea::-moz-selection {
     background-color: rgba(43, 96, 176, 0.4);
@@ -22979,10 +24525,10 @@ h3 {
     background-color: rgba(255, 255, 255, 0.4);
 }
 .input-group_text-field.text_black input::-moz-selection, .input-group_text-field.text_black textarea::-moz-selection {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(5, 17, 37, 0.4);
 }
 .input-group_text-field.text_black input::selection, .input-group_text-field.text_black textarea::selection {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(5, 17, 37, 0.4);
 }
 .input-group_text-field.text_primary .r-btn:not(.r-chip__close) .icon {
     fill: #2b60b0;
@@ -23051,10 +24597,10 @@ h3 {
       fill: white;
 }
 .input-group_text-field.text_black .r-btn:not(.r-chip__close) .icon {
-    fill: black;
+    fill: #051125;
 }
 .input-group_text-field.text_black .r-btn:not(.r-chip__close) .icon * {
-      fill: black;
+      fill: #051125;
 }
 .input-group_text-field label {
     position: absolute;
@@ -23096,7 +24642,7 @@ h3 {
       color: white;
 }
 .input-group_text-field.text_black label {
-      color: black;
+      color: #051125;
 }
 .input-group_text-field input,
   .input-group_text-field textarea {
@@ -23320,7 +24866,7 @@ h3 {
     white-space: nowrap;
 }
 .input-group_text-field:not(.input-group_error) .input-group__counter {
-    color: black;
+    color: #051125;
 }
 .input-group_text-field .input-group__counter {
     margin-left: auto;
@@ -23376,6 +24922,7 @@ h3 {
     margin: 3px;
     right: 0;
     top: 0;
+    height: 26px;
 }
 .input-group_text-field:not(.input-group_single-line).input-group_focused label, .input-group_text-field:not(.input-group_single-line).input-group_placeholder label {
     opacity: 1;
@@ -23486,6 +25033,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -23520,6 +25076,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -23580,6 +25145,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -23614,6 +25188,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -23755,6 +25338,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -23789,6 +25381,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -23990,8 +25591,8 @@ h3 {
   color: white;
 }
 .input-group_select.text_black .input-group__input {
-  border-color: black;
-  color: black;
+  border-color: #051125;
+  color: #051125;
 }
 .input-group_select .input-group__append-icon:not(.input-group__icon-clearable) .icon * {
   fill: #cdd0d5 !important;
@@ -24063,10 +25664,10 @@ h3 {
     fill: white !important;
 }
 .input-group_select.text_black .input-group__append-icon .icon * {
-  fill: black !important;
+  fill: #051125 !important;
 }
 .input-group_select.text_black .input-group__append-icon .icon * * {
-    fill: black !important;
+    fill: #051125 !important;
 }
 .input-group_select__autocomplete {
   display: block;
@@ -24223,8 +25824,8 @@ h3 {
     transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1);
 }
 .input-group.input-group_overflow.input-group_focused .input-group__input, .input-group.input-group_editable.input-group_focused .input-group__input, .input-group.input-group_segmented.input-group_focused .input-group__input {
-    -webkit-box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.1), 0px 8px 10px 1px rgba(0, 0, 0, 0.08), 0px 3px 14px 2px rgba(0, 0, 0, 0.06);
-            box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.1), 0px 8px 10px 1px rgba(0, 0, 0, 0.08), 0px 3px 14px 2px rgba(0, 0, 0, 0.06);
+    -webkit-box-shadow: 0px 5px 5px -3px rgba(5, 17, 37, 0.1), 0px 8px 10px 1px rgba(5, 17, 37, 0.08), 0px 3px 14px 2px rgba(5, 17, 37, 0.06);
+            box-shadow: 0px 5px 5px -3px rgba(5, 17, 37, 0.1), 0px 8px 10px 1px rgba(5, 17, 37, 0.08), 0px 3px 14px 2px rgba(5, 17, 37, 0.06);
 }
 .input-group.input-group_overflow label, .input-group.input-group_editable label, .input-group.input-group_segmented label {
     left: 16px !important;
@@ -24262,8 +25863,14 @@ h3 {
   display: none;
 }
 .menu__content_autocomplete {
-  -webkit-border-radius: 0;
-          border-radius: 0;
+  -webkit-border-top-left-radius: 0;
+          border-top-left-radius: 0;
+  -webkit-border-top-right-radius: 0;
+          border-top-right-radius: 0;
+  -webkit-border-bottom-left-radius: 4px;
+          border-bottom-left-radius: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+          border-bottom-right-radius: 4px;
 }
 .menu__content_autocomplete > .card {
     -webkit-border-radius: 0;
@@ -24274,7 +25881,7 @@ h3 {
       background-color: rgba(255, 76, 76, 0.06);
 }
 .input-group_text-field input {
-        height: 40px;
+        height: 38px;
 }
 .input-group_text-field .input-group__icon-clearable:hover {
         background-color: transparent !important;
@@ -24300,6 +25907,15 @@ h3 {
 }
 
 @charset "UTF-8";
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -24343,6 +25959,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -24403,6 +26028,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -24437,6 +26071,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -24578,6 +26221,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -24612,6 +26264,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -24780,8 +26441,8 @@ h3 {
     -o-transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1);
     transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1);
     contain: content;
-    -webkit-box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.1), 0px 5px 8px 0px rgba(0, 0, 0, 0.08), 0px 1px 14px 0px rgba(0, 0, 0, 0.06);
-            box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.1), 0px 5px 8px 0px rgba(0, 0, 0, 0.08), 0px 1px 14px 0px rgba(0, 0, 0, 0.06);
+    -webkit-box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
 }
 .menu__content_active {
       pointer-events: none;
@@ -24800,6 +26461,15 @@ h3 {
 }
 
 @charset "UTF-8";
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -24843,6 +26513,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -24903,6 +26582,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -24937,6 +26625,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -25078,6 +26775,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -25112,6 +26818,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -25334,10 +27049,10 @@ h3 {
     background-color: #f2f2f2;
 }
 .r-chip.black {
-    background-color: black;
+    background-color: #051125;
 }
 .r-chip.black:hover {
-    background-color: black;
+    background-color: #02070f;
 }
 .r-chip.primary {
     color: white;
@@ -25424,8 +27139,8 @@ h3 {
       fill: white;
 }
 .r-chip.info {
-    fill: black;
-    color: black;
+    fill: #051125;
+    color: #051125;
 }
 .r-chip.text_primary {
     color: #2b60b0;
@@ -25516,12 +27231,12 @@ h3 {
       fill: white;
 }
 .r-chip.text_black {
-    color: black;
-    border-color: black;
-    fill: black;
+    color: #051125;
+    border-color: #051125;
+    fill: #051125;
 }
 .r-chip.text_black * {
-      fill: black;
+      fill: #051125;
 }
 .r-chip__content {
     -webkit-box-align: center;
@@ -25549,8 +27264,8 @@ h3 {
     padding: 0 4px 0 12px;
 }
 .r-chip:focus:not(.r-chip_disabled), .r-chip_active:not(.r-chip_disabled), .r-chip_selected:not(.r-chip_disabled) {
-    -webkit-box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.1), 0px 2px 2px 0px rgba(0, 0, 0, 0.08), 0px 1px 5px 0px rgba(0, 0, 0, 0.06);
-            box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.1), 0px 2px 2px 0px rgba(0, 0, 0, 0.08), 0px 1px 5px 0px rgba(0, 0, 0, 0.06);
+    -webkit-box-shadow: 0px 3px 1px -2px rgba(5, 17, 37, 0.1), 0px 2px 2px 0px rgba(5, 17, 37, 0.08), 0px 1px 5px 0px rgba(5, 17, 37, 0.06);
+            box-shadow: 0px 3px 1px -2px rgba(5, 17, 37, 0.1), 0px 2px 2px 0px rgba(5, 17, 37, 0.08), 0px 1px 5px 0px rgba(5, 17, 37, 0.06);
 }
 .r-chip:focus:not(.r-chip_disabled):after, .r-chip_active:not(.r-chip_disabled):after, .r-chip_selected:not(.r-chip_disabled):after {
       background: currentColor;
@@ -25689,6 +27404,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -25723,6 +27447,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -25783,6 +27516,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -25817,6 +27559,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -25958,6 +27709,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -25992,6 +27752,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -26191,17 +27960,17 @@ h3 {
       -webkit-transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1);
       -o-transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1);
       transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1);
-      background-color: rgba(0, 0, 0, 0.08);
+      background-color: #ebedf0;
 }
 .list__tile_link {
       cursor: pointer;
 }
 .list__tile_link:hover {
-        background: rgba(0, 0, 0, 0.08);
+        background: #ebedf0;
         text-decoration: none;
 }
 .list__tile_highlighted {
-      background: rgba(0, 0, 0, 0.08);
+      background: #ebedf0;
 }
 .list__tile__content, .list__tile__action, .list__tile__avatar {
       height: 100%;
@@ -26385,7 +28154,7 @@ h3 {
       height: 1px;
       opacity: 0;
       width: 100%;
-      background-color: rgba(0, 0, 0, 0.08);
+      background-color: #ebedf0;
 }
 .list_group .list__tile {
       padding-left: 72px;
@@ -26395,13 +28164,13 @@ h3 {
       display: block;
 }
 .list_group__header > li:first-child:hover {
-        background: rgba(0, 0, 0, 0.08);
+        background: #ebedf0;
 }
 .list_group__header + .list_group:after {
       opacity: 1;
 }
 .list_group__header_active .list__tile {
-      background: rgba(0, 0, 0, 0.08);
+      background: #ebedf0;
 }
 .list_group__header_active .list__tile:after {
         opacity: 1;
@@ -26428,6 +28197,15 @@ h3 {
 }
 
 @charset "UTF-8";
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -26471,6 +28249,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -26531,6 +28318,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -26565,6 +28361,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -26706,6 +28511,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -26740,6 +28554,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -26900,6 +28723,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -26934,6 +28766,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -26994,6 +28835,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -27028,6 +28878,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -27169,6 +29028,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -27203,6 +29071,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -27353,13 +29230,15 @@ h3 {
 .divider__text {
     position: absolute;
     top: 50%;
-    left: 0;
-    -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-            transform: translateY(-50%);
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    margin-top: -1px;
     color: #9097a3;
     background-color: #fff;
-    padding-left: 16px;
+    padding-left: 8px;
+    padding-right: 8px;
     line-height: 1;
     white-space: nowrap;
 }
@@ -27417,6 +29296,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -27451,6 +29339,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -27511,6 +29408,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -27545,6 +29451,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -27686,6 +29601,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -27720,6 +29644,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -27931,6 +29864,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -27965,6 +29907,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -28025,6 +29976,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -28059,6 +30019,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -28200,6 +30169,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -28234,6 +30212,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -28408,10 +30395,10 @@ h3 {
       background-color: white;
 }
 .tabs__bar.black {
-      background-color: black;
+      background-color: #051125;
 }
 .tabs__bar .tabs__div {
-      color: rgba(0, 0, 0, 0.87);
+      color: rgba(5, 17, 37, 0.87);
 }
 .tabs__bar.tabs__item_disabled {
       color: #9097a3;
@@ -28778,6 +30765,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -28812,6 +30808,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -28872,6 +30877,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -28906,6 +30920,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -29047,6 +31070,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -29081,6 +31113,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -29235,12 +31276,12 @@ h3 {
     transition: 0.15s cubic-bezier(0.25, 0.8, 0.5, 1);
     width: auto;
     pointer-events: none;
-    -webkit-box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.16), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
-            box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.16), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+    -webkit-box-shadow: 0px 2px 4px -1px rgba(5, 17, 37, 0.2), 0px 4px 5px 0px rgba(5, 17, 37, 0.16), 0px 1px 10px 0px rgba(5, 17, 37, 0.12);
+            box-shadow: 0px 2px 4px -1px rgba(5, 17, 37, 0.2), 0px 4px 5px 0px rgba(5, 17, 37, 0.16), 0px 1px 10px 0px rgba(5, 17, 37, 0.12);
 }
 .tooltip__content_white {
       background: rgba(255, 255, 255, 0.85);
-      color: #000;
+      color: #051125;
 }
 
 @charset "UTF-8";
@@ -29253,6 +31294,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -29287,6 +31337,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -29347,6 +31406,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -29381,6 +31449,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -29522,6 +31599,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -29556,6 +31642,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -29699,6 +31794,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -29733,6 +31837,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -29793,6 +31906,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -29827,6 +31949,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -29968,6 +32099,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -30002,6 +32142,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -30180,6 +32329,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -30214,6 +32372,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -30274,6 +32441,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -30308,6 +32484,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -30449,6 +32634,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -30483,6 +32677,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -30699,6 +32902,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -30733,6 +32945,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -30793,6 +33014,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -30827,6 +33057,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -30968,6 +33207,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -31002,6 +33250,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -31199,8 +33456,8 @@ h3 {
     color: #051125;
     pointer-events: auto;
     width: 100%;
-    -webkit-box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.1), 0px 6px 10px 0px rgba(0, 0, 0, 0.08), 0px 1px 18px 0px rgba(0, 0, 0, 0.06);
-            box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.1), 0px 6px 10px 0px rgba(0, 0, 0, 0.08), 0px 1px 18px 0px rgba(0, 0, 0, 0.06);
+    -webkit-box-shadow: 0px 3px 5px -1px rgba(5, 17, 37, 0.1), 0px 6px 10px 0px rgba(5, 17, 37, 0.08), 0px 1px 18px 0px rgba(5, 17, 37, 0.06);
+            box-shadow: 0px 3px 5px -1px rgba(5, 17, 37, 0.1), 0px 6px 10px 0px rgba(5, 17, 37, 0.08), 0px 1px 18px 0px rgba(5, 17, 37, 0.06);
 }
 .r-toast__wrapper.primary {
       background: #2b60b0;
@@ -31236,7 +33493,7 @@ h3 {
       background: white;
 }
 .r-toast__wrapper.black {
-      background: black;
+      background: #051125;
 }
 .r-toast__content {
     width: 100%;
@@ -31342,6 +33599,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -31376,6 +33642,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -31436,6 +33711,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -31470,6 +33754,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -31611,6 +33904,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -31645,6 +33947,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -31870,6 +34181,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -31904,6 +34224,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -31964,6 +34293,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -31998,6 +34336,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -32139,6 +34486,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -32173,6 +34529,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -32441,6 +34806,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -32475,6 +34849,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -32535,6 +34918,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -32569,6 +34961,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -32710,6 +35111,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -32744,6 +35154,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -32888,7 +35307,7 @@ h3 {
           flex-direction: row;
 }
 .page-headline {
-  margin-bottom: 32px;
+  margin-bottom: 16px;
 }
 .page-headline > *:last-child {
     margin-bottom: 0 !important;
@@ -35239,6 +37658,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -35273,6 +37701,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -35333,6 +37770,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -35367,6 +37813,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -35508,6 +37963,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -35542,6 +38006,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -35701,6 +38174,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -35735,6 +38217,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -35795,6 +38286,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -35829,6 +38329,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -35970,6 +38479,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -36004,6 +38522,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */

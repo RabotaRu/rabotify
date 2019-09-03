@@ -1,6 +1,6 @@
 <script>
   // Icons
-  import MdKeyboardArrowDown from 'md-svg-vue/dist/hardware/MdKeyboardArrowDown.vue';
+  import MdKeyboardArrowDown from '@rabota/md-svg-vue/dist/hardware/MdKeyboardArrowDown.vue';
 
   // Mixins
   import Colorable from '../../mixins/colorable';

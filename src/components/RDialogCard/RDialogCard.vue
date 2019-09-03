@@ -3,7 +3,7 @@
   import Scroll from '../../directives/scroll';
 
   // Icons
-  import MdClose from 'md-svg-vue/dist/navigation/MdClose.vue';
+  import MdClose from '@rabota/md-svg-vue/dist/navigation/MdClose.vue';
 
   // Components
   import RBtn from '../RBtn/RBtn.vue';

@@ -24,9 +24,9 @@
 </template>
 
 <script>
-  import MdFavoriteBorder from 'md-svg-vue/dist/action/MdFavoriteBorder';
-  import MdClose from 'md-svg-vue/dist/navigation/MdClose';
-  import MdFormatBold from 'md-svg-vue/dist/editor/MdFormatBold.vue';
+  import MdFavoriteBorder from '@rabota/md-svg-vue/dist/action/MdFavoriteBorder';
+  import MdClose from '@rabota/md-svg-vue/dist/navigation/MdClose';
+  import MdFormatBold from '@rabota/md-svg-vue/dist/editor/MdFormatBold.vue';
 
   export default {
     components: {

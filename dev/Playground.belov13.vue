@@ -161,8 +161,8 @@
 </template>
 
 <script>
-  import MdSearch from 'md-svg-vue/dist/action/MdSearch.vue';
-  import MdKeyboardArrowDown from 'md-svg-vue/dist/hardware/MdKeyboardArrowDown.vue';
+  import MdSearch from '@rabota/md-svg-vue/dist/action/MdSearch.vue';
+  import MdKeyboardArrowDown from '@rabota/md-svg-vue/dist/hardware/MdKeyboardArrowDown.vue';
 
   export default {
 

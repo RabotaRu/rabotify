@@ -65,6 +65,11 @@
   resolved "https://registry.yarnpkg.com/@rabota/loader/-/loader-1.0.2.tgz#69039b8af9485023e85f9b5c54f8d301af8141df"
   integrity sha512-hIu9BVpPk9OxpRLM6ydBvGEBRr1qFoUEMAf6rG5EopQ9MlRETHFeYdmQ90o0u2uh1k8bbcdETb/EcTOluo/suw==
 
+"@rabota/md-svg-vue@^1.0.22":
+  version "1.0.22"
+  resolved "https://registry.yarnpkg.com/@rabota/md-svg-vue/-/md-svg-vue-1.0.22.tgz#129db92a278d01e517e4adca53ec4cebebf8bef5"
+  integrity sha512-CG1l7v2KDPpaXoyWwDhJtO8IplYH3cuAgCmOg53IDAOS0BBUHTNT9h4jrwBiFZzFebfsrD1zICFBZiP/6Y6u3Q==
+
 JSONStream@^0.8.4:
   version "0.8.4"
   resolved "https://registry.yarnpkg.com/JSONStream/-/JSONStream-0.8.4.tgz#91657dfe6ff857483066132b4618b62e8f4887bd"
@@ -5370,11 +5375,6 @@ math-random@^1.0.1:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/math-random/-/math-random-1.0.4.tgz#5dd6943c938548267016d4e34f057583080c514c"
   integrity sha512-rUxjysqif/BZQH2yhd5Aaq7vXMSx9NdEsQcyA07uEzIvxgI7zIr33gGsh+RU0/XjmQpCW7RsVof1vlkvQVCK5A==
-
-md-svg-vue@^1.0.20:
-  version "1.0.20"
-  resolved "https://registry.yarnpkg.com/md-svg-vue/-/md-svg-vue-1.0.20.tgz#c0343500189af2ced1a03c2a538a21574fd896f4"
-  integrity sha512-8z2fPCeCQuzsx5YJkfsHpVUp1TbwxUsugMaUHzdZU8cf2reH8K8ve7rknPrfAnOEoo/s6TpA6nQ9Q6i2jDW9EQ==
 
 md5.js@^1.3.4:
   version "1.3.5"

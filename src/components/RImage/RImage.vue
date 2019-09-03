@@ -1,8 +1,8 @@
 <script>
   import RImageError from './RImageError';
 
-  import MdErrorOutline from 'md-svg-vue/dist/alert/MdErrorOutline.vue';
-  import MdRefresh from 'md-svg-vue/dist/navigation/MdRefresh.vue';
+  import MdErrorOutline from '@rabota/md-svg-vue/dist/alert/MdErrorOutline.vue';
+  import MdRefresh from '@rabota/md-svg-vue/dist/navigation/MdRefresh.vue';
 
   import RBtn from '../RBtn/RBtn.vue';
 

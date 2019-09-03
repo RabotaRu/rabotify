@@ -10,7 +10,7 @@
   import { RExpandTransition } from '../transitions';
 
   /** Icons */
-  import MdArrowDropDown from 'md-svg-vue/dist/navigation/MdArrowDropDown.vue';
+  import MdArrowDropDown from '@rabota/md-svg-vue/dist/navigation/MdArrowDropDown.vue';
 
   /**
    * List group
