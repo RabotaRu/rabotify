@@ -1,6 +1,6 @@
 {
   "name": "@rabota/rabotify",
-  "version": "1.4.46",
+  "version": "1.4.47",
   "license": "MIT",
   "main": "dist/rabotify.core.min.js",
   "unpkg": "dist/rabotify.core.min.js",
@@ -118,7 +118,7 @@
   },
   "dependencies": {
     "@rabota/loader": "^1.0.2",
-    "@rabota/md-svg-vue": "^1.0.23",
+    "@rabota/md-svg-vue": "^1.0.24",
     "cleave.js": "^1.2.1",
     "normalize.css": "^8.0.1",
     "quill-image-resize-module": "^3.0.0",
