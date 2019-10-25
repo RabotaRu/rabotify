@@ -1,11 +1,12 @@
 import { storiesOf } from '@storybook/vue';
 import { boolean } from '@storybook/addon-knobs';
+import { withInfo } from 'storybook-addon-vue-info';
 
 import RDivider from '@rabota/rabotify/src/components/RDivider/RDivider.vue';
 
 const stories = storiesOf('Rabotify', module);
 
-stories.add('RDivider', () => ({
+stories.addDecorator(withInfo).add('RDivider', () => ({
   components: {
     RDivider
   },
@@ -31,4 +32,4 @@ stories.add('RDivider', () => ({
 :xmedium="xmedium"
 />
 `
-}));
+}), { info: {} });

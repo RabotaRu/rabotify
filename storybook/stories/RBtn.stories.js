@@ -2,6 +2,7 @@ import { storiesOf } from '@storybook/vue';
 import { text, boolean, select } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import StoryRouter from 'storybook-vue-router';
+import { withInfo } from 'storybook-addon-vue-info';
 
 import RBtn from '@rabota/rabotify/src/components/RBtn/RBtn.vue';
 
@@ -20,7 +21,7 @@ const optionsType = {
   None: null
 };
 
-stories.addDecorator(StoryRouter()).add('RBtn', () => ({
+stories.addDecorator(withInfo).addDecorator(StoryRouter()).add('RBtn', () => ({
   components: { RBtn },
   props: {
     ripple: {
@@ -103,4 +104,4 @@ stories.addDecorator(StoryRouter()).add('RBtn', () => ({
   @click="click"
   @change="change"
   >{{ text }}</RBtn>`
-}));
+}), { info: {} });

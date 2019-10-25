@@ -1,11 +1,12 @@
 import { storiesOf } from '@storybook/vue';
 import { text, boolean, color } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
+import { withInfo } from 'storybook-addon-vue-info';
 import RBottomSheet from '@rabota/rabotify/src/components/RBottomSheet/RBottomSheet.vue';
 
 const stories = storiesOf('Rabotify', module);
 
-stories.add('RBottomSheet', () => ({
+stories.addDecorator(withInfo).add('RBottomSheet', () => ({
   components: { RBottomSheet },
   props: {
     text: {
@@ -31,4 +32,4 @@ stories.add('RBottomSheet', () => ({
   template: `<RBottomSheet :value="value" @input="input">
   <div :style="style">{{ text }}</div>
   </RBottomSheet>`
-}));
+}), { info: {} });

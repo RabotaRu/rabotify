@@ -1,6 +1,7 @@
 import { storiesOf } from '@storybook/vue';
 import { action } from '@storybook/addon-actions';
 import { text, boolean, select } from '@storybook/addon-knobs';
+import { withInfo } from 'storybook-addon-vue-info';
 
 import RMenu from '@rabota/rabotify/src/components/RMenu/RMenu.vue';
 import RList from '@rabota/rabotify/src/components/RList/RList.vue';
@@ -17,7 +18,7 @@ const originType = {
   None: null
 };
 
-stories.add('RMenu', () => ({
+stories.addDecorator(withInfo).add('RMenu', () => ({
   components: {
     RMenu,
     RList,
@@ -105,4 +106,4 @@ style="display: flex; justify-content: space-around;"
 </RMenu>
 </div>
 `
-}));
+}), { info: {} });

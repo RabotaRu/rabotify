@@ -1,5 +1,7 @@
 import { storiesOf } from '@storybook/vue';
 import { text, boolean, select, number } from '@storybook/addon-knobs';
+import { withInfo } from 'storybook-addon-vue-info';
+
 import RImage from '@rabota/rabotify/src/components/RImage/RImage.vue';
 
 const stories = storiesOf('Rabotify', module);
@@ -10,7 +12,7 @@ const options = {
   None: null
 };
 
-stories.add('RImage', () => ({
+stories.addDecorator(withInfo).add('RImage', () => ({
   components: { RImage },
   props: {
     src: {
@@ -36,4 +38,4 @@ stories.add('RImage', () => ({
     }
   },
   template: `<RImage :src="src" :thumbnail-src="thumbnailSrc" :round="round" :image-clip="imageClip" :width="width" :height="height" :showError="showError" />`
-}));
+}), { info: {} });
