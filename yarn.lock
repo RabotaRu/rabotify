@@ -65,10 +65,10 @@
   resolved "https://registry.yarnpkg.com/@rabota/loader/-/loader-1.0.2.tgz#69039b8af9485023e85f9b5c54f8d301af8141df"
   integrity sha512-hIu9BVpPk9OxpRLM6ydBvGEBRr1qFoUEMAf6rG5EopQ9MlRETHFeYdmQ90o0u2uh1k8bbcdETb/EcTOluo/suw==
 
-"@rabota/md-svg-vue@^1.0.23":
-  version "1.0.23"
-  resolved "https://registry.yarnpkg.com/@rabota/md-svg-vue/-/md-svg-vue-1.0.23.tgz#d5a63cbb58a89320251ff4b6226f6152218b3688"
-  integrity sha512-L1g5N83+vWIbo7cVjBsrIMCyuPRohdTAAifCw4cNLt4rgDcEeL7x17CONUI0ZkLZ6Cds+Nz0s2ndOpTKQcjNIA==
+"@rabota/md-svg-vue@^1.0.24":
+  version "1.0.24"
+  resolved "https://registry.yarnpkg.com/@rabota/md-svg-vue/-/md-svg-vue-1.0.24.tgz#1cd1811eacc547b5a340ca01306deef5268d8f82"
+  integrity sha512-23cxnODnjmVl0ytXWKanxFTKfPPENHUtWi4/RZStrnyzdU9ib+kiWBP9RDgGk8wrgz6KjlMaDfrgmiU7M7XNnA==
 
 JSONStream@^0.8.4:
   version "0.8.4"

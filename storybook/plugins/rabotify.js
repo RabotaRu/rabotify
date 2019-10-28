@@ -1,9 +1,9 @@
 import Vue from 'vue';
 import Semver from 'semver';
-import { peerDependencies, version } from '@rabota/rabotify/package.json';
-import RabotifyModule from '@rabota/rabotify/src/components/Rabotify';
-import Transitions from '@rabota/rabotify/src/components/transitions';
-import * as directives from '@rabota/rabotify/src/directives';
+import { peerDependencies, version } from '../../package.json';
+import RabotifyModule from '../../src/components/Rabotify';
+import Transitions from '../../src/components/transitions';
+import * as directives from '../../src/directives';
 
 function Rabotify (Vue, args) {
   const Rabotify = RabotifyModule;

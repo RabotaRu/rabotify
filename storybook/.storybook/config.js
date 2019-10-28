@@ -4,11 +4,11 @@ import '@storybook/addon-console';
 
 import Vue from 'vue';
 import Vuex from 'vuex';
-import Rabotify from '@rabota/rabotify/src/components/Rabotify';
-import Transitions from '@rabota/rabotify/src/components/transitions';
-import * as directives from '@rabota/rabotify/src/directives';
+import Rabotify from '../../src/components/Rabotify';
+import Transitions from '../../src/components/transitions';
+import * as directives from '../../src/directives';
 
-import RApp from '@rabota/rabotify/src/components/RApp/RApp.vue';
+import RApp from '../../src/components/RApp/RApp.vue';
 
 Vue.use(Rabotify, {
   components: {}, // components omitted for webpack code-splitting

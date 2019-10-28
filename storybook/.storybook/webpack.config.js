@@ -49,5 +49,7 @@ module.exports = async ({ config, mode }) => {
     enforce: 'post'
   })
 
+  config.resolve.alias['@babel/runtime'] = path.resolve(__dirname, '../node_modules/@babel/runtime');
+
   return config;
 };

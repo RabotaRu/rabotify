@@ -15,7 +15,6 @@
     "deploy-gh-pages": "yarn install && yarn build-storybook && push-dir --dir=storybook-static --branch=gh-pages --cleanup"
   },
   "dependencies": {
-    "@rabota/rabotify": "^1.4.49",
     "nuxt": "^2.0.0",
     "push-dir": "^0.4.1"
   },

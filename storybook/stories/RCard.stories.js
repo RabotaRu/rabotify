@@ -2,7 +2,7 @@ import { storiesOf } from '@storybook/vue';
 import { boolean } from '@storybook/addon-knobs';
 import { withInfo } from 'storybook-addon-vue-info';
 
-import RCard from '@rabota/rabotify/src/components/RCard/RCard.vue';
+import RCard from '../../src/components/RCard/RCard.vue';
 
 const stories = storiesOf('Rabotify', module);
 

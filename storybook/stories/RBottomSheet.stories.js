@@ -2,7 +2,7 @@ import { storiesOf } from '@storybook/vue';
 import { text, boolean, color } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import { withInfo } from 'storybook-addon-vue-info';
-import RBottomSheet from '@rabota/rabotify/src/components/RBottomSheet/RBottomSheet.vue';
+import RBottomSheet from '../../src/components/RBottomSheet/RBottomSheet.vue';
 
 const stories = storiesOf('Rabotify', module);
 

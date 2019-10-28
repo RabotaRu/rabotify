@@ -2,7 +2,7 @@ import { storiesOf } from '@storybook/vue';
 import { text, boolean, select, number } from '@storybook/addon-knobs';
 import { withInfo } from 'storybook-addon-vue-info';
 
-import RImage from '@rabota/rabotify/src/components/RImage/RImage.vue';
+import RImage from '../../src/components/RImage/RImage.vue';
 
 const stories = storiesOf('Rabotify', module);
 

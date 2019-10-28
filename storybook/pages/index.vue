@@ -44,9 +44,9 @@
 
 <script>
 import Logo from '~/components/Logo.vue';
-import RApp from '@rabota/rabotify/src/components/RApp/RApp.vue';
-import RBtn from '@rabota/rabotify/src/components/RBtn/RBtn.vue';
-import RImage from '@rabota/rabotify/src/components/RImage/RImage.vue';
+import RApp from '../../src/components/RApp/RApp.vue';
+import RBtn from '../../src/components/RBtn/RBtn.vue';
+import RImage from '../../src/components/RImage/RImage.vue';
 
 export default {
   components: {
@@ -59,8 +59,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../../styles/common/index";
-
 .container {
   margin: 0 auto;
   min-height: 100vh;

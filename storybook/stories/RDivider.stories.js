@@ -2,7 +2,7 @@ import { storiesOf } from '@storybook/vue';
 import { boolean } from '@storybook/addon-knobs';
 import { withInfo } from 'storybook-addon-vue-info';
 
-import RDivider from '@rabota/rabotify/src/components/RDivider/RDivider.vue';
+import RDivider from '../../src/components/RDivider/RDivider.vue';
 
 const stories = storiesOf('Rabotify', module);
 

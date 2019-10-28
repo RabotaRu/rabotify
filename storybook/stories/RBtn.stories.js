@@ -4,7 +4,7 @@ import { action } from '@storybook/addon-actions';
 import StoryRouter from 'storybook-vue-router';
 import { withInfo } from 'storybook-addon-vue-info';
 
-import RBtn from '@rabota/rabotify/src/components/RBtn/RBtn.vue';
+import RBtn from '../../src/components/RBtn/RBtn.vue';
 
 const stories = storiesOf('Rabotify', module);
 

@@ -3,12 +3,12 @@ import { action } from '@storybook/addon-actions';
 import { text, boolean, select } from '@storybook/addon-knobs';
 import { withInfo } from 'storybook-addon-vue-info';
 
-import RMenu from '@rabota/rabotify/src/components/RMenu/RMenu.vue';
-import RList from '@rabota/rabotify/src/components/RList/RList.vue';
-import RListTile from '@rabota/rabotify/src/components/RList/RListTile.vue';
-import RListTileContent from '@rabota/rabotify/src/components/RList/RListTileContent.vue';
-import RListTileSubTitle from '@rabota/rabotify/src/components/RList/RListTileSubTitle.vue';
-import RCard from '@rabota/rabotify/src/components/RCard/RCard.vue';
+import RMenu from '../../src/components/RMenu/RMenu.vue';
+import RList from '../../src/components/RList/RList.vue';
+import RListTile from '../../src/components/RList/RListTile.vue';
+import RListTileContent from '../../src/components/RList/RListTileContent.vue';
+import RListTileSubTitle from '../../src/components/RList/RListTileSubTitle.vue';
+import RCard from '../../src/components/RCard/RCard.vue';
 
 const stories = storiesOf('Rabotify', module);
 
