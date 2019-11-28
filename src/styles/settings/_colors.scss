@@ -1,8 +1,8 @@
 // colors
 $white-color: white;
-$dark-color: #051125;
-$red-color: #ff4c4c;
-$blue-color: #2b60b0;
+$dark-color: #081935;
+$red-color: #ff162e;
+$blue-color: #3495db;
 $blue-light-color: #eaf7ff;
 $blue-dark-color: #03012e;
 $blue-darkest-color: #05081E;
@@ -20,8 +20,8 @@ $gray-dark-color: #9097a3;
 
 // theme colors
 $primary-color: $blue-color                 !default;
-$secondary-color: $red-color                !default;
-$accent-color: $yellow-color                !default;
+$secondary-color: $blue-color               !default;
+$accent-color: $red-color                   !default;
 $error-color: $red-color                    !default;
 $success-color: $green-color                !default;
 $info-color: $blue-light-color              !default;

@@ -3,18 +3,14 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-/**
- * Select watchers
- *
- * @mixin
- *
- * Watchers for the
- * r-select component
- */
+
+var _helpers = require('../../../util/helpers');
+
 exports.default = {
   watch: {
     filteredItems: function filteredItems() {
       this.$refs.menu && this.$refs.menu.updateDimensions();
+      this.refreshMenuParams(this.searchValue);
     },
     inputValue: function inputValue(val) {
       // Search for an existing item when a
@@ -89,6 +85,8 @@ exports.default = {
       this.genSelectedItems();
     },
     menuIsActive: function menuIsActive(val) {
+      this.$emit('toggle-menu', val);
+
       if (!val) {
         return;
       }
@@ -102,47 +100,26 @@ exports.default = {
       this.searchValue = val;
     },
     searchValue: function searchValue(val, prev) {
-      var _this3 = this;
-
-      // Wrap input to next line if overflowing
-      if (this.$refs.input.scrollWidth > this.$refs.input.clientWidth) {
-        this.shouldBreak = true;
-        this.$nextTick(this.$refs.menu.updateDimensions);
-      } else if (val === null) {
-        this.shouldBreak = false;
-      }
-
-      // Activate menu if inactive and searching
-      if (this.isActive && !this.menuIsActive && val !== this.getText(this.selectedItem)) {
-        this.menuIsActive = true;
-      }
-
-      // Only reset list index
-      // if typing in search
-      !val && prev && this.resetMenuIndex();
-
-      this.$nextTick(function () {
-        if (val && !_this3.isAnyValueAllowed) {
-          _this3.setMenuIndex(0);
-        }
-        if (val !== null && _this3.selectedIndex > -1) {
-          _this3.selectedIndex = -1;
-        }
-      });
+      this.refreshMenuParams(val, prev);
     },
     selectedItems: function selectedItems() {
-      var _this4 = this;
+      var _this3 = this;
 
       if (this.isAutocomplete) {
         this.$nextTick(function (_) {
-          if (_this4.isDetailsAlwaysShowing || !_this4.rules.length) {
-            _this4.$refs.menu.updateDimensions();
+          if (_this3.isDetailsAlwaysShowing || !_this3.rules.length) {
+            _this3.$refs.menu.updateDimensions();
           } else {
             // details element could be collapsed/expanded after validation
             // with duration ~ 350 ms
-            setTimeout(_this4.$refs.menu.updateDimensions, 350);
+            setTimeout(_this3.$refs.menu.updateDimensions, 350);
           }
         });
+      }
+
+      if (this.hideMenuAfterSelect) {
+        this.resetMenuIndex();
+        this.hideMenu();
       }
     },
     value: function value(val) {
@@ -150,4 +127,11 @@ exports.default = {
       this.validate();
     }
   }
-};
+}; /**
+    * Select watchers
+    *
+    * @mixin
+    *
+    * Watchers for the
+    * r-select component
+    */

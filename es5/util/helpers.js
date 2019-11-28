@@ -39,6 +39,7 @@ exports.ensureString = ensureString;
 exports.normalizeClassName = normalizeClassName;
 exports.isObject = isObject;
 exports.isBrowserSafari = isBrowserSafari;
+exports.generateNumber = generateNumber;
 
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
@@ -206,7 +207,7 @@ function getObjectValueByPath(obj, path) {
   var a = path.split('.');
   for (var i = 0, n = a.length; i < n; ++i) {
     var k = a[i];
-    if (obj instanceof Object && k in obj) {
+    if (((typeof obj === 'undefined' ? 'undefined' : _typeof(obj)) === 'object' || obj instanceof Object) && k in obj) {
       obj = obj[k];
     } else {
       return;
@@ -513,4 +514,19 @@ function isBrowserSafari() {
 
   return (/^((?!chrome|android|crios|fxios).)*safari/i.test(navigator.userAgent)
   );
+}
+
+/**
+ * @param {number} min
+ * @param {number} max
+ * @return {number}
+ */
+function generateNumber() {
+  var min = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+  var max = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1e9;
+
+  min = Math.ceil(min);
+  max |= 0;
+
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }

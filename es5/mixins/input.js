@@ -12,7 +12,7 @@ var _validatable = require('./validatable');
 
 var _validatable2 = _interopRequireDefault(_validatable);
 
-var _MdClose = require('md-svg-vue/dist/navigation/MdClose.vue');
+var _MdClose = require('@rabota/md-svg-vue/dist/navigation/MdClose.vue');
 
 var _MdClose2 = _interopRequireDefault(_MdClose);
 
@@ -232,6 +232,7 @@ exports.default = {
         attrs: {
           tabindex: this.disabled ? -1 : this.internalTabIndex || this.tabindex
         },
+        ref: 'inputGroup',
         on: {
           focus: this.groupFocus,
           blur: this.groupBlur,

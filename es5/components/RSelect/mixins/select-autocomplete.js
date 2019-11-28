@@ -6,6 +6,8 @@ Object.defineProperty(exports, "__esModule", {
 
 var _helpers = require('../../../util/helpers');
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 /**
  * Select autocomplete
  *
@@ -108,7 +110,11 @@ exports.default = {
     },
     onEnterDown: function onEnterDown(e) {
       this.$emit('enter', e);
-      this.updateTags(this.getCurrentTag());
+      if (this.creatableChips) {
+        this.createItem();
+      } else {
+        this.updateTags(this.getCurrentTag());
+      }
     },
     onEscDown: function onEscDown(e) {
       e.preventDefault();
@@ -192,6 +198,7 @@ exports.default = {
       // that that the search text
       // is populated if needed
       var searchValue = null;
+
       if (this.combobox) {
         selectedItems = [content];
         searchValue = this.chips ? null : content;
@@ -207,6 +214,25 @@ exports.default = {
 
         // Combobox should close its menu when tags are updated
         _this3.menuIsActive = !_this3.combobox || _this3.persistentMenu;
+      });
+    },
+    createItem: function createItem() {
+      var _this4 = this;
+
+      var item = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : this.searchValue;
+
+      if (this.isNeedCreateItem(item)) {
+        var _item;
+
+        item = (_item = {}, _defineProperty(_item, this.itemText, item), _defineProperty(_item, this.itemValue, (0, _helpers.generateNumber)(-1e15, -1e20)), _defineProperty(_item, 'created', true), _item);
+
+        this.items.push(item);
+        this.selectItem(item);
+      }
+
+      this.$nextTick(function () {
+        _this4.searchValue = null;
+        _this4.menuIsActive = !_this4.hideMenuAfterSelect;
       });
     }
   }

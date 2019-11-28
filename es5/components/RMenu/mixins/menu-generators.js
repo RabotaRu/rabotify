@@ -65,7 +65,13 @@ exports.default = {
             return _this.closeOnClick;
           },
           include: function include() {
-            return [_this.$el].concat(_toConsumableArray(_this.getOpenDependentElements()));
+            var elements = [_this.$el].concat(_toConsumableArray(_this.getOpenDependentElements()));
+
+            if (_this.includeActivator) {
+              elements.push(_this.getActivator());
+            }
+
+            return elements;
           }
         }
       }] : [];

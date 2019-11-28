@@ -37,7 +37,7 @@ var YaMapManager = exports.YaMapManager = function (_MapManager) {
      * @return {Promise<*>}
      */
     value: function load() {
-      return this.loadSdk(MAP_SDK);
+      return this.loadSdk(this._buildSdkUrl());
     }
 
     /**
@@ -68,7 +68,7 @@ var YaMapManager = exports.YaMapManager = function (_MapManager) {
         controls: this.resolveControls(options.controls)
       });
 
-      return new this.sdk.Map(domId, options);
+      return new this.sdk.Map(domId, options, options);
     }
 
     /**
@@ -291,7 +291,7 @@ var YaMapManager = exports.YaMapManager = function (_MapManager) {
     }()
 
     /**
-     * Destroy the map
+     * Destroys the map
      *
      * @param {*} map
      */
@@ -424,6 +424,27 @@ var YaMapManager = exports.YaMapManager = function (_MapManager) {
       }
 
       return sdk.util.requireCenterAndZoom(map.getType(), bounds, map.container.getSize());
+    }
+
+    /**
+     * @returns {string}
+     * @private
+     */
+
+  }, {
+    key: '_buildSdkUrl',
+    value: function _buildSdkUrl() {
+      var baseUrl = MAP_SDK;
+      var apiKey = this.apiKey;
+
+      if (!apiKey) {
+        return baseUrl;
+      }
+
+      var hasQs = baseUrl.includes('?');
+      var apiKeyQs = (hasQs ? '&' : '?') + 'apikey=' + apiKey;
+
+      return baseUrl + apiKeyQs;
     }
   }, {
     key: 'sdkObjectName',

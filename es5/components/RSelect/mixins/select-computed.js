@@ -67,7 +67,7 @@ exports.default = {
       return this.isAutocomplete && this.isDirty && this.searchValue === this.getText(this.selectedItem);
     },
     isHidingSelected: function isHidingSelected() {
-      return this.hideSelected && this.isAutocomplete && this.isMultiple;
+      return this.hideSelected && (this.isAutocomplete || this.chipsOutside) && this.isMultiple;
     },
     isAutocomplete: function isAutocomplete() {
       return this.autocomplete || this.editable || this.tags || this.combobox;
@@ -82,19 +82,22 @@ exports.default = {
       return this.multiple || this.tags;
     },
     isAnyValueAllowed: function isAnyValueAllowed() {
-      return this.tags || this.combobox;
+      return this.tags || this.combobox || this.creatableChips;
     },
     menuIsVisible: function menuIsVisible() {
       if (!this.menu) {
         return false;
       }
-      return this.menuIsActive && this.computedItems.length > 0 && (!this.isAnyValueAllowed || this.filteredItems.length > 0);
+
+      return this.creatableChips ? this.menuIsActive : this.menuIsActive && this.computedItems.length > 0 && (!this.isAnyValueAllowed || this.filteredItems.length > 0);
     },
     menuItems: function menuItems() {
       var _this = this;
 
       return this.isHidingSelected ? this.filteredItems.filter(function (o) {
-        return (_this.selectedItems || []).indexOf(o) === -1;
+        return (_this.selectedItems || []).every(function (selectedItem) {
+          return _this.getValue(selectedItem) !== _this.getValue(o);
+        });
       }) : this.filteredItems;
     },
     nudgeTop: function nudgeTop() {

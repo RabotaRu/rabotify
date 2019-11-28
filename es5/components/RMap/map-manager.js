@@ -18,19 +18,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 var MapManager = exports.MapManager = function () {
 
   /**
-   * @type {ScriptLoader}
+   * @type {string}
+   * @private
+   */
+
+
+  /**
+   * @type {Array}
    * @private
    */
 
 
   /**
    * @type {boolean}
-   * @private
-   */
-
-
-  /**
-   * @type {number}
    * @private
    */
   function MapManager() {
@@ -41,6 +41,7 @@ var MapManager = exports.MapManager = function () {
     this._sdkLoading = false;
     this._queue = [];
     this._resourceLoader = null;
+    this._apiKey = null;
     this._defaultCenterPoint = [55.76, 37.64];
 
     this._resourceLoader = new _loader.ScriptLoader();
@@ -58,13 +59,19 @@ var MapManager = exports.MapManager = function () {
 
 
   /**
-   * @type {Array}
+   * @type {ScriptLoader}
    * @private
    */
 
 
   /**
    * @type {boolean}
+   * @private
+   */
+
+
+  /**
+   * @type {number}
    * @private
    */
 
@@ -411,6 +418,16 @@ var MapManager = exports.MapManager = function () {
     }
 
     /**
+     * @param {string} apiKey
+     */
+
+  }, {
+    key: 'setApiKey',
+    value: function setApiKey(apiKey) {
+      this._apiKey = apiKey;
+    }
+
+    /**
      * @return {number}
      */
 
@@ -496,6 +513,16 @@ var MapManager = exports.MapManager = function () {
     key: 'nextId',
     get: function get() {
       return this._currentId++;
+    }
+
+    /**
+     * @returns {string}
+     */
+
+  }, {
+    key: 'apiKey',
+    get: function get() {
+      return this._apiKey;
     }
 
     /**

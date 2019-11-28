@@ -27,16 +27,35 @@ exports.default = {
       type: Boolean,
       default: true
     },
+    chipsOutside: {
+      type: Boolean,
+      default: false
+    },
     clearable: Boolean,
     combobox: Boolean,
     contentClass: String,
+    creatableChips: Boolean,
     deletableChips: Boolean,
+    backspaceDeletable: {
+      type: Boolean,
+      default: true
+    },
+    arrowNavigation: {
+      type: Boolean,
+      default: true
+    },
     dense: Boolean,
     editable: Boolean,
     fitToContent: Boolean,
     hideSelected: Boolean,
+    hideMenuAfterSelect: Boolean,
+    hideNoData: Boolean,
     lazy: Boolean,
     listRipple: Boolean,
+    removeItemAfterSelect: {
+      type: Boolean,
+      default: true
+    },
     items: {
       type: Array,
       default: function _default() {

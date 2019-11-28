@@ -12,6 +12,9 @@ Object.defineProperty(exports, "__esModule", {
  * Supports slotted and detached activators
  */
 exports.default = {
+  props: {
+    includeActivator: Boolean
+  },
   methods: {
     activatorClickHandler: function activatorClickHandler(e) {
       if (this.disabled) {

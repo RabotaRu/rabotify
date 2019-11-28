@@ -12,6 +12,8 @@ var _helpers = require('../../../util/helpers');
 
 var _console = require('../../../util/console');
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
 /**
@@ -30,7 +32,7 @@ exports.default = {
       var data = {
         ref: 'menu',
         props: {
-          activator: this.$el,
+          activator: this.$refs.inputGroup,
           auto: this.auto,
           attach: (this.attach || this.staticAttach) && attachTo,
           closeOnClick: false,
@@ -85,12 +87,26 @@ exports.default = {
     isMenuItemSelected: function isMenuItemSelected() {
       return this.menuIsActive && this.menuItems.length && this.getMenuIndex() > -1;
     },
-    genSelectionsAndSearch: function genSelectionsAndSearch() {
+    genSelectionsAndSearch: function genSelectionsAndSearch(_ref) {
+      var _ref$search = _ref.search,
+          search = _ref$search === undefined ? true : _ref$search,
+          _ref$selections = _ref.selections,
+          selections = _ref$selections === undefined ? true : _ref$selections;
+
+      var genSearch = search ? this.genSearch() : null;
+      var genSelections = selections ? this.genSelections() : [];
+      var ref = search ? 'activator' : 'selections';
+      var classes = 'input-group__selections';
+
+      if (!search) {
+        classes += this.selectedItems.length ? ' input-group__selections-outside' : '';
+      }
+
       return this.$createElement('div', {
-        'class': 'input-group__selections',
+        'class': classes,
         style: { 'overflow': 'hidden' },
-        ref: 'activator'
-      }, [].concat(_toConsumableArray(this.genSelections()), [this.genSearch()]));
+        ref: ref
+      }, [].concat(_toConsumableArray(genSelections), [genSearch]));
     },
     genSelections: function genSelections() {
       if (this.hideSelections) {
@@ -227,7 +243,7 @@ exports.default = {
           focus: click,
           input: function input() {
             if (_this3.isMultiple) {
-              _this3.selectItem(item);
+              _this3.selectItem(item, { focusInputAfterSelect: !_this3.chipsOutside });
             } else {
               _this3.inputValue = null;
             }
@@ -254,7 +270,7 @@ exports.default = {
 
       var defaultVirtualOpts = {
         items: this.menuItems,
-        itemHeight: 42,
+        itemHeight: 32,
         anyHeight: true,
         poolSize: 400,
         buffer: 100,
@@ -321,7 +337,7 @@ exports.default = {
         }
       });
 
-      if (!children.length) {
+      if (!children.length && !this.hideNoData) {
         var noData = this.$slots['no-data'];
         if (noData) {
           children.push(noData);
@@ -330,12 +346,24 @@ exports.default = {
         }
       }
 
-      return this.$createElement('r-card', [this.$createElement('r-list', {
+      var prependItem = this.$slots['prepend-item'];
+      prependItem && children.unshift(prependItem);
+
+      var creatableTile = this.searchValue && this.isNeedCreateItem(this.searchValue) ? this.genCreatableTile() : null;
+
+      return this.$createElement('r-card', [creatableTile, this.$createElement('r-list', {
         props: {
           dense: this.dense
         },
         ref: 'list'
       }, children)]);
+    },
+    genCreatableTile: function genCreatableTile() {
+      var _genTile;
+
+      return this.$createElement('r-list', {
+        'class': 'list_creatable'
+      }, [this.genTile((_genTile = {}, _defineProperty(_genTile, this.itemText, this.searchValue), _defineProperty(_genTile, this.itemValue, (0, _helpers.generateNumber)(-1e15, -1e20)), _genTile), false, this.createItem, true)]);
     },
     genHeader: function genHeader(item) {
       return this.$createElement('r-subheader', {
@@ -360,7 +388,7 @@ exports.default = {
 
       return this.$createElement('label', data, this.$slots.label || this.label);
     },
-    genTile: function genTile(item, disabled) {
+    genTile: function genTile(item, disabled, functionOnClick, isNotSelectable) {
       var _this6 = this;
 
       var active = this.selectedItems.indexOf(item) !== -1;
@@ -376,14 +404,22 @@ exports.default = {
               return;
             }
 
-            _this6.selectItem(item);
+            if (functionOnClick) {
+              return functionOnClick();
+            }
+
+            _this6.selectItem(item, {
+              focusInputAfterSelect: true,
+              removeItem: _this6.removeItemAfterSelect
+            });
           }
         },
         props: {
           avatar: item === Object(item) && this.itemAvatar in item,
           ripple: this.listRipple,
           value: active
-        }
+        },
+        'class': isNotSelectable ? '' : 'list__tile_selectable'
       };
 
       if (disabled) {
@@ -405,7 +441,7 @@ exports.default = {
     genAction: function genAction(item, active) {
       var _this7 = this;
 
-      if (!this.isMultiple || this.isHidingSelected) {
+      if (!this.isMultiple || this.isHidingSelected || this.chipsOutside) {
         return null;
       }
 

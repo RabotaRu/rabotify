@@ -66,7 +66,11 @@ exports.default = {
       }
     },
     getTiles: function getTiles() {
-      this.tiles = this.$refs.content.querySelectorAll('.list__tile');
+      var content = this.$refs.content;
+      var basicList = content.querySelectorAll('.list__tile');
+      var selectableList = content.querySelectorAll('.list__tile_selectable');
+
+      this.tiles = selectableList.length && selectableList || basicList;
     }
   }
 };

@@ -30,6 +30,33 @@ exports.default = {
       var value = (0, _helpers.getObjectValueByPath)(item, field);
 
       return typeof value === 'undefined' ? item : value;
+    },
+    isItemsEqual: function isItemsEqual(firstItem, secondItem) {
+      var itemText = (0, _helpers.ensureString)(firstItem[this.itemText]).toLowerCase();
+      var contentText = secondItem.toLowerCase();
+
+      return itemText === contentText;
+    },
+    isNeedCreateItem: function isNeedCreateItem(target) {
+      var _this = this;
+
+      if (!this.creatableChips) {
+        return;
+      }
+
+      var findInList = this.computedItems.some(function (item) {
+        return _this.isItemsEqual(item, target);
+      });
+      if (findInList) {
+        return;
+      }
+
+      var findInSelected = this.selectedItems.some(function (item) {
+        return _this.isItemsEqual(item, target);
+      });
+      if (!findInSelected) {
+        return true;
+      }
     }
   }
 }; // Helpers

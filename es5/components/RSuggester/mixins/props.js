@@ -52,6 +52,7 @@ var Props = exports.Props = {
       }
     },
     fetch: Function,
+    fetchDefaultItems: Boolean,
     cacheItems: {
       type: Boolean,
       default: true
@@ -59,7 +60,6 @@ var Props = exports.Props = {
     prefetch: Boolean,
     strictValue: Boolean,
     selectFirstOnEnter: Boolean,
-    removeQueryOnFocus: Boolean,
     color: String
   }
 };

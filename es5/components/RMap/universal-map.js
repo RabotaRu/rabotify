@@ -42,10 +42,12 @@ var UniversalMap = exports.UniversalMap = function () {
     this._map = null;
     this._defaultProvider = 'yandex';
     var _options$provider = options.provider,
-        provider = _options$provider === undefined ? this._defaultProvider : _options$provider;
+        provider = _options$provider === undefined ? this._defaultProvider : _options$provider,
+        apiKey = options.apiKey;
 
 
     this.setProvider(provider);
+    this.setApiKey(apiKey);
   }
 
   /**
@@ -70,6 +72,16 @@ var UniversalMap = exports.UniversalMap = function () {
     value: function setProvider(provider) {
       var providerExists = providers.hasOwnProperty(provider);
       this._provider = providerExists ? provider : this._defaultProvider;
+    }
+
+    /**
+     * @param {string} apiKey
+     */
+
+  }, {
+    key: 'setApiKey',
+    value: function setApiKey(apiKey) {
+      this.manager.setApiKey(apiKey);
     }
 
     /**
