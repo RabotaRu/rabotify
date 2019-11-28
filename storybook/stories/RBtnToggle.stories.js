@@ -19,9 +19,6 @@ stories.addDecorator(withInfo).addDecorator(StoryRouter()).add('RBtnToggle', () 
     mandatory: {
       default: boolean('mandatory', false)
     },
-    multiple: {
-      default: boolean('multiple', false)
-    },
     autofit: {
       default: boolean('autofit', false)
     }
@@ -31,6 +28,7 @@ stories.addDecorator(withInfo).addDecorator(StoryRouter()).add('RBtnToggle', () 
   },
   template: `
     <div>
+      <h2>:multiple="false"</h2>
       <RBtnToggle
         v-model="value"
         :mandatory="mandatory"
@@ -50,6 +48,7 @@ stories.addDecorator(withInfo).addDecorator(StoryRouter()).add('RBtnToggle', () 
         </RBtn>
       </RBtnToggle>
       <div style="text-align: center;"><span>Model: {{ JSON.stringify(value) }}</span></div>
+      <h2>:multiple="true"</h2>
       <RBtnToggle
         v-model="valueArray"
         :mandatory="mandatory"
