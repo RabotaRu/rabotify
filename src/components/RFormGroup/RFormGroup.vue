@@ -49,6 +49,7 @@
         <slot name="label"></slot>
       </span>
       <sup class="form-group__required" v-if="required">*</sup>
+      <slot name="additional"></slot>
     </label>
     <div class="form-group__control"
          :class="controlClasses"
