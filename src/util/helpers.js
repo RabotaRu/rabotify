@@ -149,7 +149,7 @@ export function getObjectValueByPath (obj, path) {
   const a = path.split('.');
   for (let i = 0, n = a.length; i < n; ++i) {
     const k = a[i];
-    if ((typeof obj ==='object' || obj instanceof Object) && k in obj) {
+    if (obj != null) {
       obj = obj[k];
     } else {
       return;
