@@ -4,6 +4,7 @@
 
     props: {
       label: String,
+      additional: Boolean,
       labelTop: Boolean,
       required: Boolean,
       vertical: Boolean,
@@ -49,6 +50,7 @@
         <slot name="label"></slot>
       </span>
       <sup class="form-group__required" v-if="required">*</sup>
+      <slot name="additional" v-if="additional"></slot>
     </label>
     <div class="form-group__control"
          :class="controlClasses"
