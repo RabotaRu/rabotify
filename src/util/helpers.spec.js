@@ -23,7 +23,7 @@ test('getObjectValueByPath()', () => {
     expect(getObjectValueByPath(someObj, 'a')).toBe(1);
     expect(getObjectValueByPath(someObj, 'b')).toBe(2);
     expect(getObjectValueByPath(someObj, 'c')).toBe(undefined);
-    // expect(getObjectValueByPath(someObj, 'd')).toBe({ d1: 41, d2: 42, d3: null, d4: undefined }); // TODO:
+    expect(getObjectValueByPath(someObj, 'd')).toEqual({ d1: 41, d2: 42, d3: null, d4: undefined });
     expect(getObjectValueByPath(someObj, 'd.d1')).toBe(41);
     expect(getObjectValueByPath(someObj, 'd.d2')).toBe(42);
     expect(getObjectValueByPath(someObj, 'd.d3')).toBe(null);
