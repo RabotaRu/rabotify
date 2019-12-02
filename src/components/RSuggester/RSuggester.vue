@@ -516,7 +516,8 @@
                 @input="onMenuInput"
                 :openOnClick="openOnClickAvailable"
                 includeActivator
-                :activator="$refs.input && $refs.input.$el">
+                :activator="$refs.input && $refs.input.$el"
+                :z-index="zIndex">
 
           <r-list>
             <r-list-tile v-for="(item, index) in lazyItems"
