@@ -42,6 +42,7 @@
       round: Boolean,
       shadowed: Boolean,
       small: Boolean,
+      reset: Boolean,
       ripple: {
         type: [ Boolean, Object ],
         default: false
@@ -79,6 +80,7 @@
           'r-btn_top': this.top,
           'r-btn_loading': this.loading,
           'r-btn_outline': this.outline,
+          'r-btn_reset': this.reset,
           'r-btn_right': this.right,
           'r-btn_round': this.round,
           'r-btn_router': this.to,

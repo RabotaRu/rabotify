@@ -279,6 +279,11 @@ $bem-use-namespaces: true;
       margin: 0 !important;
     }
   }
+
+  @include modifier('reset') {
+    height: auto;
+    line-height: normal;
+  }
 }
 
 $bem-use-namespaces: false;
