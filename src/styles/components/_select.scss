@@ -56,6 +56,13 @@
         }
       }
     }
+    &_without-borders {
+      border: transparent !important;
+
+      .input-group__input {
+        border: transparent !important;
+      }
+    }
   }
 
   .input-group__append-icon {

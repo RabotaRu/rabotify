@@ -118,6 +118,7 @@ exports.default = {
     virtual: {
       type: [Object, Boolean],
       default: false
-    }
+    },
+    withoutBorders: Boolean
   }
 };
