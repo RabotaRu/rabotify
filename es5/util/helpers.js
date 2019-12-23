@@ -207,7 +207,7 @@ function getObjectValueByPath(obj, path) {
   var a = path.split('.');
   for (var i = 0, n = a.length; i < n; ++i) {
     var k = a[i];
-    if (((typeof obj === 'undefined' ? 'undefined' : _typeof(obj)) === 'object' || obj instanceof Object) && k in obj) {
+    if (obj != null) {
       obj = obj[k];
     } else {
       return;

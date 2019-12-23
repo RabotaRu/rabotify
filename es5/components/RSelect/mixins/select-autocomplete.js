@@ -143,7 +143,7 @@ exports.default = {
       }
 
       if (!this.isAutocomplete || ![32].includes(e.keyCode) // space
-      ) this.$refs.menu.changeListIndex(e);
+      ) this.refMenu.changeListIndex(e);
 
       // Up or down
       if ([38, 40].includes(e.keyCode)) {
@@ -177,9 +177,9 @@ exports.default = {
       }
     },
     selectListTile: function selectListTile(index) {
-      if (!this.$refs.menu.tiles[index]) return;
+      if (!this.refMenu.tiles[index]) return;
 
-      this.$refs.menu.tiles[index].click();
+      this.refMenu.tiles[index].click();
     },
     updateTags: function updateTags(content) {
       var _this3 = this;

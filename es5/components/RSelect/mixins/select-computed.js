@@ -19,6 +19,7 @@ exports.default = {
         'input-group_single-line': this.singleLine || this.isDropdown,
         'input-group_multi-line': this.multiLine,
         'input-group_chips': this.chips,
+        'input-group_without-borders': this.withoutBorders,
         'input-group_multiple': this.multiple,
         'input-group_open': this.menuIsVisible,
         'input-group_select_selecting-index': this.selectedIndex > -1
@@ -144,6 +145,9 @@ exports.default = {
     },
     shouldOffset: function shouldOffset() {
       return this.isAutocomplete || this.isDropdown;
+    },
+    refMenu: function refMenu() {
+      return this.$refs.menu;
     }
   }
 }; /**

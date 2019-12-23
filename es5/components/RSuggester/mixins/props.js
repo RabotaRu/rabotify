@@ -60,6 +60,7 @@ var Props = exports.Props = {
     prefetch: Boolean,
     strictValue: Boolean,
     selectFirstOnEnter: Boolean,
-    color: String
+    color: String,
+    zIndex: String
   }
 };

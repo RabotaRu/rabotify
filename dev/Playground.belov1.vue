@@ -60,6 +60,7 @@
                 clearable
                 single-line
                 staticAttach
+                :renderingMenu="false"
               ></r-select>
             </div>
 

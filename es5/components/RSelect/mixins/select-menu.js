@@ -50,7 +50,7 @@ exports.default = {
       // Wrap input to next line if overflowing
       if (this.$refs.input.scrollWidth > this.$refs.input.clientWidth) {
         this.shouldBreak = true;
-        this.$nextTick(this.$refs.menu.updateDimensions);
+        this.$nextTick(this.updateDimensionsMenu);
       } else if (val === null) {
         this.shouldBreak = false;
       }

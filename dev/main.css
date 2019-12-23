@@ -477,6 +477,15 @@ template {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -580,6 +589,217 @@ template {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
+/**
+ * Bem Constructor settings override
+ */
+/******* Common *******/
+/**
+ * Layout breakpoints
+ * xs, sm, md, lg
+ **/
+/** Radius */
+/** Indents */
+/** Grid */
+/** Typography */
+/** Transitions */
+/** Shadows */
+/** Ripple Animation */
+/******* Components *******/
+/** Buttons */
+/** Loading */
+/** Icon */
+/** Dialog */
+/** Overlay */
+/** Input Group */
+/** Card */
+/** Toolbar */
+/** Switch */
+/** Checkbox */
+/** Radio buttons */
+/** Chip */
+/** Lists */
+/** Divider */
+/** Tabs */
+/** Tab */
+/** Mobile Header */
+/** Mobile Menu */
+/**
+ * Replace `$search` with `$replace` in `$string`
+ * @param {String} $string - Initial string
+ * @param {String} $search - Substring to replace
+ * @param {String} $replace ('') - New value
+ * @return {String} - Updated string
+ */
+/**
+ * Merges stacks of font
+ * Usage: font-family: merge-fonts-stack('Roboto Regular');
+ * Usage: font-family: merge-fonts-stack('Roboto Regular', $font-family-default);
+ */
+/**
+ * Imports background url with image
+ * Usage: background: import-background-image('image.png');
+ * Usage: background: import-background-image('image.png', '/'); // from `static` directory
+ */
+/** Typography */
+/**
+ * Add custom style to different states of input's placeholder (like :hover or :active etc).
+ *
+ * @param {string} $color - color for input placeholder
+ * @param {:hover|:active|:focus|null} $target-pseudo - parent pseudo-class
+ * E.g.: @include input-placeholder-color(#faf);
+ * E.g.: @include input-placeholder-color(#faf, (hover: #ff0));
+ * E.g.: @include input-placeholder-color(#faf, (hover: #ff0, active: #0ff), false) {
+ *    transition: all .2s ease;
+ * }
+ */
+/**
+ * Миксин для media-query:
+ * ---------------------------------------- *
+ * xs: 480px
+ * sm: 720px
+ * md: 1024px
+ * lg: 1280px
+ * ---------------------------------------- *
+ *
+ * xs-and-down  |   < 480px
+ * xs-only      |   0 <= x < 480px
+ * xs-and-up    |   >= 480px
+ *
+ * sm-and-down  |   < 720px
+ * sm-only      |   480px <= x < 720px
+ * sm-and-up    |   >= 720px
+ *
+ * md-and-down  |   < 1024px
+ * md-only      |   720px <= x < 1024px
+ * md-and-up    |   >= 1024px
+ *
+ * lg-and-down  |   < 1280px
+ * lg-only      |   1024px <= x < 1280px
+ * lg-and-up    |   >= 1280px
+ *
+ * xl-only      |   >= 1280px
+ *
+ * ---------------------------------------- *
+ * E.g.:
+ *
+ * .class {
+ *    width: 800px;
+ *    @include media-query(xs-and-down) {
+ *      width: 100%;
+ *    }
+ * }
+ *
+ * .class {
+ *    width: 800px;
+ *    @include media-query(xs-and-down, landscape, print) {
+ *      padding: 0 20px;
+ *    }
+ * }
+ */
+/**
+ * Миксин для генерации теней
+ */
+/**
+ * Миксин для плавного перехода теней
+ */
+/**
+ * Миксин для установки темы (primary, secondary) на различные свойства
+ * $properties - свойства
+ * $force-color - установить свой color насильно
+ * $hover - установить hover
+ * $color-alpha - сделать цвет прозрачным от 0 до 1
+ * $important - принудительно
+ */
+/**
+ * Миксин для установки темы (primary, secondary) на различные текстовые свойства
+ * $properties - свойства
+ * $force-color - установить свой color насильно
+ * $hover - установить hover
+ * $color-alpha - сделать цвет прозрачным от 0 до 1
+ * $important - принудительно
+ */
+/** Container layout */
+/** Row */
+/** Cols */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
+/**
+ * Bem Constructor settings override
+ */
+/******* Common *******/
+/**
+ * Layout breakpoints
+ * xs, sm, md, lg
+ **/
+/** Radius */
+/** Indents */
+/** Grid */
+/** Typography */
+/** Transitions */
+/** Shadows */
+/** Ripple Animation */
+/******* Components *******/
+/** Buttons */
+/** Loading */
+/** Icon */
+/** Dialog */
+/** Overlay */
+/** Input Group */
+/** Card */
+/** Toolbar */
+/** Switch */
+/** Checkbox */
+/** Radio buttons */
+/** Chip */
+/** Lists */
+/** Divider */
+/** Tabs */
+/** Tab */
+/** Mobile Header */
+/** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -782,6 +1002,15 @@ template {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -833,139 +1062,6 @@ template {
  * Usage: background: import-background-image('image.png');
  * Usage: background: import-background-image('image.png', '/'); // from `static` directory
  */
-/** Typography */
-/**
- * Add custom style to different states of input's placeholder (like :hover or :active etc).
- *
- * @param {string} $color - color for input placeholder
- * @param {:hover|:active|:focus|null} $target-pseudo - parent pseudo-class
- * E.g.: @include input-placeholder-color(#faf);
- * E.g.: @include input-placeholder-color(#faf, (hover: #ff0));
- * E.g.: @include input-placeholder-color(#faf, (hover: #ff0, active: #0ff), false) {
- *    transition: all .2s ease;
- * }
- */
-/**
- * Миксин для media-query:
- * ---------------------------------------- *
- * xs: 480px
- * sm: 720px
- * md: 1024px
- * lg: 1280px
- * ---------------------------------------- *
- *
- * xs-and-down  |   < 480px
- * xs-only      |   0 <= x < 480px
- * xs-and-up    |   >= 480px
- *
- * sm-and-down  |   < 720px
- * sm-only      |   480px <= x < 720px
- * sm-and-up    |   >= 720px
- *
- * md-and-down  |   < 1024px
- * md-only      |   720px <= x < 1024px
- * md-and-up    |   >= 1024px
- *
- * lg-and-down  |   < 1280px
- * lg-only      |   1024px <= x < 1280px
- * lg-and-up    |   >= 1280px
- *
- * xl-only      |   >= 1280px
- *
- * ---------------------------------------- *
- * E.g.:
- *
- * .class {
- *    width: 800px;
- *    @include media-query(xs-and-down) {
- *      width: 100%;
- *    }
- * }
- *
- * .class {
- *    width: 800px;
- *    @include media-query(xs-and-down, landscape, print) {
- *      padding: 0 20px;
- *    }
- * }
- */
-/**
- * Миксин для генерации теней
- */
-/**
- * Миксин для плавного перехода теней
- */
-/**
- * Миксин для установки темы (primary, secondary) на различные свойства
- * $properties - свойства
- * $force-color - установить свой color насильно
- * $hover - установить hover
- * $color-alpha - сделать цвет прозрачным от 0 до 1
- * $important - принудительно
- */
-/**
- * Миксин для установки темы (primary, secondary) на различные текстовые свойства
- * $properties - свойства
- * $force-color - установить свой color насильно
- * $hover - установить hover
- * $color-alpha - сделать цвет прозрачным от 0 до 1
- * $important - принудительно
- */
-/** Container layout */
-/** Row */
-/** Cols */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
-/**
- * Bem Constructor settings override
- */
-/******* Common *******/
-/**
- * Layout breakpoints
- * xs, sm, md, lg
- **/
-/** Radius */
-/** Indents */
-/** Grid */
-/** Typography */
-/** Transitions */
-/** Shadows */
-/** Ripple Animation */
-/******* Components *******/
-/** Buttons */
-/** Loading */
-/** Icon */
-/** Dialog */
-/** Overlay */
-/** Input Group */
-/** Card */
-/** Toolbar */
-/** Switch */
-/** Checkbox */
-/** Radio buttons */
-/** Chip */
-/** Lists */
-/** Divider */
-/** Tabs */
-/** Tab */
-/** Mobile Header */
-/** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -1018,6 +1114,15 @@ template {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -1211,6 +1316,15 @@ template {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -1482,6 +1596,15 @@ a:active {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -1585,6 +1708,15 @@ a:active {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -1778,6 +1910,15 @@ a:active {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -2076,6 +2217,15 @@ h6 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -2179,6 +2329,15 @@ h6 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -2372,6 +2531,15 @@ h6 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -2575,6 +2743,15 @@ h6 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -2678,6 +2855,15 @@ h6 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -2871,6 +3057,15 @@ h6 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -3384,6 +3579,15 @@ h6 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -3487,6 +3691,15 @@ h6 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -3680,6 +3893,15 @@ h6 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -4057,6 +4279,15 @@ h6 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -4160,6 +4391,15 @@ h6 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -4353,6 +4593,15 @@ h6 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -5108,6 +5357,84 @@ h6 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/**
+ * Replace `$search` with `$replace` in `$string`
+ * @param {String} $string - Initial string
+ * @param {String} $search - Substring to replace
+ * @param {String} $replace ('') - New value
+ * @return {String} - Updated string
+ */
+/**
+ * Merges stacks of font
+ * Usage: font-family: merge-fonts-stack('Roboto Regular');
+ * Usage: font-family: merge-fonts-stack('Roboto Regular', $font-family-default);
+ */
+/**
+ * Imports background url with image
+ * Usage: background: import-background-image('image.png');
+ * Usage: background: import-background-image('image.png', '/'); // from `static` directory
+ */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
+/**
+ * Bem Constructor settings override
+ */
+/******* Common *******/
+/**
+ * Layout breakpoints
+ * xs, sm, md, lg
+ **/
+/** Radius */
+/** Indents */
+/** Grid */
+/** Typography */
+/** Transitions */
+/** Shadows */
+/** Ripple Animation */
+/******* Components *******/
+/** Buttons */
+/** Loading */
+/** Icon */
+/** Dialog */
+/** Overlay */
+/** Input Group */
+/** Card */
+/** Toolbar */
+/** Switch */
+/** Checkbox */
+/** Radio buttons */
+/** Chip */
+/** Lists */
+/** Divider */
+/** Tabs */
+/** Tab */
+/** Mobile Header */
+/** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -5258,6 +5585,251 @@ h6 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
+/**
+ * Bem Constructor settings override
+ */
+/******* Common *******/
+/**
+ * Layout breakpoints
+ * xs, sm, md, lg
+ **/
+/** Radius */
+/** Indents */
+/** Grid */
+/** Typography */
+/** Transitions */
+/** Shadows */
+/** Ripple Animation */
+/******* Components *******/
+/** Buttons */
+/** Loading */
+/** Icon */
+/** Dialog */
+/** Overlay */
+/** Input Group */
+/** Card */
+/** Toolbar */
+/** Switch */
+/** Checkbox */
+/** Radio buttons */
+/** Chip */
+/** Lists */
+/** Divider */
+/** Tabs */
+/** Tab */
+/** Mobile Header */
+/** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
+/**
+ * Bem Constructor settings override
+ */
+/******* Common *******/
+/**
+ * Layout breakpoints
+ * xs, sm, md, lg
+ **/
+/** Radius */
+/** Indents */
+/** Grid */
+/** Typography */
+/** Transitions */
+/** Shadows */
+/** Ripple Animation */
+/******* Components *******/
+/** Buttons */
+/** Loading */
+/** Icon */
+/** Dialog */
+/** Overlay */
+/** Input Group */
+/** Card */
+/** Toolbar */
+/** Switch */
+/** Checkbox */
+/** Radio buttons */
+/** Chip */
+/** Lists */
+/** Divider */
+/** Tabs */
+/** Tab */
+/** Mobile Header */
+/** Mobile Menu */
+/**
+ * Replace `$search` with `$replace` in `$string`
+ * @param {String} $string - Initial string
+ * @param {String} $search - Substring to replace
+ * @param {String} $replace ('') - New value
+ * @return {String} - Updated string
+ */
+/**
+ * Merges stacks of font
+ * Usage: font-family: merge-fonts-stack('Roboto Regular');
+ * Usage: font-family: merge-fonts-stack('Roboto Regular', $font-family-default);
+ */
+/**
+ * Imports background url with image
+ * Usage: background: import-background-image('image.png');
+ * Usage: background: import-background-image('image.png', '/'); // from `static` directory
+ */
+/** Typography */
+/**
+ * Add custom style to different states of input's placeholder (like :hover or :active etc).
+ *
+ * @param {string} $color - color for input placeholder
+ * @param {:hover|:active|:focus|null} $target-pseudo - parent pseudo-class
+ * E.g.: @include input-placeholder-color(#faf);
+ * E.g.: @include input-placeholder-color(#faf, (hover: #ff0));
+ * E.g.: @include input-placeholder-color(#faf, (hover: #ff0, active: #0ff), false) {
+ *    transition: all .2s ease;
+ * }
+ */
+/**
+ * Миксин для media-query:
+ * ---------------------------------------- *
+ * xs: 480px
+ * sm: 720px
+ * md: 1024px
+ * lg: 1280px
+ * ---------------------------------------- *
+ *
+ * xs-and-down  |   < 480px
+ * xs-only      |   0 <= x < 480px
+ * xs-and-up    |   >= 480px
+ *
+ * sm-and-down  |   < 720px
+ * sm-only      |   480px <= x < 720px
+ * sm-and-up    |   >= 720px
+ *
+ * md-and-down  |   < 1024px
+ * md-only      |   720px <= x < 1024px
+ * md-and-up    |   >= 1024px
+ *
+ * lg-and-down  |   < 1280px
+ * lg-only      |   1024px <= x < 1280px
+ * lg-and-up    |   >= 1280px
+ *
+ * xl-only      |   >= 1280px
+ *
+ * ---------------------------------------- *
+ * E.g.:
+ *
+ * .class {
+ *    width: 800px;
+ *    @include media-query(xs-and-down) {
+ *      width: 100%;
+ *    }
+ * }
+ *
+ * .class {
+ *    width: 800px;
+ *    @include media-query(xs-and-down, landscape, print) {
+ *      padding: 0 20px;
+ *    }
+ * }
+ */
+/**
+ * Миксин для генерации теней
+ */
+/**
+ * Миксин для плавного перехода теней
+ */
+/**
+ * Миксин для установки темы (primary, secondary) на различные свойства
+ * $properties - свойства
+ * $force-color - установить свой color насильно
+ * $hover - установить hover
+ * $color-alpha - сделать цвет прозрачным от 0 до 1
+ * $important - принудительно
+ */
+/**
+ * Миксин для установки темы (primary, secondary) на различные текстовые свойства
+ * $properties - свойства
+ * $force-color - установить свой color насильно
+ * $hover - установить hover
+ * $color-alpha - сделать цвет прозрачным от 0 до 1
+ * $important - принудительно
+ */
+/** Container layout */
+/** Row */
+/** Cols */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
+/**
+ * Bem Constructor settings override
+ */
+/******* Common *******/
+/**
+ * Layout breakpoints
+ * xs, sm, md, lg
+ **/
+/** Radius */
+/** Indents */
+/** Grid */
+/** Typography */
+/** Transitions */
+/** Shadows */
+/** Ripple Animation */
+/******* Components *******/
+/** Buttons */
+/** Loading */
+/** Icon */
+/** Dialog */
+/** Overlay */
+/** Input Group */
+/** Card */
+/** Toolbar */
+/** Switch */
+/** Checkbox */
+/** Radio buttons */
+/** Chip */
+/** Lists */
+/** Divider */
+/** Tabs */
+/** Tab */
+/** Mobile Header */
+/** Mobile Menu */
 .icon {
   width: 24px;
   height: 24px;
@@ -5408,6 +5980,15 @@ h6 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -6045,6 +6626,15 @@ h6 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -6148,6 +6738,15 @@ h6 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -6341,6 +6940,15 @@ h6 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -10697,6 +11305,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -10800,6 +11417,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -10993,6 +11619,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -11349,6 +11984,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -11452,6 +12096,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -11645,6 +12298,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -11884,6 +12546,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -11987,6 +12658,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -12180,6 +12860,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -13183,6 +13872,11 @@ h3 {
 .r-btn_icon .md-icon {
       margin: 0 !important;
 }
+.r-btn_reset {
+    width: auto;
+    height: auto;
+    line-height: normal;
+}
 @media screen and (max-width: 719px) {
 .r-btn_block {
         -webkit-border-radius: 0;
@@ -13249,6 +13943,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -13361,6 +14064,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -13554,6 +14266,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -13805,6 +14526,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -13908,6 +14638,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -14101,6 +14840,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -14398,6 +15146,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -14501,6 +15258,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -14694,6 +15460,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -15086,6 +15861,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -15189,6 +15973,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -15382,6 +16175,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -15594,9 +16396,6 @@ h3 {
 .input-group_text-field.text_primary input::-webkit-input-placeholder, .input-group_text-field.text_primary textarea::-webkit-input-placeholder {
     color: #3495db;
 }
-.input-group_text-field.text_primary input::-moz-placeholder, .input-group_text-field.text_primary textarea::-moz-placeholder {
-    color: #3495db;
-}
 .input-group_text-field.text_primary input::-ms-input-placeholder, .input-group_text-field.text_primary textarea::-ms-input-placeholder {
     color: #3495db;
 }
@@ -15604,9 +16403,6 @@ h3 {
     color: #3495db;
 }
 .input-group_text-field.text_secondary input::-webkit-input-placeholder, .input-group_text-field.text_secondary textarea::-webkit-input-placeholder {
-    color: #3495db;
-}
-.input-group_text-field.text_secondary input::-moz-placeholder, .input-group_text-field.text_secondary textarea::-moz-placeholder {
     color: #3495db;
 }
 .input-group_text-field.text_secondary input::-ms-input-placeholder, .input-group_text-field.text_secondary textarea::-ms-input-placeholder {
@@ -15618,9 +16414,6 @@ h3 {
 .input-group_text-field.text_accent input::-webkit-input-placeholder, .input-group_text-field.text_accent textarea::-webkit-input-placeholder {
     color: #ff162e;
 }
-.input-group_text-field.text_accent input::-moz-placeholder, .input-group_text-field.text_accent textarea::-moz-placeholder {
-    color: #ff162e;
-}
 .input-group_text-field.text_accent input::-ms-input-placeholder, .input-group_text-field.text_accent textarea::-ms-input-placeholder {
     color: #ff162e;
 }
@@ -15628,9 +16421,6 @@ h3 {
     color: #ff162e;
 }
 .input-group_text-field.text_error input::-webkit-input-placeholder, .input-group_text-field.text_error textarea::-webkit-input-placeholder {
-    color: #ff162e;
-}
-.input-group_text-field.text_error input::-moz-placeholder, .input-group_text-field.text_error textarea::-moz-placeholder {
     color: #ff162e;
 }
 .input-group_text-field.text_error input::-ms-input-placeholder, .input-group_text-field.text_error textarea::-ms-input-placeholder {
@@ -15642,9 +16432,6 @@ h3 {
 .input-group_text-field.text_success input::-webkit-input-placeholder, .input-group_text-field.text_success textarea::-webkit-input-placeholder {
     color: #2bb76b;
 }
-.input-group_text-field.text_success input::-moz-placeholder, .input-group_text-field.text_success textarea::-moz-placeholder {
-    color: #2bb76b;
-}
 .input-group_text-field.text_success input::-ms-input-placeholder, .input-group_text-field.text_success textarea::-ms-input-placeholder {
     color: #2bb76b;
 }
@@ -15652,9 +16439,6 @@ h3 {
     color: #2bb76b;
 }
 .input-group_text-field.text_info input::-webkit-input-placeholder, .input-group_text-field.text_info textarea::-webkit-input-placeholder {
-    color: #eaf7ff;
-}
-.input-group_text-field.text_info input::-moz-placeholder, .input-group_text-field.text_info textarea::-moz-placeholder {
     color: #eaf7ff;
 }
 .input-group_text-field.text_info input::-ms-input-placeholder, .input-group_text-field.text_info textarea::-ms-input-placeholder {
@@ -15666,9 +16450,6 @@ h3 {
 .input-group_text-field.text_warning input::-webkit-input-placeholder, .input-group_text-field.text_warning textarea::-webkit-input-placeholder {
     color: #ffc107;
 }
-.input-group_text-field.text_warning input::-moz-placeholder, .input-group_text-field.text_warning textarea::-moz-placeholder {
-    color: #ffc107;
-}
 .input-group_text-field.text_warning input::-ms-input-placeholder, .input-group_text-field.text_warning textarea::-ms-input-placeholder {
     color: #ffc107;
 }
@@ -15676,9 +16457,6 @@ h3 {
     color: #ffc107;
 }
 .input-group_text-field.text_gray input::-webkit-input-placeholder, .input-group_text-field.text_gray textarea::-webkit-input-placeholder {
-    color: #cdd0d5;
-}
-.input-group_text-field.text_gray input::-moz-placeholder, .input-group_text-field.text_gray textarea::-moz-placeholder {
     color: #cdd0d5;
 }
 .input-group_text-field.text_gray input::-ms-input-placeholder, .input-group_text-field.text_gray textarea::-ms-input-placeholder {
@@ -15690,9 +16468,6 @@ h3 {
 .input-group_text-field.text_gray-light input::-webkit-input-placeholder, .input-group_text-field.text_gray-light textarea::-webkit-input-placeholder {
     color: #ebedf0;
 }
-.input-group_text-field.text_gray-light input::-moz-placeholder, .input-group_text-field.text_gray-light textarea::-moz-placeholder {
-    color: #ebedf0;
-}
 .input-group_text-field.text_gray-light input::-ms-input-placeholder, .input-group_text-field.text_gray-light textarea::-ms-input-placeholder {
     color: #ebedf0;
 }
@@ -15700,9 +16475,6 @@ h3 {
     color: #ebedf0;
 }
 .input-group_text-field.text_gray-dark input::-webkit-input-placeholder, .input-group_text-field.text_gray-dark textarea::-webkit-input-placeholder {
-    color: #9097a3;
-}
-.input-group_text-field.text_gray-dark input::-moz-placeholder, .input-group_text-field.text_gray-dark textarea::-moz-placeholder {
     color: #9097a3;
 }
 .input-group_text-field.text_gray-dark input::-ms-input-placeholder, .input-group_text-field.text_gray-dark textarea::-ms-input-placeholder {
@@ -15714,9 +16486,6 @@ h3 {
 .input-group_text-field.text_white input::-webkit-input-placeholder, .input-group_text-field.text_white textarea::-webkit-input-placeholder {
     color: white;
 }
-.input-group_text-field.text_white input::-moz-placeholder, .input-group_text-field.text_white textarea::-moz-placeholder {
-    color: white;
-}
 .input-group_text-field.text_white input::-ms-input-placeholder, .input-group_text-field.text_white textarea::-ms-input-placeholder {
     color: white;
 }
@@ -15724,9 +16493,6 @@ h3 {
     color: white;
 }
 .input-group_text-field.text_black input::-webkit-input-placeholder, .input-group_text-field.text_black textarea::-webkit-input-placeholder {
-    color: #081935;
-}
-.input-group_text-field.text_black input::-moz-placeholder, .input-group_text-field.text_black textarea::-moz-placeholder {
     color: #081935;
 }
 .input-group_text-field.text_black input::-ms-input-placeholder, .input-group_text-field.text_black textarea::-ms-input-placeholder {
@@ -15978,13 +16744,6 @@ h3 {
       -o-transition: 0.2s cubic-bezier(0.25, 0.8, 0.5, 1);
       transition: 0.2s cubic-bezier(0.25, 0.8, 0.5, 1);
 }
-.input-group_text-field input::-moz-placeholder,
-    .input-group_text-field textarea::-moz-placeholder {
-      color: #9097a3;
-      -webkit-transition: 0.2s cubic-bezier(0.25, 0.8, 0.5, 1);
-      -o-transition: 0.2s cubic-bezier(0.25, 0.8, 0.5, 1);
-      transition: 0.2s cubic-bezier(0.25, 0.8, 0.5, 1);
-}
 .input-group_text-field input::-ms-input-placeholder,
     .input-group_text-field textarea::-ms-input-placeholder {
       color: #9097a3;
@@ -16001,10 +16760,6 @@ h3 {
 }
 .input-group_text-field input:focus::-webkit-input-placeholder,
     .input-group_text-field textarea:focus::-webkit-input-placeholder {
-      color: #9097a3;
-}
-.input-group_text-field input:focus::-moz-placeholder,
-    .input-group_text-field textarea:focus::-moz-placeholder {
       color: #9097a3;
 }
 .input-group_text-field input:focus::-ms-input-placeholder,
@@ -16086,10 +16841,6 @@ h3 {
     .input-group_text-field.text_white .input-group__input textarea::-webkit-input-placeholder {
       color: #9097a3;
 }
-.input-group_text-field.text_white .input-group__input input::-moz-placeholder,
-    .input-group_text-field.text_white .input-group__input textarea::-moz-placeholder {
-      color: #9097a3;
-}
 .input-group_text-field.text_white .input-group__input input::-ms-input-placeholder,
     .input-group_text-field.text_white .input-group__input textarea::-ms-input-placeholder {
       color: #9097a3;
@@ -16100,10 +16851,6 @@ h3 {
 }
 .input-group_text-field.text_white .input-group__input input:focus::-webkit-input-placeholder,
     .input-group_text-field.text_white .input-group__input textarea:focus::-webkit-input-placeholder {
-      color: #9097a3;
-}
-.input-group_text-field.text_white .input-group__input input:focus::-moz-placeholder,
-    .input-group_text-field.text_white .input-group__input textarea:focus::-moz-placeholder {
       color: #9097a3;
 }
 .input-group_text-field.text_white .input-group__input input:focus::-ms-input-placeholder,
@@ -16175,10 +16922,6 @@ h3 {
 }
 .input-group_text-field.input-group_placeholder.input-group_dirty input::-webkit-input-placeholder,
   .input-group_text-field.input-group_placeholder.input-group_dirty textarea::-webkit-input-placeholder {
-    opacity: 0;
-}
-.input-group_text-field.input-group_placeholder.input-group_dirty input::-moz-placeholder,
-  .input-group_text-field.input-group_placeholder.input-group_dirty textarea::-moz-placeholder {
     opacity: 0;
 }
 .input-group_text-field.input-group_placeholder.input-group_dirty input::-ms-input-placeholder,
@@ -16407,6 +17150,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -16510,6 +17262,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -16703,6 +17464,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -17005,6 +17775,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -17108,6 +17887,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -17301,6 +18089,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -17635,6 +18432,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -17738,6 +18544,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -17931,6 +18746,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -18221,6 +19045,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -18324,6 +19157,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -18517,6 +19359,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -18724,6 +19575,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -18827,6 +19687,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -19020,6 +19889,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -19398,6 +20276,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -19501,6 +20388,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -19694,6 +20590,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -20204,6 +21109,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -20307,6 +21221,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -20500,6 +21423,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -20860,6 +21792,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -20963,6 +21904,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -21156,6 +22106,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -21501,6 +22460,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -21604,6 +22572,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -21797,6 +22774,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -22155,6 +23141,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -22258,6 +23253,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -22451,6 +23455,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -22694,6 +23707,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -22797,6 +23819,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -22990,6 +24021,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -23348,6 +24388,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -23451,6 +24500,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -23644,6 +24702,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -23904,6 +24971,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -24007,6 +25083,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -24200,6 +25285,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -24412,9 +25506,6 @@ h3 {
 .input-group_text-field.text_primary input::-webkit-input-placeholder, .input-group_text-field.text_primary textarea::-webkit-input-placeholder {
     color: #3495db;
 }
-.input-group_text-field.text_primary input::-moz-placeholder, .input-group_text-field.text_primary textarea::-moz-placeholder {
-    color: #3495db;
-}
 .input-group_text-field.text_primary input::-ms-input-placeholder, .input-group_text-field.text_primary textarea::-ms-input-placeholder {
     color: #3495db;
 }
@@ -24422,9 +25513,6 @@ h3 {
     color: #3495db;
 }
 .input-group_text-field.text_secondary input::-webkit-input-placeholder, .input-group_text-field.text_secondary textarea::-webkit-input-placeholder {
-    color: #3495db;
-}
-.input-group_text-field.text_secondary input::-moz-placeholder, .input-group_text-field.text_secondary textarea::-moz-placeholder {
     color: #3495db;
 }
 .input-group_text-field.text_secondary input::-ms-input-placeholder, .input-group_text-field.text_secondary textarea::-ms-input-placeholder {
@@ -24436,9 +25524,6 @@ h3 {
 .input-group_text-field.text_accent input::-webkit-input-placeholder, .input-group_text-field.text_accent textarea::-webkit-input-placeholder {
     color: #ff162e;
 }
-.input-group_text-field.text_accent input::-moz-placeholder, .input-group_text-field.text_accent textarea::-moz-placeholder {
-    color: #ff162e;
-}
 .input-group_text-field.text_accent input::-ms-input-placeholder, .input-group_text-field.text_accent textarea::-ms-input-placeholder {
     color: #ff162e;
 }
@@ -24446,9 +25531,6 @@ h3 {
     color: #ff162e;
 }
 .input-group_text-field.text_error input::-webkit-input-placeholder, .input-group_text-field.text_error textarea::-webkit-input-placeholder {
-    color: #ff162e;
-}
-.input-group_text-field.text_error input::-moz-placeholder, .input-group_text-field.text_error textarea::-moz-placeholder {
     color: #ff162e;
 }
 .input-group_text-field.text_error input::-ms-input-placeholder, .input-group_text-field.text_error textarea::-ms-input-placeholder {
@@ -24460,9 +25542,6 @@ h3 {
 .input-group_text-field.text_success input::-webkit-input-placeholder, .input-group_text-field.text_success textarea::-webkit-input-placeholder {
     color: #2bb76b;
 }
-.input-group_text-field.text_success input::-moz-placeholder, .input-group_text-field.text_success textarea::-moz-placeholder {
-    color: #2bb76b;
-}
 .input-group_text-field.text_success input::-ms-input-placeholder, .input-group_text-field.text_success textarea::-ms-input-placeholder {
     color: #2bb76b;
 }
@@ -24470,9 +25549,6 @@ h3 {
     color: #2bb76b;
 }
 .input-group_text-field.text_info input::-webkit-input-placeholder, .input-group_text-field.text_info textarea::-webkit-input-placeholder {
-    color: #eaf7ff;
-}
-.input-group_text-field.text_info input::-moz-placeholder, .input-group_text-field.text_info textarea::-moz-placeholder {
     color: #eaf7ff;
 }
 .input-group_text-field.text_info input::-ms-input-placeholder, .input-group_text-field.text_info textarea::-ms-input-placeholder {
@@ -24484,9 +25560,6 @@ h3 {
 .input-group_text-field.text_warning input::-webkit-input-placeholder, .input-group_text-field.text_warning textarea::-webkit-input-placeholder {
     color: #ffc107;
 }
-.input-group_text-field.text_warning input::-moz-placeholder, .input-group_text-field.text_warning textarea::-moz-placeholder {
-    color: #ffc107;
-}
 .input-group_text-field.text_warning input::-ms-input-placeholder, .input-group_text-field.text_warning textarea::-ms-input-placeholder {
     color: #ffc107;
 }
@@ -24494,9 +25567,6 @@ h3 {
     color: #ffc107;
 }
 .input-group_text-field.text_gray input::-webkit-input-placeholder, .input-group_text-field.text_gray textarea::-webkit-input-placeholder {
-    color: #cdd0d5;
-}
-.input-group_text-field.text_gray input::-moz-placeholder, .input-group_text-field.text_gray textarea::-moz-placeholder {
     color: #cdd0d5;
 }
 .input-group_text-field.text_gray input::-ms-input-placeholder, .input-group_text-field.text_gray textarea::-ms-input-placeholder {
@@ -24508,9 +25578,6 @@ h3 {
 .input-group_text-field.text_gray-light input::-webkit-input-placeholder, .input-group_text-field.text_gray-light textarea::-webkit-input-placeholder {
     color: #ebedf0;
 }
-.input-group_text-field.text_gray-light input::-moz-placeholder, .input-group_text-field.text_gray-light textarea::-moz-placeholder {
-    color: #ebedf0;
-}
 .input-group_text-field.text_gray-light input::-ms-input-placeholder, .input-group_text-field.text_gray-light textarea::-ms-input-placeholder {
     color: #ebedf0;
 }
@@ -24518,9 +25585,6 @@ h3 {
     color: #ebedf0;
 }
 .input-group_text-field.text_gray-dark input::-webkit-input-placeholder, .input-group_text-field.text_gray-dark textarea::-webkit-input-placeholder {
-    color: #9097a3;
-}
-.input-group_text-field.text_gray-dark input::-moz-placeholder, .input-group_text-field.text_gray-dark textarea::-moz-placeholder {
     color: #9097a3;
 }
 .input-group_text-field.text_gray-dark input::-ms-input-placeholder, .input-group_text-field.text_gray-dark textarea::-ms-input-placeholder {
@@ -24532,9 +25596,6 @@ h3 {
 .input-group_text-field.text_white input::-webkit-input-placeholder, .input-group_text-field.text_white textarea::-webkit-input-placeholder {
     color: white;
 }
-.input-group_text-field.text_white input::-moz-placeholder, .input-group_text-field.text_white textarea::-moz-placeholder {
-    color: white;
-}
 .input-group_text-field.text_white input::-ms-input-placeholder, .input-group_text-field.text_white textarea::-ms-input-placeholder {
     color: white;
 }
@@ -24542,9 +25603,6 @@ h3 {
     color: white;
 }
 .input-group_text-field.text_black input::-webkit-input-placeholder, .input-group_text-field.text_black textarea::-webkit-input-placeholder {
-    color: #081935;
-}
-.input-group_text-field.text_black input::-moz-placeholder, .input-group_text-field.text_black textarea::-moz-placeholder {
     color: #081935;
 }
 .input-group_text-field.text_black input::-ms-input-placeholder, .input-group_text-field.text_black textarea::-ms-input-placeholder {
@@ -24796,13 +25854,6 @@ h3 {
       -o-transition: 0.2s cubic-bezier(0.25, 0.8, 0.5, 1);
       transition: 0.2s cubic-bezier(0.25, 0.8, 0.5, 1);
 }
-.input-group_text-field input::-moz-placeholder,
-    .input-group_text-field textarea::-moz-placeholder {
-      color: #9097a3;
-      -webkit-transition: 0.2s cubic-bezier(0.25, 0.8, 0.5, 1);
-      -o-transition: 0.2s cubic-bezier(0.25, 0.8, 0.5, 1);
-      transition: 0.2s cubic-bezier(0.25, 0.8, 0.5, 1);
-}
 .input-group_text-field input::-ms-input-placeholder,
     .input-group_text-field textarea::-ms-input-placeholder {
       color: #9097a3;
@@ -24819,10 +25870,6 @@ h3 {
 }
 .input-group_text-field input:focus::-webkit-input-placeholder,
     .input-group_text-field textarea:focus::-webkit-input-placeholder {
-      color: #9097a3;
-}
-.input-group_text-field input:focus::-moz-placeholder,
-    .input-group_text-field textarea:focus::-moz-placeholder {
       color: #9097a3;
 }
 .input-group_text-field input:focus::-ms-input-placeholder,
@@ -24904,10 +25951,6 @@ h3 {
     .input-group_text-field.text_white .input-group__input textarea::-webkit-input-placeholder {
       color: #9097a3;
 }
-.input-group_text-field.text_white .input-group__input input::-moz-placeholder,
-    .input-group_text-field.text_white .input-group__input textarea::-moz-placeholder {
-      color: #9097a3;
-}
 .input-group_text-field.text_white .input-group__input input::-ms-input-placeholder,
     .input-group_text-field.text_white .input-group__input textarea::-ms-input-placeholder {
       color: #9097a3;
@@ -24918,10 +25961,6 @@ h3 {
 }
 .input-group_text-field.text_white .input-group__input input:focus::-webkit-input-placeholder,
     .input-group_text-field.text_white .input-group__input textarea:focus::-webkit-input-placeholder {
-      color: #9097a3;
-}
-.input-group_text-field.text_white .input-group__input input:focus::-moz-placeholder,
-    .input-group_text-field.text_white .input-group__input textarea:focus::-moz-placeholder {
       color: #9097a3;
 }
 .input-group_text-field.text_white .input-group__input input:focus::-ms-input-placeholder,
@@ -24993,10 +26032,6 @@ h3 {
 }
 .input-group_text-field.input-group_placeholder.input-group_dirty input::-webkit-input-placeholder,
   .input-group_text-field.input-group_placeholder.input-group_dirty textarea::-webkit-input-placeholder {
-    opacity: 0;
-}
-.input-group_text-field.input-group_placeholder.input-group_dirty input::-moz-placeholder,
-  .input-group_text-field.input-group_placeholder.input-group_dirty textarea::-moz-placeholder {
     opacity: 0;
 }
 .input-group_text-field.input-group_placeholder.input-group_dirty input::-ms-input-placeholder,
@@ -25203,6 +26238,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -25306,6 +26350,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -25499,6 +26552,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -25804,6 +26866,12 @@ h3 {
 .input-group_select.input-group_editable.input-group_focused .input-group__input, .input-group_select.input-group_overflow.input-group_focused .input-group__input, .input-group_select.input-group_segmented.input-group_focused .input-group__input {
   background: white;
 }
+.input-group_select.input-group_without-borders {
+  border: transparent !important;
+}
+.input-group_select.input-group_without-borders .input-group__input {
+    border: transparent !important;
+}
 .input-group_select .input-group__append-icon {
   margin: 2px 3px;
   -webkit-transition: 0.3s cubic-bezier(0, 0, 0.2, 1);
@@ -26086,6 +27154,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -26189,6 +27266,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -26382,6 +27468,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -26640,6 +27735,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -26743,6 +27847,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -26936,6 +28049,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -27574,6 +28696,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -27677,6 +28808,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -27870,6 +29010,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -28376,6 +29525,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -28479,6 +29637,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -28672,6 +29839,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -28893,6 +30069,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -28996,6 +30181,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -29189,6 +30383,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -29466,6 +30669,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -29569,6 +30781,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -29762,6 +30983,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -30034,6 +31264,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -30137,6 +31376,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -30330,6 +31578,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -30935,6 +32192,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -31038,6 +32304,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -31231,6 +32506,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -31464,6 +32748,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -31567,6 +32860,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -31760,6 +33062,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -31964,6 +33275,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -32067,6 +33387,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -32260,6 +33589,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -32499,6 +33837,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -32602,6 +33949,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -32795,6 +34151,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -33072,6 +34437,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -33175,6 +34549,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -33368,6 +34751,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -33769,6 +35161,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -33872,6 +35273,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -34065,6 +35475,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -34351,6 +35770,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -34454,6 +35882,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -34647,6 +36084,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -34976,6 +36422,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -35079,6 +36534,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -35272,6 +36736,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -35472,7 +36945,7 @@ h3 {
 }
 }
 /*!
- * Quill Editor v1.3.7
+ * Quill Editor v1.3.6
  * https://quilljs.com/
  * Copyright (c) 2014, Jason Chen
  * Copyright (c) 2013, salesforce.com
@@ -35869,7 +37342,7 @@ h3 {
   right: 15px;
 }
 /*!
- * Quill Editor v1.3.7
+ * Quill Editor v1.3.6
  * https://quilljs.com/
  * Copyright (c) 2014, Jason Chen
  * Copyright (c) 2013, salesforce.com
@@ -36814,7 +38287,7 @@ h3 {
   border: 1px solid #ccc;
 }
 /*!
- * Quill Editor v1.3.7
+ * Quill Editor v1.3.6
  * https://quilljs.com/
  * Copyright (c) 2014, Jason Chen
  * Copyright (c) 2013, salesforce.com
@@ -37828,6 +39301,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -37931,6 +39413,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -38124,6 +39615,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -38344,6 +39844,15 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -38447,6 +39956,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -38640,6 +40158,15 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
 /** App */
 /** Loading */
 /** Cards */

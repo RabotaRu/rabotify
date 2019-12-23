@@ -28,6 +28,10 @@ exports.default = {
     genMenu: function genMenu() {
       var _this = this;
 
+      if (!this.renderingMenu && !this.isActive && !this.$refs.menu) {
+        return;
+      }
+
       var attachTo = this.staticAttach ? '[data-uid="' + this._uid + '"] .input-group__menu-static-container' : '[data-uid="' + this._uid + '"]';
       var data = {
         ref: 'menu',
@@ -54,6 +58,13 @@ exports.default = {
             if (!val) {
               _this.menuIsActive = _this.persistentMenu;
             }
+          },
+          'hook:mounted': function hookMounted(_) {
+            _this.$nextTick(function (_) {
+              if (_this.content && !Object.keys(_this.content).length) {
+                _this.setMenuContent(_this.$refs.menu);
+              }
+            });
           }
         }
       };
@@ -76,10 +87,10 @@ exports.default = {
       }) : null;
     },
     getMenuIndex: function getMenuIndex() {
-      return this.$refs.menu ? this.$refs.menu.listIndex : -1;
+      return this.refMenu ? this.refMenu.listIndex : -1;
     },
     setMenuIndex: function setMenuIndex(index) {
-      this.$refs.menu && (this.$refs.menu.listIndex = index);
+      this.refMenu && (this.refMenu.listIndex = index);
     },
     resetMenuIndex: function resetMenuIndex() {
       this.setMenuIndex(-1);

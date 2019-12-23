@@ -11,6 +11,10 @@ import { consoleWarn } from '../../../util/console';
 export default {
   methods: {
     genMenu () {
+      if (!this.renderingMenu && !this.isActive && !this.$refs.menu) {
+        return;
+      }
+
       const attachTo = this.staticAttach
         ? `[data-uid="${this._uid}"] .input-group__menu-static-container`
         : `[data-uid="${this._uid}"]`;
@@ -39,6 +43,13 @@ export default {
             if (!val) {
               this.menuIsActive = this.persistentMenu;
             }
+          },
+          'hook:mounted': _ => {
+            this.$nextTick(_ => {
+              if (this.content && !Object.keys( this.content ).length) {
+                this.setMenuContent(this.$refs.menu);
+              }
+            });
           }
         }
       };
@@ -62,10 +73,10 @@ export default {
       }) : null;
     },
     getMenuIndex () {
-      return this.$refs.menu ? this.$refs.menu.listIndex : -1;
+      return this.refMenu ? this.refMenu.listIndex : -1;
     },
     setMenuIndex (index) {
-      this.$refs.menu && (this.$refs.menu.listIndex = index);
+      this.refMenu && (this.refMenu.listIndex = index);
     },
     resetMenuIndex () {
       this.setMenuIndex(-1);

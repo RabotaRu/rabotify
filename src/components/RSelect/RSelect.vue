@@ -110,7 +110,9 @@
       // to avoid a unnecessary label transition
       this.genSelectedItems();
 
-      this.content = this.$refs.menu.$refs.content;
+      if (this.refMenu) {
+        this.setMenuContent();
+      }
     },
 
     beforeDestroy () {
@@ -169,6 +171,7 @@
         return (
           this.isActive &&
           !!this.content &&
+          !!Object.keys(this.content).length &&
           !this.content.contains(e.target)
         );
       },
@@ -330,6 +333,20 @@
             }
           });
         });
+      },
+
+      updateDimensionsMenu (value) {
+        if (this.refMenu) {
+          this.refMenu.updateDimensions(value)
+        }
+      },
+
+      setMenuContent (menu) {
+        menu = this.refMenu || menu;
+
+        if (menu) {
+          this.content = menu.$refs.content;
+        }
       }
     },
 

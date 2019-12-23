@@ -9,6 +9,10 @@ exports.default = {
       type: String,
       default: 'md-keyboard-arrow-down'
     },
+    renderingMenu: {
+      type: Boolean,
+      default: true
+    },
     appendIconCb: Function,
     attach: Boolean,
     staticAttach: Boolean,

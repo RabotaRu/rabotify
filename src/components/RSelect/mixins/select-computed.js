@@ -161,6 +161,9 @@ export default {
     },
     shouldOffset () {
       return this.isAutocomplete || this.isDropdown;
+    },
+    refMenu () {
+      return this.$refs.menu;
     }
   }
 };

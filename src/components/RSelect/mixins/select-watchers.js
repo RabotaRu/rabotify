@@ -11,7 +11,7 @@ import { ensureString } from "../../../util/helpers";
 export default {
   watch: {
     filteredItems () {
-      this.$refs.menu && this.$refs.menu.updateDimensions();
+      this.updateDimensionsMenu();
       this.refreshMenuParams(this.searchValue);
     },
     inputValue (val) {
@@ -102,11 +102,11 @@ export default {
       if (this.isAutocomplete) {
         this.$nextTick(_ => {
           if (this.isDetailsAlwaysShowing || !this.rules.length) {
-            this.$refs.menu.updateDimensions();
+            this.updateDimensionsMenu();
           } else {
             // details element could be collapsed/expanded after validation
             // with duration ~ 350 ms
-            setTimeout(this.$refs.menu.updateDimensions, 350);
+            setTimeout(this.updateDimensionsMenu, 350);
           }
         });
       }

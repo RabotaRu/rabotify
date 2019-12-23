@@ -9,7 +9,7 @@ var _helpers = require('../../../util/helpers');
 exports.default = {
   watch: {
     filteredItems: function filteredItems() {
-      this.$refs.menu && this.$refs.menu.updateDimensions();
+      this.updateDimensionsMenu();
       this.refreshMenuParams(this.searchValue);
     },
     inputValue: function inputValue(val) {
@@ -108,11 +108,11 @@ exports.default = {
       if (this.isAutocomplete) {
         this.$nextTick(function (_) {
           if (_this3.isDetailsAlwaysShowing || !_this3.rules.length) {
-            _this3.$refs.menu.updateDimensions();
+            _this3.updateDimensionsMenu();
           } else {
             // details element could be collapsed/expanded after validation
             // with duration ~ 350 ms
-            setTimeout(_this3.$refs.menu.updateDimensions, 350);
+            setTimeout(_this3.updateDimensionsMenu, 350);
           }
         });
       }
