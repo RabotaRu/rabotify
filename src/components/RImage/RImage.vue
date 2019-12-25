@@ -43,7 +43,11 @@
         type: String,
         default: 'div'
       },
-      showError: Boolean
+      showError: Boolean,
+      lazy: {
+        type: Boolean,
+        default: true
+      }
     },
 
     data: () => ({
@@ -214,7 +218,7 @@
     <div class="r-image__inner" v-if="isWebpMode">
       <picture class="r-image__image-wrapper">
         <source :srcset="`${imageObject.url}.webp`" type="image/webp">
-        <img :src="imageObject.url" class="r-image__image" :alt="alt" :style="imageStyles" itemprop="contentUrl">
+        <img :src="imageObject.url" class="r-image__image" :alt="alt" :style="imageStyles" :loading="lazy" itemprop="contentUrl">
       </picture>
     </div>
 
@@ -230,10 +234,10 @@
 
       <transition name="image-transition" mode="in-out">
         <div class="r-image__image-wrapper" v-if="!originalLoaded && hasThumbnail" key="thumbnail">
-          <img :src="imageObject.thumbnailSrc" class="r-image__image" :alt="alt" :style="imageStyles" itemprop="contentUrl">
+          <img :src="imageObject.thumbnailSrc" class="r-image__image" :alt="alt" :style="imageStyles" :loading="lazy" itemprop="contentUrl">
         </div>
         <div class="r-image__image-wrapper" v-else key="original">
-          <img :src="imageObject.src" class="r-image__image" :alt="alt" :style="imageStyles" itemprop="contentUrl">
+          <img :src="imageObject.src" class="r-image__image" :alt="alt" :style="imageStyles" :loading="lazy" itemprop="contentUrl">
         </div>
       </transition>
     </div>
