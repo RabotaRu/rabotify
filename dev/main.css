@@ -477,15 +477,6 @@ template {
 /** Lists */
 /** Dividers */
 /** Toasts */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -589,15 +580,6 @@ template {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -800,6 +782,242 @@ template {
 /** Lists */
 /** Dividers */
 /** Toasts */
+/**
+ * Bem Constructor settings override
+ */
+/******* Common *******/
+/**
+ * Layout breakpoints
+ * xs, sm, md, lg
+ **/
+/** Radius */
+/** Indents */
+/** Grid */
+/** Typography */
+/** Transitions */
+/** Shadows */
+/** Ripple Animation */
+/******* Components *******/
+/** Buttons */
+/** Loading */
+/** Icon */
+/** Dialog */
+/** Overlay */
+/** Input Group */
+/** Card */
+/** Toolbar */
+/** Switch */
+/** Checkbox */
+/** Radio buttons */
+/** Chip */
+/** Lists */
+/** Divider */
+/** Tabs */
+/** Tab */
+/** Mobile Header */
+/** Mobile Menu */
+/**
+ * Replace `$search` with `$replace` in `$string`
+ * @param {String} $string - Initial string
+ * @param {String} $search - Substring to replace
+ * @param {String} $replace ('') - New value
+ * @return {String} - Updated string
+ */
+/**
+ * Merges stacks of font
+ * Usage: font-family: merge-fonts-stack('Roboto Regular');
+ * Usage: font-family: merge-fonts-stack('Roboto Regular', $font-family-default);
+ */
+/**
+ * Imports background url with image
+ * Usage: background: import-background-image('image.png');
+ * Usage: background: import-background-image('image.png', '/'); // from `static` directory
+ */
+/** Typography */
+/**
+ * Add custom style to different states of input's placeholder (like :hover or :active etc).
+ *
+ * @param {string} $color - color for input placeholder
+ * @param {:hover|:active|:focus|null} $target-pseudo - parent pseudo-class
+ * E.g.: @include input-placeholder-color(#faf);
+ * E.g.: @include input-placeholder-color(#faf, (hover: #ff0));
+ * E.g.: @include input-placeholder-color(#faf, (hover: #ff0, active: #0ff), false) {
+ *    transition: all .2s ease;
+ * }
+ */
+/**
+ * Миксин для media-query:
+ * ---------------------------------------- *
+ * xs: 480px
+ * sm: 720px
+ * md: 1024px
+ * lg: 1280px
+ * ---------------------------------------- *
+ *
+ * xs-and-down  |   < 480px
+ * xs-only      |   0 <= x < 480px
+ * xs-and-up    |   >= 480px
+ *
+ * sm-and-down  |   < 720px
+ * sm-only      |   480px <= x < 720px
+ * sm-and-up    |   >= 720px
+ *
+ * md-and-down  |   < 1024px
+ * md-only      |   720px <= x < 1024px
+ * md-and-up    |   >= 1024px
+ *
+ * lg-and-down  |   < 1280px
+ * lg-only      |   1024px <= x < 1280px
+ * lg-and-up    |   >= 1280px
+ *
+ * xl-only      |   >= 1280px
+ *
+ * ---------------------------------------- *
+ * E.g.:
+ *
+ * .class {
+ *    width: 800px;
+ *    @include media-query(xs-and-down) {
+ *      width: 100%;
+ *    }
+ * }
+ *
+ * .class {
+ *    width: 800px;
+ *    @include media-query(xs-and-down, landscape, print) {
+ *      padding: 0 20px;
+ *    }
+ * }
+ */
+/**
+ * Миксин для генерации теней
+ */
+/**
+ * Миксин для плавного перехода теней
+ */
+/**
+ * Миксин для установки темы (primary, secondary) на различные свойства
+ * $properties - свойства
+ * $force-color - установить свой color насильно
+ * $hover - установить hover
+ * $color-alpha - сделать цвет прозрачным от 0 до 1
+ * $important - принудительно
+ */
+/**
+ * Миксин для установки темы (primary, secondary) на различные текстовые свойства
+ * $properties - свойства
+ * $force-color - установить свой color насильно
+ * $hover - установить hover
+ * $color-alpha - сделать цвет прозрачным от 0 до 1
+ * $important - принудительно
+ */
+/** Container layout */
+/** Row */
+/** Cols */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
+/**
+ * Bem Constructor settings override
+ */
+/******* Common *******/
+/**
+ * Layout breakpoints
+ * xs, sm, md, lg
+ **/
+/** Radius */
+/** Indents */
+/** Grid */
+/** Typography */
+/** Transitions */
+/** Shadows */
+/** Ripple Animation */
+/******* Components *******/
+/** Buttons */
+/** Loading */
+/** Icon */
+/** Dialog */
+/** Overlay */
+/** Input Group */
+/** Card */
+/** Toolbar */
+/** Switch */
+/** Checkbox */
+/** Radio buttons */
+/** Chip */
+/** Lists */
+/** Divider */
+/** Tabs */
+/** Tab */
+/** Mobile Header */
+/** Mobile Menu */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
+/** App */
+/** Loading */
+/** Cards */
+/** Switch */
+/** Text-field */
+/** Chip */
+/** Lists */
+/** Dividers */
+/** Toasts */
+/**
+ * Bem Constructor settings override
+ */
+/******* Common *******/
+/**
+ * Layout breakpoints
+ * xs, sm, md, lg
+ **/
+/** Radius */
+/** Indents */
+/** Grid */
+/** Typography */
+/** Transitions */
+/** Shadows */
+/** Ripple Animation */
+/******* Components *******/
+/** Buttons */
+/** Loading */
+/** Icon */
+/** Dialog */
+/** Overlay */
+/** Input Group */
+/** Card */
+/** Toolbar */
+/** Switch */
+/** Checkbox */
+/** Radio buttons */
+/** Chip */
+/** Lists */
+/** Divider */
+/** Tabs */
+/** Tab */
+/** Mobile Header */
+/** Mobile Menu */
 /** App */
 /** Loading */
 /** Cards */
@@ -993,338 +1211,6 @@ template {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
-/**
- * Bem Constructor settings override
- */
-/******* Common *******/
-/**
- * Layout breakpoints
- * xs, sm, md, lg
- **/
-/** Radius */
-/** Indents */
-/** Grid */
-/** Typography */
-/** Transitions */
-/** Shadows */
-/** Ripple Animation */
-/******* Components *******/
-/** Buttons */
-/** Loading */
-/** Icon */
-/** Dialog */
-/** Overlay */
-/** Input Group */
-/** Card */
-/** Toolbar */
-/** Switch */
-/** Checkbox */
-/** Radio buttons */
-/** Chip */
-/** Lists */
-/** Divider */
-/** Tabs */
-/** Tab */
-/** Mobile Header */
-/** Mobile Menu */
-/**
- * Replace `$search` with `$replace` in `$string`
- * @param {String} $string - Initial string
- * @param {String} $search - Substring to replace
- * @param {String} $replace ('') - New value
- * @return {String} - Updated string
- */
-/**
- * Merges stacks of font
- * Usage: font-family: merge-fonts-stack('Roboto Regular');
- * Usage: font-family: merge-fonts-stack('Roboto Regular', $font-family-default);
- */
-/**
- * Imports background url with image
- * Usage: background: import-background-image('image.png');
- * Usage: background: import-background-image('image.png', '/'); // from `static` directory
- */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
-/**
- * Bem Constructor settings override
- */
-/******* Common *******/
-/**
- * Layout breakpoints
- * xs, sm, md, lg
- **/
-/** Radius */
-/** Indents */
-/** Grid */
-/** Typography */
-/** Transitions */
-/** Shadows */
-/** Ripple Animation */
-/******* Components *******/
-/** Buttons */
-/** Loading */
-/** Icon */
-/** Dialog */
-/** Overlay */
-/** Input Group */
-/** Card */
-/** Toolbar */
-/** Switch */
-/** Checkbox */
-/** Radio buttons */
-/** Chip */
-/** Lists */
-/** Divider */
-/** Tabs */
-/** Tab */
-/** Mobile Header */
-/** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
-/**
- * Bem Constructor settings override
- */
-/******* Common *******/
-/**
- * Layout breakpoints
- * xs, sm, md, lg
- **/
-/** Radius */
-/** Indents */
-/** Grid */
-/** Typography */
-/** Transitions */
-/** Shadows */
-/** Ripple Animation */
-/******* Components *******/
-/** Buttons */
-/** Loading */
-/** Icon */
-/** Dialog */
-/** Overlay */
-/** Input Group */
-/** Card */
-/** Toolbar */
-/** Switch */
-/** Checkbox */
-/** Radio buttons */
-/** Chip */
-/** Lists */
-/** Divider */
-/** Tabs */
-/** Tab */
-/** Mobile Header */
-/** Mobile Menu */
-/**
- * Replace `$search` with `$replace` in `$string`
- * @param {String} $string - Initial string
- * @param {String} $search - Substring to replace
- * @param {String} $replace ('') - New value
- * @return {String} - Updated string
- */
-/**
- * Merges stacks of font
- * Usage: font-family: merge-fonts-stack('Roboto Regular');
- * Usage: font-family: merge-fonts-stack('Roboto Regular', $font-family-default);
- */
-/**
- * Imports background url with image
- * Usage: background: import-background-image('image.png');
- * Usage: background: import-background-image('image.png', '/'); // from `static` directory
- */
-/** Typography */
-/**
- * Add custom style to different states of input's placeholder (like :hover or :active etc).
- *
- * @param {string} $color - color for input placeholder
- * @param {:hover|:active|:focus|null} $target-pseudo - parent pseudo-class
- * E.g.: @include input-placeholder-color(#faf);
- * E.g.: @include input-placeholder-color(#faf, (hover: #ff0));
- * E.g.: @include input-placeholder-color(#faf, (hover: #ff0, active: #0ff), false) {
- *    transition: all .2s ease;
- * }
- */
-/**
- * Миксин для media-query:
- * ---------------------------------------- *
- * xs: 480px
- * sm: 720px
- * md: 1024px
- * lg: 1280px
- * ---------------------------------------- *
- *
- * xs-and-down  |   < 480px
- * xs-only      |   0 <= x < 480px
- * xs-and-up    |   >= 480px
- *
- * sm-and-down  |   < 720px
- * sm-only      |   480px <= x < 720px
- * sm-and-up    |   >= 720px
- *
- * md-and-down  |   < 1024px
- * md-only      |   720px <= x < 1024px
- * md-and-up    |   >= 1024px
- *
- * lg-and-down  |   < 1280px
- * lg-only      |   1024px <= x < 1280px
- * lg-and-up    |   >= 1280px
- *
- * xl-only      |   >= 1280px
- *
- * ---------------------------------------- *
- * E.g.:
- *
- * .class {
- *    width: 800px;
- *    @include media-query(xs-and-down) {
- *      width: 100%;
- *    }
- * }
- *
- * .class {
- *    width: 800px;
- *    @include media-query(xs-and-down, landscape, print) {
- *      padding: 0 20px;
- *    }
- * }
- */
-/**
- * Миксин для генерации теней
- */
-/**
- * Миксин для плавного перехода теней
- */
-/**
- * Миксин для установки темы (primary, secondary) на различные свойства
- * $properties - свойства
- * $force-color - установить свой color насильно
- * $hover - установить hover
- * $color-alpha - сделать цвет прозрачным от 0 до 1
- * $important - принудительно
- */
-/**
- * Миксин для установки темы (primary, secondary) на различные текстовые свойства
- * $properties - свойства
- * $force-color - установить свой color насильно
- * $hover - установить hover
- * $color-alpha - сделать цвет прозрачным от 0 до 1
- * $important - принудительно
- */
-/** Container layout */
-/** Row */
-/** Cols */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
-/**
- * Bem Constructor settings override
- */
-/******* Common *******/
-/**
- * Layout breakpoints
- * xs, sm, md, lg
- **/
-/** Radius */
-/** Indents */
-/** Grid */
-/** Typography */
-/** Transitions */
-/** Shadows */
-/** Ripple Animation */
-/******* Components *******/
-/** Buttons */
-/** Loading */
-/** Icon */
-/** Dialog */
-/** Overlay */
-/** Input Group */
-/** Card */
-/** Toolbar */
-/** Switch */
-/** Checkbox */
-/** Radio buttons */
-/** Chip */
-/** Lists */
-/** Divider */
-/** Tabs */
-/** Tab */
-/** Mobile Header */
-/** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -1596,15 +1482,6 @@ a:active {
 /** Lists */
 /** Dividers */
 /** Toasts */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -1708,15 +1585,6 @@ a:active {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -1910,15 +1778,6 @@ a:active {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -2217,15 +2076,6 @@ h6 {
 /** Lists */
 /** Dividers */
 /** Toasts */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -2329,15 +2179,6 @@ h6 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -2531,15 +2372,6 @@ h6 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -2743,15 +2575,6 @@ h6 {
 /** Lists */
 /** Dividers */
 /** Toasts */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -2855,15 +2678,6 @@ h6 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -3057,15 +2871,6 @@ h6 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -3579,15 +3384,6 @@ h6 {
 /** Lists */
 /** Dividers */
 /** Toasts */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -3691,15 +3487,6 @@ h6 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -3893,15 +3680,6 @@ h6 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -4279,15 +4057,6 @@ h6 {
 /** Lists */
 /** Dividers */
 /** Toasts */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -4391,15 +4160,6 @@ h6 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -4593,15 +4353,6 @@ h6 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -5357,84 +5108,6 @@ h6 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/**
- * Replace `$search` with `$replace` in `$string`
- * @param {String} $string - Initial string
- * @param {String} $search - Substring to replace
- * @param {String} $replace ('') - New value
- * @return {String} - Updated string
- */
-/**
- * Merges stacks of font
- * Usage: font-family: merge-fonts-stack('Roboto Regular');
- * Usage: font-family: merge-fonts-stack('Roboto Regular', $font-family-default);
- */
-/**
- * Imports background url with image
- * Usage: background: import-background-image('image.png');
- * Usage: background: import-background-image('image.png', '/'); // from `static` directory
- */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
-/**
- * Bem Constructor settings override
- */
-/******* Common *******/
-/**
- * Layout breakpoints
- * xs, sm, md, lg
- **/
-/** Radius */
-/** Indents */
-/** Grid */
-/** Typography */
-/** Transitions */
-/** Shadows */
-/** Ripple Animation */
-/******* Components *******/
-/** Buttons */
-/** Loading */
-/** Icon */
-/** Dialog */
-/** Overlay */
-/** Input Group */
-/** Card */
-/** Toolbar */
-/** Switch */
-/** Checkbox */
-/** Radio buttons */
-/** Chip */
-/** Lists */
-/** Divider */
-/** Tabs */
-/** Tab */
-/** Mobile Header */
-/** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -5585,251 +5258,6 @@ h6 {
 /** Lists */
 /** Dividers */
 /** Toasts */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
-/**
- * Bem Constructor settings override
- */
-/******* Common *******/
-/**
- * Layout breakpoints
- * xs, sm, md, lg
- **/
-/** Radius */
-/** Indents */
-/** Grid */
-/** Typography */
-/** Transitions */
-/** Shadows */
-/** Ripple Animation */
-/******* Components *******/
-/** Buttons */
-/** Loading */
-/** Icon */
-/** Dialog */
-/** Overlay */
-/** Input Group */
-/** Card */
-/** Toolbar */
-/** Switch */
-/** Checkbox */
-/** Radio buttons */
-/** Chip */
-/** Lists */
-/** Divider */
-/** Tabs */
-/** Tab */
-/** Mobile Header */
-/** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
-/**
- * Bem Constructor settings override
- */
-/******* Common *******/
-/**
- * Layout breakpoints
- * xs, sm, md, lg
- **/
-/** Radius */
-/** Indents */
-/** Grid */
-/** Typography */
-/** Transitions */
-/** Shadows */
-/** Ripple Animation */
-/******* Components *******/
-/** Buttons */
-/** Loading */
-/** Icon */
-/** Dialog */
-/** Overlay */
-/** Input Group */
-/** Card */
-/** Toolbar */
-/** Switch */
-/** Checkbox */
-/** Radio buttons */
-/** Chip */
-/** Lists */
-/** Divider */
-/** Tabs */
-/** Tab */
-/** Mobile Header */
-/** Mobile Menu */
-/**
- * Replace `$search` with `$replace` in `$string`
- * @param {String} $string - Initial string
- * @param {String} $search - Substring to replace
- * @param {String} $replace ('') - New value
- * @return {String} - Updated string
- */
-/**
- * Merges stacks of font
- * Usage: font-family: merge-fonts-stack('Roboto Regular');
- * Usage: font-family: merge-fonts-stack('Roboto Regular', $font-family-default);
- */
-/**
- * Imports background url with image
- * Usage: background: import-background-image('image.png');
- * Usage: background: import-background-image('image.png', '/'); // from `static` directory
- */
-/** Typography */
-/**
- * Add custom style to different states of input's placeholder (like :hover or :active etc).
- *
- * @param {string} $color - color for input placeholder
- * @param {:hover|:active|:focus|null} $target-pseudo - parent pseudo-class
- * E.g.: @include input-placeholder-color(#faf);
- * E.g.: @include input-placeholder-color(#faf, (hover: #ff0));
- * E.g.: @include input-placeholder-color(#faf, (hover: #ff0, active: #0ff), false) {
- *    transition: all .2s ease;
- * }
- */
-/**
- * Миксин для media-query:
- * ---------------------------------------- *
- * xs: 480px
- * sm: 720px
- * md: 1024px
- * lg: 1280px
- * ---------------------------------------- *
- *
- * xs-and-down  |   < 480px
- * xs-only      |   0 <= x < 480px
- * xs-and-up    |   >= 480px
- *
- * sm-and-down  |   < 720px
- * sm-only      |   480px <= x < 720px
- * sm-and-up    |   >= 720px
- *
- * md-and-down  |   < 1024px
- * md-only      |   720px <= x < 1024px
- * md-and-up    |   >= 1024px
- *
- * lg-and-down  |   < 1280px
- * lg-only      |   1024px <= x < 1280px
- * lg-and-up    |   >= 1280px
- *
- * xl-only      |   >= 1280px
- *
- * ---------------------------------------- *
- * E.g.:
- *
- * .class {
- *    width: 800px;
- *    @include media-query(xs-and-down) {
- *      width: 100%;
- *    }
- * }
- *
- * .class {
- *    width: 800px;
- *    @include media-query(xs-and-down, landscape, print) {
- *      padding: 0 20px;
- *    }
- * }
- */
-/**
- * Миксин для генерации теней
- */
-/**
- * Миксин для плавного перехода теней
- */
-/**
- * Миксин для установки темы (primary, secondary) на различные свойства
- * $properties - свойства
- * $force-color - установить свой color насильно
- * $hover - установить hover
- * $color-alpha - сделать цвет прозрачным от 0 до 1
- * $important - принудительно
- */
-/**
- * Миксин для установки темы (primary, secondary) на различные текстовые свойства
- * $properties - свойства
- * $force-color - установить свой color насильно
- * $hover - установить hover
- * $color-alpha - сделать цвет прозрачным от 0 до 1
- * $important - принудительно
- */
-/** Container layout */
-/** Row */
-/** Cols */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
-/**
- * Bem Constructor settings override
- */
-/******* Common *******/
-/**
- * Layout breakpoints
- * xs, sm, md, lg
- **/
-/** Radius */
-/** Indents */
-/** Grid */
-/** Typography */
-/** Transitions */
-/** Shadows */
-/** Ripple Animation */
-/******* Components *******/
-/** Buttons */
-/** Loading */
-/** Icon */
-/** Dialog */
-/** Overlay */
-/** Input Group */
-/** Card */
-/** Toolbar */
-/** Switch */
-/** Checkbox */
-/** Radio buttons */
-/** Chip */
-/** Lists */
-/** Divider */
-/** Tabs */
-/** Tab */
-/** Mobile Header */
-/** Mobile Menu */
 .icon {
   width: 24px;
   height: 24px;
@@ -5980,15 +5408,6 @@ h6 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -6626,15 +6045,6 @@ h6 {
 /** Lists */
 /** Dividers */
 /** Toasts */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -6738,15 +6148,6 @@ h6 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -6940,15 +6341,6 @@ h6 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -11305,15 +10697,6 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -11417,15 +10800,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -11619,15 +10993,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -11984,15 +11349,6 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -12096,15 +11452,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -12298,15 +11645,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -12546,15 +11884,6 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -12658,15 +11987,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -12860,15 +12180,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -13952,15 +13263,6 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -14064,15 +13366,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -14266,15 +13559,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -14526,15 +13810,6 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -14638,15 +13913,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -14840,15 +14106,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -15146,15 +14403,6 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -15258,15 +14506,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -15460,15 +14699,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -15861,15 +15091,6 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -15973,15 +15194,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -16175,15 +15387,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -17150,15 +16353,6 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -17262,15 +16456,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -17464,15 +16649,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -17775,15 +16951,6 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -17887,15 +17054,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -18089,15 +17247,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -18432,15 +17581,6 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -18544,15 +17684,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -18746,15 +17877,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -19045,15 +18167,6 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -19157,15 +18270,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -19359,15 +18463,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -19575,15 +18670,6 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -19687,15 +18773,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -19889,15 +18966,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -20276,15 +19344,6 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -20388,15 +19447,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -20590,15 +19640,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -21109,15 +20150,6 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -21221,15 +20253,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -21423,15 +20446,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -21792,15 +20806,6 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -21904,15 +20909,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -22106,15 +21102,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -22460,15 +21447,6 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -22572,15 +21550,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -22774,15 +21743,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -23141,15 +22101,6 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -23253,15 +22204,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -23455,15 +22397,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -23707,15 +22640,6 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -23819,15 +22743,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -24021,15 +22936,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -24388,15 +23294,6 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -24500,15 +23397,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -24702,15 +23590,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -24971,15 +23850,6 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -25083,15 +23953,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -25285,15 +24146,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -26238,15 +25090,6 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -26350,15 +25193,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -26552,15 +25386,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -27154,15 +25979,6 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -27266,15 +26082,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -27468,15 +26275,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -27735,15 +26533,6 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -27847,15 +26636,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -28049,15 +26829,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -28696,15 +27467,6 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -28808,15 +27570,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -29010,15 +27763,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -29525,15 +28269,6 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -29637,15 +28372,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -29839,15 +28565,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -30069,15 +28786,6 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -30181,15 +28889,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -30383,15 +29082,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -30669,15 +29359,6 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -30781,15 +29462,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -30983,15 +29655,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -31264,15 +29927,6 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -31376,15 +30030,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -31578,15 +30223,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -32192,15 +30828,6 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -32304,15 +30931,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -32506,15 +31124,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -32748,15 +31357,6 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -32860,15 +31460,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -33062,15 +31653,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -33275,15 +31857,6 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -33387,15 +31960,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -33589,15 +32153,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -33837,15 +32392,6 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -33949,15 +32495,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -34151,15 +32688,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -34437,15 +32965,6 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -34549,15 +33068,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -34751,15 +33261,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -35161,15 +33662,6 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -35273,15 +33765,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -35475,15 +33958,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -35770,15 +34244,6 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -35882,15 +34347,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -36084,15 +34540,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -36422,15 +34869,6 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -36534,15 +34972,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -36736,15 +35165,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -39301,15 +37721,6 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -39413,15 +37824,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -39615,15 +38017,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -39844,15 +38237,6 @@ h3 {
 /** Lists */
 /** Dividers */
 /** Toasts */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /**
  * Bem Constructor settings override
  */
@@ -39956,15 +38340,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */
@@ -40158,15 +38533,6 @@ h3 {
 /** Tab */
 /** Mobile Header */
 /** Mobile Menu */
-/** App */
-/** Loading */
-/** Cards */
-/** Switch */
-/** Text-field */
-/** Chip */
-/** Lists */
-/** Dividers */
-/** Toasts */
 /** App */
 /** Loading */
 /** Cards */

@@ -5,6 +5,9 @@
       <r-card>
         <r-card-title class="font-display-1">RImage</r-card-title>
         <r-card-text>
+          <r-image :image="srcWebp" mode="webp"></r-image>
+
+          <r-divider></r-divider>
 
           <r-image :src="src" :thumbnailSrc="thumbnailSrc">
             <div style="padding: 20px;">
@@ -36,7 +39,21 @@
     },
 
     data: () => ({
-      src: 'https://novoboi.ru/download_img.php?dimg=5624&raz=2560x1435', // 'https://novoboi.ru/download_img.php?dimg=5624&raz=2560x1440',
+      srcWebp: {
+        url: 'https://s.ftcdn.net/v2013/pics/all/curated/RKyaEDwp8J7JKeZWQPuOVWvkUjGQfpCx_cover_580.jpg',
+        srcset: [
+          {
+            url: 'https://helpx.adobe.com/content/dam/help/en/stock/how-to/visual-reverse-image-search/jcr_content/main-pars/image/visual-reverse-image-search-v2_intro.jpg',
+            x_descriptor: '1x'
+          },
+          {
+            url: 'https://www.w3schools.com/w3css/img_lights.jpg',
+            x_descriptor: '2x'
+          }
+        ]
+      },
+
+      src: 'https://s.ftcdn.net/v2013/pics/all/curated/RKyaEDwp8J7JKeZWQPuOVWvkUjGQfpCx_cover_580.jpg?r=1a0fc22192d0c808b8bb2b9bcfbf4a45b1793687',
       thumbnailSrc: '/test-image-blurred.png',
 
       ex1: '',

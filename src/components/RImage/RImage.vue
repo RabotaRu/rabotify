@@ -159,6 +159,10 @@
       },
 
       imageObject () {
+        if (this.isWebpMode) {
+          return this.image;
+        }
+
         if (this.image) {
           return this.image;
         }
@@ -181,6 +185,10 @@
 
       isBackgroundMode () {
         return this.mode === 'background';
+      },
+
+      isWebpMode () {
+        return this.mode === 'webp';
       }
     },
 
@@ -202,6 +210,13 @@
              :style="styles"
              itemscope itemtype="http://schema.org/ImageObject"
              ref="container">
+
+    <div class="r-image__inner" v-if="isWebpMode">
+      <picture class="r-image__image-wrapper">
+        <source :srcset="`${imageObject.url}.webp`" type="image/webp">
+        <img :src="imageObject.url" class="r-image__image" :alt="alt" :style="imageStyles" itemprop="contentUrl">
+      </picture>
+    </div>
 
     <div class="r-image__inner" v-if="isImgMode">
 
