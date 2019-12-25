@@ -44,9 +44,9 @@
         default: 'div'
       },
       showError: Boolean,
-      lazy: {
-        type: Boolean,
-        default: true
+      loading: {
+        type: String,
+        default: 'lazy'
       }
     },
 
