@@ -122,7 +122,7 @@
       },
       genButton () {
         const { tag, data } = this.generateRouteLink();
-        const children = [ this.genContent() ];
+        const children = [ this.$slots.default ];
         const type = this.isTypeFile ? 'button' : this.type
 
         tag === 'button' && (data.attrs.type = type);
@@ -137,14 +137,6 @@
         }
 
         return this.$createElement(tag, data, children);
-      },
-      genContent () {
-        const children = [ this.$slots.default ];
-        return this.$createElement(
-          'div',
-          { 'class': 'r-btn__content' },
-          children
-        );
       },
       genInput () {
         return this.$createElement(

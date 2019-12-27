@@ -17,8 +17,6 @@ exports[`RBtn.vue should render an <a> tag when using href prop 1`] = `
    class="r-btn r-btn_medium"
    data-ripple="false"
 >
-  <div class="r-btn__content">
-  </div>
 </a>
 
 `;
@@ -30,8 +28,6 @@ exports[`RBtn.vue should render component and match snapshot 1`] = `
         class="r-btn r-btn_medium"
         data-ripple="false"
 >
-  <div class="r-btn__content">
-  </div>
 </button>
 
 `;
@@ -43,8 +39,6 @@ exports[`RBtn.vue should render component with color prop and match snapshot 1`]
         class="r-btn r-btn_medium accent"
         data-ripple="false"
 >
-  <div class="r-btn__content">
-  </div>
 </button>
 
 `;
@@ -56,8 +50,6 @@ exports[`RBtn.vue should render component with color prop and match snapshot 2`]
         class="r-btn r-btn_flat r-btn_medium text_accent"
         data-ripple="false"
 >
-  <div class="r-btn__content">
-  </div>
 </button>
 
 `;
@@ -79,8 +71,6 @@ exports[`RBtn.vue should render component with loader and match snapshot 1`] = `
       </div>
     </div>
   </span>
-  <div class="r-btn__content">
-  </div>
 </button>
 
 `;
@@ -97,8 +87,6 @@ exports[`RBtn.vue should render component with loader slot and match snapshot 1`
       loader
     </span>
   </span>
-  <div class="r-btn__content">
-  </div>
 </button>
 
 `;
@@ -109,8 +97,6 @@ exports[`RBtn.vue should render specified tag when using tag prop 1`] = `
    class="r-btn r-btn_medium"
    data-ripple="false"
 >
-  <div class="r-btn__content">
-  </div>
 </a>
 
 `;
@@ -122,8 +108,6 @@ exports[`RBtn.vue should use custom active-class 1`] = `
         class="r-btn r-btn_medium foo"
         data-ripple="false"
 >
-  <div class="r-btn__content">
-  </div>
 </button>
 
 `;
