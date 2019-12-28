@@ -122,11 +122,15 @@
       },
       genButton () {
         const { tag, data } = this.generateRouteLink();
-        const children = [ this.$slots.default ];
+        const children = this.loading
+          ? [
+              this.genLoader(),
+              this.$createElement('span', { 'class': 'r-btn__content' }, this.$slots.default)
+            ]
+          : this.$slots.default;
         const type = this.isTypeFile ? 'button' : this.type
 
         tag === 'button' && (data.attrs.type = type);
-        this.loading && children.unshift(this.genLoader());
 
         data.attrs.value = [ 'string', 'number' ].includes(typeof this.value)
           ? this.value
