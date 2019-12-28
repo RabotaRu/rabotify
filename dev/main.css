@@ -12828,6 +12828,10 @@ h3 {
     opacity: 0;
 }
 .r-btn_block {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     width: 100%;
     height: 48px;
 }
@@ -12838,6 +12842,10 @@ h3 {
         background-color: #b7e4ff !important;
 }
 .r-btn_full-width {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     width: 100%;
 }
 .r-btn_bottom {
