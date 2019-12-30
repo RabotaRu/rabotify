@@ -28,7 +28,9 @@ export default {
       this.isMultiple && this.resetMenuIndex();
     },
     showMenuItems () {
-      this.menuIsActive = true;
+      this.$nextTick(_ => {
+        this.menuIsActive = true;
+      });
     },
     toggleMenu () {
       if (this.disabled || this.readonly || this.menuIsVisible) {

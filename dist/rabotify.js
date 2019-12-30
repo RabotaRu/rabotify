@@ -24942,7 +24942,7 @@ function Rabotify(Vue, args) {
   }, args));
 }
 
-Rabotify.version = '1.5.0';
+Rabotify.version = '1.5.1';
 
 if (typeof window !== 'undefined' && window.Vue) {
   window.Vue.use(Rabotify);
@@ -30670,7 +30670,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }
 
       if (!this.isAutocomplete || ![32].includes(e.keyCode) // space
-      ) this.refMenu.changeListIndex(e);
+      ) {
+          this.refMenu && this.refMenu.changeListIndex(e);
+        }
 
       // Up or down
       if ([38, 40].includes(e.keyCode)) {
@@ -31588,7 +31590,11 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
       this.isMultiple && this.resetMenuIndex();
     },
     showMenuItems: function showMenuItems() {
-      this.menuIsActive = true;
+      var _this = this;
+
+      this.$nextTick(function (_) {
+        _this.menuIsActive = true;
+      });
     },
     toggleMenu: function toggleMenu() {
       if (this.disabled || this.readonly || this.menuIsVisible) {
@@ -31599,7 +31605,7 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
       this.focusInput();
     },
     refreshMenuParams: function refreshMenuParams(val, prev) {
-      var _this = this;
+      var _this2 = this;
 
       // Wrap input to next line if overflowing
       if (this.$refs.input.scrollWidth > this.$refs.input.clientWidth) {
@@ -31621,19 +31627,19 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
       this.$nextTick(function () {
         var isNeedSelectFirst = -1;
 
-        if (_this.menuItems.length && _this.searchValue) {
-          var firstItem = _this.menuItems[0][_this.itemText];
+        if (_this2.menuItems.length && _this2.searchValue) {
+          var firstItem = _this2.menuItems[0][_this2.itemText];
           var searchValuePrepare = Object(__WEBPACK_IMPORTED_MODULE_0__util_helpers__["h" /* ensureString */])(val).toLowerCase();
           var firstItemValuePrepare = Object(__WEBPACK_IMPORTED_MODULE_0__util_helpers__["h" /* ensureString */])(firstItem).toLowerCase();
           var isValuesIncludes = firstItemValuePrepare.includes(searchValuePrepare);
 
-          isNeedSelectFirst = isValuesIncludes && (!_this.isAnyValueAllowed || _this.creatableChips) ? 0 : -1;
+          isNeedSelectFirst = isValuesIncludes && (!_this2.isAnyValueAllowed || _this2.creatableChips) ? 0 : -1;
         }
 
-        _this.setMenuIndex(isNeedSelectFirst);
+        _this2.setMenuIndex(isNeedSelectFirst);
 
-        if (val !== null && _this.selectedIndex > -1) {
-          _this.selectedIndex = -1;
+        if (val !== null && _this2.selectedIndex > -1) {
+          _this2.selectedIndex = -1;
         }
       });
     }

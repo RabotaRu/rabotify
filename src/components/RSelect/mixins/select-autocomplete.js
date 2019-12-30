@@ -137,7 +137,9 @@ export default {
 
       if (!this.isAutocomplete ||
         ![ 32 ].includes(e.keyCode) // space
-      ) this.refMenu.changeListIndex(e);
+      ) {
+        this.refMenu && this.refMenu.changeListIndex(e);
+      }
 
       // Up or down
       if ([ 38, 40 ].includes(e.keyCode)) {

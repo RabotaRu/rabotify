@@ -34,7 +34,11 @@ exports.default = {
       this.isMultiple && this.resetMenuIndex();
     },
     showMenuItems: function showMenuItems() {
-      this.menuIsActive = true;
+      var _this = this;
+
+      this.$nextTick(function (_) {
+        _this.menuIsActive = true;
+      });
     },
     toggleMenu: function toggleMenu() {
       if (this.disabled || this.readonly || this.menuIsVisible) {
@@ -45,7 +49,7 @@ exports.default = {
       this.focusInput();
     },
     refreshMenuParams: function refreshMenuParams(val, prev) {
-      var _this = this;
+      var _this2 = this;
 
       // Wrap input to next line if overflowing
       if (this.$refs.input.scrollWidth > this.$refs.input.clientWidth) {
@@ -67,19 +71,19 @@ exports.default = {
       this.$nextTick(function () {
         var isNeedSelectFirst = -1;
 
-        if (_this.menuItems.length && _this.searchValue) {
-          var firstItem = _this.menuItems[0][_this.itemText];
+        if (_this2.menuItems.length && _this2.searchValue) {
+          var firstItem = _this2.menuItems[0][_this2.itemText];
           var searchValuePrepare = (0, _helpers.ensureString)(val).toLowerCase();
           var firstItemValuePrepare = (0, _helpers.ensureString)(firstItem).toLowerCase();
           var isValuesIncludes = firstItemValuePrepare.includes(searchValuePrepare);
 
-          isNeedSelectFirst = isValuesIncludes && (!_this.isAnyValueAllowed || _this.creatableChips) ? 0 : -1;
+          isNeedSelectFirst = isValuesIncludes && (!_this2.isAnyValueAllowed || _this2.creatableChips) ? 0 : -1;
         }
 
-        _this.setMenuIndex(isNeedSelectFirst);
+        _this2.setMenuIndex(isNeedSelectFirst);
 
-        if (val !== null && _this.selectedIndex > -1) {
-          _this.selectedIndex = -1;
+        if (val !== null && _this2.selectedIndex > -1) {
+          _this2.selectedIndex = -1;
         }
       });
     }
