@@ -2981,11 +2981,10 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
           tag = _generateRouteLink.tag,
           data = _generateRouteLink.data;
 
-      var children = [this.genContent()];
+      var children = this.loading ? [this.genLoader(), this.$createElement('span', { 'class': 'r-btn__content' }, this.$slots.default)] : this.$slots.default;
       var type = this.isTypeFile ? 'button' : this.type;
 
       tag === 'button' && (data.attrs.type = type);
-      this.loading && children.unshift(this.genLoader());
 
       data.attrs.value = ['string', 'number'].includes(_typeof(this.value)) ? this.value : JSON.stringify(this.value);
 
@@ -2996,10 +2995,6 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
       }
 
       return this.$createElement(tag, data, children);
-    },
-    genContent: function genContent() {
-      var children = [this.$slots.default];
-      return this.$createElement('div', { 'class': 'r-btn__content' }, children);
     },
     genInput: function genInput() {
       var _this2 = this;
@@ -10066,7 +10061,11 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
       type: String,
       default: 'div'
     },
-    showError: Boolean
+    showError: Boolean,
+    loading: {
+      type: String,
+      default: 'lazy'
+    }
   },
 
   data: function data() {
@@ -10775,7 +10774,7 @@ function Rabotify(Vue, args) {
   }, args));
 }
 
-Rabotify.version = '1.4.58';
+Rabotify.version = '1.5.0';
 
 if (typeof window !== 'undefined' && window.Vue) {
   window.Vue.use(Rabotify);
@@ -18856,7 +18855,7 @@ __WEBPACK_IMPORTED_MODULE_0__RImage_vue__["a" /* default */].install = function 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_RImage_vue__ = __webpack_require__(113);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_440c758b_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_RImage_vue__ = __webpack_require__(269);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_5a309c1c_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_RImage_vue__ = __webpack_require__(269);
 function injectStyle (ssrContext) {
   __webpack_require__(258)
 }
@@ -18876,7 +18875,7 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_RImage_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_440c758b_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_RImage_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_5a309c1c_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_RImage_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -19475,7 +19474,7 @@ var ScriptLoader = function (_RetryOperation) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c(_vm.tag,{ref:"container",tag:"component",class:_vm.classes,style:(_vm.styles),attrs:{"itemscope":"","itemtype":"http://schema.org/ImageObject"}},[(_vm.isWebpMode)?_c('div',{staticClass:"r-image__inner"},[_c('picture',{staticClass:"r-image__image-wrapper"},[_c('source',{attrs:{"srcset":((_vm.imageObject.url) + ".webp"),"type":"image/webp"}}),_vm._v(" "),_c('img',{staticClass:"r-image__image",style:(_vm.imageStyles),attrs:{"src":_vm.imageObject.url,"alt":_vm.alt,"itemprop":"contentUrl"}})])]):_vm._e(),_vm._v(" "),(_vm.isImgMode)?_c('div',{staticClass:"r-image__inner"},[_c('transition',{attrs:{"name":"fade-transition"}},[(_vm.showError && _vm.errored)?_c('r-image-error',{attrs:{"errored":_vm.errored,"round":_vm.round,"containerWidth":_vm.containerWidth},on:{"retry":_vm.retry}}):_vm._e()],1),_vm._v(" "),_c('transition',{attrs:{"name":"image-transition","mode":"in-out"}},[(!_vm.originalLoaded && _vm.hasThumbnail)?_c('div',{key:"thumbnail",staticClass:"r-image__image-wrapper"},[_c('img',{staticClass:"r-image__image",style:(_vm.imageStyles),attrs:{"src":_vm.imageObject.thumbnailSrc,"alt":_vm.alt,"itemprop":"contentUrl"}})]):_c('div',{key:"original",staticClass:"r-image__image-wrapper"},[_c('img',{staticClass:"r-image__image",style:(_vm.imageStyles),attrs:{"src":_vm.imageObject.src,"alt":_vm.alt,"itemprop":"contentUrl"}})])])],1):(_vm.isBackgroundMode)?[_c('div',{staticClass:"r-image__background",style:(_vm.backgroundStyles)},[_vm._t("default")],2)]:_vm._e()],2)}
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c(_vm.tag,{ref:"container",tag:"component",class:_vm.classes,style:(_vm.styles),attrs:{"itemscope":"","itemtype":"http://schema.org/ImageObject"}},[(_vm.isWebpMode)?_c('div',{staticClass:"r-image__inner"},[_c('picture',{staticClass:"r-image__image-wrapper"},[_c('source',{attrs:{"srcset":((_vm.imageObject.url) + ".webp"),"type":"image/webp"}}),_vm._v(" "),_c('img',{staticClass:"r-image__image",style:(_vm.imageStyles),attrs:{"src":_vm.imageObject.url,"alt":_vm.alt,"loading":_vm.loading,"itemprop":"contentUrl"}})])]):_vm._e(),_vm._v(" "),(_vm.isImgMode)?_c('div',{staticClass:"r-image__inner"},[_c('transition',{attrs:{"name":"fade-transition"}},[(_vm.showError && _vm.errored)?_c('r-image-error',{attrs:{"errored":_vm.errored,"round":_vm.round,"containerWidth":_vm.containerWidth},on:{"retry":_vm.retry}}):_vm._e()],1),_vm._v(" "),_c('transition',{attrs:{"name":"image-transition","mode":"in-out"}},[(!_vm.originalLoaded && _vm.hasThumbnail)?_c('div',{key:"thumbnail",staticClass:"r-image__image-wrapper"},[_c('img',{staticClass:"r-image__image",style:(_vm.imageStyles),attrs:{"src":_vm.imageObject.thumbnailSrc,"alt":_vm.alt,"loading":_vm.loading,"itemprop":"contentUrl"}})]):_c('div',{key:"original",staticClass:"r-image__image-wrapper"},[_c('img',{staticClass:"r-image__image",style:(_vm.imageStyles),attrs:{"src":_vm.imageObject.src,"alt":_vm.alt,"loading":_vm.loading,"itemprop":"contentUrl"}})])])],1):(_vm.isBackgroundMode)?[_c('div',{staticClass:"r-image__background",style:(_vm.backgroundStyles)},[_vm._t("default")],2)]:_vm._e()],2)}
 var staticRenderFns = []
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
