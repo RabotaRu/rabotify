@@ -5,11 +5,12 @@
 $bem-use-namespaces: true;
 
 @include block('btn', 'component') {
-  @extend %layer-flex-row;
-
   height: $button-height;
   min-width: $button-min-width;
-  display: inline-block;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   padding: $button-padding;
   position: relative;
 
@@ -53,15 +54,6 @@ $bem-use-namespaces: true;
     width: 18px;
     height: 18px;
     margin-right: $indent-small - 2;
-  }
-
-  @include element('content') {
-    @extend %layer-block-fill;
-    @extend %layer-flex-row;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    box-sizing: border-box;
   }
 
   @include element('loading') {
@@ -136,7 +128,7 @@ $bem-use-namespaces: true;
   }
 
   @include modifier('block') {
-    display: block !important;
+    display: flex;
     width: 100%;
     height: 48px;
 
@@ -158,7 +150,7 @@ $bem-use-namespaces: true;
   }
 
   @include modifier('full-width') {
-    display: block;
+    display: flex;
     width: 100%;
   }
 
