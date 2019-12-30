@@ -71,6 +71,8 @@ exports[`RBtn.vue should render component with loader and match snapshot 1`] = `
       </div>
     </div>
   </span>
+  <span class="r-btn__content">
+  </span>
 </button>
 
 `;
@@ -86,6 +88,8 @@ exports[`RBtn.vue should render component with loader slot and match snapshot 1`
     <span>
       loader
     </span>
+  </span>
+  <span class="r-btn__content">
   </span>
 </button>
 
