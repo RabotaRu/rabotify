@@ -49,6 +49,14 @@
     }
   }
 
+  &.input-group_clearable {
+    .input-group__input {
+      input {
+        padding-right: 34px;
+      }
+    }
+  }
+
   &.input-group_error {
     .input-group__input {
       input {
