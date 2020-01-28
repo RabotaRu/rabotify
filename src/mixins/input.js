@@ -83,7 +83,8 @@ export default {
         'input-group_hide-details': this.hideDetails,
         'input-group_placeholder': !!this.placeholder,
         'input-group_label': !!this.label || this.$slots.label,
-        'input-group_static-label': (!!this.label || this.$slots.label) && this.staticLabel
+        'input-group_static-label': (!!this.label || this.$slots.label) && this.staticLabel,
+        'input-group_clearable': this.clearable
       }, this.classes);
     },
     isDirty () {

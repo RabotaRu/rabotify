@@ -16020,6 +16020,9 @@ h3 {
     .input-group_text-field textarea:focus::-webkit-input-placeholder {
       color: #9097a3;
 }
+.input-group_text-field.input-group_clearable .input-group__input input {
+    padding-right: 34px;
+}
 .input-group_text-field.text_white .input-group__input input,
   .input-group_text-field.text_white .input-group__input textarea {
     border-color: white;
@@ -24778,6 +24781,9 @@ h3 {
 .input-group_text-field input:focus::-webkit-input-placeholder,
     .input-group_text-field textarea:focus::-webkit-input-placeholder {
       color: #9097a3;
+}
+.input-group_text-field.input-group_clearable .input-group__input input {
+    padding-right: 34px;
 }
 .input-group_text-field.text_white .input-group__input input,
   .input-group_text-field.text_white .input-group__input textarea {
